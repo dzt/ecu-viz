@@ -22,7 +22,11 @@
                 { "name": "NC", "type": null, "pin": 11 },
                 { "name": "MREL", "type": "switched_12v", "pin": 12 },
                 { "name": "NC", "type": null, "pin": 13 }
-            ]
+            ],
+            "image": {
+                "src": "/chassis/fc_s4/fem_02.png",
+                "height": 120
+            }
         },
         {
             "name": "FEM_01",
@@ -48,10 +52,14 @@
                 { "name": "Alternator Charge Light", "type": "alt_light", "pin": 13 },
                 { "name": "Wiper Signal", "type": null, "pin": 14 },
                 { "name": "Wiper Switched 12V+", "type": null, "pin": 15 }
-            ]
+            ],
+            "image": {
+                "src": "/chassis/fc_s4/fem_01.png",
+                "height": 120
+            }
         },
         {
-            "name": "TACHO",
+            "name": "FC_TACHO",
             "allow_multiple": false,
             "part_number": "6187-4441",
             "connector_type": "Female",
@@ -63,7 +71,11 @@
                 { "name": "NC", "type": null, "pin": 2 },
                 { "name": "Tachometer", "type": "tacho", "pin": 3 },
                 { "name": "NC", "type": null, "pin": 4 }
-            ]
+            ],
+            "image": {
+                "src": "/chassis/fc_s4/tacho.png",
+                "height": 120
+            }
         }
     ],
     "analog_inputs": [
@@ -75,7 +87,11 @@
             "sources": null,
             "pinout": [
                 { "name": "Signal", "type": "signal", "pin": 1 }
-            ]
+            ],
+            "image": {
+                "src": "/generic/wideband.png",
+                "height": 120
+            }
         },
         {
             "name": "Mazda TPS (S6)",
@@ -90,7 +106,11 @@
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "5V+", "type": "vref", "pin": 2 },
                 { "name": "Ground", "type": "vref_ground", "pin": 3 }
-            ]
+            ],
+            "image": {
+                "src": "/analog_inputs/rx7_s6_tps.png",
+                "height": 120
+            }
         },
         {
             "name": "GM/Delphi MAP Sensor",
@@ -106,7 +126,11 @@
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "5V+", "type": "vref", "pin": 2 },
                 { "name": "Ground", "type": "vref_ground", "pin": 3 }
-            ]
+            ],
+            "image": {
+                "src": "/analog_inputs/gm_map.png",
+                "height": 80
+            }
         },
         {
             "name": "Link ECU MAP Sensor",
@@ -118,10 +142,14 @@
                "https://dealers.linkecu.com/products/accessories/accessories-sensors/MAP"
             ],
             "pinout": [
-                { "name": "Signal", "type": "signal", "pin": 1 },
-                { "name": "5V+", "type": "vref", "pin": 2 },
-                { "name": "Ground", "type": "vref_ground", "pin": 3 }
-            ]
+                { "name": "Ground", "type": "vref_ground", "pin": 1 },
+                { "name": "Signal", "type": "signal", "pin": 2 },
+                { "name": "5V+", "type": "vref", "pin": 3 }
+            ],
+            "image": {
+                "src": "/analog_inputs/link_map_sensor.png",
+                "height": 120
+            }
         },
         {
             "name": "GM/Delphi Style Pressure Sensor",
@@ -136,7 +164,11 @@
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "5V+", "type": "vref", "pin": 2 },
                 { "name": "Ground", "type": "vref_ground", "pin": 3 }
-            ]
+            ],
+            "image": {
+                "src": "/analog_inputs/gm_pressure_fluid.png",
+                "height": 120
+            }
         }
     ],
     "injectors": [
@@ -150,7 +182,11 @@
             "pinout": [
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
                 { "name": "Trigger", "type": "signal", "pin": 2 }
-            ]
+            ],
+            "image": {
+                "src": "/generic/2pin.png",
+                "height": 50
+            }
         },
         {
             "name": "EV6/EV14",
@@ -162,7 +198,11 @@
             "pinout": [
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
                 { "name": "Trigger", "type": "signal", "pin": 2 }
-            ]
+            ],
+            "image": {
+                "src": "/generic/2pin.png",
+                "height": 50
+            }
         }
     ],
     "can_bus": [
@@ -177,9 +217,13 @@
             "pinout": [
                 { "name": "Ignition Switched +12V", "type": "switched_12v", "pin": 1 },
                 { "name": "Ground", "type": "ground", "pin": 2 },
-                { "name": "CAN Low", "type": "can_l", "pin": 3 },
-                { "name": "CAN High", "type": "can_h", "pin": 4 }
-            ]
+                { "name": "CAN High", "type": "can_h", "pin": 3 },
+                { "name": "CAN Low", "type": "can_l", "pin": 4 }
+            ],
+            "image": {
+                "src": "/generic/can.png",
+                "height": 120
+            }
         }
     ],
     "ignition_coils": [
@@ -196,7 +240,11 @@
                 { "name": "Ground", "type": "ground", "pin": 2 },
                 { "name": "Signal", "type": "signal", "pin": 3 },
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 4 }
-            ]
+            ],
+            "image": {
+                "src": "/ignition_coils/gm.png",
+                "height": 120
+            }
         },
         {
             "name": "IGN-1A Ignition Coil",
@@ -212,7 +260,11 @@
                 { "name": "Ground", "type": "ground", "pin": 3 },
                 { "name": "Ground", "type": "ground", "pin": 4 },
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 5 }
-            ]
+            ],
+            "image": {
+                "src": "/ignition_coils/ign1a.png",
+                "height": 120
+            }
         }
     ],
     "auxiliary_options": [
@@ -226,7 +278,11 @@
             "pinout": [
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
                 { "name": "Trigger", "type": "signal", "pin": 2 }
-            ]
+            ],
+            "image": {
+                "src": "/generic/2pin.png",
+                "height": 50
+            }
         },
         {
             "name": "Boost Control",
@@ -236,7 +292,11 @@
             "pinout": [
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
                 { "name": "Trigger", "type": "signal", "pin": 2 }
-            ]
+            ],
+            "image": {
+                "src": "/generic/2pin.png",
+                "height": 50
+            }
         },
         {
             "name": "Single Speed Cooling Fan",
@@ -246,12 +306,16 @@
             "pinout": [
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
                 { "name": "Trigger", "type": "signal", "pin": 2 }
-            ]
+            ],
+            "image": {
+                "src": "/generic/2pin.png",
+                "height": 50
+            }
         }
     ],
     "alternator_options": [
         {
-            "name": "Series 4 RX-7",
+            "name": "Series 4 RX-7 Alternator",
             "allow_multiple": false,
             "part_number": "6111-2568",
             "connector_type": "Female",
@@ -261,10 +325,14 @@
             "pinout": [
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
                 { "name": "L Terminal", "type": "l_terminal", "pin": 2 }
-            ]
+            ],
+            "image": {
+                "src": "/alternators/s4_rx7_alt.png",
+                "height": 120
+            }
         },
         {
-            "name": "Series 5/6 RX-7",
+            "name": "Series 5/6 RX-7 Alternator",
             "allow_multiple": false,
             "part_number": "7223-6224-40",
             "connector_type": "Female",
@@ -274,7 +342,11 @@
             "pinout": [
                 { "name": "Constant 12V+", "type": "constant_12v", "pin": 1 },
                 { "name": "L Terminal", "type": "l_terminal", "pin": 2 }
-            ]
+            ],
+            "image": {
+                "src": "/alternators/s5_rx7_alt.png",
+                "height": 120
+            }
         }
     ],
     "clt_options": [
@@ -288,7 +360,11 @@
             "pinout": [
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "Ground", "type": "vref_ground", "pin": 2 }
-            ]
+            ],
+            "image": {
+                "src": "/generic/temp_2pin.png",
+                "height": 120
+            }
         },
         {
             "name": "Mazda S4/S5 CLT",
@@ -300,7 +376,11 @@
             "pinout": [
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "Ground", "type": "vref_ground", "pin": 2 }
-            ]
+            ],
+            "image": {
+                "src": "/generic/temp_2pin.png",
+                "height": 120
+            }
         }
     ],
     "iat_options": [
@@ -314,7 +394,11 @@
             "pinout": [
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "Ground", "type": "vref_ground", "pin": 2 }
-            ]
+            ],
+            "image": {
+                "src": "/generic/temp_2pin.png",
+                "height": 120
+            }
         },
         {
             "name": "Link ECU IAT",
@@ -326,7 +410,11 @@
             "pinout": [
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "Ground", "type": "vref_ground", "pin": 2 }
-            ]
+            ],
+            "image": {
+                "src": "/generic/temp_2pin.png",
+                "height": 120
+            }
         }
     ],
     "trigger_options": [
@@ -342,7 +430,11 @@
                 { "name": "G-", "type": "home_ground", "pin": 2 },
                 { "name": "Ne+", "type": "home", "pin": 3 },
                 { "name": "Ne-", "type": "trigger_ground", "pin": 4 }
-            ]
+            ],
+            "image": {
+                "src": "/trigger_sensor/s4_s5_cas.png",
+                "height": 120
+            }
         },
         {
             "name": "Full Function Engineering 13B Trigger Kit",
@@ -355,7 +447,11 @@
                 { "name": "Signal", "type": "home", "pin": 1 },
                 { "name": "Ground", "type": "home_ground", "pin": 2 },
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 3 }
-            ]
+            ],
+            "image": {
+                "src": "/generic/3pin.png",
+                "height": 90
+            }
         }
     ],
     "flex_options": [
@@ -370,7 +466,11 @@
                 { "name": "VCC", "type": "switched_12v", "pin": 1 },
                 { "name": "GND", "type": "ground", "pin": 2 },
                 { "name": "OUT", "type": "signal", "pin": 3 }
-            ]
+            ],
+            "image": {
+                "src": "/generic/flex.png",
+                "height": 120
+            }
         }
     ]
 }
