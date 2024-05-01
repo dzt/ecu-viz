@@ -11,7 +11,7 @@
     "iat": "15449027",
     "trigger": "FFE-TRIGGER-KIT",
     "flex": "13511132",
-    "external_inputs": ["DTM4-N-SF"],
+    "can_devices": ["DTM4-N-SF"],
     "auxiliary_options": ["7223-1324-30", "boost", "fan-2way"],
     "analog_inputs": ["12065287", "12065287", "analog-wideband"]
 }
