@@ -4,10 +4,10 @@
   "description": "Tool designed to generate wiring diagrams for standalone ECU installations",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-yaml": "node start.js && wireviz ./out/output.yaml && open ./out/output.html"
   },
   "author": "Peter Soboyejo <thepcmrtim@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "json-to-pretty-yaml": "^1.2.2",
     "json2yaml": "^1.1.0",

@@ -13,10 +13,10 @@ const generateDiagram = (input) => {
     return { connectors: connectors.data, cables, connections };
 }
 
+// Used for testing
 let output = generateDiagram(s4_example);
 let data = YAML.stringify(output)
-
-fs.writeFile('output.yaml', data, function(error) {
+fs.writeFile('out/output.yaml', data, function(error) {
     if(error) { 
         console.log('[write auth]: ' + err);
     } else {
