@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Mazda RX-7 (Series 4)",
+        "id": "fc_s4",
+        "chassis_connectors": [
+            "FEM_01",
+            "FEM_02",
+            "TACHO"
+        ]
+    },
+    {
+        "name": "Mazda RX-7 (Series 5)",
+        "id": "fc_s5",
+        "chassis_connectors": [
+            "FEM_01",
+            "FEM_O2",
+            "TACHO"
+        ]
+    }
+]

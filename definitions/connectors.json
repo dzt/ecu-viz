@@ -1,0 +1,376 @@
+{
+    "chassis_options": [
+        {
+            "name": "FEM_02",
+            "allow_multiple": false,
+            "part_number": "172498-1",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=1169"
+            ],
+            "pinout": [
+                { "name": "NC", "type": null, "pin": 1 },
+                { "name": "MREL", "type": "switched_12v", "pin": 2 },
+                { "name": "NC", "type": null, "pin": 3 },
+                { "name": "BATT", "type": "constant_12v", "pin": 4 },
+                { "name": "MREL", "type": "switched_12v", "pin": 5 },
+                { "name": "CLT", "type": "clt_cluster", "pin": 6 },
+                { "name": "NC", "type": null, "pin": 7 },
+                { "name": "MREL", "type": "switched_12v", "pin": 8 },
+                { "name": "NC", "type": null, "pin": 9 },
+                { "name": "F_PUMP", "type": "fuel_pump", "pin": 10 },
+                { "name": "NC", "type": null, "pin": 11 },
+                { "name": "MREL", "type": "switched_12v", "pin": 12 },
+                { "name": "NC", "type": null, "pin": 13 }
+            ]
+        },
+        {
+            "name": "FEM_01",
+            "allow_multiple": false,
+            "part_number": "172498-1",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=1169"
+            ],
+            "pinout": [
+                { "name": "NC", "type": null, "pin": 1 },
+                { "name": "NC", "type": null, "pin": 2 },
+                { "name": "NC", "type": null, "pin": 3 },
+                { "name": "NC", "type": null, "pin": 4 },
+                { "name": "Alternator Switched 12V+", "type": "alt_switched_12v", "pin": 5 },
+                { "name": "Wiper Signal", "type": null, "pin": 6 },
+                { "name": "Wiper Signal", "type": null, "pin": 7 },
+                { "name": "NC", "type": null, "pin": 8 },
+                { "name": "NC", "type": null, "pin": 9 },
+                { "name": "NC", "type": null, "pin": 10 },
+                { "name": "Wiper Ground", "type": null, "pin": 11 },
+                { "name": "NC", "type": null, "pin": 12 },
+                { "name": "Alternator Charge Light", "type": "alt_light", "pin": 13 },
+                { "name": "Wiper Signal", "type": null, "pin": 14 },
+                { "name": "Wiper Switched 12V+", "type": null, "pin": 15 }
+            ]
+        },
+        {
+            "name": "TACHO",
+            "allow_multiple": false,
+            "part_number": "6187-4441",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=341"
+            ],
+            "pinout": [
+                { "name": "NC", "type": null, "pin": 1 },
+                { "name": "NC", "type": null, "pin": 2 },
+                { "name": "Tachometer", "type": "tacho", "pin": 3 },
+                { "name": "NC", "type": null, "pin": 4 }
+            ]
+        }
+    ],
+    "analog_inputs": [
+        {
+            "name": "Wideband (Traditional)",
+            "allow_multiple": false,
+            "part_number": "analog-wideband",
+            "connector_type": "Female",
+            "sources": null,
+            "pinout": [
+                { "name": "Signal", "type": "signal", "pin": 1 }
+            ]
+        },
+        {
+            "name": "Mazda TPS (S6)",
+            "allow_multiple": false,
+            "type": "tps",
+            "part_number": "6195-0030",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=444"
+            ],
+            "pinout": [
+                { "name": "Signal", "type": "signal", "pin": 1 },
+                { "name": "5V+", "type": "vref", "pin": 2 },
+                { "name": "Ground", "type": "vref_ground", "pin": 3 }
+            ]
+        },
+        {
+            "name": "GM/Delphi MAP Sensor",
+            "allow_multiple": false,
+            "part_number": "WP-3S-1",
+            "type": "pressure",
+            "connector_type": "Male",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=325",
+                "https://www.bmotorsports.com/shop/product_info.php/xrf/gshp/products_id/463"
+            ],
+            "pinout": [
+                { "name": "Signal", "type": "signal", "pin": 1 },
+                { "name": "5V+", "type": "vref", "pin": 2 },
+                { "name": "Ground", "type": "vref_ground", "pin": 3 }
+            ]
+        },
+        {
+            "name": "Link ECU MAP Sensor",
+            "allow_multiple": true,
+            "part_number": "LINK-MAP",
+            "type": "pressure",
+            "connector_type": "Female",
+            "sources": [
+               "https://dealers.linkecu.com/products/accessories/accessories-sensors/MAP"
+            ],
+            "pinout": [
+                { "name": "Signal", "type": "signal", "pin": 1 },
+                { "name": "5V+", "type": "vref", "pin": 2 },
+                { "name": "Ground", "type": "vref_ground", "pin": 3 }
+            ]
+        },
+        {
+            "name": "GM/Delphi Style Pressure Sensor",
+            "allow_multiple": true,
+            "part_number": "12065287",
+            "type": "pressure",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=314"
+            ],
+            "pinout": [
+                { "name": "Signal", "type": "signal", "pin": 1 },
+                { "name": "5V+", "type": "vref", "pin": 2 },
+                { "name": "Ground", "type": "vref_ground", "pin": 3 }
+            ]
+        }
+    ],
+    "injectors": [
+        {
+            "name": "EV1",
+            "allow_multiple": false,
+            "part_number": "282189-1",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=1217"
+            ],
+            "pinout": [
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+                { "name": "Trigger", "type": "signal", "pin": 2 }
+            ]
+        },
+        {
+            "name": "EV6/EV14",
+            "allow_multiple": false,
+            "part_number": "E-2157-000",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=430"
+            ],
+            "pinout": [
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+                { "name": "Trigger", "type": "signal", "pin": 2 }
+            ]
+        }
+    ],
+    "can_bus": [
+        {
+            "name": "CAN Gauge",
+            "allow_multiple": true,
+            "part_number": "DTM4-N-SF",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.prowireusa.com/p-1009-dtm-4-way-kit-nickle-stamped.html"
+            ],
+            "pinout": [
+                { "name": "Ignition Switched +12V", "type": "switched_12v", "pin": 1 },
+                { "name": "Ground", "type": "ground", "pin": 2 },
+                { "name": "CAN Low", "type": "can_l", "pin": 3 },
+                { "name": "CAN High", "type": "can_h", "pin": 4 }
+            ]
+        }
+    ],
+    "ignition_coils": [
+        {
+            "name": "GM/Delphi Ignition Coil",
+            "allow_multiple": false,
+            "part_number": "15439568",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=1049"
+            ],
+            "pinout": [
+                { "name": "Ground", "type": "ground", "pin": 1 },
+                { "name": "Ground", "type": "ground", "pin": 2 },
+                { "name": "Signal", "type": "signal", "pin": 3 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 4 }
+            ]
+        },
+        {
+            "name": "IGN-1A Ignition Coil",
+            "allow_multiple": false,
+            "part_number": "12162825",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=573"
+            ],
+            "pinout": [
+                { "name": "Signal", "type": "signal", "pin": 1 },
+                { "name": "Ground", "type": "ground", "pin": 2 },
+                { "name": "Ground", "type": "ground", "pin": 3 },
+                { "name": "Ground", "type": "ground", "pin": 4 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 5 }
+            ]
+        }
+    ],
+    "auxiliary_options": [
+        {
+            "name": "S5/S6 Idle Valve",
+            "allow_multiple": false,
+            "part_number": "7223-1324-30",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=815"
+            ],
+            "pinout": [
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+                { "name": "Trigger", "type": "signal", "pin": 2 }
+            ]
+        },
+        {
+            "name": "Boost Control",
+            "allow_multiple": true,
+            "part_number": "boost",
+            "sources": null,
+            "pinout": [
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+                { "name": "Trigger", "type": "signal", "pin": 2 }
+            ]
+        },
+        {
+            "name": "Single Speed Cooling Fan",
+            "allow_multiple": true,
+            "part_number": "fan-2way",
+            "sources": null,
+            "pinout": [
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+                { "name": "Trigger", "type": "signal", "pin": 2 }
+            ]
+        }
+    ],
+    "alternator_options": [
+        {
+            "name": "Series 4 RX-7",
+            "allow_multiple": false,
+            "part_number": "6111-2568",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=358"
+            ],
+            "pinout": [
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+                { "name": "L Terminal", "type": "l_terminal", "pin": 2 }
+            ]
+        },
+        {
+            "name": "Series 5/6 RX-7",
+            "allow_multiple": false,
+            "part_number": "7223-6224-40",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=1125"
+            ],
+            "pinout": [
+                { "name": "Constant 12V+", "type": "constant_12v", "pin": 1 },
+                { "name": "L Terminal", "type": "l_terminal", "pin": 2 }
+            ]
+        }
+    ],
+    "clt_options": [
+        {
+            "name": "GM/Delphi CLT",
+            "allow_multiple": false,
+            "part_number": "12162193",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=306"
+            ],
+            "pinout": [
+                { "name": "Signal", "type": "signal", "pin": 1 },
+                { "name": "Ground", "type": "vref_ground", "pin": 2 }
+            ]
+        },
+        {
+            "name": "Mazda S4/S5 CLT",
+            "allow_multiple": false,
+            "part_number": "963040-3",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=643"
+            ],
+            "pinout": [
+                { "name": "Signal", "type": "signal", "pin": 1 },
+                { "name": "Ground", "type": "vref_ground", "pin": 2 }
+            ]
+        }
+    ],
+    "iat_options": [
+        {
+            "name": "GM/Delphi IAT",
+            "allow_multiple": false,
+            "part_number": "15449027",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=540"
+            ],
+            "pinout": [
+                { "name": "Signal", "type": "signal", "pin": 1 },
+                { "name": "Ground", "type": "vref_ground", "pin": 2 }
+            ]
+        },
+        {
+            "name": "Link ECU IAT",
+            "allow_multiple": false,
+            "part_number": "101-0045",
+            "sources": [
+                "https://dealers.linkecu.com/IAT1-8_2"
+            ],
+            "pinout": [
+                { "name": "Signal", "type": "signal", "pin": 1 },
+                { "name": "Ground", "type": "vref_ground", "pin": 2 }
+            ]
+        }
+    ],
+    "trigger_options": [
+        {
+            "name": "Mazda Series 4/5 CAS",
+            "part_number": "6187-4441",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=341"
+            ],
+            "pinout": [
+                { "name": "G+", "type": "trigger", "pin": 1 },
+                { "name": "G-", "type": "home_ground", "pin": 2 },
+                { "name": "Ne+", "type": "home", "pin": 3 },
+                { "name": "Ne-", "type": "trigger_ground", "pin": 4 }
+            ]
+        },
+        {
+            "name": "Full Function Engineering 13B Trigger Kit",
+            "part_number": "FFE-TRIGGER-KIT",
+            "connector_type": "Female",
+            "sources": [
+                "https://fullfunctioneng.com/"
+            ],
+            "pinout": [
+                { "name": "Signal", "type": "home", "pin": 1 },
+                { "name": "Ground", "type": "home_ground", "pin": 2 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 3 }
+            ]
+        }
+    ],
+    "flex_options": [
+        {
+            "name": "GM/Delphi Style Flex Fuel Sensor",
+            "part_number": "13511132",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=1149"
+            ],
+            "pinout": [
+                { "name": "VCC", "type": "switched_12v", "pin": 1 },
+                { "name": "GND", "type": "ground", "pin": 2 },
+                { "name": "OUT", "type": "signal", "pin": 3 }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+[
+    {
+        "name": "red",
+        "id": "R",
+        "hex_code": "#FF0000"
+    },
+    {
+        "name": "black",
+        "id": "B",
+        "hex_code": "#000000"
+    },
+    {
+        "name": "green",
+        "id": "G",
+        "hex_code": "#008000"
+    },
+    {
+        "name": "yellow",
+        "id": "Y",
+        "hex_code": "#FFFF00"
+    },
+    {
+        "name": "brown",
+        "id": "Br",
+        "hex_code": "#964B00"
+    },
+    {
+        "name": "blue",
+        "id": "L",
+        "hex_code": "#0000FF"
+    },
+    {
+        "name": "orange",
+        "id": "O",
+        "hex_code": "#FFA500"
+    },
+    {
+        "name": "violet",
+        "id": "V",
+        "hex_code": "#800080"
+    },
+    {
+        "name": "Gray",
+        "id": "Gr",
+        "hex_code": "#C0C0C0"
+    },
+    {
+        "name": "White",
+        "id": "W",
+        "hex_code": "#FFFFFF"
+    }
+]
