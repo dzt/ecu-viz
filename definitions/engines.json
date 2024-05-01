@@ -3,55 +3,18 @@
         "name": "Mazda 13B",
         "id": "13b",
         "type": "rotary",
-        "cylinders": 2,
-        "sections": [
-            "Ignition System",
-            "Primary Injectors",
-            "Secondary Injectors",
-            "Temperature Sensors",
-            "Engine Grounds",
-            "Analog Inputs",
-            "Trigger Sensor",
-            "Instrument Cluster",
-            "Auxiliary Outputs",
-            "Flex Fuel",
-            "External Inputs"
-        ]
+        "cylinders": 2
     },
     {
         "name": "Nissan KA24DE",
         "id": "ka24de",
         "type": "piston",
-        "cylinders": 4,
-        "sections": [
-            "Ignition System",
-            "Injectors",
-            "Temperature Sensors",
-            "Engine Grounds",
-            "Analog Inputs",
-            "Crank Angle Sensor",
-            "Trigger Sensor",
-            "Auxiliary Outputs",
-            "Flex Fuel",
-            "External Inputs"
-        ]
+        "cylinders": 4
     },
     {
-        "name": "Nissan SR20DET",
-        "id": "sr20det",
+        "name": "Nissan SR20DET (S13)",
+        "id": "sr20det-s13",
         "type": "piston",
-        "cylinders": 4,
-        "sections": [
-            "Ignition System",
-            "Injectors",
-            "Temperature Sensors",
-            "Engine Grounds",
-            "Analog Inputs",
-            "Crank Angle Sensor",
-            "Trigger Sensor",
-            "Auxiliary Outputs",
-            "Flex Fuel",
-            "External Inputs"
-        ]
+        "cylinders": 4
     }
 ]
