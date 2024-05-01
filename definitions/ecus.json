@@ -45,6 +45,10 @@
             { "name": "Digital Input 4", "type": "digital_input", "pin": 6, "color": "R/W" },
             { "name": "CAN L", "type": "digital_input", "pin": 29, "color": "O/Y" },
             { "name": "CAN H", "type": "digital_input", "pin": 28, "color": "O/G" }
-        ]
+        ],
+        "image": {
+            "src": "/ecus/monsoon_g4x.png",
+            "height": 160
+        }
     }
 ]
