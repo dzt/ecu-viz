@@ -15,6 +15,11 @@
         "hex_code": "#008000"
     },
     {
+        "name": "green",
+        "id": "Gr",
+        "hex_code": "#008000"
+    },
+    {
         "name": "yellow",
         "id": "Y",
         "hex_code": "#FFFF00"
@@ -41,7 +46,7 @@
     },
     {
         "name": "Gray",
-        "id": "Gr",
+        "id": "Gy",
         "hex_code": "#C0C0C0"
     },
     {

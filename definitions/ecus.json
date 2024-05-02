@@ -39,9 +39,9 @@
             { "name": "Auxillary Output 4", "type": "auxiliary_output", "pin": 18, "color": "O" },
             { "name": "Auxillary Output 5", "type": "auxiliary_output", "pin": 27, "color": "O/L" },
             { "name": "Auxillary Output 6", "type": "auxiliary_output", "pin": 26, "color": "O/V" },
-            { "name": "Digital Input 1", "type": "digital_input", "pin": 30, "color": "Gr/B" },
-            { "name": "Digital Input 2", "type": "digital_input", "pin": 31, "color": "Gr/Br" },
-            { "name": "Digital Input 3", "type": "digital_input", "pin": 23, "color": "Gr/R" },
+            { "name": "Digital Input 1", "type": "digital_input", "pin": 30, "color": "Gy/B" },
+            { "name": "Digital Input 2", "type": "digital_input", "pin": 31, "color": "Gy/Br" },
+            { "name": "Digital Input 3", "type": "digital_input", "pin": 23, "color": "Gy/R" },
             { "name": "Digital Input 4", "type": "digital_input", "pin": 6, "color": "R/W" },
             { "name": "CAN L", "type": "can_l", "pin": 29, "color": "O/Y" },
             { "name": "CAN H", "type": "can_h", "pin": 28, "color": "O/G" }
@@ -49,6 +49,58 @@
         "image": {
             "src": "/ecus/monsoon_g4x.png",
             "width": 250
+        }
+    },
+    {
+        "name": "Haltech Elite 550",
+        "id": "elite_550",
+        "can_support": true,
+        "supports_fc_coils": false,
+        "temp_inputs": 2,
+        "injector_outputs": 4,
+        "ignition_outputs": 4,
+        "digital_inputs": 1,
+        "auxiliary_outputs": 5,
+        "analog_inputs": 3,
+        "pinout": [
+            { "name": "DPO 2", "type": "auxiliary_output", "pin": 1, "color": "V/Br" },
+            { "name": "AVI 1", "type": "analog_input", "pin": 2, "color": "Gr/Y" },
+            { "name": "IGN 1", "type": "ignition", "pin": 3, "color": "Y/B" },
+            { "name": "IGN 2", "type": "ignition", "pin": 4, "color": "Y/R" },
+            { "name": "IGN 3", "type": "ignition", "pin": 5, "color": "Y/O" },
+            { "name": "IGN 4", "type": "ignition", "pin": 6, "color": "Y/G" },
+            { "name": "NC", "type": null, "pin": 7, "color": null },
+            { "name": "NC", "type": null, "pin": 8, "color": null },
+            { "name": "+5V DC", "type": "vref", "pin": 9, "color": "O" },
+            { "name": "Battery Ground", "type": "ground", "pin": 10, "color": "B" },
+            { "name": "Signal Ground", "type": "vref_ground", "pin": 11, "color": "B/W" },
+            { "name": "DPI 1", "type": "digital_input", "pin": 12, "color": "Gy" },
+            { "name": "NC", "type": null, "pin": 13, "color": null },
+            { "name": "AVI 2", "type": "analog_input", "pin": 14, "color": "W" },
+            { "name": "AVI 3", "type": "analog_input", "pin": 15, "color": "Y" },
+            { "name": "CAN H", "type": "can_h", "pin": 16, "color": "W" },
+            { "name": "CAN L", "type": "can_l", "pin": 17, "color": "L" },
+            { "name": "DPO 1", "type": "auxiliary_output", "pin": 18, "color": "V/B" },
+            { "name": "INJ 1", "type": "injector", "pin": 19, "color": "L" },
+            { "name": "INJ 2", "type": "injector", "pin": 20, "color": "L/B" },
+            { "name": "INJ 3", "type": "injector", "pin": 21, "color": "L/Br" },
+            { "name": "INJ 4", "type": "injector", "pin": 22, "color": "L/R" },
+            { "name": "DPO 3", "type": "auxiliary_output", "pin": 23, "color": "V/R" },
+            { "name": "DPO 5", "type": "auxiliary_output", "pin": 24, "color": "B/Y" },
+            { "name": "DPO 4", "type": "auxiliary_output", "pin": 25, "color": "V/O" },
+            { "name": "+13.8V ECU / INJ PWR", "type": "power", "pin": 26, "color": "R/L" },
+            { "name": "NC", "type": null, "pin": 27, "color": null },
+            { "name": "NC", "type": null, "pin": 28, "color": null },
+            { "name": "Air Temperature", "type": "temp", "pin": 29, "color": "Gy" },
+            { "name": "Coolant Temperature", "type": "temp", "pin": 30, "color": "V" },
+            { "name": "Trigger +", "type": "trigger", "pin": 31, "color": "Gy" },
+            { "name": "Home +", "type": "home", "pin": 32, "color": "Gy/B" },
+            { "name": "Trigger -", "type": "trigger_ground", "pin": 33, "color": "Gy" },
+            { "name": "Home -", "type": "home_ground", "pin": 34, "color": "Gy/B" }
+        ],
+        "image": {
+            "src": "/ecus/haltech_550.png",
+            "width": 350
         }
     }
 ]

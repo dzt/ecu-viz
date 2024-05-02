@@ -1,4 +1,4 @@
-const s4_example = require('./input_examples/s4.json');
+const s4_example = require('./input_examples/s4-550.json');
 const lib = require('./lib/index.js');
 const fs = require('fs');
 
