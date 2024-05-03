@@ -64,7 +64,7 @@
         "analog_inputs": 3,
         "pinout": [
             { "name": "DPO 2", "type": "auxiliary_output", "pin": 1, "color": "V/Br" },
-            { "name": "AVI 1", "type": "analog_input", "pin": 2, "color": "Gr/Y" },
+            { "name": "AVI 1", "type": "analog_input", "pin": 2, "color": "Gy/Y" },
             { "name": "IGN 1", "type": "ignition", "pin": 3, "color": "Y/B" },
             { "name": "IGN 2", "type": "ignition", "pin": 4, "color": "Y/R" },
             { "name": "IGN 3", "type": "ignition", "pin": 5, "color": "Y/O" },
@@ -76,7 +76,7 @@
             { "name": "Signal Ground", "type": "vref_ground", "pin": 11, "color": "B/W" },
             { "name": "DPI 1", "type": "digital_input", "pin": 12, "color": "Gy" },
             { "name": "NC", "type": null, "pin": 13, "color": null },
-            { "name": "AVI 2", "type": "analog_input", "pin": 14, "color": "W" },
+            { "name": "Throttle Position Sensor", "type": "analog_input", "pin": 14, "tps": true, "color": "W" },
             { "name": "AVI 3", "type": "analog_input", "pin": 15, "color": "Y" },
             { "name": "CAN H", "type": "can_h", "pin": 16, "color": "W" },
             { "name": "CAN L", "type": "can_l", "pin": 17, "color": "L" },
