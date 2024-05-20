@@ -13,5 +13,8 @@
     "json-to-pretty-yaml": "^1.2.2",
     "json2yaml": "^1.1.0",
     "underscore": "^1.13.6"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
   }
 }

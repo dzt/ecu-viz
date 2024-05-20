@@ -12,8 +12,7 @@
         "name": "Mazda RX-7 (Series 5)",
         "id": "fc_s5",
         "chassis_connectors": [
-            "????",
-            "????",
+            "X-11",
             "FC_TACHO"
         ]
     }

@@ -15,6 +15,7 @@ const generateDiagram = (input) => {
 
 // Used for testing
 let output = generateDiagram(s4_example);
+console.dir(output)
 let data = YAML.stringify(output)
 fs.writeFile('out/output.yaml', data, function(error) {
     if(error) { 
