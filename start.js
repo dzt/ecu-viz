@@ -1,4 +1,4 @@
-const s4_example = require('./input_examples/s4-550.json');
+const s4_example = require('./input_examples/s5-atom.json');
 const lib = require('./lib/index.js');
 const fs = require('fs');
 
@@ -15,10 +15,10 @@ const generateDiagram = (input) => {
 
 // Used for testing
 let output = generateDiagram(s4_example);
-console.dir(output)
+// console.dir(output)
 let data = YAML.stringify(output)
 fs.writeFile('out/output.yaml', data, function(error) {
-    if(error) { 
+    if(error) {
         console.log('[write auth]: ' + err);
     } else {
       console.log('[write auth]: success');

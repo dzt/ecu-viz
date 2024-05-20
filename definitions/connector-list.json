@@ -54,7 +54,42 @@
                 { "name": "Wiper Switched 12V+", "type": null, "pin": 15 }
             ],
             "image": {
-                "src": "/chassis/fc_s4/fem_01.png",
+                "src": "/chassis/fc_s4/fem_02.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "X-11",
+            "allow_multiple": false,
+            "part_number": "6240-5035",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=1357"
+            ],
+            "pinout": [
+                { "name": "F_PUMP", "type": "fuel_pump", "pin": 1 },
+                { "name": "NC", "type": null, "pin": 2 },
+                { "name": "NC", "type": null, "pin": 3 },
+                { "name": "NC", "type": null, "pin": 4 },
+                { "name": "NC", "type": null, "pin": 5 },
+                { "name": "CLT", "type": "clt_cluster", "pin": 6 },
+                { "name": "NC", "type": null, "pin": 7 },
+                { "name": "MREL", "type": "switched_12v", "pin": 8 },
+                { "name": "MREL", "type": "switched_12v", "pin": 9 },
+                { "name": "CLT", "type": "clt_cluster", "pin": 10 },
+                { "name": "NC", "type": null, "pin": 11 },
+                { "name": "NC", "type": null, "pin": 12 },
+                { "name": "NC", "type": null, "pin": 13 },
+                { "name": "NC", "type": null, "pin": 14 },
+                { "name": "NC", "type": null, "pin": 15 },
+                { "name": "NC", "type": null, "pin": 16 },
+                { "name": "MREL", "type": "switched_12v", "pin": 17 },
+                { "name": "NC", "type": null, "pin": 18 },
+                { "name": "MREL", "type": "switched_12v", "pin": 19 },
+                { "name": "MREL", "type": "switched_12v", "pin": 20 }
+            ],
+            "image": {
+                "src": "/chassis/fc_s5/x11.png",
                 "height": 120
             }
         },
@@ -432,7 +467,7 @@
                 { "name": "Ne-", "type": "trigger_ground", "pin": 4 }
             ],
             "image": {
-                "src": "/trigger_sensor/s4_s5_cas.png",
+                "src": "/trigger_sensors/s4_s5_cas.png",
                 "height": 120
             }
         },
