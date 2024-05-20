@@ -1,7 +1,7 @@
 {
     "ecu": "atom_g4x",
     "use_chassis_tacho": true,
-    "chassis": "fc_s5",
+    "chassis": "fc_s4",
     "engine": "13b",
     "tps": "6195-0030",
     "injectors": "282189-1",
