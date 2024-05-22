@@ -31,17 +31,15 @@
         {
             "name": "FEM_01",
             "allow_multiple": false,
-            "part_number": "172498-1",
+            "part_number": "FEM_01_NLA",
             "connector_type": "Female",
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=1169"
-            ],
+            "sources": [],
             "pinout": [
                 { "name": "NC", "type": null, "pin": 1 },
                 { "name": "NC", "type": null, "pin": 2 },
                 { "name": "NC", "type": null, "pin": 3 },
                 { "name": "NC", "type": null, "pin": 4 },
-                { "name": "Alternator Switched 12V+", "type": "alt_switched_12v", "pin": 5 },
+                { "name": "Alternator 12V+ Output (Switched)", "type": null, "pin": 5 },
                 { "name": "Wiper Signal", "type": null, "pin": 6 },
                 { "name": "Wiper Signal", "type": null, "pin": 7 },
                 { "name": "NC", "type": null, "pin": 8 },
@@ -49,12 +47,14 @@
                 { "name": "NC", "type": null, "pin": 10 },
                 { "name": "Wiper Ground", "type": null, "pin": 11 },
                 { "name": "NC", "type": null, "pin": 12 },
-                { "name": "Alternator Charge Light", "type": "alt_light", "pin": 13 },
+                { "name": "Alternator Charge Light", "type": null, "pin": 13 },
                 { "name": "Wiper Signal", "type": null, "pin": 14 },
-                { "name": "Wiper Switched 12V+", "type": null, "pin": 15 }
+                { "name": "NC", "type": null, "pin": 15 },
+                { "name": "NC", "type": null, "pin": 16 },
+                { "name": "Wiper Power", "type": null, "pin": 17 }
             ],
             "image": {
-                "src": "/chassis/fc_s4/fem_02.png",
+                "src": "/chassis/fc_s4/fem_01.png",
                 "height": 120
             }
         },
@@ -69,22 +69,22 @@
             "pinout": [
                 { "name": "F_PUMP", "type": "fuel_pump", "pin": 1 },
                 { "name": "NC", "type": null, "pin": 2 },
-                { "name": "NC", "type": null, "pin": 3 },
-                { "name": "NC", "type": null, "pin": 4 },
+                { "name": "Wiper Switched 12V+", "type": null, "pin": 3 },
+                { "name": "Ground", "type": null, "pin": 4 },
                 { "name": "NC", "type": null, "pin": 5 },
                 { "name": "NC", "type": null, "pin": 6 },
-                { "name": "NC", "type": null, "pin": 7 },
+                { "name": "Wiper Signal", "type": null, "pin": 7 },
                 { "name": "MREL", "type": "switched_12v", "pin": 8 },
                 { "name": "MREL", "type": "switched_12v", "pin": 9 },
                 { "name": "CLT", "type": "clt_cluster", "pin": 10 },
                 { "name": "NC", "type": null, "pin": 11 },
-                { "name": "NC", "type": null, "pin": 12 },
+                { "name": "Wiper Signal", "type": null, "pin": 12 },
                 { "name": "NC", "type": null, "pin": 13 },
                 { "name": "NC", "type": null, "pin": 14 },
                 { "name": "NC", "type": null, "pin": 15 },
                 { "name": "NC", "type": null, "pin": 16 },
                 { "name": "MREL", "type": "switched_12v", "pin": 17 },
-                { "name": "NC", "type": null, "pin": 18 },
+                { "name": "Wiper Signal", "type": null, "pin": 18 },
                 { "name": "MREL", "type": "switched_12v", "pin": 19 },
                 { "name": "MREL", "type": "switched_12v", "pin": 20 }
             ],
@@ -525,6 +525,40 @@
             ],
             "image": {
                 "src": "/generic/flex.png",
+                "height": 120
+            }
+        }
+    ],
+    "accessories": [
+        {
+            "name": "Series 4 RX-7 Alternator",
+            "part_number": "6111-2568",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=358"
+            ],
+            "pinout": [
+                { "name": "Switched 12V+", "type": "r_terminal", "pin": 1 },
+                { "name": "Alternator Charge Light", "type": "l_terminal", "pin": 2 }
+            ],
+            "image": {
+                "src": "/accessories/s4_rx7_alt.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "Series 5/6 RX-7 Alternator",
+            "part_number": "7223-6224-40",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=1125"
+            ],
+            "pinout": [
+                { "name": "Constant 12V+", "type": "s_terminal", "pin": 1 },
+                { "name": "Alternator Charge Light", "type": "l_terminal", "pin": 2 }
+            ],
+            "image": {
+                "src": "/accessories/s5_s6_rx7_alt.png.png",
                 "height": 120
             }
         }
