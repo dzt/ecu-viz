@@ -2,6 +2,7 @@
     {
         "id": "S4_RX7_Alt",
         "name": "Series 4 RX-7 Alternator Control",
+        "colors": ["B/W", "W/B"],
         "connections": [
             [{ "FEM_01": 5 }, { "Series 4 RX-7 Alternator": 1 }],
             [{ "FEM_01": 13 }, { "Series 4 RX-7 Alternator": 2 }]
@@ -10,6 +11,7 @@
     {
         "id": "S5_S6_RX7_Alt",
         "name": "Series 5/6 RX-7 Alternator Control",
+        "colors": ["W/O", "W/B"],
         "connections": [
             [{ "FEM_02": 4 }, { "Series 5/6 RX-7 Alternator": 1 }],
             [{ "FEM_01": 13 }, { "Series 5/6 RX-7 Alternator": 2 }]
@@ -18,23 +20,25 @@
     {
         "id": "S4_RX7_Wipers",
         "name": "Wiper Control",
+        "colors": ["L", "B", "L/R", "L/W", "L/Y"],
         "connections": [
+            [{ "FEM_01": 15 }, { "FC_WIPER": 1 }],
+            [{ "FEM_01": 11 }, { "FC_WIPER": 2 }],
             [{ "FEM_01": 6 }, { "FC_WIPER": 3 }],
             [{ "FEM_01": 7 }, { "FC_WIPER": 4 }],
-            [{ "FEM_01": 11 }, { "FC_WIPER": 3 }],
-            [{ "FEM_01": 14 }, { "FC_WIPER": 5 }],
-            [{ "FEM_01": 15 }, { "FC_WIPER": 4 }]
+            [{ "FEM_01": 14 }, { "FC_WIPER": 5 }]
         ]
     },
     {
         "id": "S5_RX7_Wipers",
         "name": "Wiper Control",
+        "colors": ["L", "B", "L/R", "L/W", "L/Y"],
         "connections": [
             [{ "X-11": 3 }, { "FC_WIPER": 1 }],
             [{ "X-11": 4 }, { "FC_WIPER": 2 }],
+            [{ "X-11": 18 }, { "FC_WIPER": 3 }],
             [{ "X-11": 7 }, { "FC_WIPER": 4 }],
-            [{ "X-11": 12 }, { "FC_WIPER": 5 }],
-            [{ "X-11": 18 }, { "FC_WIPER": 3 }]
+            [{ "X-11": 12 }, { "FC_WIPER": 5 }]
         ]
     }
 ]
