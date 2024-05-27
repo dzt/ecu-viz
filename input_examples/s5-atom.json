@@ -1,7 +1,7 @@
 {
     "ecu": "atom_g4x",
     "use_chassis_tacho": true,
-    "chassis": "fc_s4",
+    "chassis": "fc_s5",
     "engine": "13b",
     "tps": "6195-0030",
     "injectors": "282189-1",
@@ -13,5 +13,6 @@
     "flex": null,
     "can_devices": ["DTM4-N-SF"],
     "auxiliary_options": ["boost", "fan-2way"],
-    "analog_inputs": ["WP-3S-1", "analog-wideband"]
+    "analog_inputs": ["WP-3S-1", "analog-wideband"],
+    "inserts": ["S5_RX7_Wipers"]
 }
