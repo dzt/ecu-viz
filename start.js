@@ -1,4 +1,4 @@
-const s4_example = require('./input_examples/s5-atom.json');
+const s4_example = require('./input_examples/s13-monsoon.json');
 const lib = require('./lib/index.js');
 const fs = require('fs');
 

@@ -2,22 +2,19 @@
     {
         "name": "Mazda RX-7 (Series 4)",
         "id": "fc_s4",
-        "chassis_connectors": [
-            "FEM_01",
-            "FEM_02",
-            "FC_WIPER",
-            "FC_TACHO"
-        ],
+        "chassis_connectors": ["FEM_01", "FEM_02", "FC_WIPER", "FC_TACHO"],
         "insert_options": ["S4_RX7_Wipers", "S4_RX7_Alt", "S5_S6_RX7_Alt"]
     },
     {
         "name": "Mazda RX-7 (Series 5)",
         "id": "fc_s5",
-        "chassis_connectors": [
-            "X-11",
-            "FC_TACHO",
-            "FC_WIPER"
-        ],
+        "chassis_connectors": ["X-11", "FC_TACHO", "FC_WIPER"],
         "insert_options": ["S5_RX7_Wipers"]
+    },
+    {
+        "name": "Nissan 240SX (S13)",
+        "id": "240sx_s13",
+        "chassis_connectors": ["F1_S13", "F8_S13", "F10_S13"],
+        "insert_options": []
     }
 ]

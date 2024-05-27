@@ -1,7 +1,7 @@
 {
     "ecu": "monsoon_g4x",
     "use_chassis_tacho": true,
-    "chassis": "fc_s4",
+    "chassis": "240sx_s13",
     "engine": "13b",
     "tps": "6195-0030",
     "injectors": "E-2157-000",
