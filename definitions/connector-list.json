@@ -246,6 +246,25 @@
             }
         },
         {
+            "name": "Nissan KA24DE TPS",
+            "allow_multiple": false,
+            "type": "tps",
+            "part_number": "WS_WRS-KA24-TPS",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.wiringspecialties.com/s13-ka24de-tps-connector/"
+            ],
+            "pinout": [
+                { "name": "5V+", "type": "vref", "pin": 1 },
+                { "name": "Signal", "type": "signal", "pin": 2 },
+                { "name": "Signal Ground", "type": "vref_ground", "pin": 3 }
+            ],
+            "image": {
+                "src": "/analog_inputs/ka24de_tps.png",
+                "height": 120
+            }
+        },
+        {
             "name": "GM/Delphi MAP Sensor",
             "allow_multiple": false,
             "part_number": "WP-3S-1",
@@ -398,6 +417,24 @@
                 "src": "/ignition_coils/ign1a.png",
                 "height": 120
             }
+        },
+        {
+            "name": "Denso Honda/Acura K-Series Ignition Coil",
+            "allow_multiple": false,
+            "part_number": "6189-0728",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.corsa-technic.com/item.php?item_id=713"
+            ],
+            "pinout": [
+                { "name": "Signal", "type": "signal", "pin": 1 },
+                { "name": "Ground", "type": "ground", "pin": 2 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 3 }
+            ],
+            "image": {
+                "src": "/ignition_coils/kcoils.png",
+                "height": 120
+            }
         }
     ],
     "auxiliary_options": [
@@ -407,6 +444,22 @@
             "part_number": "7223-1324-30",
             "sources": [
                 "https://www.corsa-technic.com/item.php?item_id=815"
+            ],
+            "pinout": [
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+                { "name": "Trigger", "type": "signal", "pin": 2 }
+            ],
+            "image": {
+                "src": "/generic/2pin.png",
+                "height": 50
+            }
+        },
+        {
+            "name": "Nissan KA24DE Idle Control Valve",
+            "allow_multiple": false,
+            "part_number": "WS_KA24-IACON-LT",
+            "sources": [
+                "https://www.wiringspecialties.com/s14kaidairco.html"
             ],
             "pinout": [
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
@@ -584,6 +637,24 @@
             "image": {
                 "src": "/generic/3pin.png",
                 "height": 90
+            }
+        },
+        {
+            "name": "Nissan KA24DE CAS",
+            "part_number": "WS_KA-CAS-CON",
+            "connector_type": "Female",
+            "sources": [
+                "https://www.wiringspecialties.com/kacascocrans.html"
+            ],
+            "pinout": [
+                { "name": "Signal Ground", "type": "home_ground", "pin": 1 },
+                { "name": "Switched 12v+", "type": "switched_12v", "pin": 2 },
+                { "name": "360x", "type": "home", "pin": 3 },
+                { "name": "4x", "type": "trigger", "pin": 4 }
+            ],
+            "image": {
+                "src": "/trigger_sensors/ka24de_cas.png",
+                "height": 200
             }
         }
     ],
