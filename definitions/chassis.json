@@ -16,5 +16,11 @@
         "id": "240sx_s13",
         "chassis_connectors": ["F1_S13", "F8_S13", "F10_S13"],
         "insert_options": []
+    },
+    {
+        "name": "Lexus IS300 (2002+)",
+        "id": "is300_2002",
+        "chassis_connectors": ["IS2002_E3", "IS2002_E4", "IS2002_EA1"],
+        "insert_options": []
     }
 ]

@@ -433,7 +433,7 @@
             ],
             "image": {
                 "src": "/ignition_coils/kcoils.png",
-                "height": 120
+                "height": 200
             }
         }
     ],
