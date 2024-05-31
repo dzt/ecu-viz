@@ -20,7 +20,7 @@
     {
         "name": "Lexus IS300 (2002+)",
         "id": "is300_2002",
-        "chassis_connectors": ["IS2002_E3", "IS2002_E4", "IS2002_EA1"],
+        "chassis_connectors": ["E3_IS2002", "E4_IS2002", "EA1_IS2002"],
         "insert_options": []
     }
 ]

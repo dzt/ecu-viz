@@ -16,5 +16,11 @@
         "id": "sr20det-s13",
         "type": "piston",
         "cylinders": 4
+    },
+    {
+        "name": "Toyota 1JZ-GTE VVT-i",
+        "id": "1jz_gte_vvti",
+        "type": "piston",
+        "cylinders": 6
     }
 ]
