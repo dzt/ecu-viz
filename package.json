@@ -4,7 +4,8 @@
   "description": "Tool designed to generate wiring diagrams for standalone ECU installations",
   "main": "index.js",
   "scripts": {
-    "test-yaml": "node start.js && wireviz ./out/output.yaml && open ./out/output.html"
+    "test-yaml": "node start.js && wireviz ./out/output.yaml && open ./out/output.html",
+    "server": "mkdir -p tmp && cp -a ./pinout_images/ ./tmp/pinout_images && node server.js"
   },
   "author": "Peter Soboyejo <thepcmrtim@gmail.com>",
   "license": "MIT",
@@ -13,6 +14,7 @@
     "express": "^4.19.2",
     "json-to-pretty-yaml": "^1.2.2",
     "json2yaml": "^1.1.0",
+    "temp": "^0.9.4",
     "underscore": "^1.13.6"
   },
   "devDependencies": {

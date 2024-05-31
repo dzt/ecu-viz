@@ -5,17 +5,14 @@ const fs = require('fs');
 const YAML = require('json-to-pretty-yaml');
 
 const generateDiagram = (input) => {
-
     let connectors = lib.createConnectors(input);
     let cables = lib.createCables(connectors.summary, input);
     let connections = lib.createConnections(connectors, cables, input);
-
     return { connectors: connectors.data, cables, connections };
 }
 
 // Used for testing
 let output = generateDiagram(s4_example);
-// console.dir(output)
 let data = YAML.stringify(output)
 
 fs.writeFile('out/output.yaml', data, function(error) {
