@@ -14,7 +14,7 @@ app.server = http.createServer(app);
 
 const PORT = 8080;
 
-// API Definitions
+// Connector Definitions
 const chassis = require('./definitions/chassis.json');
 const ecus = require('./definitions/ecus.json');
 const engines = require('./definitions/engines.json');
@@ -24,8 +24,12 @@ temp.track();
 app.use(bodyParser.json())
 app.set('view engine', 'html');
 
-app.get('/', (req, res) => {
-    return res.end('Hello World');
+app.get('/', (_req, res) => {
+    return res.json({ message: 'ECUViz API' });
+});
+
+app.get('/definitions', (req, res) => {
+    return res.json({chassis, ecus, engines, inserts});
 });
 
 app.post('/fetch', (req, res) => {
@@ -35,13 +39,13 @@ app.post('/fetch', (req, res) => {
     let output_yaml = YAML.stringify(output);
 
     temp.cleanupSync();
-    temp.mkdir({dir: path.join(__dirname, 'tmp')}, function(err, dirPath) {
+    temp.mkdir({dir: path.join(__dirname, 'tmp')}, (err, dirPath) => {
         if (err) return res.end('Error occured spwaning temp directory')
         const yamlFilePath = path.join(dirPath, 'output.yaml');
         fs.writeFile(yamlFilePath, output_yaml, (err) => {
             if (err) res.end('Write error has occured');
             process.chdir(dirPath);
-            exec(`wireviz ${yamlFilePath}`, function(err, stdout) {
+            exec(`wireviz ${yamlFilePath}`, (err, stdout) => {
                 if (err) res.end('WireViz Error');
                 const pngFilePath = yamlFilePath.split('.yaml')[0] + '.png';
                 return res.sendFile(pngFilePath);

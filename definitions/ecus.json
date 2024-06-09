@@ -3,6 +3,7 @@
         "name": "Link Monsoon G4X",
         "id": "monsoon_g4x",
         "can_support": true,
+        "dbw_support": false,
         "supports_fc_coils": false,
         "internal_map_sensor": true,
         "temp_inputs": 2,
@@ -108,6 +109,7 @@
     {
         "name": "Haltech Elite 550",
         "id": "elite_550",
+        "dbw_support": false,
         "can_support": true,
         "supports_fc_coils": false,
         "internal_map_sensor": true,
