@@ -235,8 +235,8 @@
                 { "name": "NC", "type": null, "pin": 22, "color": null },
                 { "name": "CAN H", "type": "can_h", "pin": 23, "color": "V/R" },
                 { "name": "CAN L", "type": "can_l", "pin": 24, "color": "B/Y" },
-                { "name": "DBW 1 / DPO", "type": "auxiliary_output", "pin": 25, "color": "B/Y" },
-                { "name": "DBW 2 / DPO", "type": "auxiliary_output", "pin": 26, "color": "B/Y" }
+                { "name": "DBW 1 / DPO", "type": "dbw", "pin": 25, "color": "B/Y" },
+                { "name": "DBW 2 / DPO", "type": "dbw", "pin": 26, "color": "B/Y" }
             ]
         ],
         "image": {
