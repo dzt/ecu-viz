@@ -1,5 +1,5 @@
 {
-    "ecu": "monsoon_g4x",
+    "ecu": "elite_1500",
     "use_chassis_tacho": true,
     "chassis": "is300_2002",
     "engine": "13b",
