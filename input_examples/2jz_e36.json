@@ -1,0 +1,18 @@
+{
+    "ecu": "storm_g4x",
+    "use_chassis_tacho": true,
+    "chassis": "obd2_e36",
+    "engine": "2jz_ge_vvti",
+    "tps": "4693236940939",
+    "injectors": "282189-1",
+    "ignition": "15439568",
+    "alt": null,
+    "clt": "12162193",
+    "iat": "15449027",
+    "trigger": "6187-4441",
+    "flex": null,
+    "can_devices": ["DTM4-N-SF"],
+    "auxiliary_options": ["boost", "fan-2way"],
+    "analog_inputs": ["WP-3S-1", "analog-wideband"],
+    "inserts": []
+}

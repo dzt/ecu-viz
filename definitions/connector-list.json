@@ -302,6 +302,44 @@
                 "src": "/chassis/is300_2002+/ea1.png",
                 "height": 120
             }
+        },
+        {
+            "name": "e36_obd2_x20",
+            "allow_multiple": false,
+            "part_number": "e36_obd2_x20",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "(not used / empty)", "type": null, "pin": 1 },
+                { "name": "(not used / empty)", "type": null, "pin": 2 },
+                { "name": "Exhaust Flap Control Valve", "type": null, "pin": 3 },
+                { "name": "A/C Compressor Control", "type": null, "pin": 4 },
+                { "name": "A/C Pressure Switch", "type": null, "pin": 5 },
+                { "name": "A/C ON Input Signal", "type": null, "pin": 6 },
+                { "name": "EWS II Immobilization", "type": null, "pin": 7 },
+                { "name": "12V+ Switched from ECU", "type": null, "pin": 8 },
+                { "name": "Vehicle Speed Signal Input", "type": null, "pin": 9 },
+                { "name": "Reverse Light Signal", "type": null, "pin": 10 },
+                { "name": "Coolant Temperature (to Cluster)", "type": "clt_cluster", "pin": 11 },
+                { "name": "Coolant Temperature (to Cluster)", "type": "clt_cluster", "pin": 12 },
+                { "name": "Fuel Pump Relay 12V+", "type": "fuel_pump", "pin": 13 },
+                { "name": "(not used / empty)", "type": null, "pin": 14 },
+                { "name": "Starter Relay Unloader", "type": null, "pin": 15 },
+                { "name": "Diagnostic RXD", "type": null, "pin": 16 },
+                { "name": "Diagnostic TXD", "type": null, "pin": 17 },
+                { "name": "Start / Ignition", "type": "cranking_12v", "pin": 18 },
+                { "name": "Data Link (SI Reset)", "type": null, "pin": 19 },
+                { "name": "Engine Speed Signal (Tachometer)", "type": "tacho", "pin": 20 },
+                { "name": "Switched 12V+ / ECU Power", "type": "switched_12v", "pin": 21 },
+                { "name": "Switched 12V+ Data Link Conn.", "type": null, "pin": 22 },
+                { "name": "Oil Preassure Switch (to cluster)", "type": null, "pin": 23 },
+                { "name": "Fuel Consumption", "type": null, "pin": 24 },
+                { "name": "Alterantor Charge Signal 12V+", "type": null, "pin": 25 }
+            ],
+            "image": {
+                "src": "/chassis/e36/x20.png",
+                "height": 120
+            }
         }
     ],
     "analog_inputs": [

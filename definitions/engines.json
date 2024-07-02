@@ -22,5 +22,11 @@
         "id": "1jz_gte_vvti",
         "type": "piston",
         "cylinders": 6
+    },
+    {
+        "name": "Toyota 2JZ-GE VVT-i",
+        "id": "2jz_ge_vvti",
+        "type": "piston",
+        "cylinders": 6
     }
 ]

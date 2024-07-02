@@ -1,5 +1,6 @@
-const s4_example = require('./input_examples/is300_1jz.json');
+const input_file = require('./input_examples/2jz_e36.json');
 const lib = require('./lib/index.js');
+const utils = require('./lib/utils.js');
 const fs = require('fs');
 
 const YAML = require('json-to-pretty-yaml');
@@ -12,8 +13,13 @@ const generateDiagram = (input) => {
 }
 
 // Used for testing
-let output = generateDiagram(s4_example);
+let output = generateDiagram(input_file);
 let data = YAML.stringify(output)
+
+// ECU Summary Print
+console.log('ECU Summary:');
+let summary = utils.getECUSummary(input_file.ecu, false);
+console.dir(summary);
 
 fs.writeFile('out/output.yaml', data, function(error) {
     if(error) {

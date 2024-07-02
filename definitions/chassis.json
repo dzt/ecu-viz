@@ -26,6 +26,7 @@
     {
         "name": "BMW 3-Series (1995-1999 / OBD2)",
         "id": "obd2_e36",
+        "chassis_connectors": ["e36_obd2_x20"],
         "insert_options": []
     }
 ]

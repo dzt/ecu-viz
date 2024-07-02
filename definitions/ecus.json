@@ -103,7 +103,7 @@
             { "name": "Injector 1", "type": "injector", "pin": "A4", "color": "Br/B" },
             { "name": "+14V", "type": "power", "pin": "A5", "color": "R" },
             { "name": "+8V", "type": "8v_ref", "pin": "A6", "color": "R/W" },
-            { "name": "Shield/Ground", "type": "trigger_ground", "pin": "A7", "color": "G" },
+            { "name": "Shield/Ground", "type": "shield_ground", "pin": "A7", "color": "G" },
             { "name": "Trig 1", "type": "home", "pin": "A8", "color": "B" },
             { "name": "Trig 2", "type": "trigger", "pin": "A9", "color": "R" },
             { "name": "Ignition 4", "type": "ignition", "pin": "A10", "color": "L/O" },
