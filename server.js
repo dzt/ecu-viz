@@ -19,6 +19,7 @@ const chassis = require('./definitions/chassis.json');
 const ecus = require('./definitions/ecus.json');
 const engines = require('./definitions/engines.json');
 const inserts = require('./definitions/inserts.json');
+const connectors = require('./definitions/connector-list.json');
 
 temp.track();
 app.use(bodyParser.json())
@@ -30,7 +31,7 @@ app.get('/', (_req, res) => {
 });
 
 app.get('/definitions', (req, res) => {
-    return res.json({chassis, ecus, engines, inserts});
+    return res.json({chassis, ecus, engines, inserts, connectors});
 });
 
 app.post('/fetch', (req, res) => {
@@ -57,7 +58,7 @@ app.post('/fetch', (req, res) => {
 });
 
 app.get('/viz', (req, res) => {
-    return res.render('viz');
+    return res.render('viz', { chassis, ecus, engines, inserts, connectors });
 });
 
 const generateDiagram = (input) => {
