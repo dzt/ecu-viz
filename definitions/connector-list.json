@@ -363,6 +363,7 @@
             "type": "tps",
             "part_number": "4693236940939",
             "connector_type": "Female",
+            "restrictions": ["13b"],
             "sources": [
                 "https://jdlmfg.com/products/tps-bracket-for-fc-throttle-body"
             ],
@@ -382,6 +383,7 @@
             "type": "tps",
             "part_number": "6195-0030",
             "connector_type": "Female",
+            "restrictions": ["13b"],
             "sources": [
                 "https://www.corsa-technic.com/item.php?item_id=444"
             ],
@@ -401,6 +403,7 @@
             "type": "tps",
             "part_number": "WS_WRS-KA24-TPS",
             "connector_type": "Female",
+            "restrictions": ["ka24de"],
             "sources": [
                 "https://www.wiringspecialties.com/s13-ka24de-tps-connector/"
             ],
@@ -592,6 +595,7 @@
             "name": "S5/S6 Idle Valve",
             "allow_multiple": false,
             "part_number": "7223-1324-30",
+            "restrictions": ["13b"],
             "sources": [
                 "https://www.corsa-technic.com/item.php?item_id=815"
             ],
@@ -608,6 +612,7 @@
             "name": "Nissan KA24DE Idle Control Valve",
             "allow_multiple": false,
             "part_number": "WS_KA24-IACON-LT",
+            "restrictions": ["ka24de"],
             "sources": [
                 "https://www.wiringspecialties.com/s14kaidairco.html"
             ],
@@ -646,42 +651,6 @@
             "image": {
                 "src": "/generic/2pin.png",
                 "height": 50
-            }
-        }
-    ],
-    "alternator_options": [
-        {
-            "name": "Series 4 RX-7 Alternator",
-            "allow_multiple": false,
-            "part_number": "6111-2568",
-            "connector_type": "Female",
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=358"
-            ],
-            "pinout": [
-                { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
-                { "name": "L Terminal", "type": "l_terminal", "pin": 2 }
-            ],
-            "image": {
-                "src": "/alternators/s4_rx7_alt.png",
-                "height": 120
-            }
-        },
-        {
-            "name": "Series 5/6 RX-7 Alternator",
-            "allow_multiple": false,
-            "part_number": "7223-6224-40",
-            "connector_type": "Female",
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=1125"
-            ],
-            "pinout": [
-                { "name": "Constant 12V+", "type": "constant_12v", "pin": 1 },
-                { "name": "L Terminal", "type": "l_terminal", "pin": 2 }
-            ],
-            "image": {
-                "src": "/alternators/s5_rx7_alt.png",
-                "height": 120
             }
         }
     ],
@@ -758,6 +727,7 @@
             "name": "Mazda Series 4/5 CAS",
             "part_number": "6187-4441",
             "connector_type": "Female",
+            "restrictions": ["13b"],
             "sources": [
                 "https://www.corsa-technic.com/item.php?item_id=341"
             ],
@@ -776,6 +746,7 @@
             "name": "Full Function Engineering 13B Trigger Kit",
             "part_number": "FFE-TRIGGER-KIT",
             "connector_type": "Female",
+            "restrictions": ["13b"],
             "sources": [
                 "https://fullfunctioneng.com/"
             ],
@@ -793,6 +764,7 @@
             "name": "Nissan KA24DE CAS",
             "part_number": "WS_KA-CAS-CON",
             "connector_type": "Female",
+            "restrictions": ["ka24de"],
             "sources": [
                 "https://www.wiringspecialties.com/kacascocrans.html"
             ],
