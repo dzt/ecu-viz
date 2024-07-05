@@ -290,7 +290,7 @@
         }
     },
     {
-        "name": "Haltech Elite 2500",
+        "name": "Haltech Elite 2000/2500",
         "id": "elite_2500",
         "dbw_support": true,
         "internal_map_sensor": true,

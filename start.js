@@ -1,4 +1,4 @@
-const input_file = require('./input_examples/2jz_e36.json');
+const input_file = require('./input_examples/http.json');
 const lib = require('./lib/index.js');
 const utils = require('./lib/utils.js');
 const fs = require('fs');

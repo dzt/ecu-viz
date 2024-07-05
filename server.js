@@ -40,17 +40,25 @@ app.post('/fetch', (req, res) => {
     let output = generateDiagram(input);
     let output_yaml = YAML.stringify(output);
 
+    console.dir(input)
+
     temp.cleanupSync();
     temp.mkdir({dir: path.join(__dirname, 'tmp')}, (err, dirPath) => {
-        if (err) return res.end('Error occured spwaning temp directory')
+        if (err) return res.end('Error occured spwaning temp directory');
         const yamlFilePath = path.join(dirPath, 'output.yaml');
         fs.writeFile(yamlFilePath, output_yaml, (err) => {
-            if (err) res.end('Write error has occured');
+            if (err) return res.end('Write error has occured');
             process.chdir(dirPath);
             exec(`wireviz ${yamlFilePath}`, (err, stdout) => {
-                if (err) res.end('WireViz Error');
+                
+                if (err) console.error(err)
+                if (err) return res.end('WireViz Error');
                 const pngFilePath = yamlFilePath.split('.yaml')[0] + '.png';
-                return res.sendFile(pngFilePath);
+                const buffer = fs.readFileSync(pngFilePath);
+                const base64String = Buffer.from(buffer).toString('base64');
+
+                return res.end(`data:image/png;base64,${base64String}`);
+                // return res.sendFile(pngFilePath);
             });
         });
     });

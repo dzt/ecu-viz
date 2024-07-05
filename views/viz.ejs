@@ -1,229 +1,244 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>ECUViz</title>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="/public/css//main.css" rel="stylesheet" />
-	</head>
-	<body>
-		<header class="p-3 text-bg-dark">
-			<div class="container">
-				<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ECUViz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/public/css//main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                     <img class="wkj-logo" src="/public/imgs/logo_transparent.png" /></a>
-					<ul style="margin-left: 40px;" class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-						<li><a href="#" class="nav-link px-2 text-white">Home</a></li>
-						<li><a href="#" class="nav-link px-2 text-white">Store</a></li>
-						<li><a href="#" class="nav-link px-2 text-secondary">ECUViz</a></li>
-					</ul>
-				</div>
-			</div>
-		</header>
-		<div class="container">
-			<main>
-				<div class="row align-items-md-stretch">
-					<div class="col-md-6">
-						<div class="p-5 text-bg-dark rounded-3">
-                            <img id="image" src="/public/imgs/preview-example.png" alt="Live Preview" class="img-thumbnail" />
-							<div id="lens"></div>
-						</div>
-					</div>
-					<div class="col-md-6" style="font-size: 14px;">
-						<div class="h-100 p-5 bg-light border rounded-3">
-							<p>Auxiliary Outputs: 2 | Analog Inputs: 2 | Digital Inputs: 4</p>
-                            <button type="button" class="btn btn-outline-primary">Update Preview</button>
-                            <button type="button" class="btn btn-success">Download as PDF</button>
-							<hr />
-							<p>Pick and choose between the available options, if you don't see an option you would like feel free to <a href="#">request</a>.</p>
-							<hr />
-							<form>
-								<nav class="navbar-container">
-									<div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                        <button class="nav-link active" id="nav-general-tab" data-bs-toggle="tab" data-bs-target="#nav-general" type="button" role="tab" aria-controls="nav-general" aria-selected="true">General</button>
-                                        <button class="nav-link" id="nav-basics-tab" data-bs-toggle="tab" data-bs-target="#nav-basics" type="button" role="tab" aria-controls="nav-basics" aria-selected="false">Basics</button>
-                                        <button class="nav-link" id="nav-io-tab" data-bs-toggle="tab" data-bs-target="#nav-io" type="button" role="tab" aria-controls="nav-io" aria-selected="false">Additional I/O</button>
+                <ul style="margin-left: 40px;"
+                    class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Store</a></li>
+                    <li><a href="#" class="nav-link px-2 text-secondary">ECUViz</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main>
+            <div class="row align-items-md-stretch">
+                <div class="col-md-6">
+                    <div class="p-5 text-bg-dark rounded-3">
+                        <img id="previewImage" src="/public/imgs/preview-example.png" alt="Live Preview"
+                            class="img-thumbnail" />
+                        <div id="lens"></div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="font-size: 14px;">
+                    <div class="h-100 p-5 bg-light border rounded-3">
+                        <p>Auxiliary Outputs: 2 | Analog Inputs: 2 | Digital Inputs: 4</p>
+                        <button type="button" id="updateBtn" class="btn btn-outline-primary">Update Preview</button>
+                        <button type="button" id="downloadBtn" class="btn btn-success">Download as PDF</button>
+                        <hr />
+                        <p>Pick and choose between the available options, if you don't see an option you would like feel
+                            free to <a href="#">request</a>.</p>
+                        <hr />
+                        <form>
+                            <nav class="navbar-container">
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="nav-general-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-general" type="button" role="tab"
+                                        aria-controls="nav-general" aria-selected="true">General</button>
+                                    <button class="nav-link" id="nav-basics-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-basics" type="button" role="tab" aria-controls="nav-basics"
+                                        aria-selected="false">Basics</button>
+                                    <button class="nav-link" id="nav-io-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-io" type="button" role="tab" aria-controls="nav-io"
+                                        aria-selected="false">Additional I/O</button>
+                                </div>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-general" role="tabpanel"
+                                    aria-labelledby="nav-general-tab">
+                                    <div class="mb-3">
+                                        <label for="vehicleChassis" class="form-label">Vehicle Chassis</label>
+                                        <select id="vehicleChassis" class="form-select" aria-label="Vehicle Chassis">
+                                            <% chassis.forEach((vehicle)=>{%>
+                                            <option value="<%=vehicle.id%>">
+                                                <%=vehicle.name%>
+                                            </option>
+                                            <%});%>
+                                        </select>
+                                        <div id="emailHelp" class="form-text">Ensure to select the correct generation if
+                                            aplicable.</div>
                                     </div>
-								</nav>
-								<div class="tab-content" id="nav-tabContent">
-									<div class="tab-pane fade show active" id="nav-general" role="tabpanel" aria-labelledby="nav-general-tab">
-										<div class="mb-3">
-                                            <label for="vehicleChassis" class="form-label">Vehicle Chassis</label>
-                                            <select class="form-select" aria-label="Vehicle Chassis">
-                                                <% chassis.forEach((vehicle)=>{%>
-                                                    <option value="<%=vehicle.id%>">
-                                                        <%=vehicle.name%>
+                                    <div class="mb-3">
+                                        <label for="chassisOptions" class="form-label">Chassis Options</label>
+                                        <div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" value="option1" />
+                                                <label class="form-check-label">Wipers</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" value="option2" />
+                                                <label class="form-check-label">Series 4 Alternator</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" value="option3">
+                                                <label class="form-check-label">Series 5 Alternator</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="use_factory_tacho" />
+                                        <label class="form-check-label" for="use_chassis_tacho">Use factory tachometer</label>
+                                    </div>
+                                    <hr />
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="ecu" class="form-label">ECU Model/Type</label>
+                                            <select id="ecu" class="form-select" aria-label="ECU Mode/Type">
+                                                <% ecus.forEach((ecu)=>{%>
+                                                    <option value="<%=ecu.id%>">
+                                                        <%=ecu.name%>
                                                     </option>
                                                 <%});%>
-											</select>
-											<div id="emailHelp" class="form-text">Ensure to select the correct generation if aplicable.</div>
-										</div>
-										<div class="mb-3">
-                                            <label for="chassisOptions" class="form-label">Chassis Options</label>
-											<div>
-												<div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" value="option1"/>
-                                                    <label class="form-check-label">Wipers</label>
-                                                </div>
-												<div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" value="option2"/>
-                                                    <label class="form-check-label">Series 4 Alternator</label>
-                                                </div>
-												<div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" value="option3">
-                                                    <label class="form-check-label">Series 5 Alternator</label>
-                                                </div>
-											</div>
-										</div>
-										<div class="mb-3 form-check">
-                                            <input type="checkbox" class="form-check-input" id="use_factory_tacho"/>
-                                            <label class="form-check-label" for="use_chassis_tacho">Use factory tachometer</label>
+                                            </select>
                                         </div>
-										<hr />
-										<div class="row">
-											<div class="col-md-6 mb-3">
-                                                <label for="ecu" class="form-label">ECU Model/Type</label>
-                                                <select class="form-select" aria-label="ECU Mode/Type">
-                                                    <% ecus.forEach((ecu)=>{%>
-                                                        <option value="<%=ecu.id%>">
-                                                            <%=ecu.name%>
-                                                        </option>
-                                                    <%});%>
-												</select>
-                                            </div>
-											<div class="col-md-6 mb-3">
-                                                <label for="engine" class="form-label">Engine</label>
-                                                <select class="form-select" aria-label="Engine">
-                                                    <% engines.forEach((engine)=>{%>
-                                                        <option value="<%=engine.id%>">
-                                                            <%=engine.name%>
-                                                        </option>
-                                                    <%});%>
-												</select>
-                                            </div>
-										</div>
-									</div>
-									<div class="tab-pane fade" id="nav-basics" role="tabpanel" aria-labelledby="nav-basics-tab">
-										<div class="row">
-											<div class="col-md-6 mb-3">
-                                                <label for="tps" class="form-label">Throttle Position Sensor</label>
-                                                <select class="form-select" aria-label="Throttle Position Sensor">
-													<% connectors.analog_inputs.forEach((conn)=>{%>
-                                                        <%if (conn.type == "tps") { %>
-                                                            <option value="<%=conn.id%>">
-                                                                <%=conn.name%>
-                                                            </option>
-                                                        <% } %>                                                            
-                                                    <%});%>
-												</select>
-                                            </div>
-											<div class="col-md-6 mb-3">
-                                                <label for="inj" class="form-label">Injectors</label>
-                                                <select class="form-select" aria-label="Injectors">
-                                                    <% connectors.injectors.forEach((conn)=>{%>
-                                                            <option value="<%=conn.id%>">
-                                                                <%=conn.name%>
-                                                            </option>                            
-                                                    <%});%>
-												</select>
-                                            </div>
-										</div>
-										<div class="row">
-											<div class="col-md-6 mb-3">
-                                                <label for="ign" class="form-label">Ignition Configuration</label>
-                                                <select class="form-select" aria-label="Ignition Configuration">
-                                                    <% connectors.ignition_coils.forEach((conn)=>{%>
-                                                        <option value="<%=conn.id%>">
-                                                            <%=conn.name%>
-                                                        </option>                            
-                                                    <%});%>
-												</select>
-                                            </div>
-											<div class="col-md-6 mb-3">
-                                                <label for="clt" class="form-label">Coolant Temperature Sensor</label>
-                                                <select class="form-select" aria-label="Coolant Temperature Sensor">
-                                                    <% connectors.clt_options.forEach((conn)=>{%>
-                                                        <option value="<%=conn.id%>">
-                                                            <%=conn.name%>
-                                                        </option>                            
-                                                    <%});%>
-												</select>
-                                            </div>
-										</div>
-										<div class="row">
-											<div class="col-md-6 mb-3">
-                                                <label for="iat" class="form-label">Intake Air Temperature Sensor</label>
-                                                <select class="form-select" aria-label="Intake Air Temperature Sensor">
-                                                    <% connectors.iat_options.forEach((conn)=>{%>
-                                                        <option value="<%=conn.id%>">
-                                                            <%=conn.name%>
-                                                        </option>                            
-                                                    <%});%>
-												</select>
-                                            </div>
-											<div class="col-md-6 mb-3">
-                                                <label for="trigger_sensor" class="form-label">Trigger Sensor</label>
-                                                <select class="form-select" aria-label="Trigger Setup">
-                                                    <% connectors.trigger_options.forEach((conn)=>{%>
-                                                        <option value="<%=conn.id%>">
-                                                            <%=conn.name%>
-                                                        </option>                            
-                                                    <%});%>
-												</select>
-                                            </div>
-										</div>
-									</div>
-									<div class="tab-pane fade" id="nav-io" role="tabpanel" aria-labelledby="nav-io-tab">
-										<div class="mb-3">
-                                            <label for="flex" class="form-label">Flex Fuel Sensor</label>
-                                            <select class="form-select" aria-label="Flex Fuel Sensor">
-												<option value="0">None</option>
-												<option value="1">Standard</option>
-											</select>
-                                        </div>
-										<div class="mb-3">
-                                            <label for="can" class="form-label">CAN Devices</label>
-                                            <select class="form-select" multiple aria-label="CAN Devices">
-												<% connectors.can_bus.forEach((conn)=>{%>
-                                                    <option value="<%=conn.id%>">
-                                                        <%=conn.name%>
-                                                    </option>                            
+                                        <div class="col-md-6 mb-3">
+                                            <label for="engine" class="form-label">Engine</label>
+                                            <select id="engine" class="form-select" aria-label="Engine">
+                                                <% engines.forEach((engine)=>{%>
+                                                    <option value="<%=engine.id%>">
+                                                        <%=engine.name%>
+                                                    </option>
                                                 <%});%>
-											</select>
+                                            </select>
                                         </div>
-										<div class="mb-3">
-                                            <label for="auxiliary_outputs" class="form-label">Auxiliary Options</label>
-                                            <select class="form-select" multiple aria-label="Auxiliary Options">
-												<% connectors.auxiliary_options.forEach((conn)=>{%>
-                                                    <option value="<%=conn.id%>">
-                                                        <%=conn.name%>
-                                                    </option>                            
-                                                <%});%>
-											</select>
-                                        </div>
-										<div class="mb-3">
-                                            <label for="analog_inputs" class="form-label">Analog Inputs</label>
-                                            <select class="form-select" multiple aria-label="Analog Inputs">
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-basics" role="tabpanel"
+                                    aria-labelledby="nav-basics-tab">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="tps" class="form-label">Throttle Position Sensor</label>
+                                            <select id="tps" class="form-select" aria-label="Throttle Position Sensor">
                                                 <% connectors.analog_inputs.forEach((conn)=>{%>
-                                                    <%if (conn.type != "tps") { %>
-                                                        <option value="<%=conn.id%>">
-                                                            <%=conn.name%>
-                                                        </option>
-                                                    <% } %>                                                            
+                                                <%if (conn.type == "tps") { %>
+                                                    <option value="<%=conn.part_number%>">
+                                                        <%=conn.name%>
+                                                    </option>
+                                                <% } %>
                                                 <%});%>
-											</select>
+                                            </select>
                                         </div>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</main>
-		</div>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="/public/js/validate.js"></script>
-        <script src="/public/js/scripts.js"></script>
-	</body>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="inj" class="form-label">Injectors</label>
+                                            <select id="inj" class="form-select" aria-label="Injectors">
+                                                <% connectors.injectors.forEach((conn)=>{%>
+                                                    <option value="<%=conn.part_number%>">
+                                                        <%=conn.name%>
+                                                    </option>
+                                                <%});%>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="ign" class="form-label">Ignition Configuration</label>
+                                            <select id="ign" class="form-select" aria-label="Ignition Configuration">
+                                                <% connectors.ignition_coils.forEach((conn)=>{%>
+                                                    <option value="<%=conn.part_number%>">
+                                                        <%=conn.name%>
+                                                    </option>
+                                                <%});%>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="clt" class="form-label">Coolant Temperature Sensor</label>
+                                            <select id="clt" class="form-select" aria-label="Coolant Temperature Sensor">
+                                                <% connectors.clt_options.forEach((conn)=>{%>
+                                                    <option value="<%=conn.part_number%>">
+                                                        <%=conn.name%>
+                                                    </option>
+                                                <%});%>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="iat" class="form-label">Intake Air Temperature Sensor</label>
+                                            <select id="iat" class="form-select" aria-label="Intake Air Temperature Sensor">
+                                                <% connectors.iat_options.forEach((conn)=>{%>
+                                                    <option value="<%=conn.part_number%>">
+                                                        <%=conn.name%>
+                                                    </option>
+                                                <%});%>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="trigger" class="form-label">Trigger Sensor</label>
+                                            <select id="trigger" class="form-select" aria-label="Trigger Setup">
+                                                <% connectors.trigger_options.forEach((conn)=>{%>
+                                                    <option value="<%=conn.part_number%>">
+                                                        <%=conn.name%>
+                                                    </option>
+                                                <%});%>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-io" role="tabpanel" aria-labelledby="nav-io-tab">
+                                    <div class="mb-3">
+                                        <label for="flex" class="form-label">Flex Fuel Sensor</label>
+                                        <select class="form-select" aria-label="Flex Fuel Sensor">
+                                            <option value="0">None</option>
+                                            <option value="1">Standard</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="can" class="form-label">CAN Devices</label>
+                                        <select class="form-select" multiple aria-label="CAN Devices">
+                                            <% connectors.can_bus.forEach((conn)=>{%>
+                                                <option value="<%=conn.id%>">
+                                                    <%=conn.name%>
+                                                </option>
+                                            <%});%>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="auxiliary_outputs" class="form-label">Auxiliary Options</label>
+                                        <select class="form-select" multiple aria-label="Auxiliary Options">
+                                            <% connectors.auxiliary_options.forEach((conn)=>{%>
+                                                <option value="<%=conn.id%>">
+                                                    <%=conn.name%>
+                                                </option>
+                                            <%});%>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="analog_inputs" class="form-label">Analog Inputs</label>
+                                        <select class="form-select" multiple aria-label="Analog Inputs">
+                                            <% connectors.analog_inputs.forEach((conn)=>{%>
+                                                <%if (conn.type != "tps") { %>
+                                                <option value="<%=conn.id%>">
+                                                    <%=conn.name%>
+                                                </option>
+                                                <% } %>
+                                            <%});%>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/public/js/validate.js"></script>
+
+</body>
+
 </html>
