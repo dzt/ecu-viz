@@ -12,15 +12,16 @@ const generateDiagram = (input) => {
     return { connectors: connectors.data, cables, connections };
 }
 
-// Used for testing
+/* Used for testing */
 let output = generateDiagram(input_file);
 let data = YAML.stringify(output)
 
-// ECU Summary Print
+/* ECU Summary Print */
 console.log('ECU Summary:');
 let summary = utils.getECUSummary(input_file.ecu, false);
 console.dir(summary);
 
+/* YAML Generation */
 fs.writeFile('out/output.yaml', data, function(error) {
     if(error) {
         console.log('[write auth]: ' + err);
@@ -29,6 +30,7 @@ fs.writeFile('out/output.yaml', data, function(error) {
     }
 });
 
+/* JSON Generation (for testing) */
 fs.writeFile('out/output.json', JSON.stringify(output, null, 4), function(error) {
     if(error) {
         console.log('[write auth]: ' + err);

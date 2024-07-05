@@ -22,7 +22,8 @@ const inserts = require('./definitions/inserts.json');
 
 temp.track();
 app.use(bodyParser.json())
-app.set('view engine', 'html');
+app.set('view engine', 'ejs');
+app.use('/public', express.static(__dirname + '/public'));
 
 app.get('/', (_req, res) => {
     return res.json({ message: 'ECUViz API' });
@@ -53,6 +54,10 @@ app.post('/fetch', (req, res) => {
         });
     });
 
+});
+
+app.get('/viz', (req, res) => {
+    return res.render('viz');
 });
 
 const generateDiagram = (input) => {
