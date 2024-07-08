@@ -1,11 +1,13 @@
-$(document).ready(function() {
-    let previewImage = $('#previewImage');  // Assuming previewImage is an ID
+$(document).ready(function () {
 
     /* Buttons */
     let updateBtn = $('#updateBtn');
     let downloadBtn = $('#downloadBtn');
 
-    downloadBtn.click(function() {
+    updateBtn.click(function () {
+
+        let previewImage = $('#previewImage');
+
         /* Form Fields */
         let chassis = $('#vehicleChassis').find('option:selected').val();
         let ecu = $('#ecu').find('option:selected').val();
@@ -16,7 +18,7 @@ $(document).ready(function() {
         let clt = $('#clt').find('option:selected').val();
         let iat = $('#iat').find('option:selected').val();
         let trigger = $('#trigger').find('option:selected').val();
-        
+
         // Assuming these values should be fetched or initialized
         let options = $('#chassisOptions').find('option:selected').val() || [];
         let flex_fuel = null;
@@ -51,11 +53,24 @@ $(document).ready(function() {
             contentType: "application/json",
             data: JSON.stringify(req_params),
             success: function (data, textStatus, jqXHR) {
-                console.log({ data, textStatus, jqXHR });
-                previewImage.attr('src', data);
+                console.log({
+                    data,
+                    textStatus,
+                    jqXHR
+                });
+                // Ensure data is in correct format
+                if (data.startsWith("data:image/png;base64,")) {
+                    $('#previewImage').attr('src', data);
+                } else {
+                    console.error("Invalid image data");
+                }
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                console.error({ jqXHR, textStatus, errorThrown });
+                console.error({
+                    jqXHR,
+                    textStatus,
+                    errorThrown
+                });
             }
         });
     });

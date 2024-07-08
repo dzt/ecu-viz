@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -28,9 +29,19 @@
             <div class="row align-items-md-stretch">
                 <div class="col-md-6">
                     <div class="p-5 text-bg-dark rounded-3">
-                        <img id="previewImage" src="/public/imgs/preview-example.png" alt="Live Preview"
-                            class="img-thumbnail" />
-                        <div id="lens"></div>
+
+                        <!-- Image Version -->
+                        <div style="height: 600px;overflow: scroll;-ms-overflow-style: none;scrollbar-width: none;">
+                            <img id="previewImage" style="width: 1500px;height: auto;" src="/public/imgs/preview-example.png" alt="Live Preview">
+                        </div>
+
+                        <!-- iFrame Version -->
+                        <!-- <iframe style="min-height: 600px; min-width: 100%; overflow: hidden scroll;"
+                            src="/public/imgs/preview-example.png" name="previewImage" id="previewImage">
+                            <p>iframes are not supported by your browser.</p>
+                        </iframe>
+                        <div id="lens"></div> -->
+
                     </div>
                 </div>
                 <div class="col-md-6" style="font-size: 14px;">
@@ -90,7 +101,8 @@
                                     </div>
                                     <div class="mb-3 form-check">
                                         <input type="checkbox" class="form-check-input" id="use_factory_tacho" />
-                                        <label class="form-check-label" for="use_chassis_tacho">Use factory tachometer</label>
+                                        <label class="form-check-label" for="use_chassis_tacho">Use factory
+                                            tachometer</label>
                                     </div>
                                     <hr />
                                     <div class="row">
@@ -98,9 +110,9 @@
                                             <label for="ecu" class="form-label">ECU Model/Type</label>
                                             <select id="ecu" class="form-select" aria-label="ECU Mode/Type">
                                                 <% ecus.forEach((ecu)=>{%>
-                                                    <option value="<%=ecu.id%>">
-                                                        <%=ecu.name%>
-                                                    </option>
+                                                <option value="<%=ecu.id%>">
+                                                    <%=ecu.name%>
+                                                </option>
                                                 <%});%>
                                             </select>
                                         </div>
@@ -108,9 +120,9 @@
                                             <label for="engine" class="form-label">Engine</label>
                                             <select id="engine" class="form-select" aria-label="Engine">
                                                 <% engines.forEach((engine)=>{%>
-                                                    <option value="<%=engine.id%>">
-                                                        <%=engine.name%>
-                                                    </option>
+                                                <option value="<%=engine.id%>">
+                                                    <%=engine.name%>
+                                                </option>
                                                 <%});%>
                                             </select>
                                         </div>
@@ -124,9 +136,9 @@
                                             <select id="tps" class="form-select" aria-label="Throttle Position Sensor">
                                                 <% connectors.analog_inputs.forEach((conn)=>{%>
                                                 <%if (conn.type == "tps") { %>
-                                                    <option value="<%=conn.part_number%>">
-                                                        <%=conn.name%>
-                                                    </option>
+                                                <option value="<%=conn.part_number%>">
+                                                    <%=conn.name%>
+                                                </option>
                                                 <% } %>
                                                 <%});%>
                                             </select>
@@ -135,9 +147,9 @@
                                             <label for="inj" class="form-label">Injectors</label>
                                             <select id="inj" class="form-select" aria-label="Injectors">
                                                 <% connectors.injectors.forEach((conn)=>{%>
-                                                    <option value="<%=conn.part_number%>">
-                                                        <%=conn.name%>
-                                                    </option>
+                                                <option value="<%=conn.part_number%>">
+                                                    <%=conn.name%>
+                                                </option>
                                                 <%});%>
                                             </select>
                                         </div>
@@ -147,19 +159,20 @@
                                             <label for="ign" class="form-label">Ignition Configuration</label>
                                             <select id="ign" class="form-select" aria-label="Ignition Configuration">
                                                 <% connectors.ignition_coils.forEach((conn)=>{%>
-                                                    <option value="<%=conn.part_number%>">
-                                                        <%=conn.name%>
-                                                    </option>
+                                                <option value="<%=conn.part_number%>">
+                                                    <%=conn.name%>
+                                                </option>
                                                 <%});%>
                                             </select>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label for="clt" class="form-label">Coolant Temperature Sensor</label>
-                                            <select id="clt" class="form-select" aria-label="Coolant Temperature Sensor">
+                                            <select id="clt" class="form-select"
+                                                aria-label="Coolant Temperature Sensor">
                                                 <% connectors.clt_options.forEach((conn)=>{%>
-                                                    <option value="<%=conn.part_number%>">
-                                                        <%=conn.name%>
-                                                    </option>
+                                                <option value="<%=conn.part_number%>">
+                                                    <%=conn.name%>
+                                                </option>
                                                 <%});%>
                                             </select>
                                         </div>
@@ -167,11 +180,12 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label for="iat" class="form-label">Intake Air Temperature Sensor</label>
-                                            <select id="iat" class="form-select" aria-label="Intake Air Temperature Sensor">
+                                            <select id="iat" class="form-select"
+                                                aria-label="Intake Air Temperature Sensor">
                                                 <% connectors.iat_options.forEach((conn)=>{%>
-                                                    <option value="<%=conn.part_number%>">
-                                                        <%=conn.name%>
-                                                    </option>
+                                                <option value="<%=conn.part_number%>">
+                                                    <%=conn.name%>
+                                                </option>
                                                 <%});%>
                                             </select>
                                         </div>
@@ -179,9 +193,9 @@
                                             <label for="trigger" class="form-label">Trigger Sensor</label>
                                             <select id="trigger" class="form-select" aria-label="Trigger Setup">
                                                 <% connectors.trigger_options.forEach((conn)=>{%>
-                                                    <option value="<%=conn.part_number%>">
-                                                        <%=conn.name%>
-                                                    </option>
+                                                <option value="<%=conn.part_number%>">
+                                                    <%=conn.name%>
+                                                </option>
                                                 <%});%>
                                             </select>
                                         </div>
@@ -199,9 +213,9 @@
                                         <label for="can" class="form-label">CAN Devices</label>
                                         <select class="form-select" multiple aria-label="CAN Devices">
                                             <% connectors.can_bus.forEach((conn)=>{%>
-                                                <option value="<%=conn.id%>">
-                                                    <%=conn.name%>
-                                                </option>
+                                            <option value="<%=conn.id%>">
+                                                <%=conn.name%>
+                                            </option>
                                             <%});%>
                                         </select>
                                     </div>
@@ -209,9 +223,9 @@
                                         <label for="auxiliary_outputs" class="form-label">Auxiliary Options</label>
                                         <select class="form-select" multiple aria-label="Auxiliary Options">
                                             <% connectors.auxiliary_options.forEach((conn)=>{%>
-                                                <option value="<%=conn.id%>">
-                                                    <%=conn.name%>
-                                                </option>
+                                            <option value="<%=conn.id%>">
+                                                <%=conn.name%>
+                                            </option>
                                             <%});%>
                                         </select>
                                     </div>
@@ -219,11 +233,11 @@
                                         <label for="analog_inputs" class="form-label">Analog Inputs</label>
                                         <select class="form-select" multiple aria-label="Analog Inputs">
                                             <% connectors.analog_inputs.forEach((conn)=>{%>
-                                                <%if (conn.type != "tps") { %>
-                                                <option value="<%=conn.id%>">
-                                                    <%=conn.name%>
-                                                </option>
-                                                <% } %>
+                                            <%if (conn.type != "tps") { %>
+                                            <option value="<%=conn.id%>">
+                                                <%=conn.name%>
+                                            </option>
+                                            <% } %>
                                             <%});%>
                                         </select>
                                     </div>
