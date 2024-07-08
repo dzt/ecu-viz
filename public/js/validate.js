@@ -5,9 +5,34 @@ $(document).ready(function () {
     let downloadBtn = $('#downloadBtn');
 
     updateBtn.click(function () {
+        updateBtn.prop("disabled", true);
+        $('#previewContainer').hide();
+        $('#spinner').show();
+        let req_params = getUserInput();
+        fetch(req_params, function(err, image) {
+            if (!err) $('#previewImage').attr('src', image);
+            updateBtn.prop("disabled", false);
+            $('#spinner').hide();
+            $('#previewContainer').show();
+        });
 
-        let previewImage = $('#previewImage');
+    });
 
+    downloadBtn.click(function () {
+        updateBtn.click();
+        downloadBtn.prop("disabled", true);
+        fetch(getUserInput(), function(err, image) {
+            if (!err) {
+                let a = document.createElement("a");
+                a.href = image;
+                a.download = `ecu-viz-download.png`;
+                a.click();     
+            }
+            downloadBtn.prop("disabled", false);
+        });
+    });
+
+    let getUserInput = function() {
         /* Form Fields */
         let chassis = $('#vehicleChassis').find('option:selected').val();
         let ecu = $('#ecu').find('option:selected').val();
@@ -47,31 +72,28 @@ $(document).ready(function () {
 
         console.log(JSON.stringify(req_params));
 
+        return req_params;
+    }
+
+    let fetch = function(params, callback) {
         $.ajax({
             url: "/fetch",
             method: "POST",
             contentType: "application/json",
-            data: JSON.stringify(req_params),
+            data: JSON.stringify(params),
             success: function (data, textStatus, jqXHR) {
-                console.log({
-                    data,
-                    textStatus,
-                    jqXHR
-                });
+                console.log({ data, textStatus, jqXHR });
                 // Ensure data is in correct format
                 if (data.startsWith("data:image/png;base64,")) {
-                    $('#previewImage').attr('src', data);
+                    return callback(null, data);
                 } else {
-                    console.error("Invalid image data");
+                    return callback('Invalid Response', null);
                 }
             },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.error({
-                    jqXHR,
-                    textStatus,
-                    errorThrown
-                });
+            error: function (_jqXHR, _textStatus, errorThrown) {
+                return callback(errorThrown, null);
             }
         });
-    });
+    }
+
 });

@@ -28,19 +28,13 @@
         <main>
             <div class="row align-items-md-stretch">
                 <div class="col-md-6">
-                    <div class="p-5 text-bg-dark rounded-3">
+                    <div class="p-5 text-bg-dark rounded-3" style="text-align: center;height: 100%;">
 
-                        <!-- Image Version -->
-                        <div style="height: 600px;overflow: scroll;-ms-overflow-style: none;scrollbar-width: none;">
+                        <div id="spinner" class="spinner-border text-light" style="margin-top: 40%; display: none;" role="status"></div>
+
+                        <div id="previewContainer" style="height: 600px;overflow: scroll;-ms-overflow-style: none;scrollbar-width: none;">
                             <img id="previewImage" style="width: 1500px;height: auto;" src="/public/imgs/preview-example.png" alt="Live Preview">
                         </div>
-
-                        <!-- iFrame Version -->
-                        <!-- <iframe style="min-height: 600px; min-width: 100%; overflow: hidden scroll;"
-                            src="/public/imgs/preview-example.png" name="previewImage" id="previewImage">
-                            <p>iframes are not supported by your browser.</p>
-                        </iframe>
-                        <div id="lens"></div> -->
 
                     </div>
                 </div>
