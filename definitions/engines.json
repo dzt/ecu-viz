@@ -13,7 +13,7 @@
     },
     {
         "name": "Nissan SR20DET (S13)",
-        "id": "sr20det-s13",
+        "id": "sr20det",
         "type": "piston",
         "cylinders": 4
     },
@@ -26,6 +26,18 @@
     {
         "name": "Toyota 2JZ-GE VVT-i",
         "id": "2jz_ge_vvti",
+        "type": "piston",
+        "cylinders": 6
+    },
+    {
+        "name": "Toyota 2JZ-GE VVT-i",
+        "id": "2jz_ge_vvti",
+        "type": "piston",
+        "cylinders": 6
+    },
+    {
+        "name": "Nissan RB25DET",
+        "id": "rb25det",
         "type": "piston",
         "cylinders": 6
     }

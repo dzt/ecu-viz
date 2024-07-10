@@ -778,6 +778,25 @@
                 "src": "/trigger_sensors/ka24de_cas.png",
                 "height": 200
             }
+        },
+        {
+            "name": "Nissan SR20DET CAS (S13/S14/S15)",
+            "part_number": "WS_SR20-CAM-CON",
+            "connector_type": "Female",
+            "restrictions": ["sr20det"],
+            "sources": [
+                "https://www.wiringspecialties.com/srcamposeco.html"
+            ],
+            "pinout": [
+                { "name": "Signal Ground", "type": "home_ground", "pin": 1 },
+                { "name": "Switched 12v+", "type": "switched_12v", "pin": 2 },
+                { "name": "360x", "type": "home", "pin": 3 },
+                { "name": "4x", "type": "trigger", "pin": 4 }
+            ],
+            "image": {
+                "src": "/trigger_sensors/ka24de_cas.png",
+                "height": 200
+            }
         }
     ],
     "flex_options": [
