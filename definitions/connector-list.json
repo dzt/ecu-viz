@@ -732,9 +732,9 @@
                 "https://www.corsa-technic.com/item.php?item_id=341"
             ],
             "pinout": [
-                { "name": "G+", "type": "trigger", "pin": 1 },
+                { "name": "G+", "type": "home", "pin": 1 },
                 { "name": "G-", "type": "home_ground", "pin": 2 },
-                { "name": "Ne+", "type": "home", "pin": 3 },
+                { "name": "Ne+", "type": "trigger", "pin": 3 },
                 { "name": "Ne-", "type": "trigger_ground", "pin": 4 }
             ],
             "image": {
@@ -761,26 +761,7 @@
             }
         },
         {
-            "name": "Nissan KA24DE CAS",
-            "part_number": "WS_KA-CAS-CON",
-            "connector_type": "Female",
-            "restrictions": ["ka24de"],
-            "sources": [
-                "https://www.wiringspecialties.com/kacascocrans.html"
-            ],
-            "pinout": [
-                { "name": "Signal Ground", "type": "home_ground", "pin": 1 },
-                { "name": "Switched 12v+", "type": "switched_12v", "pin": 2 },
-                { "name": "360x", "type": "home", "pin": 3 },
-                { "name": "4x", "type": "trigger", "pin": 4 }
-            ],
-            "image": {
-                "src": "/trigger_sensors/ka24de_cas.png",
-                "height": 200
-            }
-        },
-        {
-            "name": "Nissan SR20DET CAS (S13/S14/S15)",
+            "name": "Nissan ECCS (SR/KA/RB)",
             "part_number": "WS_SR20-CAM-CON",
             "connector_type": "Female",
             "restrictions": ["sr20det"],
@@ -788,13 +769,32 @@
                 "https://www.wiringspecialties.com/srcamposeco.html"
             ],
             "pinout": [
-                { "name": "Signal Ground", "type": "home_ground", "pin": 1 },
-                { "name": "Switched 12v+", "type": "switched_12v", "pin": 2 },
-                { "name": "360x", "type": "home", "pin": 3 },
-                { "name": "4x", "type": "trigger", "pin": 4 }
+                { "name": "4x", "type": "home", "pin": 1 },
+                { "name": "360x", "type": "trigger", "pin": 2 },
+                { "name": "Switched 12v+", "type": "switched_12v", "pin": 3 },
+                { "name": "Signal Ground", "type": "home_ground", "pin": 4 }
             ],
             "image": {
-                "src": "/trigger_sensors/ka24de_cas.png",
+                "src": "/trigger_sensors/eccs.png",
+                "height": 200
+            }
+        },
+        {
+            "name": "Nissan ECCS (SR/KA/RB) - Haltech Specific",
+            "part_number": "WS_SR20-CAM-CON",
+            "connector_type": "Female",
+            "restrictions": ["sr20det"],
+            "sources": [
+                "https://www.wiringspecialties.com/srcamposeco.html"
+            ],
+            "pinout": [
+                { "name": "4x", "type": "trigger", "pin": 1 },
+                { "name": "360x", "type": "home", "pin": 2 },
+                { "name": "Switched 12v+", "type": "switched_12v", "pin": 3 },
+                { "name": "Signal Ground", "type": "home_ground", "pin": 4 }
+            ],
+            "image": {
+                "src": "/trigger_sensors/eccs.png",
                 "height": 200
             }
         }
