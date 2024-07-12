@@ -24,7 +24,7 @@ const connectors = require('./definitions/connector-list.json');
 temp.track();
 app.use(bodyParser.json())
 app.set('view engine', 'ejs');
-app.use('/public', express.static(__dirname + '/public'));
+app.use('/public', express.static(__dirname + '/views/public'));
 
 app.get('/', (_req, res) => {
     return res.json({ message: 'ECUViz API' });
