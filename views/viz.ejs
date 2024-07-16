@@ -42,7 +42,7 @@
                     <div class="h-100 p-5 bg-light border rounded-3">
                         <p>Auxiliary Outputs: 2 | Analog Inputs: 2 | Digital Inputs: 4</p>
                         <button type="button" id="updateBtn" class="btn btn-outline-primary">Update Preview</button>
-                        <button type="button" id="downloadBtn" class="btn btn-success">Download as PDF</button>
+                        <a type="button" download="ecu-viz.png" href="#" id="downloadBtn" class="btn btn-success disabled">Download as PDF</a>
                         <hr />
                         <p>Pick and choose between the available options, if you don't see an option you would like feel
                             free to <a href="#">request</a>.</p>
@@ -205,7 +205,9 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="can" class="form-label">CAN Devices</label>
-                                        <select class="form-select" multiple aria-label="CAN Devices">
+                                        <span class="badge bg-dark">Add</span>
+                                        <select class="form-select" aria-label="CAN Devices">
+                                            <option value="null">None</option>
                                             <% connectors.can_bus.forEach((conn)=>{%>
                                             <option value="<%=conn.id%>">
                                                 <%=conn.name%>
@@ -215,7 +217,8 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="auxiliary_outputs" class="form-label">Auxiliary Options</label>
-                                        <select class="form-select" multiple aria-label="Auxiliary Options">
+                                        <span class="badge bg-dark">Add</span>
+                                        <select class="form-select" aria-label="Auxiliary Options">
                                             <% connectors.auxiliary_options.forEach((conn)=>{%>
                                             <option value="<%=conn.id%>">
                                                 <%=conn.name%>
@@ -225,7 +228,8 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="analog_inputs" class="form-label">Analog Inputs</label>
-                                        <select class="form-select" multiple aria-label="Analog Inputs">
+                                        <span class="badge bg-dark">Add</span>
+                                        <select class="form-select" aria-label="Analog Inputs">
                                             <% connectors.analog_inputs.forEach((conn)=>{%>
                                             <%if (conn.type != "tps") { %>
                                             <option value="<%=conn.id%>">

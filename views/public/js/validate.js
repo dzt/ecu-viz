@@ -10,7 +10,11 @@ $(document).ready(function () {
         $('#spinner').show();
         let req_params = getUserInput();
         fetch(req_params, function(err, image) {
-            if (!err) $('#previewImage').attr('src', image);
+            if (!err) {
+                $('#downloadBtn').attr('href', image);
+                $("#downloadBtn").removeClass('disabled');
+                $('#previewImage').attr('src', image);
+            }
             updateBtn.prop("disabled", false);
             $('#spinner').hide();
             $('#previewContainer').show();
@@ -18,19 +22,19 @@ $(document).ready(function () {
 
     });
 
-    downloadBtn.click(function () {
-        updateBtn.click();
-        downloadBtn.prop("disabled", true);
-        fetch(getUserInput(), function(err, image) {
-            if (!err) {
-                let a = document.createElement("a");
-                a.href = image;
-                a.download = `ecu-viz-download.png`;
-                a.click();     
-            }
-            downloadBtn.prop("disabled", false);
-        });
-    });
+    // downloadBtn.click(function () {
+    //     updateBtn.click();
+    //     downloadBtn.prop("disabled", true);
+    //     fetch(getUserInput(), function(err, image) {
+    //         if (!err) {
+    //             let a = document.createElement("a");
+    //             a.href = image;
+    //             a.download = `ecu-viz-download.png`;
+    //             a.click();     
+    //         }
+    //         downloadBtn.prop("disabled", false);
+    //     });
+    // });
 
     let getUserInput = function() {
         /* Form Fields */

@@ -2,7 +2,7 @@
     {
         "name": "Mazda RX-7 (Series 4)",
         "id": "fc_s4",
-        "chassis_connectors": ["FEM_01", "FEM_02", "FC_WIPER", "FC_TACHO"],
+        "chassis_connectors": ["FEM_02", "FC_TACHO"],
         "insert_options": ["S4_RX7_Wipers", "S4_RX7_Alt", "S5_S6_RX7_Alt"]
     },
     {
