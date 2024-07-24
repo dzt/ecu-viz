@@ -1,8 +1,7 @@
 $(document).ready(function () {
 
     /* Buttons */
-    let updateBtn = $('#updateBtn');
-    let downloadBtn = $('#downloadBtn');
+    let updateBtn = $('#updateBtn');    
     let addIOButton = $('.add-select');
 
     // TODO
@@ -28,20 +27,6 @@ $(document).ready(function () {
 
     });
 
-    // downloadBtn.click(function () {
-    //     updateBtn.click();
-    //     downloadBtn.prop("disabled", true);
-    //     fetch(getUserInput(), function(err, image) {
-    //         if (!err) {
-    //             let a = document.createElement("a");
-    //             a.href = image;
-    //             a.download = `ecu-viz-download.png`;
-    //             a.click();     
-    //         }
-    //         downloadBtn.prop("disabled", false);
-    //     });
-    // });
-
     let getUserInput = function() {
         /* Form Fields */
         let chassis = $('#vehicleChassis').find('option:selected').val();
@@ -54,6 +39,8 @@ $(document).ready(function () {
         let iat = $('#iat').find('option:selected').val();
         let trigger = $('#trigger').find('option:selected').val();
 
+        let use_factory_tacho = $('#use_factory_tacho').is(":checked");
+
         // Assuming these values should be fetched or initialized
         let options = $('#chassisOptions').find('option:selected').val() || [];
         let flex_fuel = null;
@@ -63,7 +50,7 @@ $(document).ready(function () {
 
         let req_params = {
             "ecu": ecu,
-            "use_chassis_tacho": true,
+            "use_chassis_tacho": use_factory_tacho,
             "inserts": options,
             "chassis": chassis,
             "engine": engine,
