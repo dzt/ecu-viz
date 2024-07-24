@@ -478,7 +478,7 @@
     ],
     "injectors": [
         {
-            "name": "EV1",
+            "name": "EV1 Injector",
             "allow_multiple": false,
             "part_number": "282189-1",
             "sources": [
@@ -494,7 +494,7 @@
             }
         },
         {
-            "name": "EV6/EV14",
+            "name": "EV6/EV14 Injector",
             "allow_multiple": false,
             "part_number": "E-2157-000",
             "sources": [

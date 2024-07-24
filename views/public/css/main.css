@@ -34,3 +34,24 @@ main {
 .navbar-container {
     margin-bottom: 20px;
 }
+
+.add-select {
+    margin-left: 3px;
+}
+
+.add-select:hover {
+    cursor: pointer;
+}
+
+.form-select:focus, input:focus, textarea:focus{
+    box-shadow: none !important;
+    border-color: black !important;
+}
+
+table {
+    font-size: 13px;
+}
+
+th {
+    font-size: 12px;
+}

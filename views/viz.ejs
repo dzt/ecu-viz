@@ -30,10 +30,13 @@
                 <div class="col-md-6">
                     <div class="p-5 text-bg-dark rounded-3" style="text-align: center;height: 100%;">
 
-                        <div id="spinner" class="spinner-border text-light" style="margin-top: 40%; display: none;" role="status"></div>
+                        <div id="spinner" class="spinner-border text-light" style="margin-top: 40%; display: none;"
+                            role="status"></div>
 
-                        <div id="previewContainer" style="height: 600px;overflow: scroll;-ms-overflow-style: none;scrollbar-width: none;">
-                            <img id="previewImage" style="width: 1500px;height: auto;" src="/public/imgs/preview-example.png" alt="Live Preview">
+                        <div id="previewContainer"
+                            style="height: 600px;overflow: scroll;-ms-overflow-style: none;scrollbar-width: none;">
+                            <img id="previewImage" style="width: 1500px;height: auto;"
+                                src="/public/imgs/preview-example.png" alt="Live Preview">
                         </div>
 
                     </div>
@@ -42,7 +45,8 @@
                     <div class="h-100 p-5 bg-light border rounded-3">
                         <p>Auxiliary Outputs: 2 | Analog Inputs: 2 | Digital Inputs: 4</p>
                         <button type="button" id="updateBtn" class="btn btn-outline-primary">Update Preview</button>
-                        <a type="button" download="ecu-viz.png" href="#" id="downloadBtn" class="btn btn-success disabled">Download as PDF</a>
+                        <a type="button" download="ecu-viz.png" href="#" id="downloadBtn"
+                            class="btn btn-success disabled">Download as PDF</a>
                         <hr />
                         <p>Pick and choose between the available options, if you don't see an option you would like feel
                             free to <a href="#">request</a>.</p>
@@ -59,6 +63,10 @@
                                     <button class="nav-link" id="nav-io-tab" data-bs-toggle="tab"
                                         data-bs-target="#nav-io" type="button" role="tab" aria-controls="nav-io"
                                         aria-selected="false">Additional I/O</button>
+                                    <button class="nav-link" id="nav-cart-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-cart" type="button" role="tab" aria-controls="nav-cart"
+                                        aria-selected="false">Cart Summary</button>
+
                                 </div>
                             </nav>
                             <div class="tab-content" id="nav-tabContent">
@@ -205,7 +213,7 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="can" class="form-label">CAN Devices</label>
-                                        <span class="badge bg-dark">Add</span>
+                                        <span class="badge bg-dark add-select" viz-id="can">Add</span>
                                         <select class="form-select" aria-label="CAN Devices">
                                             <option value="null">None</option>
                                             <% connectors.can_bus.forEach((conn)=>{%>
@@ -217,7 +225,7 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="auxiliary_outputs" class="form-label">Auxiliary Options</label>
-                                        <span class="badge bg-dark">Add</span>
+                                        <span class="badge bg-dark add-select" viz-id="aux">Add</span>
                                         <select class="form-select" aria-label="Auxiliary Options">
                                             <% connectors.auxiliary_options.forEach((conn)=>{%>
                                             <option value="<%=conn.id%>">
@@ -228,7 +236,7 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="analog_inputs" class="form-label">Analog Inputs</label>
-                                        <span class="badge bg-dark">Add</span>
+                                        <span class="badge bg-dark add-select" viz-id="analog">Add</span>
                                         <select class="form-select" aria-label="Analog Inputs">
                                             <% connectors.analog_inputs.forEach((conn)=>{%>
                                             <%if (conn.type != "tps") { %>
@@ -239,6 +247,38 @@
                                             <%});%>
                                         </select>
                                     </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-cart" role="tabpanel" aria-labelledby="nav-cart-tab">
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Qty</th>
+                                            <th scope="col">Purchase Link</th>
+                                            <th scope="col">Cost (Est.)</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">IGN-1A Ignition Coil</th>
+                                            <td>4</td>
+                                            <td><a href="#">https://www.corsa-technic.com/item.php?item_id=573</a></td>
+                                            <td>$17.92</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">EV6/EV14 Injector</th>
+                                            <td>4</td>
+                                            <td><a href="#">https://www.corsa-technic.com/item.php?item_id=430</a></td>
+                                            <td>$6.94</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Mazda Series 4/5 CAS</th>
+                                            <td>1</td>
+                                            <td><a href="#">https://www.corsa-technic.com/item.php?item_id=341</a></td>
+                                            <td>$3.17</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
                                 </div>
                             </div>
                         </form>

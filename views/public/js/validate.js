@@ -3,6 +3,12 @@ $(document).ready(function () {
     /* Buttons */
     let updateBtn = $('#updateBtn');
     let downloadBtn = $('#downloadBtn');
+    let addIOButton = $('.add-select');
+
+    // TODO
+    addIOButton.click(function () {
+        alert($(this).attr('viz-id')) // can, aux, or analog
+    });
 
     updateBtn.click(function () {
         updateBtn.prop("disabled", true);
