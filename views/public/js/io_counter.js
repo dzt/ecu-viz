@@ -7,13 +7,12 @@ let getSummary = function(ecu_id) {
     }
 }
 
-// TODO
 let parseAdditionalIO = function() {
     return {
-        flex: null,
-        can_devices: [],
-        auxiliary_outputs: [],
-        analog_inputs: []
+        flex: (readOptionsFields('#flex_container').length > 0),
+        can_devices: readOptionsFields('#can_container'),
+        auxiliary_outputs: readOptionsFields('#aux_container'),
+        analog_inputs: readOptionsFields('#analog_container')
     }
 }
 
@@ -51,6 +50,7 @@ let updateCounter = function() {
     $('#aux_count').text(aux_count);
     $('#an_count').text(an_count);
     $('#di_count').text(di_count);
+
 }
 
 $(document).ready(function () {

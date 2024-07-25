@@ -64,9 +64,13 @@ $(document).ready(function () {
         // Assuming these values should be fetched or initialized
         let options = $('#chassisOptions').find('option:selected').val() || [];
         let flex_fuel = null;
-        let can_devices = [];
-        let aux_outputs = [];
-        let analog_inputs = [];
+
+        let additional_io = parseAdditionalIO();
+
+        let can_devices = additional_io.can_devices;
+        let aux_outputs = additional_io.auxiliary_outputs;
+        let analog_inputs = additional_io.analog_inputs;
+
 
         let req_params = {
             "ecu": ecu,
