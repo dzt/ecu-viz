@@ -5,9 +5,11 @@
             "allow_multiple": false,
             "part_number": "172498-1",
             "connector_type": "Female",
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=1169"
-            ],
+            "sources": [{
+                    "seller": "Corsa Technic",
+                    "url": "https://www.corsa-technic.com/item.php?item_id=1169",
+                    "estimated_price": 5.16
+            }],
             "pinout": [
                 { "name": "NC", "type": null, "pin": 1 },
                 { "name": "MREL", "type": "switched_12v", "pin": 2 },
@@ -63,7 +65,11 @@
             "allow_multiple": false,
             "part_number": "6240-5035",
             "connector_type": "Female",
-            "sources": ["https://www.corsa-technic.com/item.php?item_id=1357"],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=1357",
+                "estimated_price": 6.25
+            }],
             "pinout": [
                 { "name": "F_PUMP", "type": "fuel_pump", "pin": 1 },
                 { "name": "NC", "type": null, "pin": 2 },
@@ -96,7 +102,11 @@
             "allow_multiple": false,
             "part_number": "6187-4441",
             "connector_type": "Female",
-            "sources": ["https://www.corsa-technic.com/item.php?item_id=341"],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=341",
+                "estimated_price": 3.17
+            }],
             "pinout": [
                 { "name": "NC", "type": null, "pin": 1 },
                 { "name": "NC", "type": null, "pin": 2 },
@@ -113,7 +123,11 @@
             "allow_multiple": false,
             "part_number": "7123-2165-30",
             "connector_type": "Female",
-            "sources": ["https://www.corsa-technic.com/item.php?item_id=365"],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=365",
+                "estimated_price": 2.21
+            }],
             "pinout": [
                 { "name": "Wiper Speed Output", "type": null, "pin": 1 },
                 { "name": "Wiper Speed Output", "type": null, "pin": 2 },
@@ -132,7 +146,11 @@
             "allow_multiple": false,
             "part_number": "WS_WRSDICON",
             "connector_type": "Female",
-            "sources": ["https://www.wiringspecialties.com/connectore.html"],
+            "sources": [{
+                "seller": "Wiring Specialties",
+                "url": "https://www.wiringspecialties.com/connectore.html",
+                "estimated_price": 15.00
+            }],
             "pinout": [
                 { "name": "Coolant Gauge signal", "type": "clt_cluster", "pin": 1 },
                 { "name": "Tachometer Signal", "type": "tacho", "pin": 2 },
@@ -161,7 +179,11 @@
             "allow_multiple": false,
             "part_number": "WS_WRSPICON",
             "connector_type": "Female",
-            "sources": ["https://www.wiringspecialties.com/connector.html"],
+            "sources": [{
+                "seller": "Wiring Specialties",
+                "url": "https://www.wiringspecialties.com/connector.html",
+                "estimated_price": 18.00
+            }],
             "pinout": [
                 { "name": "NC", "type": null, "pin": 1 },
                 { "name": "Ignition Power Switched 12V+", "type": "switched_12v", "pin": 2 },
@@ -182,7 +204,11 @@
             "allow_multiple": false,
             "part_number": "WS_WRSCICON",
             "connector_type": "Female",
-            "sources": ["https://www.wiringspecialties.com/connectord1.html"],
+            "sources": [{
+                "seller": "Wiring Specialties",
+                "url": "https://www.wiringspecialties.com/connectord1.html",
+                "estimated_price": 18.00
+            }],
             "pinout": [
                 { "name": "NC", "type": null, "pin": 1 },
                 { "name": "NC", "type": null, "pin": 2 },
@@ -203,9 +229,7 @@
             "allow_multiple": false,
             "part_number": "IS2002_E3",
             "connector_type": "Female",
-            "sources": [
-                ""
-            ],
+            "sources": [],
             "pinout": [
                 { "name": "BATT (+12v)", "type": null, "pin": 1 },
                 { "name": "NC", "type": null, "pin": 2 },
@@ -240,9 +264,7 @@
             "allow_multiple": false,
             "part_number": "IS2002_E4",
             "connector_type": "Female",
-            "sources": [
-                ""
-            ],
+            "sources": [],
             "pinout": [
                 { "name": "NC", "type": null, "pin": 1 },
                 { "name": "Starter STA", "type": null, "pin": 2 },
@@ -283,9 +305,7 @@
             "allow_multiple": false,
             "part_number": "IS2002_EA1",
             "connector_type": "Female",
-            "sources": [
-                ""
-            ],
+            "sources": [],
             "pinout": [
                 { "name": "OBD2 Port Ground (Center side of the intake manifold)", "type": null, "pin": 1 },
                 { "name": "Starter Signal via 7.5A Fuse to ECT P/N Switch", "type": null, "pin": 2 },
@@ -308,7 +328,11 @@
             "allow_multiple": false,
             "part_number": "e36_obd2_x20",
             "connector_type": "Female",
-            "sources": [],
+            "sources": [{
+                "seller": "Tulay's Wire Werks",
+                "url": "https://tulayswirewerks.com/product/bmw-e36-x20-chassis-harness-connector-kit/",
+                "estimated_price": 34.95
+            }],
             "pinout": [
                 { "name": "(not used / empty)", "type": null, "pin": 1 },
                 { "name": "(not used / empty)", "type": null, "pin": 2 },
@@ -348,7 +372,7 @@
             "allow_multiple": false,
             "part_number": "analog-wideband",
             "connector_type": "Female",
-            "sources": null,
+            "sources": [],
             "pinout": [
                 { "name": "Signal", "type": "signal", "pin": 1 }
             ],
@@ -364,9 +388,7 @@
             "part_number": "4693236940939",
             "connector_type": "Female",
             "restrictions": ["13b"],
-            "sources": [
-                "https://jdlmfg.com/products/tps-bracket-for-fc-throttle-body"
-            ],
+            "sources": [],
             "pinout": [
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "Ground", "type": "vref_ground", "pin": 2 },
@@ -384,9 +406,11 @@
             "part_number": "6195-0030",
             "connector_type": "Female",
             "restrictions": ["13b"],
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=444"
-            ],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=444",
+                "estimated_price": 4.73
+            }],
             "pinout": [
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "5V+", "type": "vref", "pin": 2 },
@@ -404,9 +428,11 @@
             "part_number": "WS_WRS-KA24-TPS",
             "connector_type": "Female",
             "restrictions": ["ka24de"],
-            "sources": [
-                "https://www.wiringspecialties.com/s13-ka24de-tps-connector/"
-            ],
+            "sources": [{
+                "seller": "Wiring Specialties",
+                "url": "https://www.wiringspecialties.com/s13-ka24de-tps-connector/",
+                "estimated_price": 9.95
+            }],
             "pinout": [
                 { "name": "5V+", "type": "vref", "pin": 1 },
                 { "name": "Signal", "type": "signal", "pin": 2 },
@@ -423,10 +449,11 @@
             "part_number": "WP-3S-1",
             "type": "pressure",
             "connector_type": "Male",
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=325",
-                "https://www.bmotorsports.com/shop/product_info.php/xrf/gshp/products_id/463"
-            ],
+            "sources": [{
+                "seller": "Ballenger Motorsports",
+                "url": "https://www.bmotorsports.com/shop/product_info.php/xrf/gshp/products_id/463",
+                "estimated_price": 3.99
+            }],
             "pinout": [
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "5V+", "type": "vref", "pin": 2 },
@@ -443,9 +470,11 @@
             "part_number": "LINK-MAP",
             "type": "pressure",
             "connector_type": "Female",
-            "sources": [
-               "https://dealers.linkecu.com/products/accessories/accessories-sensors/MAP"
-            ],
+            "sources": [{
+                "seller": "Race Spec",
+                "url": "https://racespeconline.com/products/dtm-socket-connector-kits",
+                "estimated_price": 6.00
+            }],
             "pinout": [
                 { "name": "Ground", "type": "vref_ground", "pin": 1 },
                 { "name": "Signal", "type": "signal", "pin": 2 },
@@ -462,9 +491,11 @@
             "part_number": "12065287",
             "type": "pressure",
             "connector_type": "Female",
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=314"
-            ],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=314",
+                "estimated_price": 3.75
+            }],
             "pinout": [
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "5V+", "type": "vref", "pin": 2 },
@@ -481,9 +512,11 @@
             "name": "EV1 Injector",
             "allow_multiple": false,
             "part_number": "282189-1",
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=1217"
-            ],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=1217",
+                "estimated_price": 3.02
+            }],
             "pinout": [
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
                 { "name": "Trigger", "type": "signal", "pin": 2 }
@@ -497,9 +530,11 @@
             "name": "EV6/EV14 Injector",
             "allow_multiple": false,
             "part_number": "E-2157-000",
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=430"
-            ],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=430",
+                "estimated_price": 3.47
+            }],
             "pinout": [
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
                 { "name": "Trigger", "type": "signal", "pin": 2 }
@@ -512,13 +547,36 @@
     ],
     "can_bus": [
         {
-            "name": "CAN Gauge",
+            "name": "GaugeArt CAN Gauge",
             "allow_multiple": true,
             "part_number": "DTM4-N-SF",
             "connector_type": "Female",
-            "sources": [
-                "https://www.prowireusa.com/p-1009-dtm-4-way-kit-nickle-stamped.html"
+            "sources": [{
+                "seller": "Race Spec",
+                "url": "https://racespeconline.com/products/dtm-socket-connector-kits",
+                "estimated_price": 9.00
+            }],
+            "pinout": [
+                { "name": "Ignition Switched +12V", "type": "switched_12v", "pin": 1 },
+                { "name": "Ground", "type": "ground", "pin": 2 },
+                { "name": "CAN High", "type": "can_h", "pin": 3 },
+                { "name": "CAN Low", "type": "can_l", "pin": 4 }
             ],
+            "image": {
+                "src": "/generic/can.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "Link CAN Lambda",
+            "allow_multiple": true,
+            "part_number": "DTM4-N-SF",
+            "connector_type": "Female",
+            "sources": [{
+                "seller": "Race Spec",
+                "url": "https://racespeconline.com/products/dtm-socket-connector-kits",
+                "estimated_price": 9.00
+            }],
             "pinout": [
                 { "name": "Ignition Switched +12V", "type": "switched_12v", "pin": 1 },
                 { "name": "Ground", "type": "ground", "pin": 2 },
@@ -537,9 +595,11 @@
             "allow_multiple": false,
             "part_number": "15439568",
             "connector_type": "Female",
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=1049"
-            ],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=1049",
+                "estimated_price": 2.98
+            }],
             "pinout": [
                 { "name": "Ground", "type": "ground", "pin": 1 },
                 { "name": "Ground", "type": "ground", "pin": 2 },
@@ -556,9 +616,11 @@
             "allow_multiple": false,
             "part_number": "12162825",
             "connector_type": "Female",
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=573"
-            ],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=573",
+                "estimated_price": 4.48
+            }],
             "pinout": [
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "Ground", "type": "ground", "pin": 2 },
@@ -576,9 +638,11 @@
             "allow_multiple": false,
             "part_number": "6189-0728",
             "connector_type": "Female",
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=713"
-            ],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=713",
+                "estimated_price": 5.44
+            }],
             "pinout": [
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "Ground", "type": "ground", "pin": 2 },
@@ -596,9 +660,11 @@
             "allow_multiple": false,
             "part_number": "7223-1324-30",
             "restrictions": ["13b"],
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=815"
-            ],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=815",
+                "estimated_price": 4.91
+            }],
             "pinout": [
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
                 { "name": "Trigger", "type": "signal", "pin": 2 }
@@ -613,9 +679,11 @@
             "allow_multiple": false,
             "part_number": "WS_KA24-IACON-LT",
             "restrictions": ["ka24de"],
-            "sources": [
-                "https://www.wiringspecialties.com/s14kaidairco.html"
-            ],
+            "sources": [{
+                "seller": "Wiring Specialties",
+                "url": "https://www.wiringspecialties.com/s14kaidairco.html",
+                "estimated_price": 9.95
+            }],
             "pinout": [
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
                 { "name": "Trigger", "type": "signal", "pin": 2 }
@@ -629,7 +697,11 @@
             "name": "Boost Control",
             "allow_multiple": true,
             "part_number": "boost",
-            "sources": null,
+            "sources": [{
+                "seller": "Race Spec",
+                "url": "https://racespeconline.com/products/dt-connector-kits",
+                "estimated_price": 9.00
+            }],
             "pinout": [
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
                 { "name": "Trigger", "type": "signal", "pin": 2 }
@@ -643,7 +715,11 @@
             "name": "Cooling Fan Output",
             "allow_multiple": true,
             "part_number": "fan-1way",
-            "sources": null,
+            "sources": [{
+                "seller": "Race Spec",
+                "url": "https://racespeconline.com/products/dt-connector-kits",
+                "estimated_price": 9.00
+            }],
             "pinout": [
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
                 { "name": "Trigger", "type": "signal", "pin": 2 }
@@ -659,9 +735,11 @@
             "name": "GM/Delphi CLT",
             "allow_multiple": false,
             "part_number": "12162193",
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=306"
-            ],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=306",
+                "estimated_price": 2.49
+            }],
             "pinout": [
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "Ground", "type": "vref_ground", "pin": 2 }
@@ -675,9 +753,11 @@
             "name": "Mazda S4/S5 CLT",
             "allow_multiple": false,
             "part_number": "963040-3",
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=643"
-            ],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=643",
+                "estimated_price": 2.82
+            }],
             "pinout": [
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "Ground", "type": "vref_ground", "pin": 2 }
@@ -693,9 +773,11 @@
             "name": "GM/Delphi IAT",
             "allow_multiple": false,
             "part_number": "15449027",
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=540"
-            ],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=540",
+                "estimated_price": 1.96
+            }],
             "pinout": [
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "Ground", "type": "vref_ground", "pin": 2 }
@@ -709,9 +791,11 @@
             "name": "Link ECU IAT",
             "allow_multiple": false,
             "part_number": "101-0045",
-            "sources": [
-                "https://dealers.linkecu.com/IAT1-8_2"
-            ],
+            "sources": [{
+                "seller": "Race Spec",
+                "url": "https://racespeconline.com/products/dtm-socket-connector-kits",
+                "estimated_price": 6.00
+            }],
             "pinout": [
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "Ground", "type": "vref_ground", "pin": 2 }
@@ -728,9 +812,11 @@
             "part_number": "6187-4441",
             "connector_type": "Female",
             "restrictions": ["13b"],
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=341"
-            ],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=341",
+                "estimated_price": 3.17
+            }],
             "pinout": [
                 { "name": "G+", "type": "home", "pin": 1 },
                 { "name": "G-", "type": "home_ground", "pin": 2 },
@@ -747,9 +833,11 @@
             "part_number": "FFE-TRIGGER-KIT",
             "connector_type": "Female",
             "restrictions": ["13b"],
-            "sources": [
-                "https://fullfunctioneng.com/"
-            ],
+            "sources": [{
+                "seller": "Race Spec",
+                "url": "https://racespeconline.com/products/dtm-connector-kits",
+                "estimated_price": 9.00
+            }],
             "pinout": [
                 { "name": "Signal", "type": "home", "pin": 1 },
                 { "name": "Ground", "type": "home_ground", "pin": 2 },
@@ -765,9 +853,11 @@
             "part_number": "WS_SR20-CAM-CON_LINK",
             "connector_type": "Female",
             "restrictions": ["sr20det"],
-            "sources": [
-                "https://www.wiringspecialties.com/srcamposeco.html"
-            ],
+            "sources": [{
+                "seller": "Wiring Specialties",
+                "url": "https://www.wiringspecialties.com/srcamposeco.html",
+                "estimated_price": 9.95
+            }],
             "pinout": [
                 { "name": "4x (REF)", "type": "home", "pin": 1 },
                 { "name": "360x (POS)", "type": "trigger", "pin": 2 }, 
@@ -784,9 +874,11 @@
             "part_number": "WS_SR20-CAM-CON",
             "connector_type": "Female",
             "restrictions": ["sr20det"],
-            "sources": [
-                "https://www.wiringspecialties.com/srcamposeco.html"
-            ],
+            "sources": [{
+                "seller": "Wiring Specialties",
+                "url": "https://www.wiringspecialties.com/srcamposeco.html",
+                "estimated_price": 9.95
+            }],
             "pinout": [
                 { "name": "4x (REF)", "type": "trigger", "pin": 1 },
                 { "name": "360x (POS)", "type": "home", "pin": 2 },
@@ -804,9 +896,11 @@
             "name": "GM/Delphi Style Flex Fuel Sensor",
             "part_number": "13511132",
             "connector_type": "Female",
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=1149"
-            ],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=1149",
+                "estimated_price": 3.35
+            }],
             "pinout": [
                 { "name": "VCC", "type": "switched_12v", "pin": 1 },
                 { "name": "GND", "type": "ground", "pin": 2 },
@@ -823,9 +917,11 @@
             "name": "Series 4 RX-7 Alternator",
             "part_number": "6111-2568",
             "connector_type": "Female",
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=358"
-            ],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=358",
+                "estimated_price": 1.19
+            }],
             "pinout": [
                 { "name": "Switched 12V+", "type": "r_terminal", "pin": 1 },
                 { "name": "Alternator Charge Light", "type": "l_terminal", "pin": 2 }
@@ -839,9 +935,11 @@
             "name": "Series 5/6 RX-7 Alternator",
             "part_number": "7223-6224-40",
             "connector_type": "Female",
-            "sources": [
-                "https://www.corsa-technic.com/item.php?item_id=1125"
-            ],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=1125",
+                "estimated_price": 4.19
+            }],
             "pinout": [
                 { "name": "Constant 12V+", "type": "s_terminal", "pin": 1 },
                 { "name": "Alternator Charge Light", "type": "l_terminal", "pin": 2 }
