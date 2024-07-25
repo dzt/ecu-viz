@@ -4,10 +4,30 @@ $(document).ready(function () {
     let updateBtn = $('#updateBtn');    
     let addIOButton = $('.add-select');
 
-    // TODO
     addIOButton.click(function () {
-        alert($(this).attr('viz-id')) // can, aux, or analog
+        let vizID = $(this).attr('viz-id') // can, aux, or analog
+        let selectClone = $(`#${vizID}_select`).clone().html();
+        console.log(selectClone)
+        $(`#${vizID}_container`).append(`
+            <div class="row">
+                <div class="col-sm-9">
+                    <select value="" class="form-select">
+                        ${selectClone}
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <button type="button" class="btn btn-outline-danger del-select">Delete</button>
+                </div>
+            </div>
+        `);
+        updateCounter();
     });
+
+    // Handle dynamic delete button
+    $(document).on('click', '.del-select', function(){ 
+        $(this).parent().parent().remove();
+        updateCounter();
+   });
 
     updateBtn.click(function () {
         updateBtn.prop("disabled", true);

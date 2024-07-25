@@ -7,16 +7,40 @@ let getSummary = function(ecu_id) {
     }
 }
 
+// TODO
+let parseAdditionalIO = function() {
+    return {
+        flex: null,
+        can_devices: [],
+        auxiliary_outputs: [],
+        analog_inputs: []
+    }
+}
+
+let readOptionsFields = function(selector) {
+    let arr = [];
+    $(selector).find('select').each(function(i, elm){
+        let val = $(elm).find('option:selected').val();
+        console.log(`${selector}: ${val}`)
+
+        if (val != 'null') {
+            arr.push(val);
+        }
+    });
+    console.log(`${selector} length: ${arr.length}`)
+    return arr;
+}
+
 let updateCounter = function() {
     let selectedECU = $('#ecu').find('option:selected').val();
     let summary = getSummary(selectedECU);
 
-    // TODO
-    let additional_aux = 0; // tach is included is selected by user
-    let additional_an = 0;
-    let additional_di = 0;
+    // Used I/O
+    let additional_aux = readOptionsFields('#aux_container').length;
+    let additional_an = readOptionsFields('#analog_container').length;
+    let additional_di = readOptionsFields('#flex_container').length; // for flex fuel input
 
-    if ($('#use_factory_tacho').is(":checked")) additional_aux += 1;
+    if ($('#use_factory_tacho').is(":checked")) additional_aux += 1; // tach is included is selected by user
 
     /* Active Count Values */ 
     let aux_count = summary.auxiliary_outputs.length - (1 + additional_aux); // Reserved for Fuel Pump Output
@@ -35,7 +59,8 @@ $(document).ready(function () {
     updateCounter();
 
     /* Called anytime a change is made to the ECU selection */
-    $('#ecu, #use_factory_tacho').on('change', function() {
+    $('#ecu, #use_factory_tacho, #nav-io').on('change', function() {
+        console.log('change')
         updateCounter();
     });
 

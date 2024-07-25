@@ -86,7 +86,7 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="chassisOptions" class="form-label">Chassis Options</label>
-                                        <div>
+                                        <!-- <div id="options_container">
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" value="option1" />
                                                 <label class="form-check-label">Wipers</label>
@@ -99,7 +99,7 @@
                                                 <input class="form-check-input" type="checkbox" value="option3">
                                                 <label class="form-check-label">Series 5 Alternator</label>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="mb-3 form-check">
                                         <input type="checkbox" class="form-check-input" id="use_factory_tacho" checked></input>
@@ -205,48 +205,56 @@
                                 <div class="tab-pane fade" id="nav-io" role="tabpanel" aria-labelledby="nav-io-tab">
                                     <div class="mb-3">
                                         <label for="flex" class="form-label">Flex Fuel Sensor</label>
-                                        <select class="form-select" aria-label="Flex Fuel Sensor">
-                                            <option value="0">None</option>
-                                            <option value="1">Standard</option>
-                                        </select>
+                                        <div id="flex_container">
+                                            <select class="form-select" aria-label="Flex Fuel Sensor">
+                                                <option value="null">None</option>
+                                                <option value="true">Standard</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="mb-3">
                                         <label for="can" class="form-label">CAN Devices</label>
                                         <span class="badge bg-dark add-select" viz-id="can">Add</span>
-                                        <select class="form-select" aria-label="CAN Devices">
-                                            <option value="null">None</option>
-                                            <% connectors.can_bus.forEach((conn)=>{%>
-                                            <option value="<%=conn.id%>">
-                                                <%=conn.name%>
-                                            </option>
-                                            <%});%>
-                                        </select>
+                                        <div id="can_container">
+                                            <select id="can_select" class="form-select" aria-label="CAN Devices">
+                                                <option value="null">None</option>
+                                                <% connectors.can_bus.forEach((conn)=>{%>
+                                                    <option value="<%=conn.part_number%>">
+                                                        <%=conn.name%>
+                                                    </option>
+                                                <%});%>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="mb-3">
                                         <label for="auxiliary_outputs" class="form-label">Auxiliary Options</label>
                                         <span class="badge bg-dark add-select" viz-id="aux">Add</span>
-                                        <select class="form-select" aria-label="Auxiliary Options">
-                                            <option value="null">None</option>
-                                            <% connectors.auxiliary_options.forEach((conn)=>{%>                                                
-                                            <option value="<%=conn.id%>">
-                                                <%=conn.name%>
-                                            </option>
-                                            <%});%>
-                                        </select>
+                                        <div id="aux_container">
+                                            <select id="aux_select" class="form-select" aria-label="Auxiliary Options">
+                                                <option value="null">None</option>
+                                                <% connectors.auxiliary_options.forEach((conn)=>{%>                                                
+                                                <option value="<%=conn.part_number%>">
+                                                    <%=conn.name%>
+                                                </option>
+                                                <%});%>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="mb-3">
                                         <label for="analog_inputs" class="form-label">Analog Inputs</label>
                                         <span class="badge bg-dark add-select" viz-id="analog">Add</span>
-                                        <select class="form-select" aria-label="Analog Inputs">
-                                            <option value="null">None</option>
-                                            <% connectors.analog_inputs.forEach((conn)=>{%>
-                                            <%if (conn.type != "tps") { %>
-                                            <option value="<%=conn.id%>">
-                                                <%=conn.name%>
-                                            </option>
-                                            <% } %>
-                                            <%});%>
-                                        </select>
+                                        <div id="analog_container">
+                                            <select id="analog_select" class="form-select" aria-label="Analog Inputs">
+                                                <option value="null">None</option>
+                                                <% connectors.analog_inputs.forEach((conn)=>{%>
+                                                    <%if (conn.type != "tps") { %>
+                                                        <option value="<%=conn.part_number%>">
+                                                            <%=conn.name%>
+                                                        </option>
+                                                    <% } %>
+                                                <%});%>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="nav-cart" role="tabpanel" aria-labelledby="nav-cart-tab">

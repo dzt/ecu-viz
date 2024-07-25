@@ -55,3 +55,19 @@ table {
 th {
     font-size: 12px;
 }
+
+#can_container div.row, #aux_container div.row, #analog_container div.row {
+    margin-top: 15px;
+}
+
+#can_container button, #aux_container button, #analog_container button {
+    width: 100%;
+}
+
+/* #can_container select, #aux_container select, #analog_container select {
+    margin-top: 5px;
+}
+
+#can_container button, #aux_container button, #analog_container button {
+    margin-top: 5px;
+} */
