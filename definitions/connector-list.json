@@ -642,7 +642,7 @@
         {
             "name": "Cooling Fan Output",
             "allow_multiple": true,
-            "part_number": "fan-2way",
+            "part_number": "fan-1way",
             "sources": null,
             "pinout": [
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },

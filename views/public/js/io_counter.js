@@ -28,13 +28,8 @@ let readOptionsFields = function (selector) {
     let arr = [];
     $(selector).find('select').each(function (i, elm) {
         let val = $(elm).find('option:selected').val();
-        console.log(`${selector}: ${val}`)
-
-        if (val != 'null') {
-            arr.push(val);
-        }
+        if (val != 'null') arr.push(val);
     });
-    console.log(`${selector} length: ${arr.length}`)
     return arr;
 }
 
@@ -68,7 +63,6 @@ $(document).ready(function () {
 
     /* Called anytime a change is made to the ECU selection */
     $('#ecu, #use_factory_tacho, #nav-io').on('change', function () {
-        console.log('change')
         updateCounter();
     });
 
