@@ -1,13 +1,21 @@
-let getSummary = function(ecu_id) {
-    let pinout = _.findWhere(serverData.ecus, { id: ecu_id }).pinout;
+let getSummary = function (ecu_id) {
+    let pinout = _.findWhere(serverData.ecus, {
+        id: ecu_id
+    }).pinout;
     return {
-        auxiliary_outputs: _.pluck(_.where(pinout, { type: 'auxiliary_output'}), 'name'),
-        analog_inputs: _.pluck(_.where(pinout, { type: 'analog_input'}), 'name'),
-        digital_inputs: _.pluck(_.where(pinout, { type: 'digital_input'}), 'name'),
+        auxiliary_outputs: _.pluck(_.where(pinout, {
+            type: 'auxiliary_output'
+        }), 'name'),
+        analog_inputs: _.pluck(_.where(pinout, {
+            type: 'analog_input'
+        }), 'name'),
+        digital_inputs: _.pluck(_.where(pinout, {
+            type: 'digital_input'
+        }), 'name'),
     }
 }
 
-let parseAdditionalIO = function() {
+let parseAdditionalIO = function () {
     return {
         flex: (readOptionsFields('#flex_container').length > 0),
         can_devices: readOptionsFields('#can_container'),
@@ -16,9 +24,9 @@ let parseAdditionalIO = function() {
     }
 }
 
-let readOptionsFields = function(selector) {
+let readOptionsFields = function (selector) {
     let arr = [];
-    $(selector).find('select').each(function(i, elm){
+    $(selector).find('select').each(function (i, elm) {
         let val = $(elm).find('option:selected').val();
         console.log(`${selector}: ${val}`)
 
@@ -30,7 +38,7 @@ let readOptionsFields = function(selector) {
     return arr;
 }
 
-let updateCounter = function() {
+let updateCounter = function () {
     let selectedECU = $('#ecu').find('option:selected').val();
     let summary = getSummary(selectedECU);
 
@@ -41,7 +49,7 @@ let updateCounter = function() {
 
     if ($('#use_factory_tacho').is(":checked")) additional_aux += 1; // tach is included is selected by user
 
-    /* Active Count Values */ 
+    /* Active Count Values */
     let aux_count = summary.auxiliary_outputs.length - (1 + additional_aux); // Reserved for Fuel Pump Output
     let an_count = summary.analog_inputs.length - (1 + additional_an); // Reserved for TPS
     let di_count = summary.digital_inputs.length - additional_di;
@@ -59,7 +67,7 @@ $(document).ready(function () {
     updateCounter();
 
     /* Called anytime a change is made to the ECU selection */
-    $('#ecu, #use_factory_tacho, #nav-io').on('change', function() {
+    $('#ecu, #use_factory_tacho, #nav-io').on('change', function () {
         console.log('change')
         updateCounter();
     });

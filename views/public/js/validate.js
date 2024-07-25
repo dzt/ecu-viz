@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     /* Buttons */
-    let updateBtn = $('#updateBtn');    
+    let updateBtn = $('#updateBtn');
     let addIOButton = $('.add-select');
 
     addIOButton.click(function () {
@@ -24,17 +24,17 @@ $(document).ready(function () {
     });
 
     // Handle dynamic delete button
-    $(document).on('click', '.del-select', function(){ 
+    $(document).on('click', '.del-select', function () {
         $(this).parent().parent().remove();
         updateCounter();
-   });
+    });
 
     updateBtn.click(function () {
         updateBtn.prop("disabled", true);
         $('#previewContainer').hide();
         $('#spinner').show();
         let req_params = getUserInput();
-        fetch(req_params, function(err, image) {
+        fetch(req_params, function (err, image) {
             if (!err) {
                 $('#downloadBtn').attr('href', image);
                 $("#downloadBtn").removeClass('disabled');
@@ -47,7 +47,7 @@ $(document).ready(function () {
 
     });
 
-    let getUserInput = function() {
+    let getUserInput = function () {
         /* Form Fields */
         let chassis = $('#vehicleChassis').find('option:selected').val();
         let ecu = $('#ecu').find('option:selected').val();
@@ -96,14 +96,18 @@ $(document).ready(function () {
         return req_params;
     }
 
-    let fetch = function(params, callback) {
+    let fetch = function (params, callback) {
         $.ajax({
             url: "/fetch",
             method: "POST",
             contentType: "application/json",
             data: JSON.stringify(params),
             success: function (data, textStatus, jqXHR) {
-                console.log({ data, textStatus, jqXHR });
+                console.log({
+                    data,
+                    textStatus,
+                    jqXHR
+                });
                 // Ensure data is in correct format
                 if (data.startsWith("data:image/png;base64,")) {
                     return callback(null, data);

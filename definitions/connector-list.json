@@ -640,7 +640,7 @@
             }
         },
         {
-            "name": "Single Speed Cooling Fan",
+            "name": "Cooling Fan Output",
             "allow_multiple": true,
             "part_number": "fan-2way",
             "sources": null,
