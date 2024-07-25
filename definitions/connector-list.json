@@ -762,7 +762,7 @@
         },
         {
             "name": "Nissan ECCS (SR/KA/RB) - Link G3/G4 Specific",
-            "part_number": "WS_SR20-CAM-CON",
+            "part_number": "WS_SR20-CAM-CON_LINK",
             "connector_type": "Female",
             "restrictions": ["sr20det"],
             "sources": [
