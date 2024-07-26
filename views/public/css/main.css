@@ -18,6 +18,7 @@
     background-color: #fff;
     display: none;
 }
+
 .wkj-logo {
     height: 40px;
 }
@@ -43,7 +44,9 @@ main {
     cursor: pointer;
 }
 
-.form-select:focus, input:focus, textarea:focus{
+.form-select:focus,
+input:focus,
+textarea:focus {
     box-shadow: none !important;
     border-color: black !important;
 }
@@ -56,18 +59,23 @@ th {
     font-size: 12px;
 }
 
-#can_container div.row, #aux_container div.row, #analog_container div.row {
+#can_container div.row,
+#aux_container div.row,
+#analog_container div.row {
     margin-top: 15px;
 }
 
-#can_container button, #aux_container button, #analog_container button {
+#can_container button,
+#aux_container button,
+#analog_container button {
     width: 100%;
 }
 
-/* #can_container select, #aux_container select, #analog_container select {
-    margin-top: 5px;
+.tab-content {
+    height: 380px !important;
+    overflow: scroll;
 }
 
-#can_container button, #aux_container button, #analog_container button {
-    margin-top: 5px;
-} */
+::-webkit-scrollbar {
+    display: none;
+  }
