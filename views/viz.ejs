@@ -298,7 +298,10 @@
     </div>
     <script>
         let serverData = {
-            ecus: JSON.parse('<%- JSON.stringify(ecus) %>')
+            engines: <%- raw.engines %>,
+            ecus: <%- raw.ecus %>,
+            connectors: <%- raw.connectors %>,
+            chassis: <%- raw.chassis %>
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.6/underscore-umd-min.js"></script>
@@ -306,6 +309,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/public/js/validate.js"></script>
     <script src="/public/js/io_counter.js"></script>
+    <script src="/public/js/cart_summary.js"></script>
 
 </body>
 

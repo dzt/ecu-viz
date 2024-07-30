@@ -20,6 +20,7 @@ const ecus = require('./definitions/ecus.json');
 const engines = require('./definitions/engines.json');
 const inserts = require('./definitions/inserts.json');
 const connectors = require('./definitions/connector-list.json');
+const { stringify } = require('querystring');
 
 temp.track();
 app.use(bodyParser.json())
@@ -27,11 +28,19 @@ app.set('view engine', 'ejs');
 app.use('/public', express.static(__dirname + '/views/public'));
 
 app.get('/', (_req, res) => {
-    return res.json({ message: 'ECUViz API' });
+    return res.json({
+        message: 'ECUViz API'
+    });
 });
 
 app.get('/definitions', (req, res) => {
-    return res.json({chassis, ecus, engines, inserts, connectors});
+    return res.json({
+        chassis,
+        ecus,
+        engines,
+        inserts,
+        connectors
+    });
 });
 
 app.post('/fetch', (req, res) => {
@@ -43,14 +52,16 @@ app.post('/fetch', (req, res) => {
     console.dir(input)
 
     temp.cleanupSync();
-    temp.mkdir({dir: path.join(__dirname, 'tmp')}, (err, dirPath) => {
+    temp.mkdir({
+        dir: path.join(__dirname, 'tmp')
+    }, (err, dirPath) => {
         if (err) return res.end('Error occured spwaning temp directory');
         const yamlFilePath = path.join(dirPath, 'output.yaml');
         fs.writeFile(yamlFilePath, output_yaml, (err) => {
             if (err) return res.end('Write error has occured');
             process.chdir(dirPath);
             exec(`wireviz ${yamlFilePath}`, (err, stdout) => {
-                
+
                 if (err) console.error(err)
                 if (err) return res.end('WireViz Error');
                 const pngFilePath = yamlFilePath.split('.yaml')[0] + '.png';
@@ -58,7 +69,6 @@ app.post('/fetch', (req, res) => {
                 const base64String = Buffer.from(buffer).toString('base64');
 
                 return res.end(`data:image/png;base64,${base64String}`);
-                // return res.sendFile(pngFilePath);
             });
         });
     });
@@ -66,14 +76,31 @@ app.post('/fetch', (req, res) => {
 });
 
 app.get('/viz', (req, res) => {
-    return res.render('viz', { chassis, ecus, engines, inserts, connectors });
+    return res.render('viz', {
+        chassis,
+        ecus,
+        engines,
+        inserts,
+        connectors,
+        raw: {
+            chassis: JSON.stringify(chassis),
+            ecus: JSON.stringify(ecus),
+            engines: JSON.stringify(engines),
+            inserts: JSON.stringify(inserts),
+            connectors: JSON.stringify(connectors)
+        }
+    });
 });
 
 const generateDiagram = (input) => {
     let connectors = lib.createConnectors(input);
     let cables = lib.createCables(connectors.summary, input);
     let connections = lib.createConnections(connectors, cables, input);
-    return { connectors: connectors.data, cables, connections };
+    return {
+        connectors: connectors.data,
+        cables,
+        connections
+    };
 }
 
 app.server.listen(process.env.PORT || PORT, () => {

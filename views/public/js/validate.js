@@ -1,3 +1,52 @@
+let getUserInput = function () {
+    /* Form Fields */
+    let chassis = $('#vehicleChassis').find('option:selected').val();
+    let ecu = $('#ecu').find('option:selected').val();
+    let engine = $('#engine').find('option:selected').val();
+    let tps = $('#tps').find('option:selected').val();
+    let injectors = $('#inj').find('option:selected').val();
+    let ignition = $('#ign').find('option:selected').val();
+    let clt = $('#clt').find('option:selected').val();
+    let iat = $('#iat').find('option:selected').val();
+    let trigger = $('#trigger').find('option:selected').val();
+
+    let use_factory_tacho = $('#use_factory_tacho').is(":checked");
+
+    // Assuming these values should be fetched or initialized
+    let options = $('#chassisOptions').find('option:selected').val() || [];
+    let flex_fuel = null;
+
+    let additional_io = parseAdditionalIO();
+
+    let can_devices = additional_io.can_devices;
+    let aux_outputs = additional_io.auxiliary_outputs;
+    let analog_inputs = additional_io.analog_inputs;
+
+
+    let req_params = {
+        "ecu": ecu,
+        "use_chassis_tacho": use_factory_tacho,
+        "inserts": options,
+        "chassis": chassis,
+        "engine": engine,
+        "tps": tps,
+        "injectors": injectors,
+        "ignition": ignition,
+        "alt": null,
+        "clt": clt,
+        "iat": iat,
+        "trigger": trigger,
+        "flex": flex_fuel,
+        "can_devices": can_devices,
+        "auxiliary_options": aux_outputs,
+        "analog_inputs": analog_inputs
+    };
+
+    console.log(JSON.stringify(req_params));
+
+    return req_params;
+}
+
 $(document).ready(function () {
 
     /* Buttons */
@@ -46,55 +95,6 @@ $(document).ready(function () {
         });
 
     });
-
-    let getUserInput = function () {
-        /* Form Fields */
-        let chassis = $('#vehicleChassis').find('option:selected').val();
-        let ecu = $('#ecu').find('option:selected').val();
-        let engine = $('#engine').find('option:selected').val();
-        let tps = $('#tps').find('option:selected').val();
-        let injectors = $('#inj').find('option:selected').val();
-        let ignition = $('#ign').find('option:selected').val();
-        let clt = $('#clt').find('option:selected').val();
-        let iat = $('#iat').find('option:selected').val();
-        let trigger = $('#trigger').find('option:selected').val();
-
-        let use_factory_tacho = $('#use_factory_tacho').is(":checked");
-
-        // Assuming these values should be fetched or initialized
-        let options = $('#chassisOptions').find('option:selected').val() || [];
-        let flex_fuel = null;
-
-        let additional_io = parseAdditionalIO();
-
-        let can_devices = additional_io.can_devices;
-        let aux_outputs = additional_io.auxiliary_outputs;
-        let analog_inputs = additional_io.analog_inputs;
-
-
-        let req_params = {
-            "ecu": ecu,
-            "use_chassis_tacho": use_factory_tacho,
-            "inserts": options,
-            "chassis": chassis,
-            "engine": engine,
-            "tps": tps,
-            "injectors": injectors,
-            "ignition": ignition,
-            "alt": null,
-            "clt": clt,
-            "iat": iat,
-            "trigger": trigger,
-            "flex": flex_fuel,
-            "can_devices": can_devices,
-            "auxiliary_options": aux_outputs,
-            "analog_inputs": analog_inputs
-        };
-
-        console.log(JSON.stringify(req_params));
-
-        return req_params;
-    }
 
     let fetch = function (params, callback) {
         $.ajax({
