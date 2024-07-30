@@ -30,32 +30,29 @@ let getCartSummary = function(input) {
                 summary.push(cartBuilder(input[key], 1, 'analog_inputs'));
                 break;
             case 'can_devices': // bundle query for can device
-                summary.concat(input[key].map((pn) => {
+                summary = summary.concat(input[key].map((pn) => {
                     return cartBuilder(pn, 1, 'can_bus');
                 }))
                 break;
             case 'auxiliary_options': // bundle query for aux device
-                summary.concat(input[key].map((pn) => {
+                summary = summary.concat(input[key].map((pn) => {
                     return cartBuilder(pn, 1, 'auxiliary_options');
                 }))            
                 break;
             case 'analog_inputs': // bundle query for analog input
-                summary.concat(input[key].map((pn) => {
+                summary = summary.concat(input[key].map((pn) => {
                     return cartBuilder(pn, 1, 'analog_inputs');
                 }))  
                 break;
         }
     }
-    console.log(summary)
-    return summary;
+    return _.without(summary, null);
 }
 
 let cartBuilder = function(pn, qty, category) {
 
-    console.log({ pn, qty, category })
     let conn = _.findWhere(serverData.connectors[category], { part_number: pn });
     let source;
-    console.log(conn)
 
     if (conn.sources == 0) return null;
 
@@ -75,19 +72,48 @@ let cartBuilder = function(pn, qty, category) {
 
 }
 
-let connectorQuery = function(pn, category) {}
-let multiConnectorQuery = function() {}
-
 
 let displaySummary = function(summary) {
-    return 0;
+    let tableItems = [];
+    for (let i = 0; i < summary.length; i++) {
+        let conn = summary[i];
+        tableItems.push(`
+            <tr>
+                <th scope="row">${conn.name}</th>
+                <td>${conn.qty}</td>
+                <td><a target="_blank" href="${conn.source.url}">${conn.source.seller}</a></td>
+                <td>$${currencyFormatted(conn.est_cost)}</td>
+            </tr>
+        `)
+    }
+    let tableBody = tableItems.join('\n');
+    $('#summaryTableBody').html(tableBody);
+}
+
+function currencyFormatted(amount) {
+    var i = parseFloat(amount);
+    if(isNaN(i)) { i = 0.00; }
+    var minus = '';
+    if(i < 0) { minus = '-'; }
+    i = Math.abs(i);
+    i = parseInt((i + .005) * 100);
+    i = i / 100;
+    s = new String(i);
+    if(s.indexOf('.') < 0) { s += '.00'; }
+    if(s.indexOf('.') == (s.length - 2)) { s += '0'; }
+    s = minus + s;
+    return s;
+}
+
+let refreshCartSummary = function() {
+    let cartSummary = getCartSummary(getUserInput());
+    displaySummary(cartSummary);
 }
 
 /* Updates in realtime any values are changed throughout all the pages */
 $(document).ready(function () {
+    refreshCartSummary()
     $('#nav-tabContent').on('change', function () {
-        let cartSummary = getCartSummary(getUserInput());
-        displaySummary(cartSummary);
-        console.log('change detected')
+        refreshCartSummary()
     });
 });

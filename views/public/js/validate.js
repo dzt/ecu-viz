@@ -56,7 +56,6 @@ $(document).ready(function () {
     addIOButton.click(function () {
         let vizID = $(this).attr('viz-id') // can, aux, or analog
         let selectClone = $(`#${vizID}_select`).clone().html();
-        console.log(selectClone)
         $(`#${vizID}_container`).append(`
             <div class="row">
                 <div class="col-sm-9">
