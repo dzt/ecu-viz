@@ -763,6 +763,48 @@
                 "src": "/ignition_coils/kcoils.png",
                 "height": 200
             }
+        },
+        {
+            "name": "VW/Audi FSI Ignition Coil",
+            "allow_multiple": false,
+            "part_number": "8K0973724",
+            "connector_type": "Female",
+            "sources": [{
+                "seller": "Ballenger Motorsports",
+                "url": "https://www.bmotorsports.com/shop/product_info.php/xrf/gshp/products_id/3366",
+                "estimated_price": 13.99
+            }],
+            "pinout": [
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+                { "name": "Ground", "type": "ground", "pin": 2 },
+                { "name": "Signal", "type": "signal", "pin": 3 },
+                { "name": "Ground", "type": "ground", "pin": 4 }
+            ],
+            "image": {
+                "src": "/ignition_coils/vw_audi_fsi.png",
+                "height": 200
+            }
+        },
+        {
+            "name": "Toyota Yaris/ZZ Ignition Coil",
+            "allow_multiple": false,
+            "part_number": "10232591297",
+            "connector_type": "Female",
+            "sources": [{
+                "seller": "Race Spec",
+                "url": "https://racespeconline.com/products/1zz-coil-connector-kit",
+                "estimated_price": 6.00
+            }],
+            "pinout": [
+                { "name": "Ground", "type": "ground", "pin": 1 },
+                { "name": "Signal", "type": "signal", "pin": 2 },
+                { "name": "IGF Fail Signal", "type": null, "pin": 3 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 4 }
+            ],
+            "image": {
+                "src": "/ignition_coils/yaris_zz.png",
+                "height": 200
+            }
         }
     ],
     "auxiliary_options": [
