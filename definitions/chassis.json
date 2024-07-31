@@ -2,42 +2,49 @@
     {
         "name": "Mazda RX-7 (Series 4)",
         "id": "fc_s4",
+        "fuel_pump_12v": false,
         "chassis_connectors": ["FEM_02", "FC_TACHO"],
         "insert_options": ["S4_RX7_Wipers", "S4_RX7_Alt", "S5_S6_RX7_Alt"]
     },
     {
         "name": "Mazda RX-7 (Series 5)",
         "id": "fc_s5",
+        "fuel_pump_12v": false,
         "chassis_connectors": ["X-11", "FC_TACHO"],
         "insert_options": ["S5_RX7_Wipers"]
     },
     {
         "name": "Nissan 240SX (S13)",
         "id": "240sx_s13",
+        "fuel_pump_12v": false,
         "chassis_connectors": ["F1_S13", "F8_S13", "F10_S13"],
         "insert_options": []
     },
     {
         "name": "Lexus IS300 (2002+)",
         "id": "is300_2002",
+        "fuel_pump_12v": false,
         "chassis_connectors": ["E3_IS2002", "E4_IS2002", "EA1_IS2002"],
         "insert_options": []
     },
     {
         "name": "BMW 3-Series (1995-1999 / OBD2)",
         "id": "obd2_e36",
+        "fuel_pump_12v": true,
         "chassis_connectors": ["e36_obd2_x20"],
         "insert_options": []
     },
     {
         "name": "BMW 3-Series (1984-1986 / Early Model)",
         "id": "e30_early",
+        "fuel_pump_12v": true,
         "chassis_connectors": ["c101_early", "c104_e30_early"],
         "insert_options": []
     },
     {
         "name": "BMW 3-Series (1987+ / Late Model)",
         "id": "e30_late",
+        "fuel_pump_12v": true,
         "chassis_connectors": ["c101_late"],
         "insert_options": []
     }
