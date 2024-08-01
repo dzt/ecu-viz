@@ -2,7 +2,7 @@
 
 Effortlessly craft engine wiring diagrams for your project using. Save time planning with a user-friendly interface and clear, easy-to-understand visuals. Spend seconds, not hours, bringing your project to life.
 
-[Preview](./docs//images/git-preview.png)
+![Preview](./docs//images/git-preview.png)
 
 ### Installation
 
@@ -10,8 +10,6 @@ ecu-viz requires the following
 - [Node.js (LTS Version)](http://nodejs.org/).
 - [Python 3.7 or later](https://www.python.org/downloads/)
 - [WireViz](https://github.com/wireviz/WireViz)
-
-![webapp](https://i.imgur.com/ZTGlrfq.png)
 
 Setup:
 
