@@ -14,10 +14,24 @@
         "insert_options": ["S5_RX7_Wipers"]
     },
     {
+        "name": "Mazda RX-7 (Series 6)",
+        "id": "fd_s6",
+        "fuel_pump_12v": false,
+        "chassis_connectors": ["X-14"],
+        "insert_options": []
+    },
+    {
         "name": "Nissan 240SX (S13)",
         "id": "240sx_s13",
         "fuel_pump_12v": false,
         "chassis_connectors": ["F1_S13", "F8_S13", "F10_S13"],
+        "insert_options": []
+    },
+    {
+        "name": "Nissan 240SX (S14 OBDII)",
+        "id": "240sx_s14",
+        "fuel_pump_12v": false,
+        "chassis_connectors": ["F3_S14_OBDII"],
         "insert_options": []
     },
     {

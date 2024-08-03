@@ -142,6 +142,65 @@
             }
         },
         {
+            "name": "F3_S14_OBDII",
+            "allow_multiple": false,
+            "part_number": "WRS-S14F3_OBDII",
+            "connector_type": "Female",
+            "sources": [{
+                    "seller": "Wiring Specialties",
+                    "url": "https://www.wiringspecialties.com/s1424f3dapl.html",
+                    "estimated_price": 45.00
+            }],
+            "pinout": [
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+                { "name": "Ground", "type": null, "pin": 2 },
+                { "name": "Rear Defroster Electrical Load", "type": null, "pin": 3 },
+                { "name": "Washer Switch", "type": null, "pin": 4 },
+                { "name": "Wiper Motor", "type": null, "pin": 5 },
+                { "name": "Wiper Motor", "type": null, "pin": 6 },
+                { "name": "Wiper Motor", "type": null, "pin": 7 },
+                { "name": "Wiper Motor", "type": null, "pin": 8 },
+                { "name": "NC", "type": null, "pin": 9 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 10 },
+                { "name": "Fuel Pump Relay Trigger", "type": "fuel_pump", "pin": 11 },
+                { "name": "Headlamp Signal", "type": null, "pin": 12 },
+                { "name": "NC", "type": null, "pin": 13 },
+                { "name": "NC", "type": null, "pin": 14 },
+                { "name": "Power Steering Oil Pressure Switch", "type": null, "pin": 15 },
+                { "name": "Air Conditioning Switch", "type": null, "pin": 16 },
+                { "name": "Constant 12V+ to ECCS Relay and ECU", "type": null, "pin": 17 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 18 },
+                { "name": "NC", "type": null, "pin": 19 },
+                { "name": "Data-Link (KLINE)", "type": null, "pin": 20 },
+                { "name": "Data-Link (Ground)", "type": null, "pin": 21 },
+                { "name": "Data-Link (SCTIX)", "type": null, "pin": 22 },
+                { "name": "Data-Link (SCICL)", "type": null, "pin": 23 },
+                { "name": "Vehicle Speed Sensor Inputx", "type": null, "pin": 24 },
+                { "name": "Cooling Fan", "type": null, "pin": 25 },
+                { "name": "Tachometer Signal", "type": "tacho", "pin": 26 },
+                { "name": "Wiper Signal", "type": null, "pin": 27 },
+                { "name": "Water Temp Signal to Cluster", "type": null, "pin": 28 },
+                { "name": "Ambient Temp Switch", "type": null, "pin": 29 },
+                { "name": "Check Engine Light", "type": null, "pin": 30 },
+                { "name": "ASCD Actuator Power", "type": null, "pin": 31 },
+                { "name": "ASCD Actuator Power", "type": null, "pin": 32 },
+                { "name": "5th Gear Position Switch", "type": null, "pin": 33 },
+                { "name": "Cranking 12V+", "type": null, "pin": 34 },
+                { "name": "NC", "type": null, "pin": 35 },
+                { "name": "NC", "type": null, "pin": 36 },
+                { "name": "Recirc Relay", "type": null, "pin": 37 },
+                { "name": "Data-Link (SCIRX)", "type": null, "pin": 38 },
+                { "name": "NC", "type": null, "pin": 39 },
+                { "name": "Neutral Position Switch", "type": null, "pin": 40 },
+                { "name": "Cooling Fan", "type": null, "pin": 41 },
+                { "name": "Wiper Motor", "type": null, "pin": 42 }
+            ],
+            "image": {
+                "src": "/chassis/s14/f3.png",
+                "height": 120
+            }
+        },
+        {
             "name": "F1_S13",
             "allow_multiple": false,
             "part_number": "WS_WRSDICON",
@@ -961,8 +1020,29 @@
     ],
     "trigger_options": [
         {
-            "name": "Mazda Series 4/5 CAS",
+            "name": "Mazda S4/S5 RX-7 CAS",
             "part_number": "6187-4441",
+            "connector_type": "Female",
+            "restrictions": ["13b"],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=341",
+                "estimated_price": 3.17
+            }],
+            "pinout": [
+                { "name": "G+", "type": "home", "pin": 1 },
+                { "name": "G-", "type": "home_ground", "pin": 2 },
+                { "name": "Ne+", "type": "trigger", "pin": 3 },
+                { "name": "Ne-", "type": "trigger_ground", "pin": 4 }
+            ],
+            "image": {
+                "src": "/trigger_sensors/s4_s5_cas.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "Mazda S6/S7/S8 RX-7 Trigger Sensor",
+            "part_number": "S6/S7/S8",
             "connector_type": "Female",
             "restrictions": ["13b"],
             "sources": [{

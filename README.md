@@ -7,7 +7,7 @@ Effortlessly craft engine wiring diagrams for your project using. Save time plan
 ### Installation
 
 ecu-viz requires the following
-- [Node.js (LTS Version)](http://nodejs.org/).
+- [Node.js (LTS Version)](http://nodejs.org/)
 - [Python 3.7 or later](https://www.python.org/downloads/)
 - [WireViz](https://github.com/wireviz/WireViz)
 
