@@ -512,6 +512,114 @@
                 "src": "/chassis/e30/c104.png",
                 "height": 120
             }
+        },
+        {
+            "name": "X-14-MT",
+            "allow_multiple": false,
+            "part_number": "MLC070-14S",
+            "connector_type": "Female",
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=893",
+                "estimated_price": 5.81
+            }],
+            "pinout": [
+                { "name": "Speedo Input", "type": null, "pin": 1 },
+                { "name": "Reverse Light (Power to Reverse Lights)", "type": null, "pin": 2 },
+                { "name": "Neutral (Ground)", "type": null, "pin": 3 },
+                { "name": "Temp Gauge", "type": null, "pin": 4 },
+                { "name": "Fuel Temp Sensor", "type": null, "pin": 5 },
+                { "name": "NC", "type": null, "pin": 6 },
+                { "name": "Dash Cluster Ground", "type": null, "pin": 7 },
+                { "name": "Speedo Input", "type": null, "pin": 8 },
+                { "name": "Reverse Lights (Power to Switch)", "type": null, "pin": 9 },
+                { "name": "2nd gear switch", "type": null, "pin": 10 },
+                { "name": "1st gear switch", "type": null, "pin": 11 },
+                { "name": "Thermo fan switch", "type": null, "pin": 12 },
+                { "name": "Neutral Switch", "type": null, "pin": 13 },
+                { "name": "Electrical Load Input", "type": null, "pin": 14 }
+            ],
+            "image": {
+                "src": "/chassis/fd_s6/x14_mt.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "X-05-MT",
+            "allow_multiple": false,
+            "part_number": "MLC070-10S",
+            "connector_type": "Female",
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=740",
+                "estimated_price": 4.64
+            }],
+            "pinout": [
+                { "name": "12v+ EGR Power", "type": "switched_12v", "pin": 1 },
+                { "name": "1st Gear Switch", "type": null, "pin": 2 },
+                { "name": "Sensor Ground from ECU", "type": null, "pin": 3 },
+                { "name": "EGR Switch", "type": null, "pin": 4 },
+                { "name": "5V+ Supply from the ECU", "type": null, "pin": 5 },
+                { "name": "Switched 12V+ to Injectors", "type": "switched_12v", "pin": 6 },
+                { "name": "Fan Trigger from factory ECU", "type": null, "pin": 7 },
+                { "name": "Switched 12V+ to Solenoids", "type": "switched_12v", "pin": 8 },
+                { "name": "2nd Gear Switch", "type": null, "pin": 9 },
+                { "name": "Neutral Switch Input to the body", "type": null, "pin": 10 }
+            ],
+            "image": {
+                "src": "/chassis/fd_s6/x05_mt.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "FD3S_ECU_HEADER",
+            "allow_multiple": false,
+            "part_number": "FD3S_ECU_HEADER",
+            "connector_type": "Female",
+            "sources": [{
+                "seller": "LMS EFI",
+                "url": "https://lms-efi-llc.myshopify.com/products/s5-fc-and-fd-rx-7-ecu-header",
+                "estimated_price": 25.00
+            }],
+            "pinout": [
+                { "name": "Battery", "type": null, "pin": "1A" },
+                { "name": "Main Relay", "type": null, "pin": "1B" },
+                { "name": "Ignition Switch", "type": null, "pin": "1C" },
+                { "name": "Self Diag Checker (Monitor Lamp)", "type": null, "pin": "1D" },
+                { "name": "Air Conditioner Sensor", "type": null, "pin": "1E" },
+                { "name": "Self Diag Checker (Code Number)", "type": null, "pin": "1F" },
+                { "name": "Igniter (Trailing) Front Rotor", "type": null, "pin": "1G" },
+                { "name": "Igniter (Leading)", "type": null, "pin": "1H" },
+                { "name": "Data Link Connector (Ten Terminal)", "type": null, "pin": "1I" },
+                { "name": "Igniter (Trailing) Rear Rotor", "type": null, "pin": "1J" },
+                { "name": "Fuel Pump Relay (Speed)", "type": null, "pin": "1K" },
+                { "name": "A/C Relay", "type": null, "pin": "1L" },
+                { "name": "Vehicle Speed Sensor", "type": null, "pin": "1M" },
+                { "name": "Steering Pressure Sensor / Mileage Switch", "type": null, "pin": "1N" },
+                { "name": "Manifold Absolute Pressure Sensor", "type": null, "pin": "1O" },
+                { "name": "NC", "type": null, "pin": "1P" },
+                { "name": "Clutch Switch (M/T) / PCM (Trans A/T)", "type": null, "pin": "1Q" },
+                { "name": "Neutral Switch (M/T) / PCM (Trans A/T)", "type": null, "pin": "1R" },
+                { "name": "Stop Light Switch", "type": null, "pin": "1S" },
+                { "name": "Fuel Pump Relay", "type": "fuel_pump", "pin": "1T" },
+                { "name": "Fuel Thermosensor", "type": null, "pin": "1U" },
+                { "name": "NC", "type": null, "pin": "2A" },
+                { "name": "Tachometer", "type": "tacho", "pin": "2B" },
+                { "name": "PCM (A/T Trans)", "type": null, "pin": "2C" },
+                { "name": "PCM (A/T Trans)", "type": null, "pin": "2D" },
+                { "name": "PCM (A/T Trans)", "type": null, "pin": "2E" },
+                { "name": "NC", "type": null, "pin": "2F" },
+                { "name": "PCM (A/T Trans)", "type": null, "pin": "2G" },
+                { "name": "NC", "type": null, "pin": "2H" },
+                { "name": "Heat Hazzard Sensor", "type": null, "pin": "2I" },
+                { "name": "A/P Relay", "type": null, "pin": "2J" },
+                { "name": "1-2 Switch", "type": null, "pin": "2K" },
+                { "name": "1-2 Switch", "type": null, "pin": "2L" }
+            ],
+            "image": {
+                "src": "/chassis/fd_s6/s6_ecu_header.png",
+                "height": 120
+            }
         }
     ],
     "analog_inputs": [
