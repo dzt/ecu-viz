@@ -17,7 +17,7 @@
         "name": "Mazda RX-7 (Series 6 - M/T Chassis)",
         "id": "fd_s6",
         "fuel_pump_12v": false,
-        "chassis_connectors": ["X-05-MT", "X-14-MT", "FD3S_ECU_HEADER"],
+        "chassis_connectors": ["X-05-MT", "FD3S_ECU_HEADER"],
         "insert_options": []
     },
     {
