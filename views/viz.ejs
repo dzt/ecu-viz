@@ -87,6 +87,10 @@
                                     <div class="mb-3">
                                         <label for="chassisOptions" class="form-label">Chassis Options</label>
                                     </div>
+                                    <div class="mb-3" id="optionsContainer">
+                                        <!-- Auto Populated -->
+                                        
+                                    </div>
                                     <div class="mb-3 form-check">
                                         <input type="checkbox" class="form-check-input" id="use_factory_tacho" checked></input>
                                         <label class="form-check-label" for="use_factory_tacho">Use factory tachometer</label>
@@ -268,7 +272,8 @@
             engines: <%- raw.engines %>,
             ecus: <%- raw.ecus %>,
             connectors: <%- raw.connectors %>,
-            chassis: <%- raw.chassis %>
+            chassis: <%- raw.chassis %>,
+            inserts: <%- raw.inserts %>
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.6/underscore-umd-min.js"></script>

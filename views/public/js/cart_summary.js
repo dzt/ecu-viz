@@ -111,9 +111,9 @@ let refreshCartSummary = function() {
 }
 
 /* Updates in realtime any values are changed throughout all the pages */
-$(document).ready(function () {
-    refreshCartSummary()
-    $('#nav-tabContent').on('change', function () {
-        refreshCartSummary()
-    });
-});
+// $(document).ready(function () {
+//     refreshCartSummary()
+//     $('#nav-tabContent').on('change', function () {
+//         refreshCartSummary()
+//     });
+// });

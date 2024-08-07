@@ -56,14 +56,37 @@ let updateCounter = function () {
 
 }
 
+let updateChassisOptions = function () {
+    let chassisID = $('#vehicleChassis').find('option:selected').val();
+    let options = _.findWhere(serverData.chassis, { id: chassisID }).insert_options;
+    let checkboxArr = [];
+    for (let i = 0; i < options.length; i++) {
+        let option = _.findWhere(serverData.inserts, { id: options[i] });
+        let div = `
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="checkBox_${i + 1}" value="${option.id}">
+                <label class="form-check-label" for="checkBox_${i + 1}">${option.name}</label>
+            </div>
+        `
+        checkboxArr.push(div);
+    }
+    $('#optionsContainer').html(checkboxArr.join('\n'));
+}
+
+let refresh = function() {
+    updateCounter();
+    updateChassisOptions();
+    refreshCartSummary();
+}
+
 $(document).ready(function () {
 
-    /* Called once page is loaded */
-    updateCounter();
+    /* Init: Called once page is loaded */
+    refresh();
 
     /* Called anytime a change is made to the ECU selection */
-    $('#ecu, #use_factory_tacho, #nav-io').on('change', function () {
-        updateCounter();
+    $('#nav-tabContent').on('change', function () {
+        refresh();
     });
 
 });
