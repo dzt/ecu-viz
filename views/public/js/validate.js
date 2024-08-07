@@ -13,7 +13,6 @@ let getUserInput = function () {
     let use_factory_tacho = $('#use_factory_tacho').is(":checked");
 
     // Assuming these values should be fetched or initialized
-    let options = $('#chassisOptions').find('option:selected').val() || [];
     let flex_fuel = null;
 
     let additional_io = parseAdditionalIO();
@@ -22,6 +21,12 @@ let getUserInput = function () {
     let aux_outputs = additional_io.auxiliary_outputs;
     let analog_inputs = additional_io.analog_inputs;
 
+    let options = []
+    $('#optionsContainer').find('input[type="checkbox"]:checked').each(function() {
+        options.push($(this).val())
+    });
+
+    console.log(options)
 
     let req_params = {
         "ecu": ecu,

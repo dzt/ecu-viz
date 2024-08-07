@@ -56,21 +56,30 @@ let updateCounter = function () {
 
 }
 
+let currentOptions = [];
 let updateChassisOptions = function () {
+
     let chassisID = $('#vehicleChassis').find('option:selected').val();
     let options = _.findWhere(serverData.chassis, { id: chassisID }).insert_options;
     let checkboxArr = [];
+
     for (let i = 0; i < options.length; i++) {
         let option = _.findWhere(serverData.inserts, { id: options[i] });
         let div = `
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="checkBox_${i + 1}" value="${option.id}">
-                <label class="form-check-label" for="checkBox_${i + 1}">${option.name}</label>
+                <input type="checkbox" class="form-check-input" value="${option.id}" id="checkbox_${i + 1}"></input>
+                <label class="form-check-label" for="checkbox_${i + 1}">${option.name}</label>
             </div>
         `
         checkboxArr.push(div);
     }
-    $('#optionsContainer').html(checkboxArr.join('\n'));
+
+    let htmlText = checkboxArr.join('\n');
+    if (currentOptions != options) {
+        $('#optionsContainer').html(htmlText);
+        currentOptions = options;
+    }
+
 }
 
 let refresh = function() {
