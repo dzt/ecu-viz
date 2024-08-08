@@ -61,11 +61,11 @@
         "name": "Air Conditioning",
         "colors": [null, null],
         "additional_connectors": [
-            { "category": "chassis_options", "name": "Starter" }
+            { "category": "chassis_options", "name": "F-31" }
         ],
         "connections": [
-            [{ "F-31": 2 }, "ECU_DI"],
-            [{ "F-31": 2 }, "ECU_AUX"]
+            [{ "F-31": "1E" }, "digital_input"],
+            [{ "F-31": "1F" }, "auxiliary_output"]
         ]
     },
     {
@@ -73,11 +73,11 @@
         "name": "Air Conditioning",
         "colors": [null, null],
         "additional_connectors": [
-            { "category": "chassis_options", "name": "Starter" }
+            { "category": "chassis_options", "name": "B1-03" }
         ],
         "connections": [
-            [{ "B1-03": 2 }, "ECU_DI"],
-            [{ "B1-03": 2 }, "ECU_AUX"]
+            [{ "B1-03": "1O" }, "digital_input"],
+            [{ "B1-03": "1L" }, "auxiliary_output"]
         ]
     },
     {
