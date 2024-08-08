@@ -3,6 +3,10 @@
         "id": "S4_RX7_Alt",
         "name": "Series 4 RX-7 Alternator Control",
         "colors": ["B/W", "W/B"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "FEM_01" },
+            { "category": "accessories", "name": "Series 4 RX-7 Alternator" }
+        ],
         "connections": [
             [{ "FEM_01": 5 }, { "Series 4 RX-7 Alternator": 1 }],
             [{ "FEM_01": 13 }, { "Series 4 RX-7 Alternator": 2 }]
@@ -12,6 +16,10 @@
         "id": "S5_S6_RX7_Alt",
         "name": "Series 5/6 RX-7 Alternator Control",
         "colors": ["W/O", "W/B"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "FEM_01" },
+            { "category": "accessories", "name": "Series 5/6 RX-7 Alternator" }
+        ],
         "connections": [
             [{ "FEM_02": 4 }, { "Series 5/6 RX-7 Alternator": 1 }],
             [{ "FEM_01": 13 }, { "Series 5/6 RX-7 Alternator": 2 }]
@@ -21,6 +29,10 @@
         "id": "S4_RX7_Wipers",
         "name": "Wiper Control",
         "colors": ["L", "B", "L/R", "L/W", "L/Y"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "FEM_01" },
+            { "category": "chassis_options", "name": "FC_WIPER" }
+        ],
         "connections": [
             [{ "FEM_01": 15 }, { "FC_WIPER": 1 }],
             [{ "FEM_01": 11 }, { "FC_WIPER": 2 }],
@@ -33,6 +45,9 @@
         "id": "S5_RX7_Wipers",
         "name": "Wiper Control",
         "colors": ["L", "B", "L/R", "L/W", "L/Y"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "FC_WIPER" }
+        ],
         "connections": [
             [{ "X-11": 3 }, { "FC_WIPER": 1 }],
             [{ "X-11": 4 }, { "FC_WIPER": 2 }],
