@@ -57,6 +57,41 @@
         ]
     },
     {
+        "id": "S4_RX7_AC",
+        "name": "Air Conditioning",
+        "colors": [null, null],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "Starter" }
+        ],
+        "connections": [
+            [{ "F-31": 2 }, "ECU_DI"],
+            [{ "F-31": 2 }, "ECU_AUX"]
+        ]
+    },
+    {
+        "id": "S5_RX7_AC",
+        "name": "Air Conditioning",
+        "colors": [null, null],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "Starter" }
+        ],
+        "connections": [
+            [{ "B1-03": 2 }, "ECU_DI"],
+            [{ "B1-03": 2 }, "ECU_AUX"]
+        ]
+    },
+    {
+        "id": "E36_STARTER_OBDII",
+        "name": "Starter Control",
+        "colors": ["B/Y"],
+        "additional_connectors": [
+            { "category": "generics", "name": "Starter" }
+        ],
+        "connections": [
+            [{ "e36_obd2_x20": 18 }, { "Starter": 1 }]
+        ]
+    },
+    {
         "id": "IS300_2002_STARTER",
         "name": "Starter Control",
         "colors": ["B/Y"],
@@ -65,6 +100,15 @@
         ],
         "connections": [
             [{ "EA1_IS2002": 8 }, { "Starter": 1 }]
+        ]
+    },
+    {
+        "id": "IS300_2002_NSS_BYPASS",
+        "name": "Neutral Safety Switch Bypass",
+        "colors": ["B/R"],
+        "additional_connectors": [],
+        "connections": [
+            [{ "EA1_IS2002": 2 }, { "EA1_IS2002": 6 }]
         ]
     }
 ]

@@ -4,14 +4,14 @@
         "id": "fc_s4",
         "fuel_pump_12v": false,
         "chassis_connectors": ["FEM_02", "FC_TACHO"],
-        "insert_options": ["S4_RX7_Wipers", "S4_RX7_Alt", "S5_S6_RX7_Alt"]
+        "insert_options": ["S4_RX7_Wipers", "S4_RX7_Alt", "S5_S6_RX7_Alt", "S4_RX7_AC"]
     },
     {
         "name": "Mazda RX-7 (Series 5)",
         "id": "fc_s5",
         "fuel_pump_12v": false,
         "chassis_connectors": ["X-11", "FC_TACHO"],
-        "insert_options": ["S5_RX7_Wipers"]
+        "insert_options": ["S5_RX7_Wipers", "S5_RX7_AC"]
     },
     {
         "name": "Mazda RX-7 (Series 6 - M/T Chassis)",
@@ -39,14 +39,14 @@
         "id": "is300_2002",
         "fuel_pump_12v": false,
         "chassis_connectors": ["E3_IS2002", "E4_IS2002", "EA1_IS2002"],
-        "insert_options": ["IS300_2002_STARTER"]
+        "insert_options": ["IS300_2002_STARTER", "IS300_2002_AIRCON", "IS300_2002_NSS_BYPASS"]
     },
     {
         "name": "BMW 3-Series (1995-1999 / OBD2)",
         "id": "obd2_e36",
         "fuel_pump_12v": true,
         "chassis_connectors": ["e36_obd2_x20"],
-        "insert_options": []
+        "insert_options": ["E36_STARTER_OBDII"]
     },
     {
         "name": "BMW 3-Series (1984-1986 / Early Model)",

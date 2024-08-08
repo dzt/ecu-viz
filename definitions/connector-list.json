@@ -142,6 +142,42 @@
             }
         },
         {
+            "name": "F-31",
+            "allow_multiple": false,
+            "part_number": "F31",
+            "connector_type": "Female",
+            "sources": [{
+                    "seller": "Corsa Technic",
+                    "url": "https://www.corsa-technic.com/item.php?item_id=1169",
+                    "estimated_price": 5.16
+            }],
+            "pinout": [
+                { "name": "NC", "type": null, "pin": 1 }
+            ],
+            "image": {
+                "src": "/chassis/fc_s4/f-31.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "B1-03",
+            "allow_multiple": false,
+            "part_number": "4900723589259",
+            "connector_type": "Female",
+            "sources": [{
+                    "seller": "LMS EFI",
+                    "url": "https://lms-efi-llc.myshopify.com/products/s5-fc-and-fd-rx-7-ecu-header",
+                    "estimated_price": 25.00
+            }],
+            "pinout": [
+                { "name": "NC", "type": null, "pin": 1 }
+            ],
+            "image": {
+                "src": "/chassis/fc_s5/b1-03.png",
+                "height": 120
+            }
+        },
+        {
             "name": "F3_S14_OBDII",
             "allow_multiple": false,
             "part_number": "WRS-S14F3_OBDII",
@@ -175,7 +211,7 @@
                 { "name": "Data-Link (Ground)", "type": null, "pin": 21 },
                 { "name": "Data-Link (SCTIX)", "type": null, "pin": 22 },
                 { "name": "Data-Link (SCICL)", "type": null, "pin": 23 },
-                { "name": "Vehicle Speed Sensor Inputx", "type": null, "pin": 24 },
+                { "name": "Vehicle Speed Sensor Input", "type": null, "pin": 24 },
                 { "name": "Cooling Fan", "type": null, "pin": 25 },
                 { "name": "Tachometer Signal", "type": "tacho", "pin": 26 },
                 { "name": "Wiper Signal", "type": null, "pin": 27 },
