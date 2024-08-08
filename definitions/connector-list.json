@@ -214,7 +214,7 @@
                 { "name": "Fog Light Switch", "type": null, "pin": "1S" },
                 { "name": "Back-up light and 5th switch", "type": null, "pin": "1T" },
                 { "name": "Mileage Sensor No.2", "type": null, "pin": "1U" },
-                { "name": "Ignition Coil (Trailing) IGf-T Ignition Confirmation Signal", "type": null, "pin": "1V" },
+                { "name": "Ignition Coil (Trailing) IGf-T Ignition Confirmation Signal", "type": null, "pin": "1V" }
             ],
             "image": {
                 "src": "/chassis/fc_s5/b1-03.png",
