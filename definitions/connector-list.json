@@ -1286,7 +1286,22 @@
                 { "name": "Alternator Charge Light", "type": "l_terminal", "pin": 2 }
             ],
             "image": {
-                "src": "/accessories/s5_s6_rx7_alt.png.png",
+                "src": "/accessories/s5_s6_rx7_alt.png",
+                "height": 120
+            }
+        }
+    ],
+    "generics": [
+        {
+            "name": "Starter",
+            "part_number": "starter_conn",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "Cranking 12V+", "type": null, "pin": 1 }
+            ],
+            "image": {
+                "src": "/generic/starter.png",
                 "height": 120
             }
         }

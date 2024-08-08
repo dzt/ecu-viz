@@ -55,5 +55,16 @@
             [{ "X-11": 7 }, { "FC_WIPER": 4 }],
             [{ "X-11": 12 }, { "FC_WIPER": 5 }]
         ]
+    },
+    {
+        "id": "IS300_2002_STARTER",
+        "name": "Starter Control",
+        "colors": ["B/Y"],
+        "additional_connectors": [
+            { "category": "generics", "name": "Starter" }
+        ],
+        "connections": [
+            [{ "EA1_IS2002": 8 }, { "Starter": 1 }]
+        ]
     }
 ]
