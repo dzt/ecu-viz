@@ -59,7 +59,7 @@
     {
         "id": "S4_RX7_AC",
         "name": "Air Conditioning",
-        "colors": [],
+        "colors": ["AUTO", "AUTO"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "F-31" }
         ],
@@ -71,7 +71,7 @@
     {
         "id": "S5_RX7_AC",
         "name": "Air Conditioning",
-        "colors": [null, null],
+        "colors": ["AUTO", "AUTO"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "B1-03" }
         ],
