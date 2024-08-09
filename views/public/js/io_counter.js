@@ -61,7 +61,8 @@ let updateCounter = function () {
     // Used I/O
     let additional_aux = readOptionsFields('#aux_container').length;
     let additional_an = readOptionsFields('#analog_container').length;
-    let additional_di = readOptionsFields('#flex_container').length; // for flex fuel input
+    let additional_di = 0; // for flex fuel input
+    if ($('#flex').find('option:selected').val() != '0') additional_di++;
 
     // Used I/O from Insert Option(s)
     let insertCounts = getInsertCounts();

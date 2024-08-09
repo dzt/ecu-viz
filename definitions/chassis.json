@@ -4,7 +4,7 @@
         "id": "fc_s4",
         "fuel_pump_12v": false,
         "chassis_connectors": ["FEM_02", "FC_TACHO"],
-        "insert_options": ["S4_RX7_Wipers", "S4_RX7_Alt", "S5_S6_RX7_Alt", "S4_RX7_AC"]
+        "insert_options": ["S4_RX7_Wipers", "S4_RX7_Alt", "S5_S6_RX7_Alt", "S4_RX7_AC", "S4_RX7_CLUTCH_INPUT"]
     },
     {
         "name": "Mazda RX-7 (Series 5)",

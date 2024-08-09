@@ -42,18 +42,14 @@
         ]
     },
     {
-        "id": "S5_RX7_Wipers",
-        "name": "Wiper Control",
-        "colors": ["L", "B", "L/R", "L/W", "L/Y"],
+        "id": "S4_RX7_CLUTCH_INPUT",
+        "name": "Clutch Input",
+        "colors": ["AUTO"],
         "additional_connectors": [
-            { "category": "chassis_options", "name": "FC_WIPER" }
+            { "category": "chassis_options", "name": "F-31" }
         ],
         "connections": [
-            [{ "X-11": 3 }, { "FC_WIPER": 1 }],
-            [{ "X-11": 4 }, { "FC_WIPER": 2 }],
-            [{ "X-11": 18 }, { "FC_WIPER": 3 }],
-            [{ "X-11": 7 }, { "FC_WIPER": 4 }],
-            [{ "X-11": 12 }, { "FC_WIPER": 5 }]
+            [{ "F-31": "1L" }, "digital_input"]
         ]
     },
     {
@@ -66,6 +62,21 @@
         "connections": [
             [{ "F-31": "1E" }, "digital_input"],
             [{ "F-31": "1F" }, "auxiliary_output"]
+        ]
+    },
+    {
+        "id": "S5_RX7_Wipers",
+        "name": "Wiper Control",
+        "colors": ["L", "B", "L/R", "L/W", "L/Y"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "FC_WIPER" }
+        ],
+        "connections": [
+            [{ "X-11": 3 }, { "FC_WIPER": 1 }],
+            [{ "X-11": 4 }, { "FC_WIPER": 2 }],
+            [{ "X-11": 18 }, { "FC_WIPER": 3 }],
+            [{ "X-11": 7 }, { "FC_WIPER": 4 }],
+            [{ "X-11": 12 }, { "FC_WIPER": 5 }]
         ]
     },
     {
