@@ -59,7 +59,7 @@
     {
         "id": "S4_RX7_AC",
         "name": "Air Conditioning",
-        "colors": [null, null],
+        "colors": [],
         "additional_connectors": [
             { "category": "chassis_options", "name": "F-31" }
         ],
