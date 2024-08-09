@@ -65,6 +65,28 @@
         ]
     },
     {
+        "id": "S4_RX7_PS_SWITCH",
+        "name": "Power Steering Switch",
+        "colors": ["AUTO"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "F-31" }
+        ],
+        "connections": [
+            [{ "F-31": "1R" }, "digital_input"]
+        ]
+    },
+    {
+        "id": "S4_CLT_CLUSTER",
+        "name": "Coolant Temp (Instrument Cluster)",
+        "colors": ["Y/W"],
+        "additional_connectors": [
+            { "category": "generics", "name": "Female Spade" }
+        ],
+        "connections": [
+            [{ "FEM_02": 6 }, { "Female Spade": 1 }]
+        ]
+    },
+    {
         "id": "S5_RX7_Wipers",
         "name": "Wiper Control",
         "colors": ["L", "B", "L/R", "L/W", "L/Y"],
@@ -80,6 +102,39 @@
         ]
     },
     {
+        "id": "S5_CLT_CLUSTER",
+        "name": "Coolant Temp (Instrument Cluster)",
+        "colors": ["Y/W"],
+        "additional_connectors": [
+            { "category": "generics", "name": "Female Spade" }
+        ],
+        "connections": [
+            [{ "X-11": 10 }, { "Female Spade": 1 }]
+        ]
+    },
+    {
+        "id": "S5_RX7_CLUTCH_SWITCH",
+        "name": "Clutch Switch",
+        "colors": ["AUTO"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "B1-03" }
+        ],
+        "connections": [
+            [{ "B1-03": "1Q" }, "digital_input"]
+        ]
+    },
+    {
+        "id": "S5_RX7_PS_SWITCH",
+        "name": "Power Steering Switch",
+        "colors": ["AUTO"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "B1-03" }
+        ],
+        "connections": [
+            [{ "B1-03": "1N" }, "digital_input"]
+        ]
+    },
+    {
         "id": "S5_RX7_AC",
         "name": "Air Conditioning",
         "colors": ["AUTO", "AUTO"],
@@ -89,6 +144,121 @@
         "connections": [
             [{ "B1-03": "1O" }, "digital_input"],
             [{ "B1-03": "1L" }, "auxiliary_output"]
+        ]
+    },
+    {
+        "id": "S6_RX7_AC",
+        "name": "Air Conditioning",
+        "colors": ["AUTO", "AUTO"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "FD3S_ECU_HEADER" }
+        ],
+        "connections": [
+            [{ "FD3S_ECU_HEADER": "1E" }, "digital_input"],
+            [{ "FD3S_ECU_HEADER": "1L" }, "auxiliary_output"]
+        ]
+    },
+    {
+        "id": "S6_RX7_FAN_TRIGGER",
+        "name": "Factory Cooling Fan Control",
+        "colors": ["AUTO"],
+        "additional_connectors": [],
+        "connections": [
+            [{ "X-05-MT": 7 }, "auxiliary_output"]
+        ]
+    },
+    {
+        "id": "S6_RX7_PS_SWITCH",
+        "name": "Power Steering Switch",
+        "colors": ["AUTO"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "FD3S_ECU_HEADER" }
+        ],
+        "connections": [
+            [{ "FD3S_ECU_HEADER": "1N" }, "digital_input"]
+        ]
+    },
+    {
+        "id": "S6_RX7_CLUTCH_SWITCH",
+        "name": "Clutch Switch",
+        "colors": ["AUTO"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "FD3S_ECU_HEADER" }
+        ],
+        "connections": [
+            [{ "FD3S_ECU_HEADER": "1Q" }, "digital_input"]
+        ]
+    },
+    {
+        "id": "S6_RX7_FP_SPEED",
+        "name": "Fuel Pump Speed Control",
+        "colors": ["AUTO"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "FD3S_ECU_HEADER" }
+        ],
+        "connections": [
+            [{ "FD3S_ECU_HEADER": "1K" }, "auxiliary_output"]
+        ]
+    },
+    {
+        "id": "S13_AC",
+        "name": "Air Conditioning",
+        "colors": ["AUTO", "AUTO"],
+        "additional_connectors": [],
+        "connections": [
+            [{ "F8_S13": 4 }, "digital_input"],
+            [{ "F8_S13": 7 }, "auxiliary_output"]
+        ]
+    },
+    {
+        "id": "S13_CLT_CLUSTER",
+        "name": "Coolant Temp (Instrument Cluster)",
+        "colors": ["Y/W"],
+        "additional_connectors": [
+            { "category": "generics", "name": "Female Spade" }
+        ],
+        "connections": [
+            [{ "F1_S13": 1 }, { "Female Spade": 1 }]
+        ]
+    },
+    {
+        "id": "S13_CEL",
+        "name": "Check Engine Light",
+        "colors": ["AUTO"],
+        "additional_connectors": [],
+        "connections": [
+            [{ "F1_S13": 13 }, "auxiliary_output"]
+        ]
+    },
+    {
+        "id": "S14_OBDII_AC",
+        "name": "Air Conditioning",
+        "colors": ["AUTO", "AUTO", "AUTO"],
+        "additional_connectors": [],
+        "connections": [
+            [{ "F3_S14_OBDII": 46 }, "digital_input"],
+            [{ "F3_S14_OBDII": 43 }, "auxiliary_output"],
+            [{ "F3_S14_OBDII": 25 }, "auxiliary_output"]
+        ]
+    },
+    {
+        "id": "S14_CLT_CLUSTER",
+        "name": "Coolant Temp (Instrument Cluster)",
+        "colors": ["Y/W"],
+        "additional_connectors": [
+            { "category": "generics", "name": "Female Spade" }
+        ],
+        "connections": [
+            [{ "F3_S14_OBDII": 28 }, { "Female Spade": 1 }]
+        ]
+    },
+    {
+        "id": "S14_CEL",
+        "name": "Check Engine Light",
+        "colors": ["AUTO"],
+        "additional_connectors": [],
+        "connections": [
+            [{ "F3_S14_OBDII": 30 }, "auxiliary_output"]
         ]
     },
     {
@@ -121,5 +291,12 @@
         "connections": [
             [{ "EA1_IS2002": 2 }, { "EA1_IS2002": 6 }]
         ]
+    },
+    {
+        "id": "IS300_2002_AIRCON",
+        "name": "Air Conditioning",
+        "colors": [],
+        "additional_connectors": [],
+        "connections": []
     }
 ]

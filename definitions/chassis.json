@@ -4,35 +4,35 @@
         "id": "fc_s4",
         "fuel_pump_12v": false,
         "chassis_connectors": ["FEM_02", "FC_TACHO"],
-        "insert_options": ["S4_RX7_Wipers", "S4_RX7_Alt", "S5_S6_RX7_Alt", "S4_RX7_AC", "S4_RX7_CLUTCH_INPUT"]
+        "insert_options": ["S4_RX7_Wipers", "S4_RX7_Alt", "S5_S6_RX7_Alt", "S4_RX7_AC", "S4_RX7_CLUTCH_INPUT", "S4_RX7_PS_SWITCH", "S4_CLT_CLUSTER"]
     },
     {
         "name": "Mazda RX-7 (Series 5)",
         "id": "fc_s5",
         "fuel_pump_12v": false,
         "chassis_connectors": ["X-11", "FC_TACHO"],
-        "insert_options": ["S5_RX7_Wipers", "S5_RX7_AC"]
+        "insert_options": ["S5_RX7_Wipers", "S5_RX7_AC", "S5_CLT_CLUSTER", "S5_RX7_CLUTCH_SWITCH", "S5_RX7_PS_SWITCH"]
     },
     {
         "name": "Mazda RX-7 (Series 6 - M/T Chassis)",
         "id": "fd_s6",
         "fuel_pump_12v": false,
         "chassis_connectors": ["X-05-MT", "FD3S_ECU_HEADER"],
-        "insert_options": []
+        "insert_options": ["S6_RX7_AC", "S6_RX7_PS_SWITCH", "S6_RX7_FP_SPEED", "S6_RX7_CLUTCH_SWITCH", "S6_RX7_FAN_TRIGGER"]
     },
     {
         "name": "Nissan 240SX (S13)",
         "id": "240sx_s13",
         "fuel_pump_12v": false,
         "chassis_connectors": ["F1_S13", "F8_S13", "F10_S13"],
-        "insert_options": []
+        "insert_options": ["S13_AC", "S13_CLT_CLUSTER", "S13_CEL"]
     },
     {
         "name": "Nissan 240SX (S14 OBDII)",
         "id": "240sx_s14",
         "fuel_pump_12v": false,
         "chassis_connectors": ["F3_S14_OBDII"],
-        "insert_options": []
+        "insert_options": ["S14_OBDII_AC", "S14_CLT_CLUSTER", "S14_CEL"]
     },
     {
         "name": "Lexus IS300 (2002+)",

@@ -256,7 +256,7 @@
                 { "name": "Data-Link (SCTIX)", "type": null, "pin": 22 },
                 { "name": "Data-Link (SCICL)", "type": null, "pin": 23 },
                 { "name": "Vehicle Speed Sensor Input", "type": null, "pin": 24 },
-                { "name": "Cooling Fan", "type": null, "pin": 25 },
+                { "name": "A/C Cooling Fan", "type": null, "pin": 25 },
                 { "name": "Tachometer Signal", "type": "tacho", "pin": 26 },
                 { "name": "Wiper Signal", "type": null, "pin": 27 },
                 { "name": "Water Temp Signal to Cluster", "type": null, "pin": 28 },
@@ -273,7 +273,14 @@
                 { "name": "NC", "type": null, "pin": 39 },
                 { "name": "Neutral Position Switch", "type": null, "pin": 40 },
                 { "name": "Cooling Fan", "type": null, "pin": 41 },
-                { "name": "Wiper Motor", "type": null, "pin": 42 }
+                { "name": "Wiper Motor", "type": null, "pin": 42 },
+                { "name": "A/C Relay", "type": null, "pin": 43 },
+                { "name": "Idle Up Signal Pin", "type": null, "pin": 44 },
+                { "name": "NC", "type": null, "pin": 45 },
+                { "name": "A/C Request Signal", "type": null, "pin": 46 },
+                { "name": "NC", "type": null, "pin": 47 },
+                { "name": "NC", "type": null, "pin": 48 }
+
             ],
             "image": {
                 "src": "/chassis/s14/f3.png",
@@ -641,7 +648,7 @@
                 { "name": "EGR Switch", "type": null, "pin": 4 },
                 { "name": "5V+ Supply from the ECU", "type": null, "pin": 5 },
                 { "name": "Switched 12V+ to Injectors", "type": "switched_12v", "pin": 6 },
-                { "name": "Fan Trigger from factory ECU", "type": null, "pin": 7 },
+                { "name": "Cooling Fan Trigger", "type": null, "pin": 7 },
                 { "name": "Switched 12V+ to Solenoids", "type": "switched_12v", "pin": 8 },
                 { "name": "2nd Gear Switch", "type": null, "pin": 9 },
                 { "name": "Neutral Switch Input to the body", "type": null, "pin": 10 }
@@ -675,7 +682,7 @@
                 { "name": "Fuel Pump Relay (Speed)", "type": null, "pin": "1K" },
                 { "name": "A/C Relay", "type": null, "pin": "1L" },
                 { "name": "Vehicle Speed Sensor", "type": null, "pin": "1M" },
-                { "name": "Steering Pressure Sensor / Mileage Switch", "type": null, "pin": "1N" },
+                { "name": "Steering Pressure Switch", "type": null, "pin": "1N" },
                 { "name": "Manifold Absolute Pressure Sensor", "type": null, "pin": "1O" },
                 { "name": "NC", "type": null, "pin": "1P" },
                 { "name": "Clutch Switch (M/T) / PCM (Trans A/T)", "type": null, "pin": "1Q" },
@@ -1382,6 +1389,19 @@
             ],
             "image": {
                 "src": "/generic/starter.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "Female Spade",
+            "part_number": "female_spade",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "Signal", "type": null, "pin": 1 }
+            ],
+            "image": {
+                "src": "/generic/female_spade.png",
                 "height": 120
             }
         }
