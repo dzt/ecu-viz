@@ -13,7 +13,8 @@ let getUserInput = function () {
     let use_factory_tacho = $('#use_factory_tacho').is(":checked");
 
     // Assuming these values should be fetched or initialized
-    let flex_fuel = null;
+    let flex_fuel = Boolean($('#flex').find('option:selected').val())
+    if (flex_fuel) flex_fuel = serverData.connectors['flex_options'][0].part_number;
 
     let additional_io = parseAdditionalIO();
 

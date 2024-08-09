@@ -33,6 +33,27 @@ let readOptionsFields = function (selector) {
     return arr;
 }
 
+let getInsertCounts = function() {
+
+    let aux = 0;
+    let di = 0;
+
+    $('#optionsContainer').find('input[type="checkbox"]:checked').each(function() {
+        let insert_id = $(this).val();
+        let insert_connections = _.findWhere(serverData.inserts, { id: insert_id }).connections
+        for (let i = 0; i < insert_connections.length; i++) {
+            let connection = insert_connections[i]; // arr type
+            let type;
+            if (typeof connection[0] == 'string') type = connection[0];
+            if (typeof connection[1] == 'string') type = connection[1];
+            if (type == 'digital_input') di++;
+            if (type == 'auxiliary_output') aux++;
+        }
+    });
+
+    return { aux, di }
+}
+
 let updateCounter = function () {
     let selectedECU = $('#ecu').find('option:selected').val();
     let summary = getSummary(selectedECU);
@@ -41,6 +62,11 @@ let updateCounter = function () {
     let additional_aux = readOptionsFields('#aux_container').length;
     let additional_an = readOptionsFields('#analog_container').length;
     let additional_di = readOptionsFields('#flex_container').length; // for flex fuel input
+
+    // Used I/O from Insert Option(s)
+    let insertCounts = getInsertCounts();
+    additional_aux += insertCounts.aux;
+    additional_di +=  insertCounts.di;
 
     if ($('#use_factory_tacho').is(":checked")) additional_aux += 1; // tach is included is selected by user
 
