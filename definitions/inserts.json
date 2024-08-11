@@ -262,6 +262,13 @@
         ]
     },
     {
+        "id": "S14_STARTER",
+        "name": "Starter Control (TODO)",
+        "colors": ["B/Y"],
+        "additional_connectors": [],
+        "connections": []
+    },
+    {
         "id": "E36_STARTER_OBDII",
         "name": "Starter Control",
         "colors": ["B/Y"],
@@ -294,7 +301,7 @@
     },
     {
         "id": "IS300_2002_AIRCON",
-        "name": "Air Conditioning",
+        "name": "Air Conditioning (TODO)",
         "colors": [],
         "additional_connectors": [],
         "connections": []
