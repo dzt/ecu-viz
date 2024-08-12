@@ -61,5 +61,12 @@
         "fuel_pump_12v": true,
         "chassis_connectors": ["c101_late"],
         "insert_options": []
+    },
+    {
+        "name": "Toyota Chaser/Cresta/MKII (JZX100)",
+        "id": "jzx_100",
+        "fuel_pump_12v": true,
+        "chassis_connectors": [],
+        "insert_options": []
     }
 ]
