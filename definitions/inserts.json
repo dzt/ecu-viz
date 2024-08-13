@@ -302,7 +302,7 @@
     {
         "id": "IS300_2002_AIRCON",
         "name": "Air Conditioning (TODO)",
-        "colors": [],
+        "colors": ["AUTO", "AUTO"],
         "additional_connectors": [],
         "connections": []
     }
