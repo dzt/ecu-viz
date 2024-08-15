@@ -1558,6 +1558,24 @@
                 "src": "/accessories/s5_s6_rx7_alt.png",
                 "height": 120
             }
+        },
+        {
+            "name": "TOYOTA_SPEEDO_3WAY",
+            "part_number": "9080-11143",
+            "connector_type": "Female",
+            "sources": [{
+                "seller": "toyotapartsdeal.com",
+                "url": "https://www.toyotapartsdeal.com/oem/toyota~housing~connector~f~90980-11143.html",
+                "estimated_price": 8.93
+            }],
+            "pinout": [
+                { "name": "Constant 12V+", "type": "s_terminal", "pin": 1 },
+                { "name": "Alternator Charge Light", "type": "l_terminal", "pin": 2 }
+            ],
+            "image": {
+                "src": "/accessories/toyota_speedo_3way.png",
+                "height": 120
+            }
         }
     ],
     "generics": [

@@ -305,5 +305,89 @@
         "colors": ["AUTO", "AUTO"],
         "additional_connectors": [],
         "connections": []
+    },
+    {
+        "id": "JZX_100_MREL_BYPASS",
+        "name": "Main Relay Bypass",
+        "colors": ["R/Y"],
+        "additional_connectors": [],
+        "connections": [
+            [{ "JZX_100_F26": 4 }, { "JZX_100_CG1": 15 }]
+        ]
+    },
+    {
+        "id": "JZX_100_AC",
+        "name": "Air Conditioning",
+        "colors": ["AUTO", "AUTO"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "JZX_100_F25" }
+        ],
+        "connections": [
+            [{ "JZX_100_F25": 4 }, "auxiliary_output"],
+            [{ "JZX_100_F25": 15 }, "digital_input"]
+        ]
+    },
+    {
+        "id": "JZX_100_CEL",
+        "name": "Check Engine Light Control",
+        "colors": ["AUTO"],
+        "additional_connectors": [],
+        "connections": [
+            [{ "JZX_100_F26": 2 }, "auxiliary_output"]
+        ]
+    },
+    {
+        "id": "JZX_100_FP_SPEED",
+        "name": "Fuel Pump Speed Control",
+        "colors": ["AUTO"],
+        "additional_connectors": [],
+        "connections": [
+            [{ "JZX_100_F26": 1 }, "auxiliary_output"]
+        ]
+    },
+    {
+        "id": "JZX_100_SPEEDO",
+        "name": "Speedometer (Factory M/T Chassis)",
+        "colors": ["R/Y", "B", "L"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "JZX_100_CF2" },
+            { "category": "accessories", "name": "TOYOTA_SPEEDO_3WAY" }
+        ],
+        "connections": [
+            [{ "JZX_100_CF2": 11 }, { "TOYOTA_SPEEDO_3WAY": 1 }],
+            [{ "JZX_100_CG1": 6 }, { "TOYOTA_SPEEDO_3WAY": 2 }],
+            [{ "JZX_100_CG1": 7 }, { "TOYOTA_SPEEDO_3WAY": 3 }]
+        ]
+    },
+    {
+        "id": "JZX_100_REVERSE_LIGHTS",
+        "name": "Reverse Lights",
+        "colors": ["L", "L/R"],
+        "additional_connectors": [],
+        "connections": []
+    },
+    {
+        "id": "JZX_100_PS_SWITCH",
+        "name": "Power Steering Pressure Switch",
+        "colors": ["AUTO"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "JZX_100_CF3" }
+        ],
+        "connections": [
+            [{ "JZX_100_CF3": 13 }, "digital_input"]
+        ]
+    },
+    {
+        "id": "JZX_100_STARTER",
+        "name": "Starter Control",
+        "colors": ["Gy", "B/Y"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "JZX_100_CF2" },
+            { "category": "generics", "name": "Starter" }
+        ],
+        "connections": [
+            [{ "JZX_100_CF2": 1 }, { "JZX_100_CF3": 2 }],
+            [{ "JZX_100_CF2": 5 }, { "Starter": 2 }]
+        ]
     }
 ]
