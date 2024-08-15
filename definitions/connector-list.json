@@ -707,6 +707,188 @@
                 "src": "/chassis/fd_s6/s6_ecu_header.png",
                 "height": 120
             }
+        },
+        {
+            "name": "JZX_100_CG1",
+            "allow_multiple": false,
+            "part_number": "JZX_100_F26",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "Water Temp Sender (Ground) to Instrument Cluster", "type": null, "pin": 1 },
+                { "name": "NC", "type": null, "pin": 2 },
+                { "name": "AirCon CPU (SG)", "type": null, "pin": 3 },
+                { "name": "AirCon CPU (Mag-Clutch Switch)", "type": null, "pin": 4 },
+                { "name": "Fuel Filter Switch to Instrument Cluster", "type": null, "pin": 5 },
+                { "name": "Speedometer (M/T)", "type": null, "pin": 6 },
+                { "name": "Speedometer (M/T)", "type": null, "pin": 7 },
+                { "name": "Factory ECU Communication Pin #10", "type": null, "pin": 8 },
+                { "name": "Reverse Gear Indicator Light (Instrument Cluster)", "type": null, "pin": 9 },
+                { "name": "Low Gear Indicator Light (Instrument Cluster)", "type": null, "pin": 10 },
+                { "name": "2nd Gear Indicator Light (Instrument Cluster)", "type": null, "pin": 11 },
+                { "name": "Drive Gear Indicator Light (Instrument Cluster)", "type": null, "pin": 12 },
+                { "name": "Neutral Gear Indicator Light (Instrument Cluster)", "type": null, "pin": 13 },
+                { "name": "Park Gear Indicator Light (Instrument Cluster)", "type": null, "pin": 14 },
+                { "name": "Ground", "type": null, "pin": 15 },
+                { "name": "NC", "type": null, "pin": 16 },
+                { "name": "Tachometer Signal", "type": null, "pin": 17 },
+                { "name": "Oil Pressure Switch to Instrument Cluster", "type": null, "pin": 18 },
+                { "name": "Water Temp Sender (Signal) to Instrument Cluster", "type": null, "pin": 19 },
+                { "name": "NC", "type": null, "pin": 20 }
+            ],
+            "image": {
+                "src": "/chassis/fc/cg1.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "JZX_100_F26",
+            "allow_multiple": false,
+            "part_number": "JZX_100_CG1",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "Fuel Pump Speed", "type": null, "pin": 1 },
+                { "name": "Check Engine Light", "type": null, "pin": 2 },
+                { "name": "Main Relay", "type": null, "pin": 3 },
+                { "name": "NEO", "type": null, "pin": 4 },
+                { "name": "EFI+", "type": null, "pin": 5 },
+                { "name": "NC", "type": null, "pin": 6 },
+                { "name": "TE1", "type": null, "pin": 7 },
+                { "name": "EFI-", "type": null, "pin": 8 },
+                { "name": "Fuel Pump Control (FC)", "type": null, "pin": 9 },
+                { "name": "FAIL", "type": null, "pin": 10 },
+                { "name": "FPU", "type": null, "pin": 11 },
+                { "name": "NC", "type": null, "pin": 12 },
+                { "name": "NC", "type": null, "pin": 13 },
+                { "name": "ABV", "type": null, "pin": 14 },
+                { "name": "PRG (Purge Valve Solenoid)", "type": null, "pin": 15 },
+                { "name": "N/A", "type": null, "pin": 16 }
+            ],
+            "image": {
+                "src": "/chassis/jzx_100/f26.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "JZX_100_C1",
+            "allow_multiple": false,
+            "part_number": "JZX_100_C1",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "Switched 12V+", "type": null, "pin": 1 },
+                { "name": "Switched 12V+", "type": null, "pin": 2 },
+                { "name": "Switched 12V+", "type": null, "pin": 3 },
+                { "name": "Switched 12V+", "type": null, "pin": 4 },
+                { "name": "Switched 12V+", "type": null, "pin": 5 },
+                { "name": "Switched 12V+", "type": null, "pin": 6 },
+                { "name": "Switched 12V+", "type": null, "pin": 7 },
+                { "name": "Switched 12V+", "type": null, "pin": 8 },
+                { "name": "Switched 12V+", "type": null, "pin": 9 },
+                { "name": "Switched 12V+", "type": null, "pin": 10 },
+                { "name": "Switched 12V+", "type": null, "pin": 11 },
+                { "name": "Switched 12V+", "type": null, "pin": 12 }
+            ],
+            "image": {
+                "src": "/chassis/jzx_100/c1.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "JZX_100_F25",
+            "allow_multiple": false,
+            "part_number": "JZX_100_F25",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "EGW", "type": null, "pin": 1 },
+                { "name": "NC", "type": null, "pin": 2 },
+                { "name": "PWRL", "type": null, "pin": 3 },
+                { "name": "AC Clutch", "type": null, "pin": 4 },
+                { "name": "NC", "type": null, "pin": 5 },
+                { "name": "PWR", "type": null, "pin": 6 },
+                { "name": "L", "type": null, "pin": 7 },
+                { "name": "TT", "type": null, "pin": 8 },
+                { "name": "CCO", "type": null, "pin": 9 },
+                { "name": "Vehicle Speed Input via Dash", "type": null, "pin": 10 },
+                { "name": "TE2", "type": null, "pin": 11 },
+                { "name": "2*2", "type": null, "pin": 12 },
+                { "name": "Ignition Switch", "type": null, "pin": 13 },
+                { "name": "ELS2", "type": null, "pin": 14 },
+                { "name": "AC Request Signal (AC1)", "type": null, "pin": 15 },
+                { "name": "AC2", "type": null, "pin": 16 },
+                { "name": "EFIF", "type": null, "pin": 17 },
+                { "name": "NC", "type": null, "pin": 18 },
+                { "name": "RSPD2", "type": null, "pin": 19 },
+                { "name": "3*2", "type": null, "pin": 20 },
+                { "name": "BATT", "type": null, "pin": 21 },
+                { "name": "ELS1", "type": null, "pin": 22 },
+                { "name": "ELS3", "type": null, "pin": 23 },
+                { "name": "THWO", "type": null, "pin": 24 },
+                { "name": "STP", "type": null, "pin": 25 },
+                { "name": "R*2", "type": null, "pin": 26 },
+                { "name": "NC", "type": null, "pin": 27 },
+                { "name": "+B", "type": null, "pin": 28 }
+            ],
+            "image": {
+                "src": "/chassis/jzx_100/f25.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "JZX_100_CF2",
+            "allow_multiple": false,
+            "part_number": "JZX_100_CF2",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "Neutral Safety Switch (Opening Switch)", "type": null, "pin": 1 },
+                { "name": "Switched 12V+ to Solenoids", "type": null, "pin": 2 },
+                { "name": "NC", "type": null, "pin": 3 },
+                { "name": "NC", "type": null, "pin": 4 },
+                { "name": "Starter Solenoid Trigger", "type": null, "pin": 5 },
+                { "name": "Diagnosis Port (WB)", "type": null, "pin": 6 },
+                { "name": "NC", "type": null, "pin": 7 },
+                { "name": "STA and NSW Pin to Stock ECU", "type": null, "pin": 8 },
+                { "name": "Diagnostic Port (FP)", "type": null, "pin": 9 },
+                { "name": "NC", "type": null, "pin": 10 },
+                { "name": "Fused 12V+ to Speed Sensor", "type": null, "pin": 11 },
+                { "name": "Diagnostic Port (VF1)", "type": null, "pin": 12 }
+            ],
+            "image": {
+                "src": "/chassis/jzx_100/cf2.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "JZX_100_CF3",
+            "allow_multiple": false,
+            "part_number": "JZX_100_CF3",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "Neutral Safety Switch (RL)", "type": null, "pin": 1 },
+                { "name": "Neutral Safety Switch (Constant 12V+)", "type": null, "pin": 2 },
+                { "name": "Diagnostic Port (WB)", "type": null, "pin": 3 },
+                { "name": "Diagnostic Port (TC)", "type": null, "pin": 4 },
+                { "name": "Cruise Control Computer (ECT)", "type": null, "pin": 5 },
+                { "name": "Diagnostic Port (TS)", "type": null, "pin": 6 },
+                { "name": "Diagnosis Port (CF3)", "type": null, "pin": 7 },
+                { "name": "Neutral Safety Switch (PL)", "type": null, "pin": 8 },
+                { "name": "Neutral Safety Switch (NL)", "type": null, "pin": 9 },
+                { "name": "Diagnostic Port (AB)", "type": null, "pin": 10 },
+                { "name": "Neutral Start Switch (Receiving End)", "type": null, "pin": 11 },
+                { "name": "VSV Solenoid Trigger", "type": null, "pin": 12 },
+                { "name": "Power Steering Switch", "type": null, "pin": 13 },
+                { "name": "Speed Sensor / RR+", "type": null, "pin": 14 },
+                { "name": "Speed Sensor / RR-", "type": null, "pin": 15 },
+                { "name": "Diagnostic Port (TE1)", "type": null, "pin": 16 }
+            ],
+            "image": {
+                "src": "/chassis/jzx_100/f25.png",
+                "height": 120
+            }
         }
     ],
     "analog_inputs": [

@@ -71,7 +71,9 @@
             "JZX_100_MREL_BYPASS",
             "JZX_100_AC",
             "JZX_100_CEL",
+            "JZX_100_FP_SPEED",
             "JZX_100_SPEEDO",
+            "JZX_100_ECT_CLUSTER",
             "JZX_100_REVERSE_LIGHTS",
             "JZX_100_PS_SWITCH",
             "JZX_100_NSS_BYPASS"
