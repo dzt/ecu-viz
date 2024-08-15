@@ -731,13 +731,13 @@
                 { "name": "Park Gear Indicator Light (Instrument Cluster)", "type": null, "pin": 14 },
                 { "name": "Ground", "type": null, "pin": 15 },
                 { "name": "NC", "type": null, "pin": 16 },
-                { "name": "Tachometer Signal", "type": null, "pin": 17 },
+                { "name": "Tachometer Signal", "type": "tacho", "pin": 17 },
                 { "name": "Oil Pressure Switch to Instrument Cluster", "type": null, "pin": 18 },
                 { "name": "Water Temp Sender (Signal) to Instrument Cluster", "type": null, "pin": 19 },
                 { "name": "NC", "type": null, "pin": 20 }
             ],
             "image": {
-                "src": "/chassis/fc/cg1.png",
+                "src": "/chassis/jzx100/cg1.png",
                 "height": 120
             }
         },
@@ -756,7 +756,7 @@
                 { "name": "NC", "type": null, "pin": 6 },
                 { "name": "TE1", "type": null, "pin": 7 },
                 { "name": "EFI-", "type": null, "pin": 8 },
-                { "name": "Fuel Pump Control (FC)", "type": null, "pin": 9 },
+                { "name": "Fuel Pump Control (FC)", "type": "fuel_pump", "pin": 9 },
                 { "name": "FAIL", "type": null, "pin": 10 },
                 { "name": "FPU", "type": null, "pin": 11 },
                 { "name": "NC", "type": null, "pin": 12 },
@@ -766,7 +766,7 @@
                 { "name": "N/A", "type": null, "pin": 16 }
             ],
             "image": {
-                "src": "/chassis/jzx_100/f26.png",
+                "src": "/chassis/jzx100/f26.png",
                 "height": 120
             }
         },
@@ -777,21 +777,21 @@
             "connector_type": "Female",
             "sources": [],
             "pinout": [
-                { "name": "Switched 12V+", "type": null, "pin": 1 },
-                { "name": "Switched 12V+", "type": null, "pin": 2 },
-                { "name": "Switched 12V+", "type": null, "pin": 3 },
-                { "name": "Switched 12V+", "type": null, "pin": 4 },
-                { "name": "Switched 12V+", "type": null, "pin": 5 },
-                { "name": "Switched 12V+", "type": null, "pin": 6 },
-                { "name": "Switched 12V+", "type": null, "pin": 7 },
-                { "name": "Switched 12V+", "type": null, "pin": 8 },
-                { "name": "Switched 12V+", "type": null, "pin": 9 },
-                { "name": "Switched 12V+", "type": null, "pin": 10 },
-                { "name": "Switched 12V+", "type": null, "pin": 11 },
-                { "name": "Switched 12V+", "type": null, "pin": 12 }
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 2 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 3 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 4 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 5 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 6 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 7 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 8 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 9 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 10 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 11 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 12 }
             ],
             "image": {
-                "src": "/chassis/jzx_100/c1.png",
+                "src": "/chassis/jzx100/c1.png",
                 "height": 120
             }
         },
@@ -832,7 +832,7 @@
                 { "name": "+B", "type": null, "pin": 28 }
             ],
             "image": {
-                "src": "/chassis/jzx_100/f25.png",
+                "src": "/chassis/jzx100/f25.png",
                 "height": 120
             }
         },
@@ -857,7 +857,7 @@
                 { "name": "Diagnostic Port (VF1)", "type": null, "pin": 12 }
             ],
             "image": {
-                "src": "/chassis/jzx_100/cf2.png",
+                "src": "/chassis/jzx100/cf2.png",
                 "height": 120
             }
         },
@@ -886,7 +886,7 @@
                 { "name": "Diagnostic Port (TE1)", "type": null, "pin": 16 }
             ],
             "image": {
-                "src": "/chassis/jzx_100/f25.png",
+                "src": "/chassis/jzx100/cf3.png",
                 "height": 120
             }
         }
@@ -1569,8 +1569,9 @@
                 "estimated_price": 8.93
             }],
             "pinout": [
-                { "name": "Constant 12V+", "type": "s_terminal", "pin": 1 },
-                { "name": "Alternator Charge Light", "type": "l_terminal", "pin": 2 }
+                { "name": "12V+", "type": null, "pin": 1 },
+                { "name": "Ground", "type": null, "pin": 2 },
+                { "name": "Signal", "type": null, "pin": 2 }
             ],
             "image": {
                 "src": "/accessories/toyota_speedo_3way.png",
