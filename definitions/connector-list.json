@@ -853,7 +853,7 @@
                 { "name": "STA and NSW Pin to Stock ECU", "type": null, "pin": 8 },
                 { "name": "Diagnostic Port (FP)", "type": null, "pin": 9 },
                 { "name": "NC", "type": null, "pin": 10 },
-                { "name": "Fused 12V+ to Speed Sensor", "type": null, "pin": 11 },
+                { "name": "Fused 12V+ (to reverse lights and speed sensor)", "type": null, "pin": 11 },
                 { "name": "Diagnostic Port (VF1)", "type": null, "pin": 12 }
             ],
             "image": {
@@ -1575,6 +1575,24 @@
             ],
             "image": {
                 "src": "/accessories/toyota_speedo_3way.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "TOYOTA_R154_REVERSE_SWITCH",
+            "part_number": "9080-11142",
+            "connector_type": "Female",
+            "sources": [{
+                "seller": "toyotapartsdeal.com",
+                "url": "https://www.toyotapartsdeal.com/oem/toyota~housing~connector~f~90980-11142.html",
+                "estimated_price": 4.52
+            }],
+            "pinout": [
+                { "name": "Load", "type": null, "pin": 1 },
+                { "name": "Output", "type": null, "pin": 2 }
+            ],
+            "image": {
+                "src": "/accessories/r154_reverse.png",
                 "height": 120
             }
         }

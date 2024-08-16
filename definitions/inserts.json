@@ -362,9 +362,15 @@
     {
         "id": "JZX_100_REVERSE_LIGHTS",
         "name": "Reverse Lights",
-        "colors": ["L", "L/R"],
-        "additional_connectors": [],
-        "connections": []
+        "colors": ["Br", "Br/R"],
+        "additional_connectors": [
+            { "category": "accessories", "name": "TOYOTA_R154_REVERSE_SWITCH" },
+            { "category": "chassis_options", "name": "JZX_100_CF2" }
+        ],
+        "connections": [
+            [{ "JZX_100_CG1": 9 }, { "TOYOTA_R154_REVERSE_SWITCH": 1 }],
+            [{ "JZX_100_CF2": 11 }, { "TOYOTA_R154_REVERSE_SWITCH": 2 }]
+        ]
     },
     {
         "id": "JZX_100_PS_SWITCH",
