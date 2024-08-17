@@ -21,6 +21,13 @@
         "insert_options": ["S6_RX7_AC", "S6_RX7_PS_SWITCH", "S6_RX7_FP_SPEED", "S6_RX7_CLUTCH_SWITCH", "S6_RX7_FAN_TRIGGER"]
     },
     {
+        "name": "Mazda RX-8 (S1)",
+        "id": "rx8_s1",
+        "fuel_pump_12v": false,
+        "chassis_connectors": ["RX8_B1-01", "RX8_X-18"],
+        "insert_options": []
+    },
+    {
         "name": "Nissan 240SX (S13)",
         "id": "240sx_s13",
         "fuel_pump_12v": false,

@@ -64,6 +64,7 @@ app.post('/fetch', (req, res) => {
 
                 if (err) console.error(err)
                 if (err) return res.end('WireViz Error');
+                
                 const pngFilePath = yamlFilePath.split('.yaml')[0] + '.png';
                 const buffer = fs.readFileSync(pngFilePath);
                 const base64String = Buffer.from(buffer).toString('base64');
