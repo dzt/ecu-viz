@@ -396,5 +396,42 @@
             [{ "JZX_100_CF2": 1 }, { "JZX_100_CF3": 2 }],
             [{ "JZX_100_CF2": 5 }, { "Starter": 1 }]
         ]
+    },
+    {
+        "id": "RX8_S1_MREL_CONTROL",
+        "name": "Main Relay Control",
+        "colors": ["AUTO"],
+        "additional_connectors": [],
+        "connections": [
+            [{ "RX8_B101": "4E" }, "auxiliary_output"]
+        ]
+    },
+    {
+        "id": "RX8_S1_CAN",
+        "name": "CAN Bus Control",
+        "colors": ["AUTO", "AUTO"],
+        "additional_connectors": [],
+        "connections": [
+            [{ "RX8_B101": "4V" }, "can_h"],
+            [{ "RX8_B101": "4S" }, "can_l"]
+        ]
+    },
+    {
+        "id": "RX8_S1_STARTER_BYPASS",
+        "name": "Starter Relay Bypass",
+        "colors": ["B/L"],
+        "additional_connectors": [],
+        "connections": [
+            [{ "RX8_B101": "5A" }, { "RX8_B101": "5R" }]
+        ]
+    },
+    {
+        "id": "RX8_S1_NSS_BYPASS",
+        "name": "Neutral Safety Bypass (Automatic Chassis)",
+        "colors": ["B/Y"],
+        "additional_connectors": [],
+        "connections": [
+            [{ "RX8_X18": 29 }, { "RX8_X18": 30 }]
+        ]
     }
 ]
