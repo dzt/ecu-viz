@@ -891,9 +891,9 @@
             }
         },
         {
-            "name": "RX8_B1-01",
+            "name": "RX8_B101",
             "allow_multiple": false,
-            "part_number": "RX8_B1-01",
+            "part_number": "RX8_B101",
             "connector_type": "Female",
             "sources": [],
             "pinout": [
@@ -905,7 +905,7 @@
                 { "name": "Clutch Switch", "type": null, "pin": "4F" },
                 { "name": "NC", "type": null, "pin": "4H" },
                 { "name": "NC", "type": null, "pin": "4I" },
-                { "name": "Ground", "type": "fuel_pump", "pin": "4J" },
+                { "name": "Ground", "type": null, "pin": "4J" },
                 { "name": "Barometric Sensor Power", "type": null, "pin": "4K" },
                 { "name": "NC", "type": null, "pin": "4L" },
                 { "name": "Fuel Pump Speed Control", "type": null, "pin": "4M" },
@@ -954,33 +954,33 @@
                 { "name": "NC", "type": null, "pin": "5AH" }
             ],
             "image": {
-                "src": "/chassis/rx8_s1/RX8_B1-01.png",
+                "src": "/chassis/rx8_s1/b101.png",
                 "height": 120
             }
         },
         {
-            "name": "RX8_X-18",
+            "name": "RX8_X18",
             "allow_multiple": false,
-            "part_number": "RX8_X-18",
+            "part_number": "RX8_X18",
             "connector_type": "Female",
             "sources": [],
             "pinout": [
                 { "name": "NC", "type": null, "pin": 1 },
-                { "name": "Switched 12V+ to Fuel Injectors via Main Relay", "type": null, "pin": 2 },
+                { "name": "Switched 12V+ to Fuel Injectors via Main Relay", "type": "switched_12v", "pin": 2 },
                 { "name": "Main Relay", "type": null, "pin": 3 },
                 { "name": "Automatic Transmission Range Switch (D)", "type": null, "pin": 4 },
                 { "name": "Automatic Transmission Vehicles (Unknown)", "type": null, "pin": 5 },
                 { "name": "TCU (2S)", "type": null, "pin": 6 },
                 { "name": "TCU (2W)", "type": null, "pin": 7 },
                 { "name": "NC", "type": null, "pin": 8 },
-                { "name": "TCU (2F)", "type": "fuel_pump", "pin": 9 },
+                { "name": "TCU (2F)", "type": null, "pin": 9 },
                 { "name": "TCU (2N)", "type": null, "pin": 10 },
                 { "name": "NC", "type": null, "pin": 11 },
                 { "name": "NC", "type": null, "pin": 12 },
                 { "name": "NC", "type": null, "pin": 13 },
                 { "name": "NC", "type": null, "pin": 14 },
                 { "name": "NC", "type": null, "pin": 15 },
-                { "name": "Switched 12V+ to SSV, Purge Valve, Secondary Air Injection Solenoid Valve, OMP, Rear O2 Sensor, Variable Dynamic Effect Intake-Air Solenoid Valve via Main Relay", "type": null, "pin": 16 },
+                { "name": "Switched 12V+ to OEM Solenoids via Main Relay", "type": "switched_12v", "pin": 16 },
                 { "name": "Reverse Light Switch (Output 12V+)", "type": null, "pin": 17 },
                 { "name": "Automatic Transmission Range Switch (N)", "type": null, "pin": 18 },
                 { "name": "TCU (2P)", "type": null, "pin": 19 },
@@ -992,7 +992,7 @@
                 { "name": "NC", "type": null, "pin": 25 },
                 { "name": "NC", "type": null, "pin": 26 },
                 { "name": "NC", "type": null, "pin": 27 },
-                { "name": "Switched 12V+ to Factory ECU (4Q) and Ignition Coils", "type": null, "pin": 28 },
+                { "name": "Switched 12V+ to Factory ECU (4Q) and Ignition Coils", "type": "switched_12v", "pin": 28 },
                 { "name": "Cranking 12V+ Output from Starter Interlock Switch (or Transmission Range Switch on Auto cars) to Starter Relay", "type": null, "pin": 29 },
                 { "name": "Cranking 12V+ to Starter Interlock Switch (or Transmission Range Switch on Auto cars) ", "type": null, "pin": 30 },
                 { "name": "Automatic Transmission Range Switch (P)", "type": null, "pin": 31 },
@@ -1007,7 +1007,7 @@
                 { "name": "NC", "type": null, "pin": 40 }
             ],
             "image": {
-                "src": "/chassis/rx8_s1/RX8_X-18.png",
+                "src": "/chassis/rx8_s1/x18.png",
                 "height": 120
             }
         }

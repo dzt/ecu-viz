@@ -24,7 +24,7 @@
         "name": "Mazda RX-8 (S1)",
         "id": "rx8_s1",
         "fuel_pump_12v": false,
-        "chassis_connectors": ["RX8_B1-01", "RX8_X-18"],
+        "chassis_connectors": ["RX8_B101", "RX8_X18"],
         "insert_options": []
     },
     {
