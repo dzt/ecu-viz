@@ -436,7 +436,7 @@
     {
         "id": "RX8_S1_MREL_CONTROL",
         "name": "Main Relay Control",
-        "required": false,
+        "required": true,
         "colors": ["AUTO"],
         "additional_connectors": [],
         "connections": [
