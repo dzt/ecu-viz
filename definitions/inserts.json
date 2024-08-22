@@ -2,6 +2,7 @@
     {
         "id": "S4_RX7_Alt",
         "name": "Series 4 RX-7 Alternator Control",
+        "required": false,
         "colors": ["B/W", "W/B"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "FEM_01" },
@@ -15,6 +16,7 @@
     {
         "id": "S5_S6_RX7_Alt",
         "name": "Series 5/6 RX-7 Alternator Control",
+        "required": false,
         "colors": ["W/O", "W/B"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "FEM_01" },
@@ -28,6 +30,7 @@
     {
         "id": "S4_RX7_Wipers",
         "name": "Wiper Control",
+        "required": false,
         "colors": ["L", "B", "L/R", "L/W", "L/Y"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "FEM_01" },
@@ -44,6 +47,7 @@
     {
         "id": "S4_RX7_CLUTCH_INPUT",
         "name": "Clutch Input",
+        "required": false,
         "colors": ["AUTO"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "F-31" }
@@ -55,6 +59,7 @@
     {
         "id": "S4_RX7_AC",
         "name": "Air Conditioning",
+        "required": false,
         "colors": ["AUTO", "AUTO"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "F-31" }
@@ -67,6 +72,7 @@
     {
         "id": "S4_RX7_PS_SWITCH",
         "name": "Power Steering Switch",
+        "required": false,
         "colors": ["AUTO"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "F-31" }
@@ -78,6 +84,7 @@
     {
         "id": "S4_CLT_CLUSTER",
         "name": "Coolant Temp (Instrument Cluster)",
+        "required": false,
         "colors": ["Y/W"],
         "additional_connectors": [
             { "category": "generics", "name": "Female Spade" }
@@ -89,6 +96,7 @@
     {
         "id": "S5_RX7_Wipers",
         "name": "Wiper Control",
+        "required": false,
         "colors": ["L", "B", "L/R", "L/W", "L/Y"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "FC_WIPER" }
@@ -104,6 +112,7 @@
     {
         "id": "S5_CLT_CLUSTER",
         "name": "Coolant Temp (Instrument Cluster)",
+        "required": false,
         "colors": ["Y/W"],
         "additional_connectors": [
             { "category": "generics", "name": "Female Spade" }
@@ -115,6 +124,7 @@
     {
         "id": "S5_RX7_CLUTCH_SWITCH",
         "name": "Clutch Switch",
+        "required": false,
         "colors": ["AUTO"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "B1-03" }
@@ -126,6 +136,7 @@
     {
         "id": "S5_RX7_PS_SWITCH",
         "name": "Power Steering Switch",
+        "required": false,
         "colors": ["AUTO"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "B1-03" }
@@ -137,6 +148,7 @@
     {
         "id": "S5_RX7_AC",
         "name": "Air Conditioning",
+        "required": false,
         "colors": ["AUTO", "AUTO"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "B1-03" }
@@ -149,6 +161,7 @@
     {
         "id": "S6_RX7_AC",
         "name": "Air Conditioning",
+        "required": false,
         "colors": ["AUTO", "AUTO"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "FD3S_ECU_HEADER" }
@@ -161,6 +174,7 @@
     {
         "id": "S6_RX7_FAN_TRIGGER",
         "name": "Factory Cooling Fan Control",
+        "required": false,
         "colors": ["AUTO"],
         "additional_connectors": [],
         "connections": [
@@ -170,6 +184,7 @@
     {
         "id": "S6_RX7_PS_SWITCH",
         "name": "Power Steering Switch",
+        "required": false,
         "colors": ["AUTO"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "FD3S_ECU_HEADER" }
@@ -181,6 +196,7 @@
     {
         "id": "S6_RX7_CLUTCH_SWITCH",
         "name": "Clutch Switch",
+        "required": false,
         "colors": ["AUTO"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "FD3S_ECU_HEADER" }
@@ -192,6 +208,7 @@
     {
         "id": "S6_RX7_FP_SPEED",
         "name": "Fuel Pump Speed Control",
+        "required": false,
         "colors": ["AUTO"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "FD3S_ECU_HEADER" }
@@ -203,6 +220,7 @@
     {
         "id": "S13_AC",
         "name": "Air Conditioning",
+        "required": false,
         "colors": ["AUTO", "AUTO"],
         "additional_connectors": [],
         "connections": [
@@ -213,6 +231,7 @@
     {
         "id": "S13_CLT_CLUSTER",
         "name": "Coolant Temp (Instrument Cluster)",
+        "required": false,
         "colors": ["Y/W"],
         "additional_connectors": [
             { "category": "generics", "name": "Female Spade" }
@@ -224,6 +243,7 @@
     {
         "id": "S13_CEL",
         "name": "Check Engine Light",
+        "required": false,
         "colors": ["AUTO"],
         "additional_connectors": [],
         "connections": [
@@ -233,6 +253,7 @@
     {
         "id": "S14_OBDII_AC",
         "name": "Air Conditioning",
+        "required": false,
         "colors": ["AUTO", "AUTO", "AUTO"],
         "additional_connectors": [],
         "connections": [
@@ -244,6 +265,7 @@
     {
         "id": "S14_CLT_CLUSTER",
         "name": "Coolant Temp (Instrument Cluster)",
+        "required": false,
         "colors": ["Y/W"],
         "additional_connectors": [
             { "category": "generics", "name": "Female Spade" }
@@ -255,6 +277,7 @@
     {
         "id": "S14_CEL",
         "name": "Check Engine Light",
+        "required": false,
         "colors": ["AUTO"],
         "additional_connectors": [],
         "connections": [
@@ -265,12 +288,14 @@
         "id": "S14_STARTER",
         "name": "Starter Control (TODO)",
         "colors": ["B/Y"],
+        "required": false,
         "additional_connectors": [],
         "connections": []
     },
     {
         "id": "E36_STARTER_OBDII",
         "name": "Starter Control",
+        "required": true,
         "colors": ["B/Y"],
         "additional_connectors": [
             { "category": "generics", "name": "Starter" }
@@ -282,6 +307,7 @@
     {
         "id": "IS300_2002_STARTER",
         "name": "Starter Control",
+        "required": true,
         "colors": ["B/Y"],
         "additional_connectors": [
             { "category": "generics", "name": "Starter" }
@@ -293,6 +319,7 @@
     {
         "id": "IS300_2002_NSS_BYPASS",
         "name": "Neutral Safety Switch Bypass",
+        "required": false,
         "colors": ["B/R"],
         "additional_connectors": [],
         "connections": [
@@ -302,6 +329,7 @@
     {
         "id": "IS300_2002_AIRCON",
         "name": "Air Conditioning (TODO)",
+        "required": false,
         "colors": ["AUTO", "AUTO"],
         "additional_connectors": [],
         "connections": []
@@ -309,6 +337,7 @@
     {
         "id": "JZX_100_MREL_BYPASS",
         "name": "Main Relay Bypass",
+        "required": true,
         "colors": ["R/Y"],
         "additional_connectors": [],
         "connections": [
@@ -318,6 +347,7 @@
     {
         "id": "JZX_100_AC",
         "name": "Air Conditioning",
+        "required": false,
         "colors": ["AUTO", "AUTO"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "JZX_100_F25" }
@@ -330,6 +360,7 @@
     {
         "id": "JZX_100_CEL",
         "name": "Check Engine Light Control",
+        "required": false,
         "colors": ["AUTO"],
         "additional_connectors": [],
         "connections": [
@@ -339,6 +370,7 @@
     {
         "id": "JZX_100_FP_SPEED",
         "name": "Fuel Pump Speed Control",
+        "required": false,
         "colors": ["AUTO"],
         "additional_connectors": [],
         "connections": [
@@ -348,6 +380,7 @@
     {
         "id": "JZX_100_SPEEDO",
         "name": "Speedometer (Factory M/T Chassis)",
+        "required": false,
         "colors": ["R/Y", "B", "L"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "JZX_100_CF2" },
@@ -362,6 +395,7 @@
     {
         "id": "JZX_100_REVERSE_LIGHTS",
         "name": "Reverse Lights",
+        "required": false,
         "colors": ["Br", "Br/R"],
         "additional_connectors": [
             { "category": "accessories", "name": "TOYOTA_R154_REVERSE_SWITCH" },
@@ -375,6 +409,7 @@
     {
         "id": "JZX_100_PS_SWITCH",
         "name": "Power Steering Pressure Switch",
+        "required": false,
         "colors": ["AUTO"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "JZX_100_CF3" }
@@ -386,6 +421,7 @@
     {
         "id": "JZX_100_STARTER",
         "name": "Starter Control",
+        "required": true,
         "colors": ["Gy", "B/Y"],
         "additional_connectors": [
             { "category": "chassis_options", "name": "JZX_100_CF2" },
@@ -400,6 +436,7 @@
     {
         "id": "RX8_S1_MREL_CONTROL",
         "name": "Main Relay Control",
+        "required": false,
         "colors": ["AUTO"],
         "additional_connectors": [],
         "connections": [
@@ -409,6 +446,7 @@
     {
         "id": "RX8_S1_CAN",
         "name": "CAN Bus Control",
+        "required": false,
         "colors": ["AUTO", "AUTO"],
         "additional_connectors": [],
         "connections": [
@@ -419,6 +457,7 @@
     {
         "id": "RX8_S1_STARTER_BYPASS",
         "name": "Starter Relay Bypass",
+        "required": true,
         "colors": ["B/L"],
         "additional_connectors": [],
         "connections": [
@@ -428,6 +467,7 @@
     {
         "id": "RX8_S1_NSS_BYPASS",
         "name": "Neutral Safety Bypass (Automatic Chassis)",
+        "required": false,
         "colors": ["B/Y"],
         "additional_connectors": [],
         "connections": [
