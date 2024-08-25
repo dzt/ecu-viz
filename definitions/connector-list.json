@@ -709,9 +709,9 @@
             }
         },
         {
-            "name": "JZX_100_CG1",
+            "name": "GX_JZX_GX_100_CG1",
             "allow_multiple": false,
-            "part_number": "JZX_100_F26",
+            "part_number": "GX_JZX_GX_100_CG1",
             "connector_type": "Female",
             "sources": [],
             "pinout": [
@@ -744,7 +744,7 @@
         {
             "name": "JZX_100_F26",
             "allow_multiple": false,
-            "part_number": "JZX_100_CG1",
+            "part_number": "JZX_100_F26",
             "connector_type": "Female",
             "sources": [],
             "pinout": [
@@ -771,9 +771,9 @@
             }
         },
         {
-            "name": "JZX_100_C1",
+            "name": "GX_JZX_100_C1",
             "allow_multiple": false,
-            "part_number": "JZX_100_C1",
+            "part_number": "GX_JZX_100_C1",
             "connector_type": "Female",
             "sources": [],
             "pinout": [
@@ -887,6 +887,41 @@
             ],
             "image": {
                 "src": "/chassis/jzx100/cf3.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "GX_100_F64",
+            "allow_multiple": false,
+            "part_number": "GX_100_F64",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "STA", "type": null, "pin": 1 },
+                { "name": "AC1", "type": null, "pin": 2 },
+                { "name": "SPD", "type": null, "pin": 3 },
+                { "name": "ACMG", "type": null, "pin": 4 },
+                { "name": "OD2/PWRL", "type": null, "pin": 5 },
+                { "name": "ELS", "type": null, "pin": 6 },
+                { "name": "W", "type": null, "pin": 7 },
+                { "name": "MREL", "type": null, "pin": 8 },
+                { "name": "EGW", "type": null, "pin": 9 },
+                { "name": "IGSW", "type": null, "pin": 10 },
+                { "name": "BATT", "type": null, "pin": 11 },
+                { "name": "NSW", "type": null, "pin": 12 },
+                { "name": "P", "type": null, "pin": 13 },
+                { "name": "IND", "type": null, "pin": 14 },
+                { "name": "ELS3", "type": null, "pin": 15 },
+                { "name": "ELS2", "type": null, "pin": 16 },
+                { "name": "MSW", "type": null, "pin": 17 },
+                { "name": "RSPD", "type": null, "pin": 18 },
+                { "name": "STP", "type": null, "pin": 19 },
+                { "name": "FC", "type": "fuel_pump", "pin": 20 },
+                { "name": "AC2", "type": null, "pin": 21 },
+                { "name": "+B", "type": null, "pin": 22 }
+            ],
+            "image": {
+                "src": "/chassis/gx100/cf3.png",
                 "height": 120
             }
         },
