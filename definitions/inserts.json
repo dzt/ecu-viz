@@ -336,12 +336,12 @@
     },
     {
         "id": "JZX_100_MREL_BYPASS",
-        "name": "Main Relay Bypass",
+        "name": "ECU Controlled Main Relay",
         "required": true,
         "colors": ["R/Y"],
         "additional_connectors": [],
         "connections": [
-            [{ "JZX_100_F26": 3 }, { "JZX_100_CG1": 15 }]
+            [{ "JZX_100_F26": 3 }, "auxiliary_output"]
         ]
     },
     {
@@ -472,6 +472,44 @@
         "additional_connectors": [],
         "connections": [
             [{ "RX8_X18": 29 }, { "RX8_X18": 30 }]
+        ]
+    },
+    {
+        "id": "GX_100_MREL_BYPASS",
+        "name": "ECU Controlled Main Relay",
+        "required": true,
+        "colors": ["AUTO"],
+        "additional_connectors": [],
+        "connections": [
+            [{ "GX_100_F64": 3 }, "auxiliary_output"]
+        ]
+    },
+    {
+        "id": "GX_100_STARTER_AUTO",
+        "name": "Starter Control (Automatic Chassis)",
+        "required": false,
+        "colors": ["Gy", "B/Y"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "GX_100_CF2" },
+            { "category": "chassis_options", "name": "GX_100_CF3" },
+            { "category": "generics", "name": "Starter" }
+        ],
+        "connections": [
+            [{ "GX_100_F64": 8 }, { "JZX_100_CF3": 2 }],
+            [{ "GX_100_CF2": 5 }, { "Starter": 1 }]
+        ]
+    },
+    {
+        "id": "GX_100_STARTER_MANUAL",
+        "name": "Starter Control (Manual Chassis)",
+        "required": false,
+        "colors": ["Gy", "B/Y"],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "GX_100_CF2" },
+            { "category": "generics", "name": "Starter" }
+        ],
+        "connections": [
+            [{ "GX_100_CF2": 5 }, { "Starter": 1 }]
         ]
     }
 ]

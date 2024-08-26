@@ -709,9 +709,9 @@
             }
         },
         {
-            "name": "GX_JZX_GX_100_CG1",
+            "name": "GX_JZX_100_CG1",
             "allow_multiple": false,
-            "part_number": "GX_JZX_GX_100_CG1",
+            "part_number": "GX_JZX_100_CG1",
             "connector_type": "Female",
             "sources": [],
             "pinout": [
@@ -773,7 +773,7 @@
         {
             "name": "GX_JZX_100_C1",
             "allow_multiple": false,
-            "part_number": "GX_JZX_100_C1",
+            "part_number": "Toyota 90980-11661",
             "connector_type": "Female",
             "sources": [],
             "pinout": [
@@ -921,7 +921,7 @@
                 { "name": "+B", "type": null, "pin": 22 }
             ],
             "image": {
-                "src": "/chassis/gx100/cf3.png",
+                "src": "/chassis/gx100/f64.png",
                 "height": 120
             }
         },

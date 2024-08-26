@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test-yaml": "node start.js && wireviz ./out/output.yaml && open ./out/output.html",
-    "server": "mkdir -p tmp && cp -a ./pinout_images/ ./tmp/pinout_images && node server.js"
+    "server": "mkdir -p tmp && cp -a ./pinout_data/ ./tmp/pinout_data && node server.js"
   },
   "author": "Peter Soboyejo <thepcmrtim@gmail.com>",
   "license": "MIT",
