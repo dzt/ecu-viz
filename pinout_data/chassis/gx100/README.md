@@ -1,4 +1,4 @@
-# Toyota Chaser/Cresta/MKII (GX100)
+# Toyota Chaser/Cresta/MKII (GX100, 1996-1998)
 
 On the Toyota JZX100 and GX100, there are connectors originally coming off of the engine harness that mate to the body harness, alongisde with connector(s) from the OEM body harness that mate to the factory ECU. These cars in particular have a CAN-bus like protocol known as [Bean Multiplex](http://wilbo666.pbworks.com/w/file/fetch/93419378/SAE970297%20Toyota%20Body%20Electronics%20Area%20Network%20(BEAN).pdf), where very few ECUs are able to control such. Luckily, LinkECU has developed hardware in their AltezzaPNP and JZX100 PNP units that contain a pin known as "BEAN" or "THWO", enabling users to have working Air Conditioning and CLT reading on the factory instrument cluster. This document will go over the entire factory 1G-FE (non-VVTi) engine harness up to August '98. The documentation written was used to develop GX100/JZX100 implementation into ecu-viz.
 

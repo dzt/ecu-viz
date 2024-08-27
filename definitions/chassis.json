@@ -70,7 +70,7 @@
         "insert_options": []
     },
     {
-        "name": "Toyota Chaser/Cresta/MKII (JZX100)",
+        "name": "Toyota Chaser/Cresta/MKII (JZX100, 1996-1998)",
         "id": "jzx_100",
         "fuel_pump_12v": false,
         "chassis_connectors": ["JZX_100_F26", "GX_JZX_100_CG1", "GX_JZX_100_C1"],
@@ -86,7 +86,7 @@
         ]
     },
     {
-        "name": "Toyota Chaser/Cresta/MKII (GX100)",
+        "name": "Toyota Chaser/Cresta/MKII (GX100, 1996-1998)",
         "id": "gx_100",
         "fuel_pump_12v": false,
         "chassis_connectors": [
