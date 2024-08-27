@@ -1805,6 +1805,19 @@
                 "src": "/accessories/r154_reverse.png",
                 "height": 120
             }
+        },
+        {
+            "name": "TOYOTA_JZ_CLT",
+            "part_number": "TOYOTA_JZ_CLT",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "Signal", "type": null, "pin": 1 }
+            ],
+            "image": {
+                "src": "/accessories/toyota_jz_clt.png",
+                "height": 120
+            }
         }
     ],
     "generics": [
@@ -1831,6 +1844,19 @@
             ],
             "image": {
                 "src": "/generic/female_spade.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "Ground Terminal",
+            "part_number": "ground_terminal",
+            "connector_type": "terminal",
+            "sources": [],
+            "pinout": [
+                { "name": "Connection", "type": null, "pin": 1 }
+            ],
+            "image": {
+                "src": "/generic/ground.png",
                 "height": 120
             }
         }

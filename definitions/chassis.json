@@ -49,18 +49,18 @@
         "insert_options": ["IS300_2002_STARTER", "IS300_2002_AIRCON", "IS300_2002_NSS_BYPASS"]
     },
     {
-        "name": "BMW 3-Series (1995-1999 / OBD2)",
-        "id": "obd2_e36",
-        "fuel_pump_12v": true,
-        "chassis_connectors": ["e36_obd2_x20"],
-        "insert_options": ["E36_STARTER_OBDII"]
-    },
-    {
         "name": "BMW 3-Series (1984-1986 / Early Model)",
         "id": "e30_early",
         "fuel_pump_12v": true,
         "chassis_connectors": ["c101_early", "c104_e30_early"],
         "insert_options": []
+    },
+    {
+        "name": "BMW 3-Series (1995-1999 / OBD2)",
+        "id": "obd2_e36",
+        "fuel_pump_12v": true,
+        "chassis_connectors": ["e36_obd2_x20"],
+        "insert_options": ["E36_STARTER_OBDII"]
     },
     {
         "name": "BMW 3-Series (1987+ / Late Model)",
@@ -82,7 +82,8 @@
             "JZX_100_SPEEDO",
             "JZX_100_REVERSE_LIGHTS",
             "JZX_100_PS_SWITCH",
-            "JZX_100_STARTER"
+            "JZX_100_STARTER",
+            "JZX_100_CLT"
         ]
     },
     {

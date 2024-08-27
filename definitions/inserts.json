@@ -434,6 +434,20 @@
         ]
     },
     {
+        "id": "JZX_100_CLT",
+        "name": "Instrument Cluster (CLT)",
+        "required": false,
+        "colors": ["Y", "Y/Br"],
+        "additional_connectors": [
+            { "category": "generics", "name": "Ground Terminal" },
+            { "category": "accessories", "name": "TOYOTA_JZ_CLT" }
+        ],
+        "connections": [
+            [{ "GX_JZX_100_CG1": 1 }, { "Ground Terminal": 1 }],
+            [{ "GX_JZX_100_CG1": 19 }, { "TOYOTA_JZ_CLT": 1 }]
+        ]
+    },
+    {
         "id": "RX8_S1_MREL_CONTROL",
         "name": "Main Relay Control",
         "required": true,

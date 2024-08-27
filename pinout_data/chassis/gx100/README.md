@@ -41,28 +41,28 @@ On the Toyota JZX100 and GX100, there are connectors originally coming off of th
 
     ![image](../jzx100/cg1.png)
 
-    | Pin | Description / Function                         | ECUViz Type |
-    |-----|------------------------------------------------|-------------|
-    | 1   | Water Temp Sender Ground to Instrument Cluster | `null`      |
-    | 2   | Not Used                                       | `null`      |
-    | 3   | Air Conditioning Computer (SG Pin)             | `null`      |
-    | 4   | Air Conditioning Computer (Mag-Clutch Switch)  | `null`      |
-    | 5   | Fuel Filter Switch to Instrument Cluster       | `null`      |
-    | 6   | Instrument Cluster Speedo (M/T Chassis)        | `null`      |
-    | 7   | Instrument Cluster Speedo (M/T Chassis)        | `null`      |
-    | 8   | ECU Communication (C3, Pin 10, #10)            | `null`      |
-    | 9   | Reverse Light to Instrument Cluster (A/T)      | `null`      |
-    | 10  | Low Gear Light to Instrument Cluster           | `null`      |
-    | 11  | 2nd Gear Light to Instrument Cluster (A/T)     | `null`      |
-    | 12  | Drive Light to Instrument Cluster (A/T)        | `null`      |
-    | 13  | Neutral Light to Instrument Cluster (A/T)      | `null`      |
-    | 14  | Park Light to Instrument Cluster (A/T)         | `null`      |
-    | 15  | Ground Light to Instrument Cluster (A/T)       | `null`      |
-    | 16  | Not Used Light to Instrument Cluster (A/T)     | `null`      |
-    | 17  | Tachometer Signal to Instrument Cluster        | `tacho`     |
-    | 18  | Oil Pressure Switch to Instrument Cluster      | `null`      |
-    | 19  | Water Temp Sender Signal to Instrument Cluster | `null`      |
-    | 20  | Not Used                                       | `null`      |
+    | Pin | Description / Function                                  | ECUViz Type |
+    | --- | ------------------------------------------------------- | ----------- |
+    | 1   | Water Temp Sender Ground to Instrument Cluster (Ground) | `null`      |
+    | 2   | Not Used                                                | `null`      |
+    | 3   | Air Conditioning Computer (SG Pin)                      | `null`      |
+    | 4   | Air Conditioning Computer (Mag-Clutch Switch)           | `null`      |
+    | 5   | Fuel Filter Switch to Instrument Cluster                | `null`      |
+    | 6   | Instrument Cluster Speedo (M/T Chassis)                 | `null`      |
+    | 7   | Instrument Cluster Speedo (M/T Chassis)                 | `null`      |
+    | 8   | ECU Communication (C3, Pin 10, #10)                     | `null`      |
+    | 9   | Reverse Light to Instrument Cluster (A/T)               | `null`      |
+    | 10  | Low Gear Light to Instrument Cluster                    | `null`      |
+    | 11  | 2nd Gear Light to Instrument Cluster (A/T)              | `null`      |
+    | 12  | Drive Light to Instrument Cluster (A/T)                 | `null`      |
+    | 13  | Neutral Light to Instrument Cluster (A/T)               | `null`      |
+    | 14  | Park Light to Instrument Cluster (A/T)                  | `null`      |
+    | 15  | Ground Light to Instrument Cluster (A/T)                | `null`      |
+    | 16  | Not Used Light to Instrument Cluster (A/T)              | `null`      |
+    | 17  | Tachometer Signal to Instrument Cluster                 | `tacho`     |
+    | 18  | Oil Pressure Switch to Instrument Cluster               | `null`      |
+    | 19  | Water Temp Sender Signal to Instrument Cluster (Signal) | `null`      |
+    | 20  | Not Used                                                | `null`      |
 
 
 
