@@ -91,30 +91,49 @@ On the Toyota JZX100 and GX100, there are connectors originally coming off of th
 
 `GX_100_CF2`
 - Part Number: Unknown / NLA
-- Note(s): TODO
+- Note(s): None currently
 
     ![image](./cf2.png)
 
-    | Pin | Description / Function                             | ECUViz Type    |
-    | --- | -------------------------------------------------- | -------------- |
-    | 1   | Switched 12V+ via Ignition Switch to Injector      | `null`         |
-    | 2   | Switched 12V+ via Ignition Switch to Injector      | `null`         |
-    | 3   | Switched 12V+ via Ignition Switch to Injector      | `null`         |
-    | 4   | Switched 12V+ via Ignition Switch to Injector      | `null`         |
-    | 5   | Switched 12V+ via Ignition Switch to Injector      | `null`         |
-    | 6   | Switched 12V+ via Ignition Switch to Injector      | `null`         |
-    | 7   | Switched 12V+ via Ignition Switch to Ignition Coil | `null`         |
-    | 8   | Switched 12V+ via Ignition Switch to Ignition Coil | `null`         |
-    | 9   | Switched 12V+ via Ignition Switch to Ignition Coil | `null`         |
-    | 10  | Switched 12V+ via Ignition Switch to Ignition Coil | `null`         |
-    | 11  | Switched 12V+ via Ignition Switch to Ignition Coil | `null`         |
-    | 12  | Switched 12V+ via Ignition Switch to Ignition Coil | `null`         |
+    | Pin | Description / Function                                                  | ECUViz Type |
+    | --- | ----------------------------------------------------------------------- | ----------- |
+    | 1   | Cranking 12V+ to OEM Starter Relay Trigger                              | `null`      |
+    | 2   | Switched 12V+ via EFI Relay                                             | `null`      |
+    | 3   | Not Used                                                                | `null`      |
+    | 4   | Not Used                                                                | `null`      |
+    | 5   | Diagnostic Port (WB)                                                    | `null`      |
+    | 6   | Diagnostic Port (WB)                                                    | `null`      |
+    | 7   | Not Used                                                                | `null`      |
+    | 8   | Not Used                                                                | `null`      |
+    | 9   | CCO Pin via Factory ECU                                                 | `null`      |
+    | 10  | SIL Pin via Factory ECU                                                 | `null`      |
+    | 11  | 12V+ Supply to Speed Sensor, Neutral Start Switch, Reverse Light Switch | `null`      |
+    | 12  | OP4 Pin from the ABS CPU to the Diag Port                               | `null`      |
 
 `GX_100_CF3`
 - Part Number: Unknown / NLA
-- Note(s): TODO
+- Note(s): None currently
 
     ![image](./cf3.png)
+
+    | Pin | Description / Function                                                   | ECUViz Type |
+    | --- | ------------------------------------------------------------------------ | ----------- |
+    | 1   | TC Pin via Factory ECU originally communicating with the Diagnostic Port | `null`      |
+    | 2   | Starter Relay Trigger (12V+)                                             | `null`      |
+    | 3   | Diagnostic Port (WB)                                                     | `null`      |
+    | 4   | TC Pin from ABS CPU to Diagnosis Connector                               | `null`      |
+    | 5   | Not Used                                                                 | `null`      |
+    | 6   | Diagnostic Port (WB)                                                     | `null`      |
+    | 7   | Not Used                                                                 | `null`      |
+    | 8   | Neutral Start Switch originally going to “P” pin on the ABS CPU          | `null`      |
+    | 9   | Neutral Start Switch originally going to “N” pin on the ABS CPU          | `null`      |
+    | 10  | Not Used                                                                 | `null`      |
+    | 11  | Not Used                                                                 | `null`      |
+    | 12  | Not Used                                                                 | `null`      |
+    | 13  | Not Used                                                                 | `null`      |
+    | 14  | Automatic Speed Sensor                                                   | `null`      |
+    | 15  | Automatic Speed Sensor                                                   | `null`      |
+    | 16  | Automatic Speed Sensor                                                   | `null`      |
 
 ## Connector Locations
 ![image](./locations_1.png)
