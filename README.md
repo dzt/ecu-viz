@@ -4,6 +4,21 @@ Effortlessly craft engine wiring diagrams for your project using. Save time plan
 
 ![Preview](./docs//images/git-preview.png)
 
+### Supported Vehicles
+- [Mazda RX-7 (Series 4)](https://github.com/dzt/ecu-viz/tree/main/pinout_data/chassis/fc_s4)
+- [Mazda RX-7 (Series 5)](https://github.com/dzt/ecu-viz/tree/main/pinout_data/chassis/fc_s5)
+- [Mazda RX-7 (Series 6 - M/T Chassis)](https://github.com/dzt/ecu-viz/tree/main/pinout_data/chassis/fd_s6)
+- [Mazda RX-8 (S1)](https://github.com/dzt/ecu-viz/tree/main/pinout_data/chassis/rx8_s1)
+- [Nissan 240SX (S13)](https://github.com/dzt/ecu-viz/tree/main/pinout_data/chassis/s13)
+- [Nissan 240SX (S14 OBDII)](https://github.com/dzt/ecu-viz/tree/main/pinout_data/chassis/s14)
+- [Lexus IS300 (2002+)](https://github.com/dzt/ecu-viz/tree/main/pinout_data/chassis/is300_2002+)
+- [BMW 3-Series (1984-1986 / Early Model)](https://github.com/dzt/ecu-viz/tree/main/pinout_data/chassis/e30)
+- [BMW 3-Series (1995-1999 / OBD2)](https://github.com/dzt/ecu-viz/tree/main/pinout_data/chassis/e36)
+- [BMW 3-Series (1987+ / Late Model)](https://github.com/dzt/ecu-viz/tree/main/pinout_data/chassis/e36)
+- [Toyota Chaser/Cresta/MKII (JZX100, 1996-1998)](https://github.com/dzt/ecu-viz/tree/main/pinout_data/chassis/jzx100)
+- [Toyota Chaser/Cresta/MKII (GX100, 1996-1998)](https://github.com/dzt/ecu-viz/tree/main/pinout_data/chassis/gx100)
+
+
 ### Installation
 
 ecu-viz requires the following
