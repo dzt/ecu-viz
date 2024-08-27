@@ -94,6 +94,9 @@
             "GX_JZX_100_CG1",
             "GX_JZX_100_C1"
         ],
-        "insert_options": []
+        "insert_options": [
+            "GX_100_MREL_BYPASS",
+            "GX_100_STARTER_MANUAL"
+        ]
     }
 ]

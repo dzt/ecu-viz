@@ -73,7 +73,7 @@ On the Toyota JZX100 and GX100, there are connectors originally coming off of th
     ![image](../jzx100/c1.png)
 
     | Pin | Description / Function                             | ECUViz Type    |
-    |-----|----------------------------------------------------|----------------|
+    | --- | -------------------------------------------------- | -------------- |
     | 1   | Switched 12V+ via Ignition Switch to Injector      | `switched_12v` |
     | 2   | Switched 12V+ via Ignition Switch to Injector      | `switched_12v` |
     | 3   | Switched 12V+ via Ignition Switch to Injector      | `switched_12v` |
@@ -89,7 +89,32 @@ On the Toyota JZX100 and GX100, there are connectors originally coming off of th
 
 ## Additional Connectors
 
-- TODO
+`GX_100_CF2`
+- Part Number: Unknown / NLA
+- Note(s): TODO
+
+    ![image](./cf2.png)
+
+    | Pin | Description / Function                             | ECUViz Type    |
+    | --- | -------------------------------------------------- | -------------- |
+    | 1   | Switched 12V+ via Ignition Switch to Injector      | `null`         |
+    | 2   | Switched 12V+ via Ignition Switch to Injector      | `null`         |
+    | 3   | Switched 12V+ via Ignition Switch to Injector      | `null`         |
+    | 4   | Switched 12V+ via Ignition Switch to Injector      | `null`         |
+    | 5   | Switched 12V+ via Ignition Switch to Injector      | `null`         |
+    | 6   | Switched 12V+ via Ignition Switch to Injector      | `null`         |
+    | 7   | Switched 12V+ via Ignition Switch to Ignition Coil | `null`         |
+    | 8   | Switched 12V+ via Ignition Switch to Ignition Coil | `null`         |
+    | 9   | Switched 12V+ via Ignition Switch to Ignition Coil | `null`         |
+    | 10  | Switched 12V+ via Ignition Switch to Ignition Coil | `null`         |
+    | 11  | Switched 12V+ via Ignition Switch to Ignition Coil | `null`         |
+    | 12  | Switched 12V+ via Ignition Switch to Ignition Coil | `null`         |
+
+`GX_100_CF3`
+- Part Number: Unknown / NLA
+- Note(s): TODO
+
+    ![image](./cf3.png)
 
 ## Connector Locations
 ![image](./locations_1.png)

@@ -388,8 +388,8 @@
         ],
         "connections": [
             [{ "JZX_100_CF2": 11 }, { "TOYOTA_SPEEDO_3WAY": 1 }],
-            [{ "JZX_100_CG1": 6 }, { "TOYOTA_SPEEDO_3WAY": 2 }],
-            [{ "JZX_100_CG1": 7 }, { "TOYOTA_SPEEDO_3WAY": 3 }]
+            [{ "GX_JZX_100_CG1": 6 }, { "TOYOTA_SPEEDO_3WAY": 2 }],
+            [{ "GX_JZX_100_CG1": 7 }, { "TOYOTA_SPEEDO_3WAY": 3 }]
         ]
     },
     {
@@ -402,7 +402,7 @@
             { "category": "chassis_options", "name": "JZX_100_CF2" }
         ],
         "connections": [
-            [{ "JZX_100_CG1": 9 }, { "TOYOTA_R154_REVERSE_SWITCH": 1 }],
+            [{ "GX_JZX_100_CG1": 9 }, { "TOYOTA_R154_REVERSE_SWITCH": 1 }],
             [{ "JZX_100_CF2": 11 }, { "TOYOTA_R154_REVERSE_SWITCH": 2 }]
         ]
     },
@@ -481,12 +481,12 @@
         "colors": ["AUTO"],
         "additional_connectors": [],
         "connections": [
-            [{ "GX_100_F64": 3 }, "auxiliary_output"]
+            [{ "GX_100_F64": 8 }, "auxiliary_output"]
         ]
     },
     {
-        "id": "GX_100_STARTER_AUTO",
-        "name": "Starter Control (Automatic Chassis)",
+        "id": "GX_100_STARTER_MANUAL",
+        "name": "Starter Control",
         "required": false,
         "colors": ["Gy", "B/Y"],
         "additional_connectors": [
@@ -495,21 +495,8 @@
             { "category": "generics", "name": "Starter" }
         ],
         "connections": [
-            [{ "GX_100_F64": 8 }, { "JZX_100_CF3": 2 }],
-            [{ "GX_100_CF2": 5 }, { "Starter": 1 }]
-        ]
-    },
-    {
-        "id": "GX_100_STARTER_MANUAL",
-        "name": "Starter Control (Manual Chassis)",
-        "required": false,
-        "colors": ["Gy", "B/Y"],
-        "additional_connectors": [
-            { "category": "chassis_options", "name": "GX_100_CF2" },
-            { "category": "generics", "name": "Starter" }
-        ],
-        "connections": [
-            [{ "GX_100_CF2": 5 }, { "Starter": 1 }]
+            [{ "GX_100_CF2": 5 }, { "Starter": 1 }],
+            [{ "GX_100_CF3": 2 }, { "GX_100_CF2": 1 }]
         ]
     }
 ]

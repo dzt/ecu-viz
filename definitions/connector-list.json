@@ -723,7 +723,7 @@
                 { "name": "Speedometer (M/T)", "type": null, "pin": 6 },
                 { "name": "Speedometer (M/T)", "type": null, "pin": 7 },
                 { "name": "Factory ECU Communication Pin #10", "type": null, "pin": 8 },
-                { "name": "Reverse Gear Indicator Light (Instrument Cluster)", "type": null, "pin": 9 },
+                { "name": "Reverse Gear Indicator Light (Instrument Cluster) and Reverse Lights", "type": null, "pin": 9 },
                 { "name": "Low Gear Indicator Light (Instrument Cluster)", "type": null, "pin": 10 },
                 { "name": "2nd Gear Indicator Light (Instrument Cluster)", "type": null, "pin": 11 },
                 { "name": "Drive Gear Indicator Light (Instrument Cluster)", "type": null, "pin": 12 },
@@ -922,6 +922,60 @@
             ],
             "image": {
                 "src": "/chassis/gx100/f64.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "GX_100_CF2",
+            "allow_multiple": false,
+            "part_number": "GX_100_CF2",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "Starter Relay Trigger", "type": null, "pin": 1 },
+                { "name": "Switched 12V+ via EFI Relay", "type": null, "pin": 2 },
+                { "name": "NC", "type": null, "pin": 3 },
+                { "name": "NC", "type": null, "pin": 4 },
+                { "name": "Cranking 12V+ Output via Starter Relay", "type": null, "pin": 5 },
+                { "name": "NC", "type": null, "pin": 6 },
+                { "name": "NC", "type": null, "pin": 7 },
+                { "name": "NC", "type": null, "pin": 8 },
+                { "name": "CCO Pin to Factory ECU", "type": null, "pin": 9 },
+                { "name": "SIL Communication Pin via Factory ECU", "type": null, "pin": 10 },
+                { "name": "12V+ Supply to Speed Sensor and Neutral Start Switch", "type": null, "pin": 11 },
+                { "name": "OP4 Pin to the Diagnosis Connector from the ABS CPU", "type": null, "pin": 12 }
+            ],
+            "image": {
+                "src": "/chassis/gx100/cf2.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "GX_100_CF3",
+            "allow_multiple": false,
+            "part_number": "GX_100_CF3",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "TC Pin via Factory ECU originally communicating with the Diagnostic Port", "type": null, "pin": 1 },
+                { "name": "Fused Cranking 12V+ from Ignition Switch", "type": null, "pin": 2 },
+                { "name": "Diagnostic Port (WB)", "type": null, "pin": 3 },
+                { "name": "TC Pin from ABS CPU to Diagnosis Connector", "type": null, "pin": 4 },
+                { "name": "NC", "type": null, "pin": 5 },
+                { "name": "TS Pin to TEMS Computer", "type": null, "pin": 6 },
+                { "name": "NC", "type": null, "pin": 7 },
+                { "name": "Neutral Start Switch originally going to “P” pin on the ABS CPU", "type": null, "pin": 8 },
+                { "name": "Neutral Start Switch originally going to “N” pin on the ABS CPU", "type": null, "pin": 9 },
+                { "name": "NC", "type": null, "pin": 10 },
+                { "name": "Neutral Safety Switch, Cranking 12V+ Output", "type": null, "pin": 11 },
+                { "name": "Fused Cranking 12V+ from Ignition Switch", "type": null, "pin": 12 },
+                { "name": "NC", "type": null, "pin": 13 },
+                { "name": "Automatic Speed Sensor", "type": null, "pin": 14 },
+                { "name": "Automatic Speed Sensor", "type": null, "pin": 15 },
+                { "name": "Automatic Speed Sensor", "type": null, "pin": 16 }
+            ],
+            "image": {
+                "src": "/chassis/gx100/cf3.png",
                 "height": 120
             }
         },
