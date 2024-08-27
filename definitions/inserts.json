@@ -335,7 +335,7 @@
         "connections": []
     },
     {
-        "id": "JZX_100_MREL_BYPASS",
+        "id": "JZX_100_MREL_CONTROL",
         "name": "ECU Controlled Main Relay",
         "required": true,
         "colors": ["R/Y"],
@@ -475,7 +475,7 @@
         ]
     },
     {
-        "id": "GX_100_MREL_BYPASS",
+        "id": "GX_100_MREL_CONTROL",
         "name": "ECU Controlled Main Relay",
         "required": true,
         "colors": ["AUTO"],
