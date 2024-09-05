@@ -53,5 +53,10 @@
         "name": "White",
         "id": "W",
         "hex_code": "#FFFFFF"
+    },
+    {
+        "name": "Light Green",
+        "id": "Lg",
+        "hex_code": "#90EE90"
     }
 ]
