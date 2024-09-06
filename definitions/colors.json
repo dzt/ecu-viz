@@ -58,5 +58,10 @@
         "name": "Light Green",
         "id": "Lg",
         "hex_code": "#90EE90"
+    },
+    {
+        "name": "Pink",
+        "id": "P",
+        "hex_code": "#FFC0CB"
     }
 ]
