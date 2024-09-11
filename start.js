@@ -9,7 +9,18 @@ const generateDiagram = (input) => {
     let connectors = lib.createConnectors(input);
     let cables = lib.createCables(connectors.summary, input);
     let connections = lib.createConnections(connectors, cables, input);
-    return { connectors: connectors.data, cables, connections };
+    return { 
+        connectors: connectors.data,
+        cables,
+        connections,
+        tweak: {
+            override: {
+                graph: {
+                    ranksep: '6'
+                }
+            }
+        }
+    };
 }
 
 /* Used for testing */
