@@ -483,7 +483,9 @@
         "name": "Neutral Safety Bypass (Automatic Chassis)",
         "required": false,
         "colors": ["B/Y"],
-        "additional_connectors": [],
+        "additional_connectors": [
+            { "category": "chassis_options", "name": "RX8_X18" }
+        ],
         "connections": [
             [{ "RX8_X18": 29 }, { "RX8_X18": 30 }]
         ]
