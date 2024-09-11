@@ -45,22 +45,22 @@
         "hex_code": "#800080"
     },
     {
-        "name": "Gray",
+        "name": "gray",
         "id": "Gy",
         "hex_code": "#C0C0C0"
     },
     {
-        "name": "White",
+        "name": "white",
         "id": "W",
         "hex_code": "#FFFFFF"
     },
     {
-        "name": "Light Green",
+        "name": "light green",
         "id": "Lg",
         "hex_code": "#90EE90"
     },
     {
-        "name": "Pink",
+        "name": "pink",
         "id": "P",
         "hex_code": "#FFC0CB"
     }
