@@ -47,6 +47,15 @@ app.post('/fetch', (req, res) => {
 
     const input = req.body;
     let output = generateDiagram(input);
+
+    output.tweak = {
+        override: {
+            graph: {
+                ranksep: '6.5'
+            }
+        }
+    }
+
     let output_yaml = YAML.stringify(output);
 
     console.dir(input)

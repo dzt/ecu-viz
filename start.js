@@ -12,14 +12,7 @@ const generateDiagram = (input) => {
     return { 
         connectors: connectors.data,
         cables,
-        connections,
-        tweak: {
-            override: {
-                graph: {
-                    ranksep: '6'
-                }
-            }
-        }
+        connections
     };
 }
 
