@@ -479,6 +479,17 @@
         ]
     },
     {
+        "id": "RX8_S1_RADIATOR_FAN_CONTROL",
+        "name": "Radiator Fan Control",
+        "required": false,
+        "colors": ["AUTO", "AUTO"],
+        "additional_connectors": [],
+        "connections": [
+            [{ "RX8_B101": "5W" },  "auxiliary_output"],
+            [{ "RX8_B101": "5AC" },  "auxiliary_output"]
+        ]
+    },
+    {
         "id": "RX8_S1_NSS_BYPASS",
         "name": "Neutral Safety Bypass (Automatic Chassis)",
         "required": false,

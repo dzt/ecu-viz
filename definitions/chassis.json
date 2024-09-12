@@ -25,7 +25,7 @@
         "id": "rx8_s1",
         "fuel_pump_12v": false,
         "chassis_connectors": ["RX8_B101"],
-        "insert_options": ["RX8_S1_MREL_CONTROL", "RX8_S1_CAN", "RX8_S1_STARTER_BYPASS", "RX8_S1_NSS_BYPASS"]
+        "insert_options": ["RX8_S1_MREL_CONTROL", "RX8_S1_CAN", "RX8_S1_STARTER_BYPASS", "RX8_S1_NSS_BYPASS", "RX8_S1_RADIATOR_FAN_CONTROL"]
     },
     {
         "name": "Nissan 240SX (S13)",
