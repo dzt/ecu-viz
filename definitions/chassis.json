@@ -28,7 +28,7 @@
         "insert_options": ["RX8_S1_MREL_CONTROL", "RX8_S1_CAN", "RX8_S1_STARTER_BYPASS", "RX8_S1_NSS_BYPASS", "RX8_S1_RADIATOR_FAN_CONTROL"]
     },
     {
-        "name": "Nissan 240SX (S13)",
+        "name": "Nissan 240SX (S13 - DOHC Chassis)",
         "id": "240sx_s13",
         "fuel_pump_12v": false,
         "chassis_connectors": ["F1_S13", "F8_S13", "F10_S13"],
