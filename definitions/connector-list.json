@@ -1349,6 +1349,7 @@
     "ignition_coils": [
         {
             "name": "GM/Delphi Ignition Coil",
+            "type": "direct_fire",
             "allow_multiple": false,
             "part_number": "15439568",
             "connector_type": "Female",
@@ -1370,6 +1371,7 @@
         },
         {
             "name": "IGN-1A Ignition Coil",
+            "type": "direct_fire",
             "allow_multiple": false,
             "part_number": "12162825",
             "connector_type": "Female",
@@ -1392,6 +1394,7 @@
         },
         {
             "name": "Denso Honda/Acura K-Series Ignition Coil",
+            "type": "direct_fire",
             "allow_multiple": false,
             "part_number": "6189-0728",
             "connector_type": "Female",
@@ -1412,6 +1415,7 @@
         },
         {
             "name": "VW/Audi FSI Ignition Coil",
+            "type": "direct_fire",
             "allow_multiple": false,
             "part_number": "8K0973724",
             "connector_type": "Female",
@@ -1433,6 +1437,7 @@
         },
         {
             "name": "Toyota Yaris/ZZ Ignition Coil",
+            "type": "direct_fire",
             "allow_multiple": false,
             "part_number": "10232591297",
             "connector_type": "Female",
