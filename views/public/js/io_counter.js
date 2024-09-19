@@ -123,6 +123,9 @@ $(document).ready(function () {
     /* Init: Called once page is loaded */
     refresh();
 
+    /* Init: Frontend Components */
+    $('#error').css({ display: 'none' });
+
     /* Called anytime a change is made to the ECU selection */
     $('#nav-tabContent').on('change', function () {
         refresh();

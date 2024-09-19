@@ -88,10 +88,14 @@ $(document).ready(function () {
         $('#spinner').show();
         let req_params = getUserInput();
         fetch(req_params, function (err, image) {
-            if (!err) {
+            if (err) {
+                $('#error').text(err);
+                $('#error').css({ display: 'block' });
+            } else {
                 $('#downloadBtn').attr('href', image);
                 $("#downloadBtn").removeClass('disabled');
                 $('#previewImage').attr('src', image);
+                $('#error').css({ display: 'none' });
             }
             updateBtn.prop("disabled", false);
             $('#spinner').hide();
@@ -106,21 +110,22 @@ $(document).ready(function () {
             method: "POST",
             contentType: "application/json",
             data: JSON.stringify(params),
-            success: function (data, textStatus, jqXHR) {
+            success: function (response, textStatus, jqXHR) {
                 console.log({
-                    data,
+                    response,
                     textStatus,
                     jqXHR
                 });
                 // Ensure data is in correct format
-                if (data.startsWith("data:image/png;base64,")) {
-                    return callback(null, data);
+                if (response.data.startsWith("data:image/png;base64,")) {
+                    return callback(null, response.data);
                 } else {
                     return callback('Invalid Response', null);
                 }
             },
-            error: function (_jqXHR, _textStatus, errorThrown) {
-                return callback(errorThrown, null);
+            error: function (xhr, textStatus, errorThrown) {
+                let err = JSON.parse(xhr.responseText).error.message;
+                return callback(err, null);
             }
         });
     }

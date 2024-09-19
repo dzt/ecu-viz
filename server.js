@@ -46,7 +46,20 @@ app.get('/definitions', (req, res) => {
 app.post('/fetch', (req, res) => {
 
     const input = req.body;
-    let output = generateDiagram(input);
+    let output;
+    
+    try {
+        output = generateDiagram(input);
+    } catch(e) {
+        console.dir(e)
+        return res.status(400).json({
+            data: null,
+            error: {
+                code: 400,
+                message: `${e}`
+            }
+        });
+    }
 
     output.tweak = {
         override: {
@@ -64,21 +77,43 @@ app.post('/fetch', (req, res) => {
     temp.mkdir({
         dir: path.join(__dirname, 'tmp')
     }, (err, dirPath) => {
-        if (err) return res.end('Error occured spwaning temp directory');
+        if (err) return res.status(400).json({
+            data: null,
+            error: {
+                code: 400,
+                message: 'Error occured spawning temp directory.'
+            }
+        });
         const yamlFilePath = path.join(dirPath, 'output.yaml');
         fs.writeFile(yamlFilePath, output_yaml, (err) => {
-            if (err) return res.end('Write error has occured');
+            if (err) return res.status(400).json({
+                data: null,
+                error: {
+                    code: 400,
+                    message: 'Write Error has occured.'
+                }
+            });
             process.chdir(dirPath);
             exec(`wireviz ${yamlFilePath}`, (err, stdout) => {
 
                 if (err) console.error(err)
-                if (err) return res.end('WireViz Error');
+                if (err) return res.status(400).json({
+                    data: null,
+                    error: {
+                        code: 400,
+                        message: 'WireViz Engine Failure.'
+                    }
+                });
                 
                 const pngFilePath = yamlFilePath.split('.yaml')[0] + '.png';
                 const buffer = fs.readFileSync(pngFilePath);
                 const base64String = Buffer.from(buffer).toString('base64');
 
-                return res.end(`data:image/png;base64,${base64String}`);
+                return res.status(200).json({
+                    data: `data:image/png;base64,${base64String}`,
+                    error: null
+                });
+
             });
         });
     });
