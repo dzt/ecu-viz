@@ -51,7 +51,7 @@ app.post('/fetch', (req, res) => {
     try {
         output = generateDiagram(input);
     } catch(e) {
-        console.dir(e)
+        console.log(e)
         return res.status(400).json({
             data: null,
             error: {
