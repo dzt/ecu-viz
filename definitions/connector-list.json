@@ -1007,15 +1007,15 @@
                 { "name": "Sensor Ground", "type": null, "pin": "4U" },
                 { "name": "CAN High", "type": "can_h", "pin": "4V" },
                 { "name": "High/Low AirCon Control", "type": null, "pin": "4W" },
-                { "name": "APP Sensor Power 2", "type": null, "pin": "4X" },
-                { "name": "APP Sensor Power 1", "type": null, "pin": "4Y" },
+                { "name": "APP Sensor Power 2", "type": "app_vref", "pin": "4X" },
+                { "name": "APP Sensor Power 1", "type": "app_vref", "pin": "4Y" },
                 { "name": "Medium AirCon Control", "type": null, "pin": "4Z" },
                 { "name": "Starter", "type": null, "pin": "5A" },
                 { "name": "NC", "type": null, "pin": "5B" },
-                { "name": "APP Sensor 2", "type": null, "pin": "5C" },
+                { "name": "APP Sensor 2", "type": "app_signal", "pin": "5C" },
                 { "name": "Ground", "type": null, "pin": "5D" },
                 { "name": "No Connection", "type": null, "pin": "5E" },
-                { "name": "APP Sensor 1", "type": null, "pin": "5F" },
+                { "name": "APP Sensor 1", "type": "app_signal", "pin": "5F" },
                 { "name": "Drive-By-Wire Relay", "type": null, "pin": "5H" },
                 { "name": "NC", "type": null, "pin": "5I" },
                 { "name": "Constant Power", "type": null, "pin": "5]" },
@@ -1033,10 +1033,10 @@
                 { "name": "Cooling Fan Relay 1", "type": null, "pin": "5W" },
                 { "name": "VFAD Solenoid Valve", "type": null, "pin": "5X" },
                 { "name": "AirCon Relay", "type": null, "pin": "5Z" },
-                { "name": "APP Sensor Ground 2", "type": null, "pin": "5AA" },
+                { "name": "APP Sensor Ground 2", "type": "app_gnd", "pin": "5AA" },
                 { "name": "Power from Main Relay", "type": null, "pin": "5AB" },
                 { "name": "Cooling Fan Relays 2 and 3", "type": null, "pin": "5AC" },
-                { "name": "APP Sensor Ground 1", "type": null, "pin": "5AD" },
+                { "name": "APP Sensor Ground 1", "type": "app_gnd", "pin": "5AD" },
                 { "name": "Power from Main Relay", "type": null, "pin": "5AE" },
                 { "name": "NC", "type": null, "pin": "5AF" },
                 { "name": "NC", "type": null, "pin": "5AG" },
@@ -1862,6 +1862,54 @@
             ],
             "image": {
                 "src": "/generic/ground.png",
+                "height": 120
+            }
+        }
+    ],
+    "dbw_tb_options": [
+        {
+            "name": "Bosch Electronic Throttle Body (60mm through 82mm)",
+            "part_number": "bosch_dbw_tb_1",
+            "connector_type": "Female",
+            "sources": [{
+                "seller": "Haltech",
+                "url": "https://www.haltech.com/product/ht-030432-bosch-electronic-throttle-body-connector-kit/",
+                "estimated_price": 16.00
+            }],
+            "pinout": [
+                { "name": "Motor -", "type": "motor", "pin": 1 },
+                { "name": "Signal Ground", "type": "vref_ground", "pin": 2 },
+                { "name": "+5V In", "type": "vref", "pin": 3 },
+                { "name": "Motor+", "type": "motor", "pin": 4 },
+                { "name": "TPS 2", "type": "signal", "pin": 5 },
+                { "name": "TPS 1", "type": "signal", "pin": 6 }
+            ],
+            "image": {
+                "src": "/dbw/bosch_motor.png",
+                "height": 120
+            }
+        }
+    ],
+    "dbw_app_options": [
+        {
+            "name": "Bosch DBW Pedal",
+            "part_number": "bosch_dbw_pedal_1",
+            "connector_type": "Female",
+            "sources": [{
+                "seller": "Haltech",
+                "url": "https://www.haltech.com/product/ht-030431-bosch-dbw-pedal-assembly-connector-kit/",
+                "estimated_price": 16.00
+            }],
+            "pinout": [
+                { "name": "+5V In", "type": "vref", "pin": 1 },
+                { "name": "+5V In", "type": "vref", "pin": 2 },
+                { "name": "Signal Ground", "type": "vref_ground", "pin": 3 },
+                { "name": "Pedal Signal 1", "type": "signal", "pin": 4 },
+                { "name": "Signal Ground", "type": "vref_ground", "pin": 5 },
+                { "name": "Pedal Signal 2", "type": "signal", "pin": 6 }
+            ],
+            "image": {
+                "src": "/dbw/bosch_app.png",
                 "height": 120
             }
         }
