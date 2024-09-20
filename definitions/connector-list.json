@@ -1888,6 +1888,52 @@
                 "src": "/dbw/bosch_motor.png",
                 "height": 120
             }
+        },
+        {
+            "name": "GM LS Gen-3 Vortec 4.8, 5.3, 6.0, LQ4, LQ9 (8-wire) Electronic Throttle Body",
+            "part_number": "ls_gen3_tb",
+            "connector_type": "Female",
+            "sources": [{
+                "seller": "Mouser Electronics",
+                "url": "https://mou.sr/3TCKtYu",
+                "estimated_price": 2.72
+            }],
+            "pinout": [
+                { "name": "Motor Control 1", "type": "motor", "pin": "A" },
+                { "name": "Signal Ground", "type": "vref_ground", "pin": "B" },
+                { "name": "Motor Control 2", "type": "vref", "pin": "C" },
+                { "name": "Signal Ground", "type": "motor", "pin": "D" },
+                { "name": "+5V In", "type": "signal", "pin": "E" },
+                { "name": "TPS 2 Signal", "type": "signal", "pin": "F" },
+                { "name": "TPS 1 Signal", "type": "signal", "pin": "G" },
+                { "name": "+5V In", "type": "signal", "pin": "H" }
+            ],
+            "image": {
+                "src": "/dbw/gen3.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "GM LS LS2/LS7 Gen-4 (6-wire) Electronic Throttle Body",
+            "part_number": "ls_gen4_tb",
+            "connector_type": "Female",
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=1918&category_id=334",
+                "estimated_price": 6.39
+            }],
+            "pinout": [
+                { "name": "Motor Control 2", "type": "motor", "pin": "A" },
+                { "name": "Motor Control 1", "type": "motor", "pin": "B" },
+                { "name": "Signal Ground", "type": "vref_ground", "pin": "C" },
+                { "name": "TPS 1 Signal", "type": "signal", "pin": "D" },
+                { "name": "+5V In", "type": "vref", "pin": "E" },
+                { "name": "TPS 2 Signal", "type": "signal", "pin": "F" }
+            ],
+            "image": {
+                "src": "/dbw/gen4.png",
+                "height": 120
+            }
         }
     ],
     "dbw_app_options": [
