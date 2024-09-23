@@ -3,6 +3,7 @@
         "name": "Mazda RX-7 (Series 4)",
         "id": "fc_s4",
         "fuel_pump_12v": false,
+        "dbw_pedal": false,
         "chassis_connectors": ["FEM_02", "FC_TACHO"],
         "insert_options": ["S4_RX7_Wipers", "S4_RX7_Alt", "S5_S6_RX7_Alt", "S4_RX7_AC", "S4_RX7_CLUTCH_INPUT", "S4_RX7_PS_SWITCH", "S4_CLT_CLUSTER"]
     },
@@ -10,6 +11,7 @@
         "name": "Mazda RX-7 (Series 5)",
         "id": "fc_s5",
         "fuel_pump_12v": false,
+        "dbw_pedal": false,
         "chassis_connectors": ["X-11", "FC_TACHO"],
         "insert_options": ["S5_RX7_Wipers", "S5_RX7_AC", "S5_CLT_CLUSTER", "S5_RX7_CLUTCH_SWITCH", "S5_RX7_PS_SWITCH"]
     },
@@ -17,13 +19,15 @@
         "name": "Mazda RX-7 (Series 6 - M/T Chassis)",
         "id": "fd_s6",
         "fuel_pump_12v": false,
+        "dbw_pedal": false,
         "chassis_connectors": ["X-05-MT", "FD3S_ECU_HEADER"],
         "insert_options": ["S6_RX7_AC", "S6_RX7_PS_SWITCH", "S6_RX7_FP_SPEED", "S6_RX7_CLUTCH_SWITCH", "S6_RX7_FAN_TRIGGER"]
     },
     {
         "name": "Mazda RX-8 (S1)",
         "id": "rx8_s1",
-        "fuel_pump_12v": false,
+        "fuel_pump_12v": true,
+        "dbw_pedal": false,
         "chassis_connectors": ["RX8_B101"],
         "insert_options": ["RX8_S1_MREL_CONTROL", "RX8_S1_CAN", "RX8_S1_STARTER_BYPASS", "RX8_S1_NSS_BYPASS", "RX8_S1_RADIATOR_FAN_CONTROL"]
     },
@@ -31,6 +35,7 @@
         "name": "Nissan 240SX (S13 - DOHC Chassis)",
         "id": "240sx_s13",
         "fuel_pump_12v": false,
+        "dbw_pedal": false,
         "chassis_connectors": ["F1_S13", "F8_S13", "F10_S13"],
         "insert_options": ["S13_AC", "S13_CLT_CLUSTER", "S13_CEL"]
     },
@@ -38,6 +43,7 @@
         "name": "Nissan 240SX (S14 OBDII)",
         "id": "240sx_s14",
         "fuel_pump_12v": false,
+        "dbw_pedal": false,
         "chassis_connectors": ["F3_S14_OBDII"],
         "insert_options": ["S14_OBDII_AC", "S14_CLT_CLUSTER", "S14_CEL"]
     },
@@ -45,6 +51,7 @@
         "name": "Lexus IS300 (2002+)",
         "id": "is300_2002",
         "fuel_pump_12v": false,
+        "dbw_pedal": false,
         "chassis_connectors": ["E3_IS2002", "E4_IS2002", "EA1_IS2002"],
         "insert_options": ["IS300_2002_STARTER", "IS300_2002_AIRCON", "IS300_2002_NSS_BYPASS"]
     },
@@ -52,6 +59,7 @@
         "name": "BMW 3-Series (1984-1986 / Early Model)",
         "id": "e30_early",
         "fuel_pump_12v": true,
+        "dbw_pedal": false,
         "chassis_connectors": ["c101_early", "c104_e30_early"],
         "insert_options": []
     },
@@ -59,6 +67,7 @@
         "name": "BMW 3-Series (1995-1999 / OBD2)",
         "id": "obd2_e36",
         "fuel_pump_12v": true,
+        "dbw_pedal": false,
         "chassis_connectors": ["e36_obd2_x20"],
         "insert_options": ["E36_STARTER_OBDII"]
     },
@@ -66,6 +75,7 @@
         "name": "BMW 3-Series (1987+ / Late Model)",
         "id": "e30_late",
         "fuel_pump_12v": true,
+        "dbw_pedal": false,
         "chassis_connectors": ["c101_late"],
         "insert_options": []
     },
@@ -73,6 +83,7 @@
         "name": "Toyota Chaser/Cresta/MKII (JZX100, 1996-1998)",
         "id": "jzx_100",
         "fuel_pump_12v": false,
+        "dbw_pedal": false,
         "chassis_connectors": ["JZX_100_F26", "GX_JZX_100_CG1", "GX_JZX_100_C1"],
         "insert_options": [
             "JZX_100_MREL_CONTROL",
@@ -90,6 +101,7 @@
         "name": "Toyota Chaser/Cresta/MKII (GX100, 1996-1998)",
         "id": "gx_100",
         "fuel_pump_12v": false,
+        "dbw_pedal": false,
         "chassis_connectors": [
             "GX_100_F64",
             "GX_JZX_100_CG1",
