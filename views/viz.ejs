@@ -26,6 +26,7 @@
     </header>
     <div class="container">
         <main>
+            <div id="error" class="alert alert-danger" role="alert">Error occured...</div>
             <div class="row align-items-md-stretch">
                 <div class="col-md-6">
                     <div class="p-5 text-bg-dark rounded-3" style="text-align: center;height: 100%;">
@@ -43,7 +44,6 @@
                 </div>
                 <div class="col-md-6" style="font-size: 14px;">
                     <div class="h-100 p-5 bg-light border rounded-3">
-                        <div id="error" class="alert alert-danger" role="alert">Error occured...</div>
                         <p>Auxiliary Outputs: <span id="aux_count">N/A</span> | Analog Inputs: <span id="an_count">N/A</span> | Digital Inputs: <span id="di_count">N/A</span></p>
                         <button type="button" id="updateBtn" class="btn btn-outline-primary">Update Preview</button>
                         <a type="button" download="ecu-viz.png" href="#" id="downloadBtn"

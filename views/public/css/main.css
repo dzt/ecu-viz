@@ -1,3 +1,7 @@
+body {
+    zoom: 90%;
+}
+
 .nav-tabs .nav-link.active {
     color: black;
     background-color: transparent;

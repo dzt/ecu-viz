@@ -1686,7 +1686,7 @@
             "pinout": [
                 { "name": "4x (REF)", "type": "home", "pin": 1 },
                 { "name": "360x (POS)", "type": "trigger", "pin": 2 }, 
-                { "name": "Switched 12v+", "type": "switched_12v", "pin": 3 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 3 },
                 { "name": "Signal Ground", "type": "home_ground", "pin": 4 }
             ],
             "image": {
@@ -1707,11 +1707,34 @@
             "pinout": [
                 { "name": "4x (REF)", "type": "trigger", "pin": 1 },
                 { "name": "360x (POS)", "type": "home", "pin": 2 },
-                { "name": "Switched 12v+", "type": "switched_12v", "pin": 3 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 3 },
                 { "name": "Signal Ground", "type": "home_ground", "pin": 4 }
             ],
             "image": {
                 "src": "/trigger_sensors/eccs.png",
+                "height": 200
+            }
+        },
+        {
+            "name": "Nissan ECCS S14 USDM (KA24DE)",
+            "part_number": "WS_KA24DE_S14",
+            "connector_type": "Female",
+            "restrictions": ["sr20det"],
+            "sources": [{
+                "seller": "Wiring Specialties",
+                "url": "??",
+                "estimated_price": 9.95
+            }],
+            "pinout": [
+                { "name": "Signal Ground", "type": "trigger_ground", "pin": 1 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 2 },
+                { "name": "360x (POS)", "type": "trigger", "pin": 3 },
+                { "name": "4x (REF)", "type": "home", "pin": 4 },
+                { "name": "Signal Ground", "type": "home_ground", "pin": 5 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 6 }
+            ],
+            "image": {
+                "src": "/trigger_sensors/ka24de_s14.png",
                 "height": 200
             }
         }
