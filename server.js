@@ -20,7 +20,6 @@ const ecus = require('./definitions/ecus.json');
 const engines = require('./definitions/engines.json');
 const inserts = require('./definitions/inserts.json');
 const connectors = require('./definitions/connector-list.json');
-const { stringify } = require('querystring');
 
 temp.track();
 app.use(bodyParser.json())

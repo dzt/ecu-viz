@@ -1157,10 +1157,10 @@
             }
         },
         {
-            "name": "Nissan KA24DE TPS",
+            "name": "Nissan S13/S14 KA24DE & RB20 TPS",
             "allow_multiple": false,
             "type": "tps",
-            "part_number": "WS_WRS-KA24-TPS",
+            "part_number": "WS_WRS-KA24-TPS_S13",
             "connector_type": "Female",
             "restrictions": ["ka24de"],
             "sources": [{
@@ -1179,7 +1179,7 @@
             }
         },
         {
-            "name": "Nissan SR20 TPS (3-Pin)",
+            "name": "Nissan SR20, RB25-S2, S14.5 KA24DE TPS",
             "allow_multiple": false,
             "type": "tps",
             "part_number": "NSN3PNTPSCOIL",
@@ -1389,6 +1389,27 @@
             ],
             "image": {
                 "src": "/ignition_coils/ign1a.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "Hitachi R35 Ignition Coil",
+            "type": "direct_fire",
+            "allow_multiple": false,
+            "part_number": "020106",
+            "connector_type": "Female",
+            "sources": [{
+                "seller": "Race Spec",
+                "url": "https://racespeconline.com/products/gtr-sumi-3-pin",
+                "estimated_price": 8.00
+            }],
+            "pinout": [
+                { "name": "Signal", "type": "signal", "pin": 1 },
+                { "name": "Ground", "type": "ground", "pin": 2 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 3 }
+            ],
+            "image": {
+                "src": "/ignition_coils/r35.png",
                 "height": 120
             }
         },
