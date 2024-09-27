@@ -1157,7 +1157,7 @@
             }
         },
         {
-            "name": "Nissan S13/S14 KA24DE & RB20 TPS",
+            "name": "Nissan S13/S14 KA24DE & RB20 TPS (Gray)",
             "allow_multiple": false,
             "type": "tps",
             "part_number": "WS_WRS-KA24-TPS_S13",
@@ -1179,7 +1179,7 @@
             }
         },
         {
-            "name": "Nissan SR20, RB25-S2, S14.5 KA24DE TPS",
+            "name": "Nissan SR20, RB25-S2, S14.5 KA24DE TPS (Brown)",
             "allow_multiple": false,
             "type": "tps",
             "part_number": "NSN3PNTPSCOIL",
@@ -1500,13 +1500,32 @@
             }
         },
         {
-            "name": "Nissan KA24DE Idle Control Valve",
+            "name": "Nissan Idle Control Valve (Brown)",
             "allow_multiple": false,
             "part_number": "WS_KA24-IACON-LT",
             "restrictions": ["ka24de"],
             "sources": [{
                 "seller": "Wiring Specialties",
                 "url": "https://www.wiringspecialties.com/s14kaidairco.html",
+                "estimated_price": 9.95
+            }],
+            "pinout": [
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+                { "name": "Trigger", "type": "signal", "pin": 2 }
+            ],
+            "image": {
+                "src": "/generic/2pin.png",
+                "height": 50
+            }
+        },
+        {
+            "name": "Nissan Idle Control Valve (Purple)",
+            "allow_multiple": false,
+            "part_number": "WRB25-IDL-RB",
+            "restrictions": ["ka24de"],
+            "sources": [{
+                "seller": "Wiring Specialties",
+                "url": "https://www.wiringspecialties.com/rbidairpi.html",
                 "estimated_price": 9.95
             }],
             "pinout": [
