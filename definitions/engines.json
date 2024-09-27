@@ -24,6 +24,12 @@
         "cylinders": 6
     },
     {
+        "name": "Toyota 1UZ-FE",
+        "id": "1jz_uz_fe",
+        "type": "piston",
+        "cylinders": 6
+    },
+    {
         "name": "Toyota 2JZ-GE VVT-i",
         "id": "2jz_ge_vvti",
         "type": "piston",
