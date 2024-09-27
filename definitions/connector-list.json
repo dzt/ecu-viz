@@ -1942,7 +1942,7 @@
                 { "name": "WBC CELL", "type": null, "pin": 6 }
             ],
             "image": {
-                "src": "/generic/ground.png",
+                "src": "/generic/bosch_lsu_49.png",
                 "height": 120
             }
         }
