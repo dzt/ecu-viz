@@ -1927,6 +1927,24 @@
                 "src": "/generic/ground.png",
                 "height": 120
             }
+        },
+        {
+            "name": "Bosch LSU 4.9 Wideband Sensor",
+            "part_number": "BOSCH_LSU_49",
+            "connector_type": "terminal",
+            "sources": [],
+            "pinout": [
+                { "name": "WBC PUMP", "type": null, "pin": 1 },
+                { "name": "WBC COM", "type": null, "pin": 2 },
+                { "name": "WBC Heater-", "type": null, "pin": 3 },
+                { "name": "WBC Heater+", "type": null, "pin": 4 },
+                { "name": "WBC Cal-Resistor", "type": null, "pin": 5 },
+                { "name": "WBC CELL", "type": null, "pin": 6 }
+            ],
+            "image": {
+                "src": "/generic/ground.png",
+                "height": 120
+            }
         }
     ],
     "dbw_tb_options": [
