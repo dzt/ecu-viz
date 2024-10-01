@@ -1714,7 +1714,7 @@
             }
         },
         {
-            "name": "Nissan ECCS (SR/KA/RB) - Link G3/G4 Specific",
+            "name": "Nissan ECCS (SR/KA/RB) - Link G3/G4+ Specific",
             "part_number": "WS_SR20-CAM-CON_LINK",
             "connector_type": "Female",
             "restrictions": ["sr20det"],
@@ -1735,7 +1735,7 @@
             }
         },
         {
-            "name": "Nissan ECCS (SR/KA/RB)",
+            "name": "Nissan 4-Pin ECCS (SR/KA/RB)",
             "part_number": "WS_SR20-CAM-CON",
             "connector_type": "Female",
             "restrictions": ["sr20det"],
@@ -1756,13 +1756,13 @@
             }
         },
         {
-            "name": "Nissan ECCS S14 USDM (KA24DE)",
-            "part_number": "WS_KA24DE_S14",
+            "name": "Nissan ECCS 6-Pin - Link G3/G4+ Specific",
+            "part_number": "WS_KA24DE_6PIN_LINK",
             "connector_type": "Female",
             "restrictions": ["sr20det"],
             "sources": [{
                 "seller": "Wiring Specialties",
-                "url": "??",
+                "url": "https://www.wiringspecialties.com/kadipoconews.html",
                 "estimated_price": 9.95
             }],
             "pinout": [
@@ -1770,6 +1770,29 @@
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 2 },
                 { "name": "360x (POS)", "type": "trigger", "pin": 3 },
                 { "name": "4x (REF)", "type": "home", "pin": 4 },
+                { "name": "Signal Ground", "type": "home_ground", "pin": 5 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 6 }
+            ],
+            "image": {
+                "src": "/trigger_sensors/ka24de_s14.png",
+                "height": 200
+            }
+        },
+        {
+            "name": "Nissan ECCS 6-Pin",
+            "part_number": "WS_KA24DE_6PIN",
+            "connector_type": "Female",
+            "restrictions": ["sr20det"],
+            "sources": [{
+                "seller": "Wiring Specialties",
+                "url": "https://www.wiringspecialties.com/kadipoconews.html",
+                "estimated_price": 9.95
+            }],
+            "pinout": [
+                { "name": "Signal Ground", "type": "trigger_ground", "pin": 1 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 2 },
+                { "name": "360x (POS)", "type": "home", "pin": 3 },
+                { "name": "4x (REF)", "type": "trigger", "pin": 4 },
                 { "name": "Signal Ground", "type": "home_ground", "pin": 5 },
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 6 }
             ],
@@ -1927,10 +1950,30 @@
                 "src": "/generic/ground.png",
                 "height": 120
             }
-        },
+        }
+    ],
+    "wideband_options": [
         {
             "name": "Bosch LSU 4.9 Wideband Sensor",
             "part_number": "BOSCH_LSU_49",
+            "connector_type": "terminal",
+            "sources": [],
+            "pinout": [
+                { "name": "WBC PUMP", "type": null, "pin": 1 },
+                { "name": "WBC COM", "type": null, "pin": 2 },
+                { "name": "WBC Heater-", "type": null, "pin": 3 },
+                { "name": "WBC Heater+", "type": null, "pin": 4 },
+                { "name": "WBC Cal-Resistor", "type": null, "pin": 5 },
+                { "name": "WBC CELL", "type": null, "pin": 6 }
+            ],
+            "image": {
+                "src": "/generic/bosch_lsu_49.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "Bosch LSU 4.2 Wideband Sensor",
+            "part_number": "BOSCH_LSU_42",
             "connector_type": "terminal",
             "sources": [],
             "pinout": [
