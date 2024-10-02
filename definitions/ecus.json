@@ -35,6 +35,10 @@
             { "name": "CAN L", "type": "can_l", "pin": 29, "color": "O/Y" },
             { "name": "CAN H", "type": "can_h", "pin": 28, "color": "O/G" }
         ],
+        "multipurpose_pins": {
+            "dbw": false,
+            "stepper_valve": false
+        },
         "image": {
             "src": "/ecus/monsoon_g4x.png",
             "width": 250
@@ -81,6 +85,10 @@
             { "name": "CAN L", "type": "can_l", "pin": 29, "color": "O/Y" },
             { "name": "CAN H", "type": "can_h", "pin": 28, "color": "O/G" }
         ],
+        "multipurpose_pins": {
+            "dbw": false,
+            "stepper_valve": [27, 26]
+        },
         "image": {
             "src": "/ecus/monsoon_g4x.png",
             "width": 250
@@ -161,6 +169,10 @@
             { "name": "An Volt 5", "type": "analog_input", "pin": "B33", "color": "Y/G" },
             { "name": "Ground", "type": "ground", "pin": "B34", "color": "L" }
         ],
+        "multipurpose_pins": {
+            "dbw": false,
+            "stepper_valve": ["A29", "A28", "A27", "A26"]
+        },
         "image": {
             "src": "/ecus/storm_g4x.png",
             "width": 350
@@ -224,15 +236,19 @@
             { "name": "An Volt 9", "type": "analog_input", "pin": "Ethrottle4", "color": null },
             { "name": "An Volt 8", "type": "analog_input", "pin": "Ethrottle5", "color": null },
             { "name": "An Volt 7", "type": "analog_input", "pin": "Ethrottle6", "color": null },
-            { "name": "Auxiliary Output 10", "type": null, "pin": "Ethrottle7", "color": null },
-            { "name": "Auxiliary Output 9", "type": "digital_input", "pin": "Ethrottle8", "color": null },
-            { "name": "Digital Input 10", "type": null, "pin": "Expansion3", "color": null },
+            { "name": "Auxiliary Output 10", "type": "auxiliary_output", "pin": "Ethrottle7", "color": null },
+            { "name": "Auxiliary Output 9", "type": "auxiliary_output", "pin": "Ethrottle8", "color": null },
+            { "name": "Digital Input 10", "type": "digital_input", "pin": "Expansion3", "color": null },
             { "name": "Digital Input 9", "type": "digital_input", "pin": "Expansion4", "color": null },
             { "name": "An Volt 9", "type": "analog_input", "pin": "Expansion5", "color": null },
             { "name": "An Volt 8", "type": "analog_input", "pin": "Expansion6", "color": null },
             { "name": "An Temp 4", "type": "temp", "pin": "Expansion7", "color": null },
             { "name": "Auxiliary Output 8", "type": "auxiliary_output", "pin": "Expansion8", "color": null }            
         ],
+        "multipurpose_pins": {
+            "dbw": ["Ethrottle8", "Ethrottle7"],
+            "stepper_valve": ["20", "21", "22", "23"]
+        },
         "image": {
             "src": "/ecus/monsoon_g4x.png",
             "width": 250
@@ -279,6 +295,10 @@
             { "name": "Trigger -", "type": "trigger_ground", "pin": 33, "color": "Gy" },
             { "name": "Home -", "type": "home_ground", "pin": 34, "color": "Gy/B" }
         ],
+        "multipurpose_pins": {
+            "dbw": false,
+            "stepper_valve": true
+        },
         "image": {
             "src": "/ecus/haltech_550.png",
             "width": 350
@@ -351,6 +371,10 @@
             { "name": "DBW 1 / DPO", "type": "dbw", "pin": "B25", "color": "Br/B" },
             { "name": "DBW 2 / DPO", "type": "dbw", "pin": "B26", "color": "Br/R" }
         ],
+        "multipurpose_pins": {
+            "dbw": ["B25", "B26"],
+            "stepper_valve": true
+        },
         "image": {
             "src": "/ecus/haltech_1500.png",
             "width": 350
@@ -423,6 +447,10 @@
             { "name": "DBW 1 / DPO", "type": "dbw", "pin": "B25", "color": "Br/B" },
             { "name": "DBW 2 / DPO", "type": "dbw", "pin": "B26", "color": "Br/R" }
         ],
+        "multipurpose_pins": {
+            "dbw": ["B25", "B26"],
+            "stepper_valve": true
+        },
         "image": {
             "src": "/ecus/haltech_1500.png",
             "width": 350
@@ -448,10 +476,10 @@
             { "name": "DPO 5", "type": "auxiliary_output", "pin": "A16", "color": "V/Br" },
             { "name": "DPO 6", "type": "auxiliary_output", "pin": "A17", "color": "P" },
             { "name": "+12V Switched Input", "type": "ecr_input", "pin": "A18", "color": "V/R" },
-            { "name": "HBO 1", "type": "hbo", "pin": "A19", "color": "Br/B" },
-            { "name": "HBO 2", "type": "hbo", "pin": "A20", "color": "Br/R" },
-            { "name": "HBO 3", "type": "hbo", "pin": "A21", "color": "Br/G" },
-            { "name": "HBO 4", "type": "hbo", "pin": "A22", "color": "Br/P" },
+            { "name": "HBO 1", "type": "auxiliary_output", "pin": "A19", "color": "Br/B" },
+            { "name": "HBO 2", "type": "auxiliary_output", "pin": "A20", "color": "Br/R" },
+            { "name": "HBO 3", "type": "auxiliary_output", "pin": "A21", "color": "Br/G" },
+            { "name": "HBO 4", "type": "auxiliary_output", "pin": "A22", "color": "Br/P" },
             { "name": "CAN 1 H", "type": "can_h", "pin": "A23", "color": "W" },
             { "name": "CAN 1 L", "type": "can_l", "pin": "A24", "color": "L" },
             { "name": "+12V Switched Input", "type": "ecr_input", "pin": "A25", "color": "R" },
@@ -495,6 +523,10 @@
             { "name": "WBI Heater-", "type": "wb_heater-", "pin": "C33", "color": "W" },
             { "name": "WBI Cal", "type": "wb_cal", "pin": "C34", "color": "G" }
         ],
+        "multipurpose_pins": {
+            "dbw": ["A19", "A20"],
+            "stepper_valve": true
+        },
         "image": {
             "src": "/ecus/nexus_s3_s2.png",
             "width": 550
@@ -570,6 +602,10 @@
             { "name": "Injector #3", "type": "injector", "pin": "B23", "color": "Br/R" },
             { "name": "Power Ground", "type": "ground", "pin": "B24", "color": "B" }
         ],
+        "multipurpose_pins": {
+            "dbw": false,
+            "stepper_valve": false
+        },
         "image": {
             "src": "/ecus/emu_black.png",
             "width": 550

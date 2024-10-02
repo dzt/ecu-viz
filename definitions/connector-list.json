@@ -1186,6 +1186,29 @@
             }
         },
         {
+            "name": "Toyota 1UZ-FE 4-wire TPS",
+            "allow_multiple": false,
+            "type": "tps",
+            "part_number": "90980-10711",
+            "connector_type": "Female",
+            "restrictions": [],
+            "sources": [{
+                "seller": "Ballenger Motorsports",
+                "url": "https://www.bmotorsports.com/shop/product_info.php/products_id/2264",
+                "estimated_price": 5.99
+            }],
+            "pinout": [
+                { "name": "5V+", "type": "vref", "pin": 1 },
+                { "name": "Signal", "type": "signal", "pin": 2 },
+                { "name": "nc", "type": null, "pin": 3 },
+                { "name": "Ground", "type": "vref_ground", "pin": 4 }
+            ],
+            "image": {
+                "src": "/analog_inputs/1uz_fe_tps.png",
+                "height": 120
+            }
+        },
+        {
             "name": "Nissan S13/S14 KA24DE & RB20 TPS (Gray)",
             "allow_multiple": false,
             "type": "tps",
@@ -1605,7 +1628,7 @@
     ],
     "clt_options": [
         {
-            "name": "GM/Delphi CLT",
+            "name": "GM/Delphi ECT",
             "allow_multiple": false,
             "part_number": "12162193",
             "sources": [{
@@ -1623,7 +1646,7 @@
             }
         },
         {
-            "name": "Mazda S4/S5 CLT",
+            "name": "Mazda S4/S5 ECT",
             "allow_multiple": false,
             "part_number": "963040-3",
             "sources": [{
@@ -1637,6 +1660,24 @@
             ],
             "image": {
                 "src": "/generic/temp_2pin.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "Toyota ECT (JZ/UZ Family)",
+            "allow_multiple": false,
+            "part_number": "CONN-75820",
+            "sources": [{
+                "seller": "Ballenger Motorsports",
+                "url": "https://www.bmotorsports.com/shop/product_info.php/products_id/3186",
+                "estimated_price": 5.99
+            }],
+            "pinout": [
+                { "name": "Signal", "type": "signal", "pin": 1 },
+                { "name": "Ground", "type": "vref_ground", "pin": 2 }
+            ],
+            "image": {
+                "src": "/analog_inputs/jz_uz_ect.png",
                 "height": 120
             }
         }
