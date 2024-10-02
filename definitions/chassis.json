@@ -32,6 +32,14 @@
         "insert_options": ["RX8_S1_MREL_CONTROL", "RX8_S1_CAN", "RX8_S1_STARTER_BYPASS", "RX8_S1_NSS_BYPASS", "RX8_S1_RADIATOR_FAN_CONTROL"]
     },
     {
+        "name": "Nissan 300ZX (Z31 - N/A Chassis)",
+        "id": "z31_vg30",
+        "fuel_pump_12v": false,
+        "dbw_pedal": false,
+        "chassis_connectors": ["Z31_83M"],
+        "insert_options": []
+    },
+    {
         "name": "Nissan 240SX (S13 - DOHC Chassis)",
         "id": "240sx_s13",
         "fuel_pump_12v": false,
