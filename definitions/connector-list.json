@@ -2040,22 +2040,74 @@
                 "src": "/generic/bosch_lsu_49.png",
                 "height": 120
             }
-        },
+        }
+    ],
+    "stepper_valve_options": [
         {
-            "name": "Bosch LSU 4.2 Wideband Sensor",
-            "part_number": "BOSCH_LSU_42",
+            "name": "Toyota 6-Wire Idle Air Control Valve",
+            "part_number": "90980-11144",
             "connector_type": "terminal",
             "sources": [],
             "pinout": [
-                { "name": "WBC PUMP", "type": null, "pin": 1 },
-                { "name": "WBC COM", "type": null, "pin": 2 },
-                { "name": "WBC Heater-", "type": null, "pin": 3 },
-                { "name": "WBC Heater+", "type": null, "pin": 4 },
-                { "name": "WBC Cal-Resistor", "type": null, "pin": 5 },
-                { "name": "WBC CELL", "type": null, "pin": 6 }
+                { "name": "ISCV3", "type": "step_3", "pin": 1 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 2 },
+                { "name": "ISCV4", "type": "step_4", "pin": 3 },
+                { "name": "ISCV2", "type": "step_2", "pin": 4 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 5 },
+                { "name": "ISCV1", "type": "step_1", "pin": 6 }
             ],
             "image": {
-                "src": "/generic/bosch_lsu_49.png",
+                "src": "/stepper_valves/toyota_6pin.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "Mitsubishi 6-Wire Idle Air Control Valve",
+            "part_number": "Mitsubishi_6pin_Idle",
+            "connector_type": "terminal",
+            "sources": [],
+            "pinout": [
+                { "name": "ISCV4", "type": "step_4", "pin": 1 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 2 },
+                { "name": "ISCV3", "type": "step_3", "pin": 3 },
+                { "name": "ISCV2", "type": "step_2", "pin": 4 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 5 },
+                { "name": "ISCV1", "type": "step_1", "pin": 6 }
+            ],
+            "image": {
+                "src": "/stepper_valves/mitsubishi_6pin.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "GM/Holden 4-Wire Idle Air Control Valve (Oval Connector)",
+            "part_number": "gm_4pin_iacv_type_1",
+            "connector_type": "terminal",
+            "sources": [],
+            "pinout": [
+                { "name": "ISCV4", "type": "step_4", "pin": 1 },
+                { "name": "ISCV3", "type": "step_3", "pin": 2 },
+                { "name": "ISCV2", "type": "step_2", "pin": 3 },
+                { "name": "ISCV1", "type": "step_1", "pin": 4 }
+            ],
+            "image": {
+                "src": "/stepper_valves/gm_type_1.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "GM/Holden 4-Wire Idle Air Control Valve (Square Connector)",
+            "part_number": "gm_4pin_iacv_type_2",
+            "connector_type": "terminal",
+            "sources": [],
+            "pinout": [
+                { "name": "ISCV4", "type": "step_4", "pin": 1 },
+                { "name": "ISCV3", "type": "step_3", "pin": 2 },
+                { "name": "ISCV2", "type": "step_2", "pin": 3 },
+                { "name": "ISCV1", "type": "step_1", "pin": 4 }
+            ],
+            "image": {
+                "src": "/stepper_valves/gm_type_2.png",
                 "height": 120
             }
         }

@@ -63,13 +63,13 @@ app.post('/fetch', (req, res) => {
     output.tweak = {
         override: {
             graph: {
-                ranksep: '3.5'
+                ranksep: '2.5'
             }
         }
     }
 
     let output_yaml = YAML.stringify(output);
-
+ 
     console.dir(input)
 
     temp.cleanupSync();
