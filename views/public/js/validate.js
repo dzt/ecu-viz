@@ -14,6 +14,7 @@ let getUserInput = function () {
 
     // Assuming these values should be fetched or initialized
     let flex_fuel = ($('#flex').find('option:selected').val() == '0') ? null : serverData.connectors['flex_options'][0].part_number;
+    let idle_valve = ($('#idle_stepper').find('option:selected').val() == '0') ? null : $('#idle_stepper').find('option:selected').val();
 
     let additional_io = parseAdditionalIO();
 
@@ -42,12 +43,13 @@ let getUserInput = function () {
         "iat": iat,
         "trigger": trigger,
         "flex": flex_fuel,
+        "idle_valve": idle_valve,
         "can_devices": can_devices,
         "auxiliary_options": aux_outputs,
         "analog_inputs": analog_inputs
     };
 
-    console.log(JSON.stringify(req_params));
+    console.log(req_params);
 
     return req_params;
 }

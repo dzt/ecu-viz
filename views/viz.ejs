@@ -34,10 +34,8 @@
                         <div id="spinner" class="spinner-border text-light" style="margin-top: 40%; display: none;"
                             role="status"></div>
 
-                        <div id="previewContainer"
-                            style="height: 600px;overflow: scroll;-ms-overflow-style: none;scrollbar-width: none;">
-                            <img id="previewImage" style="width: 1500px;height: auto;"
-                                src="/public/imgs/preview-example.png" alt="Live Preview">
+                        <div id="previewContainer">
+                            <img id="previewImage" src="/public/imgs/preview-example.png" alt="Live Preview">
                         </div>
 
                     </div>
@@ -118,6 +116,23 @@
                                             </select>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="injector_setup" class="form-label">Injector Setup</label>
+                                            <select id="injector_setup" class="form-select" aria-label="Igniiton Setup">
+                                                <option value="seq">Sequential (Default)</option>
+                                                <option value="semi">Semi-Sequential</option>
+                                                <option value="batch">Batch</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="ignition_setup" class="form-label">Ignition Setup</label>
+                                            <select id="ignition_setup" class="form-select" aria-label="Igniiton Setup">
+                                                <option value="direct">Direct Fire (Default)</option>
+                                                <option value="wasted">Wasted Spark</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="tab-pane fade" id="nav-basics" role="tabpanel"
                                     aria-labelledby="nav-basics-tab">
@@ -191,17 +206,30 @@
                                             </select>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="tab-pane fade" id="nav-io" role="tabpanel" aria-labelledby="nav-io-tab">
-                                    <div class="mb-3">
-                                        <label for="flex" class="form-label">Flex Fuel Sensor</label>
-                                        <div id="flex_container">
-                                            <select class="form-select" id="flex" aria-label="Flex Fuel Sensor">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="idle_stepper" class="form-label">Idle Stepper Valve</label>
+                                            <select id="idle_stepper" class="form-select" aria-label="Idle Stepper Valve">
                                                 <option value="0">None</option>
-                                                <option value="1">Standard</option>
+                                                <% connectors.stepper_valve_options.forEach((conn)=>{%>
+                                                <option value="<%=conn.part_number%>">
+                                                    <%=conn.name%>
+                                                </option>
+                                                <%});%>
                                             </select>
                                         </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="flex" class="form-label">Flex Fuel Sensor</label>
+                                            <div id="flex_container">
+                                                <select class="form-select" id="flex" aria-label="Flex Fuel Sensor">
+                                                    <option value="0">None</option>
+                                                    <option value="1">Standard</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-io" role="tabpanel" aria-labelledby="nav-io-tab">
                                     <div class="mb-3">
                                         <label for="can" class="form-label">CAN Devices</label>
                                         <span class="badge bg-dark add-select" viz-id="can">Add</span>

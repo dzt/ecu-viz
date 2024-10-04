@@ -76,10 +76,22 @@ th {
 }
 
 .tab-content {
-    height: 380px !important;
+    height: 480px !important;
     overflow: scroll;
 }
 
 ::-webkit-scrollbar {
     display: none;
-  }
+}
+
+#previewContainer {
+    height: 700px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#previewImage {
+    width: 1500px;
+    height: auto;
+}

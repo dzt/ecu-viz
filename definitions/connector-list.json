@@ -2049,12 +2049,12 @@
             "connector_type": "terminal",
             "sources": [],
             "pinout": [
-                { "name": "ISCV3", "type": "step_3", "pin": 1 },
+                { "name": "Stepper 4", "type": "step_4", "pin": 1 },
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 2 },
-                { "name": "ISCV4", "type": "step_4", "pin": 3 },
-                { "name": "ISCV2", "type": "step_2", "pin": 4 },
+                { "name": "Stepper 3", "type": "step_3", "pin": 3 },
+                { "name": "Stepper 2", "type": "step_2", "pin": 4 },
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 5 },
-                { "name": "ISCV1", "type": "step_1", "pin": 6 }
+                { "name": "Stepper 1", "type": "step_1", "pin": 6 }
             ],
             "image": {
                 "src": "/stepper_valves/toyota_6pin.png",
@@ -2067,12 +2067,12 @@
             "connector_type": "terminal",
             "sources": [],
             "pinout": [
-                { "name": "ISCV4", "type": "step_4", "pin": 1 },
+                { "name": "Stepper 4", "type": "step_4", "pin": 1 },
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 2 },
-                { "name": "ISCV3", "type": "step_3", "pin": 3 },
-                { "name": "ISCV2", "type": "step_2", "pin": 4 },
+                { "name": "Stepper 3", "type": "step_3", "pin": 3 },
+                { "name": "Stepper 2", "type": "step_2", "pin": 4 },
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 5 },
-                { "name": "ISCV1", "type": "step_1", "pin": 6 }
+                { "name": "Stepper 1", "type": "step_1", "pin": 6 }
             ],
             "image": {
                 "src": "/stepper_valves/mitsubishi_6pin.png",
@@ -2085,10 +2085,10 @@
             "connector_type": "terminal",
             "sources": [],
             "pinout": [
-                { "name": "ISCV4", "type": "step_4", "pin": 1 },
-                { "name": "ISCV3", "type": "step_3", "pin": 2 },
-                { "name": "ISCV2", "type": "step_2", "pin": 3 },
-                { "name": "ISCV1", "type": "step_1", "pin": 4 }
+                { "name": "Stepper 4", "type": "step_4", "pin": 1 },
+                { "name": "Stepper 3", "type": "step_3", "pin": 2 },
+                { "name": "Stepper 2", "type": "step_2", "pin": 3 },
+                { "name": "Stepper 1", "type": "step_1", "pin": 4 }
             ],
             "image": {
                 "src": "/stepper_valves/gm_type_1.png",
@@ -2101,10 +2101,10 @@
             "connector_type": "terminal",
             "sources": [],
             "pinout": [
-                { "name": "ISCV4", "type": "step_4", "pin": 1 },
-                { "name": "ISCV3", "type": "step_3", "pin": 2 },
-                { "name": "ISCV2", "type": "step_2", "pin": 3 },
-                { "name": "ISCV1", "type": "step_1", "pin": 4 }
+                { "name": "Stepper 4", "type": "step_4", "pin": 1 },
+                { "name": "Stepper 3", "type": "step_3", "pin": 2 },
+                { "name": "Stepper 2", "type": "step_2", "pin": 3 },
+                { "name": "Stepper 1", "type": "step_1", "pin": 4 }
             ],
             "image": {
                 "src": "/stepper_valves/gm_type_2.png",
