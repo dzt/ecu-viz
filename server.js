@@ -9,7 +9,7 @@ const path = require('path');
 const fs = require('fs');
 const exec = require('child_process').exec;
 
-const YamlGenerator = require('./lib/index2.js');
+const YamlGenerator = require('./lib/index.js');
 
 const app = express();
 app.server = http.createServer(app);
@@ -50,7 +50,9 @@ app.post('/fetch', (req, res) => {
     let output;
     
     try {
-        output = generateDiagram(input);
+        const yg = new YamlGenerator(input);
+        yg.generateOutput();
+        output = yg.generateOutput()
     } catch(e) {
         console.log(e)
         return res.status(400).json({
@@ -137,19 +139,6 @@ app.get('/viz', (req, res) => {
         }
     });
 });
-
-const generateDiagram = (input) => {
-    const yg = new YamlGenerator(input);
-    let connectors = yg.createConnectors();
-    let cables = yg.createCables();
-    let connections = yg.createConnections();
-
-    return { 
-        connectors: connectors.data,
-        cables,
-        connections
-    };
-}
 
 app.server.listen(process.env.PORT || PORT, () => {
     console.log(`App is running on at http://127.0.0.1:${app.server.address().port}`);

@@ -1,6 +1,5 @@
 const input_file = require('./input_examples/http.json');
-const lib = require('./lib/index.js');
-const YamlGenerator = require('./lib/index2.js');
+const YamlGenerator = require('./lib/index.js');
 const utils = require('./lib/utils.js');
 const fs = require('fs');
 
