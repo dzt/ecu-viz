@@ -259,7 +259,11 @@
         ],
         "multipurpose_pins": {
             "dbw": ["B18", "B26"],
-            "stepper_valve": ["A29", "A28", "A27", "A26"]
+            "stepper_valve": ["A29", "A28", "A27", "A26"],
+            "3_wire_isc": {
+                "open_pin": "A20",
+                "close_pin": "A21"
+            }
         },
         "image": {
             "src": "/ecus/storm_g4x.png",

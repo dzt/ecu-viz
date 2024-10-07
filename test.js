@@ -1,14 +1,17 @@
 const input_file = require('./input_examples/http.json');
 const lib = require('./lib/index.js');
+const YamlGenerator = require('./lib/index2.js');
 const utils = require('./lib/utils.js');
 const fs = require('fs');
 
 const YAML = require('json-to-pretty-yaml');
 
-const generateDiagram = (input) => {
-    let connectors = lib.createConnectors(input);
-    let cables = lib.createCables(connectors.summary, input);
-    let connections = lib.createConnections(connectors, cables, input);
+let generateDiagram = (input) => {
+    const yg = new YamlGenerator(input);
+    let connectors = yg.createConnectors(input);
+    let cables = yg.createCables(connectors.summary, input);
+    let connections = yg.createConnections(connectors, cables, input);
+
     return { 
         connectors: connectors.data,
         cables,
@@ -42,3 +45,5 @@ fs.writeFile('out/output.json', JSON.stringify(output, null, 4), function(error)
       console.log('[write auth]: success (output.json)');
     }
 });
+
+module.exports.generateDiagram = generateDiagram;

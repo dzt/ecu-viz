@@ -9,6 +9,8 @@ const path = require('path');
 const fs = require('fs');
 const exec = require('child_process').exec;
 
+const YamlGenerator = require('./lib/index2.js');
+
 const app = express();
 app.server = http.createServer(app);
 
@@ -137,10 +139,12 @@ app.get('/viz', (req, res) => {
 });
 
 const generateDiagram = (input) => {
-    let connectors = lib.createConnectors(input);
-    let cables = lib.createCables(connectors.summary, input);
-    let connections = lib.createConnections(connectors, cables, input);
-    return {
+    const yg = new YamlGenerator(input);
+    let connectors = yg.createConnectors();
+    let cables = yg.createCables();
+    let connections = yg.createConnections();
+
+    return { 
         connectors: connectors.data,
         cables,
         connections
