@@ -4,12 +4,11 @@ const http = require('http');
 
 const temp = require('temp');
 const YAML = require('json-to-pretty-yaml');
-const lib = require('./lib/index.js');
 const path = require('path');
 const fs = require('fs');
 const exec = require('child_process').exec;
 
-const YamlGenerator = require('./lib/index.js');
+const YamlGenerator = require('./src/YamlGenerator.js');
 
 const app = express();
 app.server = http.createServer(app);

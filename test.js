@@ -1,6 +1,6 @@
 const input_file = require('./input_examples/http.json');
-const YamlGenerator = require('./lib/index.js');
-const utils = require('./lib/utils.js');
+const YamlGenerator = require('./src/YamlGenerator.js');
+const utils = require('./src/utils.js');
 const fs = require('fs');
 
 const YAML = require('json-to-pretty-yaml');

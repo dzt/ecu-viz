@@ -1,12 +1,12 @@
-const utils = require('./utils.js');
+const utils = require('./helpers/utils.js');
 const _ = require('underscore');
 const ecus = require('../definitions/ecus.json');
 
-const { CABLE } = require('./constants.js');
+const { CABLE } = require('./helpers/constants.js');
 
-const Connector = require('./connector.js');
-const Cables = require('./cables.js');
-const connections = require('./connections.js');
+const Connector = require('./Connector.js');
+const Cables = require('./Cables.js');
+const Connections = require('./Connections.js');
 
 class YamlGenerator {
 
@@ -87,11 +87,12 @@ class YamlGenerator {
     }
 
     createConnections () {
+        let connections = new Connections(this);
         let chassisConnections = connections.createChassisConnections(this.cables[CABLE.ECU], this.connectors, CABLE.ECU, this.input.chassis);
         let usedAuxOutputs = (chassisConnections.length - 1) + this.connectors.summary.auxiliary_outputs.length;
         let usedDIs = (this.input.flex) ? 1 : 0;
         let connectionBuild = utils.connectionBuilder([
-            connections.createFuseboxConnections(this.input, this.connectors),
+            connections.createFuseboxConnections(),
             connections.createECUGrounds(this.input.ecu),
             connections.createInsertConnections(this.input.inserts, this.input.ecu, usedAuxOutputs, usedDIs), 
             chassisConnections,

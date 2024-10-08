@@ -1,15 +1,15 @@
 let cables = {}
 
-const { CABLE } = require('./constants.js');
+const { CABLE } = require('./helpers/constants.js');
 
 const colors = require('../definitions/colors.json');
 const connectors = require('../definitions/connector-list.json');
 const ecus = require('../definitions/ecus.json');
 const inserts = require('../definitions/inserts.json');
-const utils = require('./utils');
+const utils = require('./helpers/utils.js');
 const _ = require('underscore');
 
-const { COLOR_CODE, WIRE_GAUGE } = require('./constants.js');
+const { COLOR_CODE, WIRE_GAUGE } = require('./helpers/constants.js');
 
 let gauge = WIRE_GAUGE;
 let color_code = COLOR_CODE;

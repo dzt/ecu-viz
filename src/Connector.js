@@ -6,7 +6,7 @@ const chassis = require('../definitions/chassis.json');
 const engines = require('../definitions/engines.json');
 const inserts = require('../definitions/inserts.json');
 
-const { FUSEBOX, BATTERY } = require('./constants.js');
+const { FUSEBOX, BATTERY } = require('./helpers/constants.js');
 
 let imgDir = '../pinout_data'
 let genericImagePaths = {

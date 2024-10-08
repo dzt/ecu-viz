@@ -1,12 +1,12 @@
 let utils = {};
-const colors = require('../definitions/colors.json')
+const colors = require('../../definitions/colors.json');
 const _ = require('underscore');
 
-const { FUSEBOX } = require('../lib/constants.js');
+const { FUSEBOX } = require('./constants.js');
 
-const chassis = require('../definitions/chassis.json');
-const connectors = require('../definitions/connector-list.json');
-const ecus = require('../definitions/ecus.json');
+const chassis = require('../../definitions/chassis.json');
+const connectors = require('../../definitions/connector-list.json');
+const ecus = require('../../definitions/ecus.json');
 
 utils.createConnectorSummary = function(connectorList) {
 
