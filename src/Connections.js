@@ -106,7 +106,13 @@ class Connections {
     
     };
     
-    createInjectorConnections (cableSetup, connectors, cableTitle, chassisCode) {
+    createInjectorConnections () {
+
+        let cableSetup = this.context.cables[CABLE.INJ];
+        let connectors = this.context.connectors;
+        let cableTitle = CABLE.INJ;
+        let chassisCode = this.context.input.chassis;
+
         let connList = [];
         const injectorCount = cableSetup.wirecount - 1;
     
@@ -175,7 +181,13 @@ class Connections {
         return connList;
     }
     
-    createIgnitionConnections (cableSetup, connectors, cableTitle, input) {
+    createIgnitionConnections () {
+
+        let cableSetup = this.context.cables[CABLE.IGN];
+        let connectors = this.context.connectors;
+        let cableTitle = CABLE.IGN;
+        let input = this.context.input;
+
         let connList = [];
     
         // Extract necessary data
@@ -249,9 +261,14 @@ class Connections {
     
     }
     
-    createAnalogConnections (cableSetup, connectors, cableTitle) {
+    createAnalogConnections () {
+
         let connList = [];
     
+        let cableSetup = this.context.cables[CABLE.ANALOG];
+        let connectors = this.context.connectors;
+        let cableTitle = CABLE.ANALOG;
+
         // Extract necessary data
         const ecuTitle = Object.keys(connectors.data)[0];
         const ecuPinout = _.findWhere(ecus, { name: ecuTitle }).pinout;
@@ -344,9 +361,15 @@ class Connections {
         
     }
     
-    createTempConnections (cableSetup, connectors, cableTitle, clt_pn, iat_pn) {
+    createTempConnections () {
         let connList = [];
-    
+        
+        let cableSetup = this.context.cables[CABLE.TEMP]
+        let connectors = this.context.connectors
+        let cableTitle = CABLE.TEMP
+        let clt_pn = this.context.input.clt
+        let iat_pn = this.context.input.iat
+
         // Extract necessary data
         const ecuTitle = Object.keys(connectors.data)[0];
         const ecuPinout = _.findWhere(ecus, { name: ecuTitle }).pinout;
@@ -399,7 +422,14 @@ class Connections {
     
     }
     
-    createFlexConnection (cableSetup, connectors, cableTitle, chassisCode) {
+    createFlexConnection () {
+
+        if (this.context.input.flex == null) return null;
+
+        let cableSetup = this.context.cables[CABLE.FLEX]
+        let connectors = this.context.connectors
+        let cableTitle = CABLE.FLEX
+        let chassisCode = this.context.input.chassis
     
         let connList = [];
          // Extracting ECU title and pinout
@@ -440,8 +470,16 @@ class Connections {
     
     }
     
-    createCANConnections (cableSetup, connectors, cableTitle, chassisCode) {
+    createCANConnections () {
+
+        if (this.context.input.can_devices.length < 1) return null;
+
         let connList = [];
+
+        let cableSetup = this.context.cables[CABLE.CAN]
+        let connectors = this.context.connectors
+        let cableTitle = CABLE.CAN
+        let chassisCode = this.context.input.chassis
         
         // Extracting ECU title and pinout
         const ecuTitle = Object.keys(connectors.data)[0];
@@ -482,8 +520,13 @@ class Connections {
     }
     
     
-    createAuxConnections (cableSetup, connectors, cableTitle, chassisCode) {
+    createAuxConnections () {
         let connList = [];
+
+        let cableSetup = this.context.cables[CABLE.AUX]
+        let connectors = this.context.connectors
+        let cableTitle = CABLE.AUX
+        let chassisCode = this.context.input.chassis
     
         // Extract necessary data
         const ecuTitle = Object.keys(connectors.data)[0];
@@ -562,8 +605,13 @@ class Connections {
         return connList;
     }
     
-    createTriggerConnection (cableSetup, connectors, cableTitle, chassisCode) {
-    
+    createTriggerConnection () {
+        
+        let cableSetup = this.context.cables[CABLE.TRIG]
+        let connectors = this.context.connectors
+        let cableTitle = CABLE.TRIG
+        let chassisCode = this.context.input.chassis
+
         let connList = [];
     
         for (let i = 0; i < cableSetup.wirecount; i++) {

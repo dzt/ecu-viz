@@ -87,25 +87,22 @@ class YamlGenerator {
     }
 
     createConnections () {
-
         let connections = new Connections(this);
-
         let connectionBuild = utils.connectionBuilder([
             connections.createFuseboxConnections(),
             connections.createECUGrounds(),
             connections.createInsertConnections(), 
             connections.createChassisConnections(),
-            connections.createInjectorConnections(this.cables[CABLE.INJ], this.connectors, CABLE.INJ, this.input.chassis),
-            connections.createIgnitionConnections(this.cables[CABLE.IGN], this.connectors, CABLE.IGN, this.input),
-            connections.createAnalogConnections(this.cables[CABLE.ANALOG], this.connectors, CABLE.ANALOG),
-            connections.createTempConnections(this.cables[CABLE.TEMP], this.connectors, CABLE.TEMP, this.input.clt, this.input.iat),
-            connections.createAuxConnections(this.cables[CABLE.AUX], this.connectors, CABLE.AUX, this.input.chassis),
-            connections.createTriggerConnection(this.cables[CABLE.TRIG], this.connectors, CABLE.TRIG, this.input.chassis),
-            (this.input.can_devices.length > 1) ? connections.createCANConnections(this.cables[CABLE.CAN], this.connectors, CABLE.CAN, this.input.chassis) : null,
-            (this.input.flex != null) ? connections.createFlexConnection(this.cables[CABLE.FLEX], this.connectors, CABLE.FLEX, this.input.chassis) : null
+            connections.createInjectorConnections(),
+            connections.createIgnitionConnections(),
+            connections.createAnalogConnections(),
+            connections.createTempConnections(),
+            connections.createAuxConnections(),
+            connections.createTriggerConnection(),
+            connections.createCANConnections(),
+            connections.createFlexConnection()
         ]);
         return connectionBuild;
-
     }
 
     getAvailableAuxOutputs() {

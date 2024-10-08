@@ -248,7 +248,9 @@ class Cables {
     }
     
     createAuxConnections () {
+
         let aux_assignments = this.context.summary.auxiliary_outputs;
+        if (aux_assignments.length < 1) return null;
         let key = CABLE.AUX;
         let colorList = [];
         let summary = _.where(aux_assignments, { type: 'auxiliary_options' });
