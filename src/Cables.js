@@ -34,11 +34,22 @@ class Cables {
             let isc_rules, pins_to_pluck;
             isc_rules = this.context.ecu.multipurpose_pins[(idle_pin_count === 3) ? '3_wire_isc' : 'stepper_valve'];
 
+            // In the case where the ECU has specific ISC rules to be followed
             if (Array.isArray(isc_rules) || (typeof isc_rules == 'object')) {
-                if (idle_pin_count === 3) {                    
-                    pins_to_pluck = [isc_rules.open_pin, isc_rules.close_pin]; // n numbers of aux outputs
-                } else {
-                    pins_to_pluck = isc_rules.slice(0, utils.countIdleSteps(idleValveDefinition.pinout)); // n numbers of aux outputs
+                if (idle_pin_count === 3) { // 3 wire isc                
+                    if ((typeof isc_rules == 'object')) { // explict rules
+                        pins_to_pluck = [isc_rules.open_pin, isc_rules.close_pin]; // n numbers of aux outputs
+                    } else if (Array.isArray(isc_rules) && isc_rules[0] == 'all_auxiliary_outputs') { // use any aux
+                        // pins_to_pluck = array of pin numbers to use (next available aux pin)
+                        pins_to_pluck = _.pluck(this.context.getAvailableAuxOutputs().slice(0, 2), 'pin')
+                    }
+                } else if (idle_pin_count > 3) { // stepper valve
+                    if (isc_rules.length > 1) { // follow isc rules explictly
+                        pins_to_pluck = isc_rules.slice(0, utils.countIdleSteps(idleValveDefinition.pinout)); // n numbers of aux outputs
+                    } else if (isc_rules[0] == 'all_auxiliary_outputs'){ // use any aux available
+                        // pins_to_pluck = array of pin numbers to use (next available aux pin)
+                        pins_to_pluck = _.pluck(this.context.getAvailableAuxOutputs().slice(0, utils.countIdleSteps(idleValveDefinition.pinout)), 'pin')
+                    }
                 }
             }
 
@@ -47,6 +58,7 @@ class Cables {
             pins_to_pluck.map((pin) =>  {
                 let pin_detailed = _.findWhere(this.context.ecu.pinout, { pin: pin });
                 this.context.updateAuxCounter(pin_detailed);
+                this.context.isc_pins.push(pin_detailed);
                 return pin_detailed;
             });
 
@@ -186,6 +198,7 @@ class Cables {
                 colorList.push(utils.parseColor(anOption.color))
             }
         }
+
         let cable = {
             key,
             color_code,
@@ -485,7 +498,7 @@ class Cables {
     
         let cableColors = [];
         let cableTemplate = {
-            key: 'Idle Control',
+            key: CABLE.IDLE,
             color_code,
             wirecount: idleStepCount + ((uses_switched12v) ? 1 : 0),
             gauge,
@@ -499,12 +512,13 @@ class Cables {
         // Initial Error Validations
         if ((typeof multipurpose_pins.stepper_valve == 'boolean')
             && multipurpose_pins.stepper_valve == false) throw new Error(insufficentErrorMessage)
+
         if ((Array.isArray(multipurpose_pins.stepper_valve)) &&
-            (idleStepCount > multipurpose_pins.stepper_valve.length)) throw new Error(insufficentErrorMessage)
+            (idleStepCount > multipurpose_pins.stepper_valve.length) && !multipurpose_pins.stepper_valve.includes('all_auxiliary_outputs')) throw new Error(insufficentErrorMessage)
     
         // Pin Assignment
         let ecuPinsToUse;
-        if ((typeof multipurpose_pins.stepper_valve == 'boolean') && (multipurpose_pins.stepper_valve == true)) {
+        if ((Array.isArray(multipurpose_pins.stepper_valve)) && (multipurpose_pins.stepper_valve[0] == 'all_auxiliary_outputs')) {
             if (idleStepCount <= ecuStepperSpecificPins.length) {
                 // Use only the specified stepper pins from the ECU and call it a day
                 ecuPinsToUse = ecuStepperSpecificPins.slice(ecuStepperSpecificPins.length - idleStepCount);
@@ -518,11 +532,18 @@ class Cables {
                 return _.findWhere(ecu.pinout, { pin: pinNumber });
             });
         }
-    
-        for (let i = 0; i < ecuPinsToUse.length; i++) {
-            cableColors.push(utils.parseColor(ecuPinsToUse[i].color));
-        }
         
+        if (!ecuPinsToUse || ecuPinsToUse.length == 0) {
+            ecuPinsToUse = this.context.isc_pins;
+            if (idleValveDefinition.pinout.length == 3) { // 3-wire iscv which is setup later
+                cableTemplate.wirecount = 3;
+            }
+        }
+
+        for (let i = 0; i < ecuPinsToUse.length; i++) {
+            let ecu_pin = ecuPinsToUse[i];
+            cableColors.push(utils.parseColor(ecu_pin.color));
+        }
         cableTemplate.wirelabels = utils.createColoredWireLabels(cableColors)
         return cableTemplate;
 

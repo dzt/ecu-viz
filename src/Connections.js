@@ -693,6 +693,49 @@ class Connections {
         }
         return connList;
     }
+
+    createIdleValveConnection() {
+
+        let connList = [];
+        let idleValve_pn = this.context.input.idle_valve;
+        if (!idleValve_pn) return null;
+
+        let idleValveDefinition = _.findWhere(connectorsDefinitions['stepper_valve_options'], { part_number: idleValve_pn });
+        let switch_12v_pins = _.where(idleValveDefinition.pinout, { type: 'switched_12v' });
+        let uses_switched12v = (switch_12v_pins.length > 0);
+        let colors = this.context.cables[CABLE.IDLE].colors;
+        let fbQuery = utils.getFuseBoxPin(this.context.connectors.fusebox.pn, 'main_12v');
+        let steps = ['step_1', 'step_2', 'step_3', 'step_4']
+
+        for (let i = 0; i < colors.length; i++) {
+            if ((i == 0) && (uses_switched12v)) {
+                // Populate 12v to 12v pins on ISCV
+                for (let j = 0; j < switch_12v_pins.length; j++) {
+                    let keys = [fbQuery.key, CABLE.IDLE, idleValveDefinition.name]
+                    let values = [fbQuery.value, 1, switch_12v_pins[j].pin]
+                    connList.push(this.connectionHelper(keys, values));
+                } 
+            } else {
+                if (colors.length > 3) { // Stepper Valve
+                    let keys = [this.context.ecu.name, CABLE.IDLE, idleValveDefinition.name]
+                    let true_index = (uses_switched12v) ? (i - 1): i;
+                    let step = steps[true_index];
+                    let values = [
+                        this.context.isc_pins[true_index].pin,
+                        (uses_switched12v)? (true_index + 2) : (true_index + 1),
+                        _.findWhere(idleValveDefinition.pinout, { type: step }).pin
+                    ]
+                    connList.push(this.connectionHelper(keys, values));
+                } else { //  3 Wire Valve
+                    let dest_pin = _.findWhere(idleValveDefinition.pinout, { type: (i == 1) ? 'open': 'close' }).pin;
+                    let keys = [this.context.ecu.name, CABLE.IDLE, idleValveDefinition.name]
+                    let values = [this.context.isc_pins[i -1].pin, (i + 1), dest_pin]
+                    connList.push(this.connectionHelper(keys, values));
+                }
+            }
+        }
+        return connList;
+    }
     
     connectionHelper (keys, values) {
         const conn = [];

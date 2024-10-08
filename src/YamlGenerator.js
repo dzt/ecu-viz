@@ -15,9 +15,13 @@ class YamlGenerator {
         this.ecu = _.findWhere(ecus, { id: input.ecu });
         this.used_aux_outputs = []
         this.used_digital_inputs = []
-        this.summary = null;
-        this.cables = null;
-        this.connectors = null;
+        
+        // sorted properly in accordance to idle steps (if stepper) or [open, close] for 3-wire isc
+        this.isc_pins = []
+
+        this.summary = null
+        this.cables = null
+        this.connectors = null
     }
 
     createConnectors () {
@@ -100,7 +104,8 @@ class YamlGenerator {
             connections.createAuxConnections(),
             connections.createTriggerConnection(),
             connections.createCANConnections(),
-            connections.createFlexConnection()
+            connections.createFlexConnection(),
+            connections.createIdleValveConnection(),
         ]);
         return connectionBuild;
     }
