@@ -10,7 +10,8 @@ module.exports = {
         AUX: 'Auxiliary Outputs',
         TRIG: 'Trigger Sensor(s)',
         CAN: 'CAN Bus Communication',
-        FLEX: 'Flex Fuel'
+        FLEX: 'Flex Fuel',
+        IDLE: 'Idle Control Valve'
     },
     ECU_GROUND: {
         CABLE: 'ECU Ground(s)',
@@ -27,7 +28,7 @@ module.exports = {
     },
     FUSEBOX: [
         {
-            PART_NUMBER: 'FUSEBOX_TYP1',
+            PART_NUMBER: 'FUSEBOX_TYPE1',
             TYPE: 'fusebox',
             IMAGE_FILE: 'relaybox_1.png',
             PINLABELS: [

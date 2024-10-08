@@ -42,6 +42,8 @@ class Cables {
                 }
             }
 
+            if (!pins_to_pluck) throw new Error('Insufficent I/O for Idle Control Valve');
+
             pins_to_pluck.map((pin) =>  {
                 let pin_detailed = _.findWhere(this.context.ecu.pinout, { pin: pin });
                 this.context.updateAuxCounter(pin_detailed);
@@ -281,11 +283,10 @@ class Cables {
     createCANConnection () {
 
         if (this.context.input.can_devices.length < 1) return null;
-
+        
         let canConnector = this.context.summary.can_bus[0]
-        let ecu_pinout = _.findWhere(ecus, { id: this.context.input.ecu }).pinout;
-        let low_color = _.findWhere(ecu_pinout, { type: 'can_l' }).color;
-        let high_color = _.findWhere(ecu_pinout, { type: 'can_h' }).color;
+        let low_color = _.findWhere(this.context.ecu.pinout, { type: 'can_l' }).color;
+        let high_color = _.findWhere(this.context.ecu.pinout, { type: 'can_h' }).color;
     
         let colorList = [
             _.findWhere(colors, { name: 'red' }).hex_code, // 12v

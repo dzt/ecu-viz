@@ -482,8 +482,7 @@ class Connections {
         let chassisCode = this.context.input.chassis
         
         // Extracting ECU title and pinout
-        const ecuTitle = Object.keys(connectors.data)[0];
-        const ecuPinout = _.findWhere(ecus, { name: ecuTitle }).pinout;
+        const ecuTitle = this.context.ecu.name;
     
         // Finding device information based on part number
         let pn = connectors.summary.can_bus[0].pn;
@@ -507,11 +506,11 @@ class Connections {
                 connList.push(this.connectionHelper(keys, values));
             } else if (i == 2) { // For CAN-H
                 let keys = [ecuTitle, cableTitle, can_name];
-                let values = [_.findWhere(ecuPinout, {type: 'can_h'}).pin, yamlIndex, _.findWhere(can_pinout, { type: 'can_h' }).pin];
+                let values = [_.findWhere(this.context.ecu.pinout, {type: 'can_h'}).pin, yamlIndex, _.findWhere(can_pinout, { type: 'can_h' }).pin];
                 connList.push(this.connectionHelper(keys, values));
             } else { // For CAN-L
                 let keys = [ecuTitle, cableTitle, can_name];
-                let values = [_.findWhere(ecuPinout, {type: 'can_l'}).pin, yamlIndex, _.findWhere(can_pinout, { type: 'can_l' }).pin];
+                let values = [_.findWhere(this.context.ecu.pinout, {type: 'can_l'}).pin, yamlIndex, _.findWhere(can_pinout, { type: 'can_l' }).pin];
                 connList.push(this.connectionHelper(keys, values));
             }
         }
@@ -525,7 +524,7 @@ class Connections {
 
         let cableSetup = this.context.cables[CABLE.AUX]
         if (!cableSetup) return null;
-        
+
         let connectors = this.context.connectors
         let cableTitle = CABLE.AUX
         let chassisCode = this.context.input.chassis;

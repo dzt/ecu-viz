@@ -42,7 +42,7 @@ class YamlGenerator {
             /* Optional Cases */
             (this.input.flex != null) ? connector.create(this.input.flex, "flex_options") : null, /* Flex fuel connector if applicable */
             (this.input.idle_valve != null) ? connector.create(this.input.idle_valve, "stepper_valve_options") : null, /* Stepper Valve connector if applicable */
-            (this.input.can_devices.length > 1) ? connector.createMultipleConnections(this.input.can_devices, "can_bus") : null /* CAN Devices */
+            (this.input.can_devices.length > 0) ? connector.createMultipleConnections(this.input.can_devices, "can_bus") : null /* CAN Devices */
         ];
     
         let connObj = utils.builder(buildArr); /* Build connectors */
