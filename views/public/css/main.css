@@ -94,4 +94,5 @@ th {
 #previewImage {
     width: 1500px;
     height: auto;
+    cursor: pointer;
 }

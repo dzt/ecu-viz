@@ -524,9 +524,11 @@ class Connections {
         let connList = [];
 
         let cableSetup = this.context.cables[CABLE.AUX]
+        if (!cableSetup) return null;
+        
         let connectors = this.context.connectors
         let cableTitle = CABLE.AUX
-        let chassisCode = this.context.input.chassis
+        let chassisCode = this.context.input.chassis;
     
         // Extract necessary data
         const ecuTitle = Object.keys(connectors.data)[0];
