@@ -87,15 +87,14 @@ class YamlGenerator {
     }
 
     createConnections () {
+
         let connections = new Connections(this);
-        let chassisConnections = connections.createChassisConnections(this.cables[CABLE.ECU], this.connectors, CABLE.ECU, this.input.chassis);
-        let usedAuxOutputs = (chassisConnections.length - 1) + this.connectors.summary.auxiliary_outputs.length;
-        let usedDIs = (this.input.flex) ? 1 : 0;
+
         let connectionBuild = utils.connectionBuilder([
             connections.createFuseboxConnections(),
-            connections.createECUGrounds(this.input.ecu),
-            connections.createInsertConnections(this.input.inserts, this.input.ecu, usedAuxOutputs, usedDIs), 
-            chassisConnections,
+            connections.createECUGrounds(),
+            connections.createInsertConnections(), 
+            connections.createChassisConnections(),
             connections.createInjectorConnections(this.cables[CABLE.INJ], this.connectors, CABLE.INJ, this.input.chassis),
             connections.createIgnitionConnections(this.cables[CABLE.IGN], this.connectors, CABLE.IGN, this.input),
             connections.createAnalogConnections(this.cables[CABLE.ANALOG], this.connectors, CABLE.ANALOG),
@@ -106,6 +105,7 @@ class YamlGenerator {
             (this.input.flex != null) ? connections.createFlexConnection(this.cables[CABLE.FLEX], this.connectors, CABLE.FLEX, this.input.chassis) : null
         ]);
         return connectionBuild;
+
     }
 
     getAvailableAuxOutputs() {

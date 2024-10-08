@@ -243,7 +243,7 @@ utils.removeNullPins = function(pinout) {
     return newArr;
 }
 
-utils.autoPopulateInsert = function(connection, ecuID, io) {
+utils.autoPopulateInsert = function(connection, ecuID, color) {
     let connector, pin;
     let ecuQuery = _.findWhere(ecus, { id: ecuID });
     if (typeof connection == 'object') {
@@ -252,16 +252,14 @@ utils.autoPopulateInsert = function(connection, ecuID, io) {
     } else {
         connector = ecuQuery.name
         if (connection == 'digital_input') {
-            pin = _.sortBy(_.where(ecuQuery.pinout, { type: connection }), 'name')[io.di].pin
-            io.di += 1;
+            pin = _.findWhere(ecuQuery.pinout, { type: connection, color: color }).pin
         } else if (connection == 'auxiliary_output') {
-            pin = _.sortBy(_.where(ecuQuery.pinout, { type: connection }), 'name')[io.aux].pin
-            io.aux += 1;
+            pin = _.findWhere(ecuQuery.pinout, { type: connection, color: color }).pin
         } else {
             pin = _.findWhere(ecuQuery.pinout, { type: connection }).pin
         }
     }
-    return { connector, pin, io }
+    return { connector, pin }
 }
 
 utils.getFuseBoxPin = function(fusebox_pn, pin_type) {
@@ -318,6 +316,16 @@ utils.getECUStepperPins = function(ecuPinout) {
         }
     }
     return stepperPins;
+}
+
+utils.hexToShort = function(color) {
+    if (color.indexOf(':') > -1) {
+        let col_1 = _.findWhere(colors, { hex_code: color.split(':')[0] }).id
+        let col_2 = _.findWhere(colors, { hex_code: color.split(':')[1] }).id
+        return `${col_1}/${col_2}`
+    } else {
+        return `${_.findWhere(colors, { hex_code: color }).id}`
+    }
 }
 
 const capitalize = function(string) {

@@ -5,7 +5,7 @@ const engines = require('../definitions/engines.json');
 const utils = require('./helpers/utils.js');
 const _ = require('underscore');
 
-const { ECU_GROUND, FUSEBOX } = require('./helpers/constants.js');
+const { CABLE, ECU_GROUND, FUSEBOX } = require('./helpers/constants.js');
 
 class Connections {
 
@@ -25,13 +25,13 @@ class Connections {
         let fb_ground = utils.getFuseBoxPin(connectors.fusebox.pn, 'ground');
     
         // Ignition Switch 12V+
-        connList.push(connections.connectionHelper(
+        connList.push(this.connectionHelper(
             [fb_switched12v.key, 'Fusebox Connections', chassis12VPins[0].name],
             [fb_switched12v.value, 1, chassis12VPins[0].pin]
         ))
     
         // Ground
-        connList.push(connections.connectionHelper(
+        connList.push(this.connectionHelper(
             [fb_ground.key, 'Fusebox Connections', 'BATTERY'],
             [fb_ground.value, 2, 2] // Battery, Pin 2 = Ground
         ))
@@ -39,7 +39,7 @@ class Connections {
         // Battery (Constant 12V+)
         let constant_pins = utils.getFuseBoxPins(connectors.fusebox.pn, 'battery_12v');
         for (let i = 0; i < constant_pins.length; i++) {
-            connList.push(connections.connectionHelper(
+            connList.push(this.connectionHelper(
                 [constant_pins[i].key, 'Fusebox Connections', 'BATTERY'],
                 [constant_pins[i].value, 3, 1] // Battery, Pin 1 = 12V+
             ))
@@ -50,7 +50,13 @@ class Connections {
         return connList;
     }
     
-    createChassisConnections (cableSetup, connectors, cableTitle, chassisCode) {
+    createChassisConnections () {
+
+        let cableSetup = this.context.cables[CABLE.ECU];
+        let connectors = this.context.connectors;
+        let cableTitle = CABLE.ECU;
+        let chassisCode = this.context.input.chassis;
+
         const ecuTitle = Object.keys(connectors.data)[0];
         const ecuPinout = _.findWhere(ecus, { name: ecuTitle }).pinout;
         let connList = [];
@@ -92,7 +98,7 @@ class Connections {
                     utils.getChassisPinByType(chassisCode, chassisPinType).pin
                 ];
             }
-            const conn = connections.connectionHelper(keys, values);
+            const conn = this.connectionHelper(keys, values);
             connList.push(conn);
         }
     
@@ -149,7 +155,7 @@ class Connections {
                         injector12VPin
                     ];
                     // Add connection to the list
-                    connList.push(connections.connectionHelper(keys, values));
+                    connList.push(this.connectionHelper(keys, values));
                 }
             } else { // Connections from ECU to injectors
                 keys = [
@@ -163,7 +169,7 @@ class Connections {
                     injectorSignalPin
                 ];
                 // Add connection to the list
-                connList.push(connections.connectionHelper(keys, values));
+                connList.push(this.connectionHelper(keys, values));
             }
         }
         return connList;
@@ -218,7 +224,7 @@ class Connections {
                         (i + 1),
                         sourcePin
                     ]
-                    connList.push(connections.connectionHelper(keys, values));
+                    connList.push(this.connectionHelper(keys, values));
     
                 }
             } else {
@@ -235,7 +241,7 @@ class Connections {
                     (i + 1),
                     _.findWhere(ignitionPinout, { type: 'signal' }).pin
                 ]
-                connList.push(connections.connectionHelper(keys, values));
+                connList.push(this.connectionHelper(keys, values));
             }
         }
         
@@ -284,7 +290,7 @@ class Connections {
                             i + 1,
                             _.findWhere(sensorDetails.pinout, { type: type }).pin,
                         ]
-                        connList.push(connections.connectionHelper(keys, values));
+                        connList.push(this.connectionHelper(keys, values));
                     }
     
                 }
@@ -329,7 +335,7 @@ class Connections {
                         (isMultiple) ? `${sensorDetails.name} (No. ${multipleValue + 1})` : sensorDetails.name  // account for multiple
                     ]
                     let values = [analog_input.pin, i + 1, _.findWhere(sensorDetails.pinout, { type: 'signal' }).pin]
-                    connList.push(connections.connectionHelper(keys, values));
+                    connList.push(this.connectionHelper(keys, values));
     
             }
         }
@@ -362,7 +368,7 @@ class Connections {
                         i + 1,
                         _.findWhere(sensorDetails.pinout, { type: 'vref_ground' }).pin,
                     ]
-                    connList.push(connections.connectionHelper(keys, values));
+                    connList.push(this.connectionHelper(keys, values));
                 }
             } else {
                 // Distribute sensor inputs to ECU
@@ -384,7 +390,7 @@ class Connections {
                     i + 1,
                     signalPin,
                 ]
-                connList.push(connections.connectionHelper(keys, values));
+                connList.push(this.connectionHelper(keys, values));
     
             }
         }
@@ -418,15 +424,15 @@ class Connections {
             if (i == 0) { // For 12v
                 let keys = [fbQuery.key, cableTitle, sensor_name];
                 let values = [fbQuery.value, yamlIndex, _.findWhere(sensor_pinout, { type: 'switched_12v' }).pin];
-                connList.push(connections.connectionHelper(keys, values));
+                connList.push(this.connectionHelper(keys, values));
             } else if (i == 1) { // For ground (shared)
                 let keys = [ECU_GROUND.CONNECTOR, cableTitle, sensor_name];
                 let values = [1, yamlIndex, _.findWhere(sensor_pinout, { type: 'ground' }).pin];
-                connList.push(connections.connectionHelper(keys, values));
+                connList.push(this.connectionHelper(keys, values));
             } else if (i == 2) { // For CAN-H
                 let keys = [ecuTitle, cableTitle, sensor_name];
                 let values = [firstDI.pin, yamlIndex, _.findWhere(sensor_pinout, { type: 'signal' }).pin];
-                connList.push(connections.connectionHelper(keys, values));
+                connList.push(this.connectionHelper(keys, values));
             }
         }
     
@@ -456,19 +462,19 @@ class Connections {
             if (i == 0) { // For 12v
                 let keys = [power_pin.name, cableTitle, can_name];
                 let values = [power_pin.pin, yamlIndex, _.findWhere(can_pinout, { type: 'switched_12v' }).pin];
-                connList.push(connections.connectionHelper(keys, values));
+                connList.push(this.connectionHelper(keys, values));
             } else if (i == 1) { // For ground (shared)
                 let keys = ['ECU Ground Terminal', cableTitle, can_name];
                 let values = [1, yamlIndex, _.findWhere(can_pinout, { type: 'ground' }).pin];
-                connList.push(connections.connectionHelper(keys, values));
+                connList.push(this.connectionHelper(keys, values));
             } else if (i == 2) { // For CAN-H
                 let keys = [ecuTitle, cableTitle, can_name];
                 let values = [_.findWhere(ecuPinout, {type: 'can_h'}).pin, yamlIndex, _.findWhere(can_pinout, { type: 'can_h' }).pin];
-                connList.push(connections.connectionHelper(keys, values));
+                connList.push(this.connectionHelper(keys, values));
             } else { // For CAN-L
                 let keys = [ecuTitle, cableTitle, can_name];
                 let values = [_.findWhere(ecuPinout, {type: 'can_l'}).pin, yamlIndex, _.findWhere(can_pinout, { type: 'can_l' }).pin];
-                connList.push(connections.connectionHelper(keys, values));
+                connList.push(this.connectionHelper(keys, values));
             }
         }
     
@@ -485,8 +491,6 @@ class Connections {
         let fbQuery = utils.getFuseBoxPin(connectors.fusebox.pn, 'main_12v');
     
         let summary = _.where(connectors.summary.auxiliary_outputs, { type: 'auxiliary_options' });
-    
-        console.log(summary)
     
         for (let i = 0; i < cableSetup.wirecount; i++) {
             if (i == 0) {
@@ -521,7 +525,7 @@ class Connections {
                         1, // always 1 as its 12v load
                         _.findWhere(pinout, { type: 'switched_12v' }).pin, // aux trigger pin
                     ]
-                    connList.push(connections.connectionHelper(keys, values));
+                    connList.push(this.connectionHelper(keys, values));
                 }
             } else {
                 // Distribute aux outputs to ECU
@@ -551,7 +555,7 @@ class Connections {
                     i + 1,
                     _.findWhere(pinout, { type: 'signal' }).pin
                 ]
-                connList.push(connections.connectionHelper(keys, values));
+                connList.push(this.connectionHelper(keys, values));
             }
         }
     
@@ -599,7 +603,7 @@ class Connections {
                 i + 1,
                 triggerPinout[i].pin
             ]
-            connList.push(connections.connectionHelper(keys, values));
+            connList.push(this.connectionHelper(keys, values));
         }
         return connList;
     }
@@ -611,33 +615,30 @@ class Connections {
         for (let i = 0; i < groundPins.length; i++) {
             let keys = [_.findWhere(ecus, { id: ecuID }).name, ECU_GROUND.CABLE, ECU_GROUND.CONNECTOR]
             let values = [groundPins[i].pin, (i + 1), (i + 1)]
-            connList.push(connections.connectionHelper(keys, values));
+            connList.push(this.connectionHelper(keys, values));
         }
         return connList;
     }
     
-    createInsertConnections (insert_ids, ecuID, usedAuxOutputs, usedDIs) {
+    createInsertConnections () {
         
-        let ioCount = {
-            aux: usedAuxOutputs,
-            di: usedDIs
-        }
+        let insert_ids = this.context.input.inserts;
+        let ecuID = this.context.ecu.id;
     
         let connList = [];
         for (let i = 0; i < insert_ids.length; i++) {
             let insert = _.findWhere(inserts, { id: insert_ids[i] });
-            for (j = 0; j < insert.connections.length; j++) {
+            for (let j = 0; j < insert.connections.length; j++) {
                 let connection = insert.connections[j];
-    
-                let source = utils.autoPopulateInsert(connection[0], ecuID, ioCount)
-                ioCount = source.io; // Update Counter
-    
-                let dest = utils.autoPopulateInsert(connection[1], ecuID, ioCount)
-                ioCount = dest.io; // Update Counter
+                let insert_name = insert.name;
+                let cable_color = utils.hexToShort(this.context.cables[insert_name].colors[j]);
+
+                let source = utils.autoPopulateInsert(connection[0], ecuID, cable_color)
+                let dest = utils.autoPopulateInsert(connection[1], ecuID, cable_color)
     
                 let keys = [source.connector, insert.name, dest.connector]
                 let values = [source.pin, j + 1, dest.pin]
-                connList.push(connections.connectionHelper(keys, values));
+                connList.push(this.connectionHelper(keys, values));
     
             }
         }
