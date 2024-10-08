@@ -98,6 +98,9 @@ $(document).ready(function () {
                 $("#downloadBtn").removeClass('disabled');
                 $('#previewImage').attr('src', image);
                 $('#error').css({ display: 'none' });
+
+                lg.destroy()
+                loadGallery();
             }
             updateBtn.prop("disabled", false);
             $('#spinner').hide();

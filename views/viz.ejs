@@ -320,11 +320,17 @@
     <script src="/public/js/cart_summary.js"></script>
 
     <script>
-         lightGallery(document.getElementById("previewContainer"), {
-            plugins: [lgZoom, lgThumbnail],
-            speed: 500,
-            thumbnail: true
-        });
+        let lg;
+        let loadGallery = function() {
+            lg = lightGallery(document.getElementById("previewContainer"), {
+                plugins: [lgZoom, lgThumbnail],
+                speed: 500,
+                thumbnail: true,
+                scale: 1,
+                actualSize: false
+            });
+        }
+        loadGallery();
     </script>
 
 </body>
