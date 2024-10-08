@@ -51,7 +51,6 @@ app.post('/fetch', (req, res) => {
     
     try {
         const yg = new YamlGenerator(input);
-        yg.generateOutput();
         output = yg.generateOutput()
     } catch(e) {
         console.log(e)

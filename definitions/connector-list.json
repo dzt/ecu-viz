@@ -2110,6 +2110,21 @@
                 "src": "/stepper_valves/gm_type_2.png",
                 "height": 120
             }
+        },
+        {
+            "name": "Bosch 3-Wire Idle Control Valve",
+            "part_number": "bosch_3_wire",
+            "connector_type": "terminal",
+            "sources": [],
+            "pinout": [
+                { "name": "Open", "type": "open", "pin": 1 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 2 },
+                { "name": "Closed", "type": "close", "pin": 3 }
+            ],
+            "image": {
+                "src": "/stepper_valves/bosch_3pin.png",
+                "height": 120
+            }
         }
     ],
     "dbw_tb_options": [

@@ -38,7 +38,11 @@
         ],
         "multipurpose_pins": {
             "dbw": false,
-            "stepper_valve": false
+            "stepper_valve": false,
+            "3_wire_isc": {
+                "open_pin": 20,
+                "close_pin": 21
+            }
         },
         "image": {
             "src": "/ecus/monsoon_g4x.png",
@@ -89,7 +93,11 @@
         ],
         "multipurpose_pins": {
             "dbw": false,
-            "stepper_valve": [27, 26]
+            "stepper_valve": [27, 26],
+            "3_wire_isc": {
+                "open_pin": 20,
+                "close_pin": 21
+            }
         },
         "image": {
             "src": "/ecus/monsoon_g4x.png",
@@ -174,7 +182,11 @@
         ],
         "multipurpose_pins": {
             "dbw": false,
-            "stepper_valve": ["A29", "A28", "A27", "A26"]
+            "stepper_valve": ["A29", "A28", "A27", "A26"],
+            "3_wire_isc": {
+                "open_pin": "A20",
+                "close_pin": "A21"
+            }
         },
         "image": {
             "src": "/ecus/storm_g4x.png",
@@ -340,7 +352,11 @@
         ],
         "multipurpose_pins": {
             "dbw": ["Ethrottle8", "Ethrottle7"],
-            "stepper_valve": ["20", "21", "22", "23"]
+            "stepper_valve": ["20", "21", "22", "23"],
+            "3_wire_isc": {
+                "open_pin": 71,
+                "close_pin": 12
+            }
         },
         "image": {
             "src": "/ecus/monsoon_g4x.png",
@@ -391,7 +407,8 @@
         ],
         "multipurpose_pins": {
             "dbw": false,
-            "stepper_valve": true
+            "stepper_valve": true,
+            "3_wire_isc": true
         },
         "image": {
             "src": "/ecus/haltech_550.png",
@@ -468,7 +485,8 @@
         ],
         "multipurpose_pins": {
             "dbw": ["B25", "B26"],
-            "stepper_valve": true
+            "stepper_valve": true,
+            "3_wire_isc": true
         },
         "image": {
             "src": "/ecus/haltech_1500.png",
@@ -544,7 +562,8 @@
         ],
         "multipurpose_pins": {
             "dbw": ["B25", "B26"],
-            "stepper_valve": true
+            "stepper_valve": true,
+            "3_wire_isc": true
         },
         "image": {
             "src": "/ecus/haltech_1500.png",
@@ -621,7 +640,8 @@
         ],
         "multipurpose_pins": {
             "dbw": ["A19", "A20"],
-            "stepper_valve": true
+            "stepper_valve": true,
+            "3_wire_isc": true
         },
         "image": {
             "src": "/ecus/nexus_s3_s2.png",
@@ -701,7 +721,8 @@
         ],
         "multipurpose_pins": {
             "dbw": false,
-            "stepper_valve": false
+            "stepper_valve": false,
+            "3_wire_isc": true
         },
         "image": {
             "src": "/ecus/emu_black.png",
