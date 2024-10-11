@@ -1,6 +1,22 @@
 {
     "chassis_options": [
         {
+            "name": "universal_body_interface",
+            "allow_multiple": false,
+            "part_number": "universal_body_interface",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "Tachometer Output", "type": "tacho", "pin": 1 },
+                { "name": "Switched 12V+ Input", "type": "switched_12v", "pin": 2 },
+                { "name": "Fuel Pump Trigger (Ground Output)", "type": "fuel_pump", "pin": 3 }
+            ],
+            "image": {
+                "src": "/generic/3pin.png",
+                "height": 120
+            }
+        },
+        {
             "name": "FEM_02",
             "allow_multiple": false,
             "part_number": "172498-1",

@@ -1,5 +1,13 @@
 [
     {
+        "name": "Universal",
+        "id": "universal",
+        "fuel_pump_12v": false,
+        "dbw_pedal": false,
+        "chassis_connectors": ["universal_body_interface"],
+        "insert_options": []
+    },
+    {
         "name": "Mazda RX-7 (Series 4)",
         "id": "fc_s4",
         "fuel_pump_12v": false,
