@@ -2235,6 +2235,24 @@
                 "src": "/dbw/bosch_app.png",
                 "height": 120
             }
+        },
+        {
+            "name": "Mazda RX-8 Pedal",
+            "part_number": "rx8_pedal",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "+5V In", "type": "vref", "pin": "A" },
+                { "name": "Signal Ground", "type": "vref_ground", "pin": "B" },
+                { "name": "Pedal Signal 1", "type": "signal", "pin": "C" },
+                { "name": "+5V In", "type": "vref", "pin": "D" },
+                { "name": "Signal Ground", "type": "vref_ground", "pin": "E" },
+                { "name": "Pedal Signal 2", "type": "signal", "pin": "F" }
+            ],
+            "image": {
+                "src": "/dbw/rx8_app.png",
+                "height": 120
+            }
         }
     ]
 }
