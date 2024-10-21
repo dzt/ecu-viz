@@ -1180,6 +1180,51 @@
             }
         },
         {
+            "name": "Toyota 1JZ/2JZ TPS (4-Wire - JZX90/JZX110/JZA80/JCE10/JZS160)",
+            "allow_multiple": false,
+            "type": "tps",
+            "part_number": "jz_4_wire",
+            "connector_type": "Female",
+            "restrictions": [],
+            "sources": [{
+                "seller": "Wiring Specialties",
+                "url": "https://www.wiringspecialties.com/1jz-vvti-etcs-i-tps-throttle-position-sensor-connector/",
+                "estimated_price": 9.95
+            }],
+            "pinout": [
+                { "name": "5V+", "type": "vref", "pin": 1 },
+                { "name": "Signal", "type": "signal", "pin": 2 },
+                { "name": "nc", "type": null, "pin": 3 },
+                { "name": "Signal Ground", "type": "vref_ground", "pin": 3 }
+            ],
+            "image": {
+                "src": "/analog_inputs/jz_tps_4_wire.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "Toyota 1JZ/2JZ TPS (3-Wire - JZX100/JZZ30)",
+            "allow_multiple": false,
+            "type": "tps",
+            "part_number": "jz_3_wire",
+            "connector_type": "Female",
+            "restrictions": [],
+            "sources": [{
+                "seller": "Wiring Specialties",
+                "url": "https://www.wiringspecialties.com/1jz-vvti-tps-throttle-position-sensor-connector/",
+                "estimated_price": 9.95
+            }],
+            "pinout": [
+                { "name": "Signal", "type": "signal", "pin": 1 },
+                { "name": "Ground", "type": "vref_ground", "pin": 2 },
+                { "name": "5V+", "type": "vref", "pin": 3 }
+            ],
+            "image": {
+                "src": "/analog_inputs/jz_tps_3_wire.png",
+                "height": 120
+            }
+        },
+        {
             "name": "Mazda TPS (S6)",
             "allow_multiple": false,
             "type": "tps",
@@ -1755,6 +1800,23 @@
             ],
             "image": {
                 "src": "/trigger_sensors/s4_s5_cas.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "Toyota 1JZ/2JZ Cam & Crank Sensor (Non-Distributor)",
+            "part_number": "JZ_CAM_CRANK",
+            "connector_type": "Female",
+            "restrictions": [],
+            "sources": [],
+            "pinout": [
+                { "name": "Home + (Cam Sensor)", "type": "home", "pin": 1 },
+                { "name": "Home - (Cam Sensor)", "type": "home_ground", "pin": 2 },
+                { "name": "Trigger + (Crank Sensor)", "type": "trigger", "pin": 3 },
+                { "name": "Trigger - (Crank Sensor)", "type": "trigger_ground", "pin": 4 }
+            ],
+            "image": {
+                "src": "/trigger_sensors/jz_cam_crank.png",
                 "height": 120
             }
         },
