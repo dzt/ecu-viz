@@ -1594,6 +1594,40 @@
     ],
     "auxiliary_options": [
         {
+            "name": "Generic 2-Wire Idle Control Valve",
+            "allow_multiple": false,
+            "part_number": "2-wire-idle-valve",
+            "restrictions": [],
+            "sources": [],
+            "pinout": [
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+                { "name": "Trigger", "type": "signal", "pin": 2 }
+            ],
+            "image": {
+                "src": "/generic/2pin.png",
+                "height": 50
+            }
+        },
+        {
+            "name": "Toyota VVT-i Solenoid",
+            "allow_multiple": false,
+            "part_number": "90980-11162",
+            "restrictions": [],
+            "sources": [{
+                "seller": "ProTunerz",
+                "url": "https://protunerz.com/products/toyota-vvti-connector",
+                "estimated_price": 9.50
+            }],
+            "pinout": [
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+                { "name": "Trigger", "type": "signal", "pin": 2 }
+            ],
+            "image": {
+                "src": "/generic/2pin.png",
+                "height": 50
+            }
+        },
+        {
             "name": "S5/S6 Idle Valve",
             "allow_multiple": false,
             "part_number": "7223-1324-30",
