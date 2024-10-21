@@ -1180,7 +1180,7 @@
             }
         },
         {
-            "name": "Toyota 1JZ/2JZ TPS (4-Wire - JZX90/JZX110/JZA80/JCE10/JZS160)",
+            "name": "Toyota 1JZ/2JZ TPS (4 Wire - JZX90/JZX110/JZA80/JCE10/JZS160)",
             "allow_multiple": false,
             "type": "tps",
             "part_number": "jz_4_wire",
@@ -1195,15 +1195,15 @@
                 { "name": "5V+", "type": "vref", "pin": 1 },
                 { "name": "Signal", "type": "signal", "pin": 2 },
                 { "name": "nc", "type": null, "pin": 3 },
-                { "name": "Signal Ground", "type": "vref_ground", "pin": 3 }
+                { "name": "Signal Ground", "type": "vref_ground", "pin": 4 }
             ],
             "image": {
-                "src": "/analog_inputs/jz_tps_4_wire.png",
+                "src": "/analog_inputs/jz_4_wire.png",
                 "height": 120
             }
         },
         {
-            "name": "Toyota 1JZ/2JZ TPS (3-Wire - JZX100/JZZ30)",
+            "name": "Toyota 1JZ/2JZ TPS (3 Wire - JZX100/JZZ30)",
             "allow_multiple": false,
             "type": "tps",
             "part_number": "jz_3_wire",
@@ -1220,7 +1220,7 @@
                 { "name": "5V+", "type": "vref", "pin": 3 }
             ],
             "image": {
-                "src": "/analog_inputs/jz_tps_3_wire.png",
+                "src": "/analog_inputs/jz_3_wire.png",
                 "height": 120
             }
         },
@@ -1247,7 +1247,7 @@
             }
         },
         {
-            "name": "Toyota 1UZ-FE 4-wire TPS",
+            "name": "Toyota 1UZ-FE 4-Wire TPS",
             "allow_multiple": false,
             "type": "tps",
             "part_number": "90980-10711",
@@ -1804,20 +1804,20 @@
             }
         },
         {
-            "name": "Toyota 1JZ/2JZ Cam & Crank Sensor (Non-Distributor)",
+            "name": "Toyota 1JZ/2JZ Cam/Crank Sensor",
             "part_number": "JZ_CAM_CRANK",
             "connector_type": "Female",
             "restrictions": [],
             "sources": [],
             "pinout": [
-                { "name": "Home + (Cam Sensor)", "type": "home", "pin": 1 },
-                { "name": "Home - (Cam Sensor)", "type": "home_ground", "pin": 2 },
-                { "name": "Trigger + (Crank Sensor)", "type": "trigger", "pin": 3 },
-                { "name": "Trigger - (Crank Sensor)", "type": "trigger_ground", "pin": 4 }
+                { "name": "G+", "type": "home", "pin": 1 },
+                { "name": "G-", "type": "home_ground", "pin": 2 },
+                { "name": "Ne+", "type": "trigger", "pin": 3 },
+                { "name": "Ne-", "type": "trigger_ground", "pin": 4 }
             ],
             "image": {
                 "src": "/trigger_sensors/jz_cam_crank.png",
-                "height": 120
+                "height": 440
             }
         },
         {
