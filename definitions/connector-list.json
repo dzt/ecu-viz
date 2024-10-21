@@ -1623,7 +1623,7 @@
                 { "name": "Trigger", "type": "signal", "pin": 2 }
             ],
             "image": {
-                "src": "/generic/2pin.png",
+                "src": "/generic/toyota_vvti.png",
                 "height": 50
             }
         },
