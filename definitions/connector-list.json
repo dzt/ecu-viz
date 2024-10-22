@@ -1199,7 +1199,7 @@
             ],
             "image": {
                 "src": "/analog_inputs/jz_4_wire.png",
-                "height": 120
+                "height": 180
             }
         },
         {
@@ -1221,7 +1221,7 @@
             ],
             "image": {
                 "src": "/analog_inputs/jz_3_wire.png",
-                "height": 120
+                "height": 180
             }
         },
         {
@@ -1838,16 +1838,16 @@
             }
         },
         {
-            "name": "Toyota 1JZ/2JZ Cam/Crank Sensor",
+            "name": "Toyota 1JZ/2JZ/1UZ Cam/Crank Sensor",
             "part_number": "JZ_CAM_CRANK",
             "connector_type": "Female",
             "restrictions": [],
             "sources": [],
             "pinout": [
-                { "name": "G+", "type": "home", "pin": 1 },
-                { "name": "G-", "type": "home_ground", "pin": 2 },
-                { "name": "Ne+", "type": "trigger", "pin": 3 },
-                { "name": "Ne-", "type": "trigger_ground", "pin": 4 }
+                { "name": "Cam Sensor (G+)", "type": "home", "pin": 1 },
+                { "name": "Cam Sensor (G-)", "type": "home_ground", "pin": 2 },
+                { "name": "Crank Sensor (Ne+)", "type": "trigger", "pin": 3 },
+                { "name": "Crank Sensor (Ne-)", "type": "trigger_ground", "pin": 4 }
             ],
             "image": {
                 "src": "/trigger_sensors/jz_cam_crank.png",

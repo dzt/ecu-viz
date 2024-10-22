@@ -294,7 +294,7 @@ class Connections {
                         }
                     }
     
-                    if (sensorDetails.pinout.length == 3) {
+                    if (sensorDetails.pinout.length >= 3) {
                         let type = (i == 0) ? 'vref' : 'vref_ground'
     
                         let keys = [
