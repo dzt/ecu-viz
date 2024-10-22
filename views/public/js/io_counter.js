@@ -56,12 +56,15 @@ let getInsertCounts = function() {
 
 let updateCounter = function () {
     let selectedECU = $('#ecu').find('option:selected').val();
+    let idle_stepper = $('#idle_stepper').find('option:selected').val();
     let summary = getSummary(selectedECU);
 
     // Used I/O
     let additional_aux = readOptionsFields('#aux_container').length;
     let additional_an = readOptionsFields('#analog_container').length;
     let additional_di = 0; // for flex fuel input
+
+    if (idle_stepper != '0') additional_aux += countIdleSteps(idle_stepper);
     if ($('#flex').find('option:selected').val() != '0') additional_di++;
 
     // Used I/O from Insert Option(s)
@@ -112,23 +115,30 @@ let updateChassisOptions = function () {
 
 }
 
-let refresh = function() {
+const countIdleSteps = function(id) {
+    console.log({id})
+    let pinout = _.findWhere(serverData.connectors.stepper_valve_options, { part_number: id }).pinout;
+    let types = ['step_1', 'step_2', 'step_3', 'step_4'];
+    let count = 0;
+    for (let i = 0; i < pinout.length; i++) {
+        if (types.includes(pinout[i].type)) count++;
+    }
+    return count;
+}
+
+const refresh = function() {
     updateCounter();
     updateChassisOptions();
     refreshCartSummary();
 }
 
 $(document).ready(function () {
-
     /* Init: Called once page is loaded */
     refresh();
-
     /* Init: Frontend Components */
     $('#error').css({ display: 'none' });
-
     /* Called anytime a change is made to the ECU selection */
     $('#nav-tabContent').on('change', function () {
         refresh();
     });
-
 });

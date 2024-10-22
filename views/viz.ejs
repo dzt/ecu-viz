@@ -61,6 +61,9 @@
                                     <button class="nav-link" id="nav-basics-tab" data-bs-toggle="tab"
                                         data-bs-target="#nav-basics" type="button" role="tab" aria-controls="nav-basics"
                                         aria-selected="false">Basics</button>
+                                    <button class="nav-link" id="nav-dbw-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-dbw" type="button" role="tab" aria-controls="nav-dbw"
+                                        aria-selected="false">Drive by Wire</button>
                                     <button class="nav-link" id="nav-io-tab" data-bs-toggle="tab"
                                         data-bs-target="#nav-io" type="button" role="tab" aria-controls="nav-io"
                                         aria-selected="false">Additional I/O</button>
@@ -88,9 +91,7 @@
                                     <div class="mb-3">
                                         <label for="chassisOptions" class="form-label">Chassis Options</label>
                                     </div>
-                                    <div class="mb-3" id="optionsContainer">
-                                        <!-- Auto Populated -->
-                                    </div>
+                                    <div class="mb-3" id="optionsContainer"><!-- Auto Populated --></div>
                                     <div class="mb-3 form-check">
                                         <input type="checkbox" class="form-check-input" id="use_factory_tacho" checked></input>
                                         <label class="form-check-label" for="use_factory_tacho">Use factory tachometer</label>
@@ -228,6 +229,41 @@
                                                     <option value="1">Standard</option>
                                                 </select>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-dbw" role="tabpanel" aria-labelledby="nav-dbw-tab">
+                                    <div class="mb-3">
+                                        <label for="dbw_enable" class="form-label">Mode</label>
+                                        <div id="dbw_enable_container">
+                                            <select id="dbw_enable" class="form-select" aria-label="Mode">
+                                                <option value="0">Disabled</option>
+                                                <option value="1">Enabled</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="dbw_app" class="form-label">Accelerator Pedal</label>
+                                        <div id="dbw_app_container">
+                                            <select id="dbw_app" class="form-select" aria-label="Pedal">
+                                                <% connectors.dbw_app_options.forEach((conn)=>{%>
+                                                    <option value="<%=conn.part_number%>">
+                                                        <%=conn.name%>
+                                                    </option>
+                                                <%});%>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="dbw_tb" class="form-label">Throttle Body</label>
+                                        <div id="dbw_tb_container">
+                                            <select id="dbw_tb" class="form-select" aria-label="Throttle Body">
+                                                <% connectors.dbw_tb_options.forEach((conn)=>{%>
+                                                    <option value="<%=conn.part_number%>">
+                                                        <%=conn.name%>
+                                                    </option>
+                                                <%});%>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
