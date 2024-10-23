@@ -58,7 +58,7 @@ class Connections {
         let chassisCode = this.context.input.chassis;
 
         const ecuTitle = Object.keys(connectors.data)[0];
-        const ecuPinout = _.findWhere(ecus, { name: ecuTitle }).pinout;
+        const ecuPinout = this.context.ecu.pinout;
         let connList = [];
     
         const definedAuxOutputs = connectors.summary.auxiliary_outputs;
@@ -118,7 +118,7 @@ class Connections {
     
         // Extract necessary data
         const ecuTitle = Object.keys(connectors.data)[0];
-        const ecuPinout = _.findWhere(ecus, { name: ecuTitle }).pinout;
+        const ecuPinout = this.context.ecu.pinout;
     
         // Sort injector list and retrieve injector part number and pinout
         const injectorList = _.sortBy(_.where(ecuPinout, { type: 'injector' }), 'name');
@@ -192,7 +192,7 @@ class Connections {
     
         // Extract necessary data
         const ecuTitle = Object.keys(connectors.data)[0];
-        const ecuPinout = _.findWhere(ecus, { name: ecuTitle }).pinout;
+        const ecuPinout = this.context.ecu.pinout;
     
         // Sort injector list and retrieve ignition coil part number and pinout
         const ignitionList = _.sortBy(_.where(ecuPinout, { type: 'ignition' }), 'name');
@@ -273,7 +273,7 @@ class Connections {
 
         // Extract necessary data
         const ecuTitle = Object.keys(connectors.data)[0];
-        const ecuPinout = _.findWhere(ecus, { name: ecuTitle }).pinout;
+        const ecuPinout = this.context.ecu.pinout;
     
     
         let avaialbleAnalogInputs = Array.from(_.pluck(_.where(ecuPinout, { type: 'analog_input' }), 'name')); // Array Clone, used for ECUs with reserved TPS'
@@ -375,7 +375,7 @@ class Connections {
 
         // Extract necessary data
         const ecuTitle = Object.keys(connectors.data)[0];
-        const ecuPinout = _.findWhere(ecus, { name: ecuTitle }).pinout;
+        const ecuPinout = this.context.ecu.pinout;
         
         const clts = connectorsDefinitions.clt_options;
         const iats = connectorsDefinitions.iat_options;
@@ -437,7 +437,7 @@ class Connections {
         let connList = [];
          // Extracting ECU title and pinout
         const ecuTitle = Object.keys(connectors.data)[0];
-        const ecuPinout = _.findWhere(ecus, { name: ecuTitle }).pinout;
+        const ecuPinout = this.context.ecu.pinout;
     
         // Finding device information based on part number
         let pn = _.findWhere(connectors.summary.digital_inputs, { type: 'flex_options' }).pn
@@ -534,7 +534,7 @@ class Connections {
     
         // Extract necessary data
         const ecuTitle = Object.keys(connectors.data)[0];
-        const ecuPinout = _.findWhere(ecus, { name: ecuTitle }).pinout;
+        const ecuPinout = this.context.ecu.pinout;
         let fbQuery = utils.getFuseBoxPin(connectors.fusebox.pn, 'main_12v');
     
         let summary = _.where(connectors.summary.auxiliary_outputs, { type: 'auxiliary_options' });
@@ -622,7 +622,7 @@ class Connections {
     
             let triggerPn = connectors.summary.trigger_options[0].pn
             const ecuTitle = Object.keys(connectors.data)[0];
-            const ecuPinout = _.findWhere(ecus, { name: ecuTitle }).pinout;
+            const ecuPinout = this.context.ecu.pinout;
             const triggerPinout = _.findWhere(connectorsDefinitions.trigger_options, { part_number: triggerPn }).pinout
             const triggerTitle = _.findWhere(connectorsDefinitions.trigger_options, { part_number: triggerPn }).name;
             const pinType = triggerPinout[i].type;

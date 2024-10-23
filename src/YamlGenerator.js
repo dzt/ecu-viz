@@ -4,9 +4,9 @@ const ecus = require('../definitions/ecus.json');
 
 const { CABLE } = require('./helpers/constants.js');
 
-const Connector = require('./Connector.js');
+const Connector = require('./connector.js');
 const Cables = require('./Cables.js');
-const Connections = require('./Connections.js');
+const Connections = require('./connections.js');
 
 class YamlGenerator {
 
