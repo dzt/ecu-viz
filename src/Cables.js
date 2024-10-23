@@ -389,10 +389,10 @@ class Cables {
         this.context.dbw_apps_pins.push(pedalPins[3]);
 
         // Update An Count 4 times, for I/O tracking for future An Volt assignments
-        for (let i = 0; i < 4; i++) {
-            let an = this.context.getAvailableAnalogInputs()[i];
-            this.context.updateAnalogInputCounter(an);
-        }
+        this.context.updateAnalogInputCounter(motorPins[2])
+        this.context.updateAnalogInputCounter(motorPins[3])
+        this.context.updateAnalogInputCounter(pedalPins[2])
+        this.context.updateAnalogInputCounter(pedalPins[3])
 
         // Update Aux Counter for two motor control pins
         this.context.updateAuxCounter(motorPins[4])

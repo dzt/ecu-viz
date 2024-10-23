@@ -2338,12 +2338,12 @@
             "connector_type": "Female",
             "sources": [],
             "pinout": [
-                { "name": "+5V In", "type": "vref", "pin": "A" },
-                { "name": "Signal Ground", "type": "vref_ground", "pin": "B" },
-                { "name": "Pedal Signal 1", "type": "signal", "pin": "C" },
-                { "name": "+5V In", "type": "vref", "pin": "D" },
-                { "name": "Signal Ground", "type": "vref_ground", "pin": "E" },
-                { "name": "Pedal Signal 2", "type": "signal", "pin": "F" }
+                { "name": "+5V In (A)", "type": "vref", "pin": 1 },
+                { "name": "Signal Ground (B)", "type": "vref_ground", "pin": 2 },
+                { "name": "Pedal Signal 1 (C)", "type": "signal", "pin": 3 },
+                { "name": "+5V In (D)", "type": "vref", "pin": 4 },
+                { "name": "Signal Ground (E)", "type": "vref_ground", "pin": 5 },
+                { "name": "Pedal Signal 2 (F)", "type": "signal", "pin": 6 }
             ],
             "image": {
                 "src": "/dbw/rx8_app.png",
