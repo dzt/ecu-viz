@@ -76,6 +76,13 @@ class YamlGenerator {
     createCables () {
         let cables = new Cables(this);
         let cableObj = utils.builder([
+             /* Optional Cases */
+            cables.createDBWCables(),
+            cables.createInsertCable(), /* Inserts */
+            cables.createCANConnection(), /* CAN bus connections */
+            cables.createIdleValveConnection(), /* Stepper Valve connector if applicable */
+            cables.createFlexConnection(), /* Flex Fuel Connection */,
+            /* Default Cases */
             cables.createChassisConnections(), /* Chassis connections */
             cables.createInjectors(), /* Injector connections */
             cables.createIgnitionConnections(), /* Ignition connections */
@@ -84,13 +91,7 @@ class YamlGenerator {
             cables.createAuxConnections(), /* Auxiliary outputs */
             cables.createTriggerConnection(), /* Trigger connections */
             cables.createGroundCables(), /* ECU ground connections */
-            cables.createFuseboxCables(),
-            /* Optional Cases */
-            cables.createDBWCables(),
-            cables.createInsertCable(), /* Inserts */
-            cables.createCANConnection(), /* CAN bus connections */
-            cables.createIdleValveConnection(), /* Stepper Valve connector if applicable */
-            cables.createFlexConnection(), /* Flex Fuel Connection */
+            cables.createFuseboxCables()
         ]);
 
         this.cables = cableObj;

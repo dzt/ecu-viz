@@ -281,55 +281,54 @@ class Connections {
     
         for (let i = 0; i < cableSetup.wirecount; i++) {
             if (i == 0 || i == 1) { // Distribute 5v or Vref Ground to sensors
-                for (let j = 0; j < (cableSetup.wirecount - 2); j++) {
-    
-                    let sensorDetails = _.findWhere(connectorsDefinitions.analog_inputs, { part_number: connectors.summary.analog_inputs[j].pn });
-                    let multipleQuery = _.where(connectors.summary.analog_inputs, { pn: sensorDetails.part_number })
-                    let isMultiple = false;
-                    let multipleValue = 0;
-    
-                    if (multipleQuery.length > 1) {
-                        let duplicateIndexs = utils.findAllDuplicatesInListOfObjects(connectors.summary.analog_inputs, 'pn')[0].indexes;
-                        isMultiple = true;
-                        for (let k = 0; k < duplicateIndexs.length; k++) {
-                            if (duplicateIndexs[k] == j) multipleValue = k;
+                    for (let j = 0; j < (cableSetup.wirecount - 2); j++) {
+        
+                        let sensorDetails = _.findWhere(connectorsDefinitions.analog_inputs, { part_number: connectors.summary.analog_inputs[j].pn });
+                        let multipleQuery = _.where(connectors.summary.analog_inputs, { pn: sensorDetails.part_number })
+                        let isMultiple = false;
+                        let multipleValue = 0;
+        
+                        if (multipleQuery.length > 1) {
+                            let duplicateIndexs = utils.findAllDuplicatesInListOfObjects(connectors.summary.analog_inputs, 'pn')[0].indexes;
+                            isMultiple = true;
+                            for (let k = 0; k < duplicateIndexs.length; k++) {
+                                if (duplicateIndexs[k] == j) multipleValue = k;
+                            }
                         }
-                    }
-    
-                    if (sensorDetails.pinout.length >= 3) {
-                        let type = (i == 0) ? 'vref' : 'vref_ground'
-    
-                        let keys = [
-                            ecuTitle,
-                            cableTitle,
-                            (isMultiple) ? `${sensorDetails.name} (No. ${multipleValue + 1})` : sensorDetails.name
-                        ]
-                        let values = [
-                            _.findWhere(ecuPinout, { type: type }).pin,
-                            i + 1,
-                            _.findWhere(sensorDetails.pinout, { type: type }).pin,
-                        ]
-                        connList.push(this.connectionHelper(keys, values));
-                    }
-    
+        
+                        if (sensorDetails.pinout.length >= 3) {
+                            let type = (i == 0) ? 'vref' : 'vref_ground'
+        
+                            let keys = [
+                                ecuTitle,
+                                cableTitle,
+                                (isMultiple) ? `${sensorDetails.name} (No. ${multipleValue + 1})` : sensorDetails.name
+                            ]
+                            let values = [
+                                _.findWhere(ecuPinout, { type: type }).pin,
+                                (i + 1),
+                                _.findWhere(sensorDetails.pinout, { type: type }).pin,
+                            ]
+                            connList.push(this.connectionHelper(keys, values));
+                        }
+        
                 }
             } else {
     
-                // Distribute sensour outputs to ECU
-                let sensorDetails = _.findWhere(connectorsDefinitions.analog_inputs, { part_number: connectors.summary.analog_inputs[i - 2].pn });
-                let multipleQuery = _.where(connectors.summary.analog_inputs, { pn: sensorDetails.part_number })
-                let isMultiple = false;
-                let multipleValue = 0;
-    x
-                let analog_input = _.sortBy(_.where(ecuPinout, { type: 'analog_input' }), 'name')[i - 2];
-    
-                if (multipleQuery.length > 1) {
-                    isMultiple = true;
-                    let duplicateIndexs = utils.findAllDuplicatesInListOfObjects(connectors.summary.analog_inputs, 'pn')[0].indexes;
-                    for (let j = 0; j < duplicateIndexs.length; j++) {
-                        if (duplicateIndexs[j] == (i - 2)) multipleValue = j;
+                    // Distribute sensour outputs to ECU
+                    let sensorDetails = _.findWhere(connectorsDefinitions.analog_inputs, { part_number: connectors.summary.analog_inputs[i - 2].pn });
+                    let multipleQuery = _.where(connectors.summary.analog_inputs, { pn: sensorDetails.part_number })
+                    let isMultiple = false;
+                    let multipleValue = 0;
+                    let analog_input = _.sortBy(_.where(ecuPinout, { type: 'analog_input' }), 'name')[i - 2];
+        
+                    if (multipleQuery.length > 1) {
+                        isMultiple = true;
+                        let duplicateIndexs = utils.findAllDuplicatesInListOfObjects(connectors.summary.analog_inputs, 'pn')[0].indexes;
+                        for (let j = 0; j < duplicateIndexs.length; j++) {
+                            if (duplicateIndexs[j] == (i - 2)) multipleValue = j;
+                        }
                     }
-                }
     
                     if (reservedTPSPin) {
                         if (sensorDetails.type == 'tps') {
@@ -699,6 +698,8 @@ class Connections {
     createDBWConnections() {
 
         let connList = [];
+
+        if (!this.context.input.dbw) return null;
 
         /* DBW Pedal Connections */
         let pedal_signal_check = 0;

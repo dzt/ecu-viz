@@ -176,7 +176,7 @@ class Cables {
 
         if (analog_assignments.length == 0) return null;
 
-        let key = "Analog Inputs";
+        let key = CABLE.ANALOG;
         let count = analog_assignments.length + 2;
     
         let ecuPinout = _.findWhere(ecus, { id: this.context.input.ecu }).pinout;
@@ -195,10 +195,10 @@ class Cables {
             } else if (i == 1) { //signal ground
                 colorList.push(utils.parseColor(vref_ground_color))
             } else { // signal
-                let anNumber = i - 1;
-                let anOption = tempOptionsSorted[anNumber - 1];
+                let anOption = this.context.getAvailableAnalogInputs()[0];
                 if (!anOption) throw new Error('Insufficent Analog Inputs to run this configuration.');
                 colorList.push(utils.parseColor(anOption.color))
+                this.context.updateAnalogInputCounter(anOption);
             }
         }
 
