@@ -53,7 +53,6 @@ class Connector {
                 pins = _.pluck(ecu.pinout, 'name');
             }
         } else {
-            console.log({partNumber, type})
             if (type == 'tps') type = 'analog_inputs' // read tps value from analog inputs
             pins = _.pluck(_.findWhere(connectors[type], {
                 part_number: partNumber

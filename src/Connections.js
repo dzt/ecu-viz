@@ -701,15 +701,15 @@ class Connections {
         let connList = [];
 
         /* DBW Pedal Connections */
-        let signal_check = 0;
+        let pedal_signal_check = 0;
         let pedal = _.findWhere(connectorsDefinitions['dbw_app_options'], { part_number: this.context.input.dbw.pedal });
         for (let i = 0; i < pedal.pinout.length; i++) {
             let pin_type = pedal.pinout[i].type;
             let cableIndex, ecuPin;
             if (pin_type == 'signal') {
-                cableIndex = (signal_check == 0) ? 3: 4;
-                ecuPin = this.context.dbw_apps_pins[(signal_check == 0) ? 0 : 1].pin;
-                if (signal_check == 0) signal_check += 1;
+                cableIndex = (pedal_signal_check == 0) ? 3: 4;
+                ecuPin = this.context.dbw_apps_pins[(pedal_signal_check == 0) ? 0 : 1].pin;
+                if (pedal_signal_check == 0) pedal_signal_check += 1;
             } else if (pin_type == 'vref') {
                 cableIndex = 1
                 ecuPin = _.findWhere(this.context.ecu.pinout, { type: 'vref' }).pin
@@ -721,8 +721,36 @@ class Connections {
             let values = [ecuPin, cableIndex, (i + 1)]
             connList.push(this.connectionHelper(keys, values));
         }
+
+        /* DBW Motor Connections */
+        let motor_check_an = 0;
+        let motor_check = 0;
+        let motor = _.findWhere(connectorsDefinitions['dbw_tb_options'], { part_number: this.context.input.dbw.throttle_body });
+        for (let i = 0; i < motor.pinout.length; i++) {
+            let pin_type = motor.pinout[i].type;
+            let cableIndex, ecuPin;
+            if (pin_type == 'signal') {
+                cableIndex = (motor_check_an == 0) ? 3 : 4;
+                ecuPin = this.context.dbw_tb_pins[(motor_check_an == 0) ? 0 : 1].pin;
+                if (motor_check_an == 0) motor_check_an += 1;
+            } else if (pin_type == 'vref') {
+                cableIndex = 1
+                ecuPin = _.findWhere(this.context.ecu.pinout, { type: 'vref' }).pin
+            } else if (pin_type == 'vref_ground') {
+                cableIndex = 2
+                ecuPin = _.findWhere(this.context.ecu.pinout, { type: 'vref_ground' }).pin
+            } else if (pin_type == 'motor') {
+                cableIndex = (motor_check == 0) ? 5 : 6;
+                ecuPin = this.context.ecu.multipurpose_pins.dbw[(motor_check == 0) ? 0 : 1];
+                if (motor_check == 0) motor_check += 1;
+            }
+            let keys = [this.context.ecu.name, CABLE.DBW_MOTOR, motor.name]
+            let values = [ecuPin, cableIndex, (i + 1)]
+            connList.push(this.connectionHelper(keys, values));
+        }
+
         return connList;
-        
+
     }
 
     createIdleValveConnection() {

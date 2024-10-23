@@ -20,8 +20,9 @@ class YamlGenerator {
         // sorted properly in accordance to idle steps (if stepper) or [open, close] for 3-wire isc
         this.isc_pins = []
 
-        // DBW
+        // DBW Analog Inputs
         this.dbw_apps_pins = [];
+        this.dbw_tb_pins = [];
         
         this.summary = null
         this.cables = null
@@ -137,7 +138,6 @@ class YamlGenerator {
     }
 
     updateAnalogInputCounter (pin_detailed) {
-        console.log(pin_detailed)
         if (!(_.findWhere(this.used_analog_inputs, { pin: pin_detailed.pin }))) {
             this.used_analog_inputs.push(pin_detailed);
         }

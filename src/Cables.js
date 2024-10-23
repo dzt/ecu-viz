@@ -368,6 +368,10 @@ class Cables {
             return utils.parseColor(pin.color);
         })
 
+        // Store Motor Analog Pins in Context
+        this.context.dbw_tb_pins.push(motorPins[2]);
+        this.context.dbw_tb_pins.push(motorPins[3]);
+
          // Pedal: 5V, Signal Ground, Signal, Signal
          const pedalPins = [
             _.findWhere(this.context.ecu.pinout, { type: 'vref' }),
@@ -380,6 +384,7 @@ class Cables {
             return utils.parseColor(pin.color);
         })
 
+        // Store Pedal Pins in Context
         this.context.dbw_apps_pins.push(pedalPins[2]);
         this.context.dbw_apps_pins.push(pedalPins[3]);
 
