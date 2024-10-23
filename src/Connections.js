@@ -320,8 +320,10 @@ class Connections {
                     let multipleQuery = _.where(connectors.summary.analog_inputs, { pn: sensorDetails.part_number })
                     let isMultiple = false;
                     let multipleValue = 0;
-                    let analog_input = _.sortBy(_.where(ecuPinout, { type: 'analog_input' }), 'name')[i - 2];
-        
+
+                    let cableColor = utils.hexToShort(cableSetup.colors[i]);
+                    let analog_input = _.findWhere(this.context.used_analog_inputs, { color: cableColor })
+
                     if (multipleQuery.length > 1) {
                         isMultiple = true;
                         let duplicateIndexs = utils.findAllDuplicatesInListOfObjects(connectors.summary.analog_inputs, 'pn')[0].indexes;
@@ -330,7 +332,7 @@ class Connections {
                         }
                     }
     
-                    if (reservedTPSPin) {
+                    if (reservedTPSPin && (this.context.input.dbw == null)) {
                         if (sensorDetails.type == 'tps') {
                             // assign sensor to tps pin
                             analog_input = _.findWhere(ecuPinout, { tps: true });
