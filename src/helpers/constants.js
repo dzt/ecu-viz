@@ -11,7 +11,9 @@ module.exports = {
         TRIG: 'Trigger Sensor(s)',
         CAN: 'CAN Bus Communication',
         FLEX: 'Flex Fuel',
-        IDLE: 'Idle Control Valve'
+        IDLE: 'Idle Control Valve',
+        DBW_MOTOR: 'Drive by Wire Throttle Body',
+        DBW_PEDAL: 'Drive by Wire Accelerator Pedal'
     },
     ECU_GROUND: {
         CABLE: 'ECU Ground(s)',

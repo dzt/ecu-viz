@@ -47,6 +47,8 @@ app.post('/fetch', (req, res) => {
 
     const input = req.body;
     let output;
+
+    console.log(input)
     
     try {
         const yg = new YamlGenerator(input);

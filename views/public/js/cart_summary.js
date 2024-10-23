@@ -51,6 +51,8 @@ let getCartSummary = function(input) {
 
 let cartBuilder = function(pn, qty, category) {
 
+    if (!pn) return null;
+
     let conn = _.findWhere(serverData.connectors[category], { part_number: pn });
     let source;
 

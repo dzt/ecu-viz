@@ -269,6 +269,8 @@ class Connections {
         let connectors = this.context.connectors;
         let cableTitle = CABLE.ANALOG;
 
+        if (!cableSetup) return null;
+
         // Extract necessary data
         const ecuTitle = Object.keys(connectors.data)[0];
         const ecuPinout = _.findWhere(ecus, { name: ecuTitle }).pinout;
@@ -318,7 +320,7 @@ class Connections {
                 let multipleQuery = _.where(connectors.summary.analog_inputs, { pn: sensorDetails.part_number })
                 let isMultiple = false;
                 let multipleValue = 0;
-    
+    x
                 let analog_input = _.sortBy(_.where(ecuPinout, { type: 'analog_input' }), 'name')[i - 2];
     
                 if (multipleQuery.length > 1) {

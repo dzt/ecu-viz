@@ -21,6 +21,16 @@ let getUserInput = function () {
     let can_devices = additional_io.can_devices;
     let aux_outputs = additional_io.auxiliary_outputs;
     let analog_inputs = additional_io.analog_inputs;
+    let dbw = null;
+
+    if ($('#dbw_enable').find('option:selected').val() == '1') {
+        dbw = {
+            pedal: $('#dbw_app').find('option:selected').val(),
+            throttle_body: $('#dbw_tb').find('option:selected').val()
+        }
+        tps = null;
+        idle_valve = null;
+    }
 
     let options = []
     $('#optionsContainer').find('input[type="checkbox"]:checked').each(function() {
@@ -46,7 +56,8 @@ let getUserInput = function () {
         "idle_valve": idle_valve,
         "can_devices": can_devices,
         "auxiliary_options": aux_outputs,
-        "analog_inputs": analog_inputs
+        "analog_inputs": analog_inputs,
+        "dbw": dbw
     };
 
     console.log(req_params);

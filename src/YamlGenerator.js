@@ -15,6 +15,7 @@ class YamlGenerator {
         this.ecu = _.findWhere(ecus, { id: input.ecu });
         this.used_aux_outputs = []
         this.used_digital_inputs = []
+        this.used_analog_inputs = []
         
         // sorted properly in accordance to idle steps (if stepper) or [open, close] for 3-wire isc
         this.isc_pins = []
@@ -44,6 +45,8 @@ class YamlGenerator {
             connector.createCoilGrounds(), /* Ignition coil grounds */
             connector.createBattery(),
             /* Optional Cases */
+            (this.input.dbw != null) ? connector.create(this.input.dbw.pedal, "dbw_app_options") : null, /* DBW Pedal */
+            (this.input.dbw != null) ? connector.create(this.input.dbw.throttle_body, "dbw_tb_options") : null, /* DBW Motor */
             (this.input.flex != null) ? connector.create(this.input.flex, "flex_options") : null, /* Flex fuel connector if applicable */
             (this.input.idle_valve != null) ? connector.create(this.input.idle_valve, "stepper_valve_options") : null, /* Stepper Valve connector if applicable */
             (this.input.can_devices.length > 0) ? connector.createMultipleConnections(this.input.can_devices, "can_bus") : null /* CAN Devices */
@@ -79,6 +82,7 @@ class YamlGenerator {
             cables.createGroundCables(), /* ECU ground connections */
             cables.createFuseboxCables(),
             /* Optional Cases */
+            cables.createDBWCables(),
             cables.createInsertCable(), /* Inserts */
             cables.createCANConnection(), /* CAN bus connections */
             cables.createIdleValveConnection(), /* Stepper Valve connector if applicable */
@@ -120,6 +124,19 @@ class YamlGenerator {
         let di_inputs = _.where(this.ecu.pinout, { type: 'digital_input' });
         let diff = _.difference(di_inputs, this.used_digital_inputs);
         return _.sortBy(diff, 'name');
+    }
+
+    getAvailableAnalogInputs() {
+        let analog_inputs = _.where(this.ecu.pinout, { type: 'analog_input' });
+        let diff = _.difference(analog_inputs, this.used_analog_inputs);
+        return _.sortBy(diff, 'name');
+    }
+
+    updateAnalogInputCounter (pin_detailed) {
+        console.log(pin_detailed)
+        if (!(_.findWhere(this.used_analog_inputs, { pin: pin_detailed.pin }))) {
+            this.used_analog_inputs.push(pin_detailed);
+        }
     }
 
     updateAuxCounter (pin_detailed) {

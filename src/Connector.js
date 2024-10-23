@@ -40,10 +40,11 @@ class Connector {
     }
 
     create(partNumber, type) {
+
         let pins;
-        let ecu = (type == 'ecu') ? _.findWhere(ecus, {
-            id: partNumber
-        }) : null;
+        let ecu = (type == 'ecu') ? _.findWhere(ecus, { id: partNumber }) : null;
+
+        if ((type == 'tps') && (this.context.input.dbw)) return null; // eject as dbw uses a different strategy
 
         if (type == "ecu") {
             if (typeof ecu.pinout[0].pin == 'number') {
@@ -52,7 +53,8 @@ class Connector {
                 pins = _.pluck(ecu.pinout, 'name');
             }
         } else {
-            if (type == "tps") type = "analog_inputs"; // read tps value from analog inputs
+            console.log({partNumber, type})
+            if (type == 'tps') type = 'analog_inputs' // read tps value from analog inputs
             pins = _.pluck(_.findWhere(connectors[type], {
                 part_number: partNumber
             }).pinout, 'name');

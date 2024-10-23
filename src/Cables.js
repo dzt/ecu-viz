@@ -173,6 +173,9 @@ class Cables {
     createAnalogConnections () {
 
         let analog_assignments = this.context.summary.analog_inputs;
+
+        if (analog_assignments.length == 0) return null;
+
         let key = "Analog Inputs";
         let count = analog_assignments.length + 2;
     
@@ -321,7 +324,7 @@ class Cables {
     
     createFlexConnection () {
         
-        if (this.context.input.flex == null) return null;
+        if (!this.context.input.flex) return null;
         let digitalInputs = this.context.summary.digital_inputs;
         let flexOption = _.findWhere(digitalInputs, { type: 'flex_options' });
         let connDefinition = _.findWhere(connectors.flex_options, { part_number: flexOption.pn });
@@ -336,7 +339,7 @@ class Cables {
         this.context.updateDICounter(di);
     
         return {
-            key: 'Flex Fuel',
+            key: CABLE.FLEX,
             color_code,
             wirecount: connDefinition.pinout.length,
             gauge,
@@ -345,6 +348,73 @@ class Cables {
             wirelabels: utils.createColoredWireLabels(colorList)
         }
         
+    }
+
+    createDBWCables() {
+
+        if (!this.context.input.dbw) return null;
+
+        // 5V, Signal Ground, Signal, Signal, DBW1, DBW2
+        const motorPins = [
+            _.findWhere(this.context.ecu.pinout, { type: 'vref' }),
+            _.findWhere(this.context.ecu.pinout, { type: 'vref_ground' }),
+            this.context.getAvailableAnalogInputs()[0],
+            this.context.getAvailableAnalogInputs()[1],
+            _.findWhere(this.context.ecu.pinout, { pin: this.context.ecu.multipurpose_pins.dbw[0] }),
+            _.findWhere(this.context.ecu.pinout, { pin: this.context.ecu.multipurpose_pins.dbw[1] })
+        ]
+
+        const motorColorList = motorPins.map((pin) => {
+            return utils.parseColor(pin.color);
+        })
+
+         // 5V, Signal Ground, Signal, Signal
+         const pedalPins = [
+            _.findWhere(this.context.ecu.pinout, { type: 'vref' }),
+            _.findWhere(this.context.ecu.pinout, { type: 'vref_ground' }),
+            this.context.getAvailableAnalogInputs()[2],
+            this.context.getAvailableAnalogInputs()[3],
+        ]
+
+        const pedalColorList = pedalPins.map((pin) => {
+            return utils.parseColor(pin.color);
+        })
+
+
+        // Update An Count 4 times, for I/O tracking for future An Volt assignments
+        for (let i = 0; i < 4; i++) {
+            let an = this.context.getAvailableAnalogInputs()[i];
+            this.context.updateAnalogInputCounter(an);
+        }
+
+        // Update Aux Counter for two motor control pins
+        this.context.updateAuxCounter(motorPins[4])
+        this.context.updateAuxCounter(motorPins[5])
+
+        let cableList = [
+            {
+                key: CABLE.DBW_MOTOR, // Drive by Wire Motor
+                color_code,
+                wirecount: motorPins.length, // 6
+                gauge,
+                show_equiv: true,
+                colors: motorColorList,
+                wirelabels: utils.createColoredWireLabels(motorColorList)
+            },
+            {
+                key: CABLE.DBW_PEDAL, // Drive by Pedal
+                color_code,
+                wirecount: pedalPins.length, // 4
+                gauge,
+                show_equiv: true,
+                colors: pedalPins.map((pin) => {
+                    return utils.parseColor(pin.color);
+                }),
+                wirelabels: utils.createColoredWireLabels(pedalColorList)
+            }
+        ]
+
+        return cableList;
     }
     
     createInsertCable () {

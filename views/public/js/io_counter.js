@@ -79,6 +79,12 @@ let updateCounter = function () {
     let an_count = summary.analog_inputs.length - (1 + additional_an); // Reserved for TPS
     let di_count = summary.digital_inputs.length - additional_di;
 
+    if ($('#dbw_enable').find('option:selected').val() == '1') {
+        an_count += 1; // Free up reserved TPS pin if DBW present
+        an_count -= 4; // 4 total an volts are required for working dbw (between tps and motor)
+        aux_count -= 2; // 2 total aux pins are used for motor control on DBW throttle body
+    }
+
     /* Set Values */
     $('#aux_count').text(aux_count);
     $('#an_count').text(an_count);
@@ -126,8 +132,27 @@ const countIdleSteps = function(id) {
     return count;
 }
 
+const updateUI = function() {
+    /* If DBW is enabled, enabled, disable the TPS (#tps) and Idle Control (#idle_stepper) Valve box */
+    let dbw_mode = $('#dbw_enable').find('option:selected');
+    let idle_stepper_select = $('#idle_stepper');
+    let tps_select = $('#tps');
+
+    if (dbw_mode.val() == '1') {
+        idle_stepper_select.prop("disabled", true);
+        tps_select.prop("disabled", true);
+        idle_stepper_select.val('0'); // Set to "None" for Idle Stepper Valve
+    } else {
+        idle_stepper_select.prop("disabled", false);
+        tps_select.prop("disabled", false);
+    }
+    
+    /* If chassis does not have a built in tach disable the box and uncheck it */
+}
+
 const refresh = function() {
     updateCounter();
+    updateUI();
     updateChassisOptions();
     refreshCartSummary();
 }
