@@ -20,6 +20,9 @@ class YamlGenerator {
         // sorted properly in accordance to idle steps (if stepper) or [open, close] for 3-wire isc
         this.isc_pins = []
 
+        // DBW
+        this.dbw_apps_pins = [];
+        
         this.summary = null
         this.cables = null
         this.connectors = null
@@ -110,6 +113,7 @@ class YamlGenerator {
             connections.createCANConnections(),
             connections.createFlexConnection(),
             connections.createIdleValveConnection(),
+            connections.createDBWConnections()
         ]);
         return connectionBuild;
     }

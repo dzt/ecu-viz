@@ -354,7 +354,7 @@ class Cables {
 
         if (!this.context.input.dbw) return null;
 
-        // 5V, Signal Ground, Signal, Signal, DBW1, DBW2
+        // Motor: 5V, Signal Ground, Signal, Signal, DBW1, DBW2
         const motorPins = [
             _.findWhere(this.context.ecu.pinout, { type: 'vref' }),
             _.findWhere(this.context.ecu.pinout, { type: 'vref_ground' }),
@@ -368,7 +368,7 @@ class Cables {
             return utils.parseColor(pin.color);
         })
 
-         // 5V, Signal Ground, Signal, Signal
+         // Pedal: 5V, Signal Ground, Signal, Signal
          const pedalPins = [
             _.findWhere(this.context.ecu.pinout, { type: 'vref' }),
             _.findWhere(this.context.ecu.pinout, { type: 'vref_ground' }),
@@ -380,6 +380,8 @@ class Cables {
             return utils.parseColor(pin.color);
         })
 
+        this.context.dbw_apps_pins.push(pedalPins[2]);
+        this.context.dbw_apps_pins.push(pedalPins[3]);
 
         // Update An Count 4 times, for I/O tracking for future An Volt assignments
         for (let i = 0; i < 4; i++) {

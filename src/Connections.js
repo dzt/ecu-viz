@@ -696,6 +696,35 @@ class Connections {
         return connList;
     }
 
+    createDBWConnections() {
+
+        let connList = [];
+
+        /* DBW Pedal Connections */
+        let signal_check = 0;
+        let pedal = _.findWhere(connectorsDefinitions['dbw_app_options'], { part_number: this.context.input.dbw.pedal });
+        for (let i = 0; i < pedal.pinout.length; i++) {
+            let pin_type = pedal.pinout[i].type;
+            let cableIndex, ecuPin;
+            if (pin_type == 'signal') {
+                cableIndex = (signal_check == 0) ? 3: 4;
+                ecuPin = this.context.dbw_apps_pins[(signal_check == 0) ? 0 : 1].pin;
+                if (signal_check == 0) signal_check += 1;
+            } else if (pin_type == 'vref') {
+                cableIndex = 1
+                ecuPin = _.findWhere(this.context.ecu.pinout, { type: 'vref' }).pin
+            } else if (pin_type == 'vref_ground') {
+                cableIndex = 2
+                ecuPin = _.findWhere(this.context.ecu.pinout, { type: 'vref_ground' }).pin
+            }
+            let keys = [this.context.ecu.name, CABLE.DBW_PEDAL, pedal.name]
+            let values = [ecuPin, cableIndex, (i + 1)]
+            connList.push(this.connectionHelper(keys, values));
+        }
+        return connList;
+        
+    }
+
     createIdleValveConnection() {
 
         let connList = [];
