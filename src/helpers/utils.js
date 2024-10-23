@@ -244,6 +244,7 @@ utils.removeNullPins = function(pinout) {
 }
 
 utils.autoPopulateInsert = function(connection, ecuID, color) {
+    console.log({connection, ecuID, color})
     let connector, pin;
     let ecuQuery = _.findWhere(ecus, { id: ecuID });
     if (typeof connection == 'object') {

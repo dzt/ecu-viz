@@ -338,7 +338,7 @@
         "id": "JZX_100_MREL_CONTROL",
         "name": "ECU Controlled Main Relay",
         "required": true,
-        "colors": ["R/Y"],
+        "colors": ["AUTO"],
         "additional_connectors": [],
         "connections": [
             [{ "JZX_100_F26": 3 }, "auxiliary_output"]

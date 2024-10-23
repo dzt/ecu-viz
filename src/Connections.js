@@ -684,7 +684,7 @@ class Connections {
                 let connection = insert.connections[j];
                 let insert_name = insert.name;
                 let cable_color = utils.hexToShort(this.context.cables[insert_name].colors[j]);
-
+                
                 let source = utils.autoPopulateInsert(connection[0], ecuID, cable_color)
                 let dest = utils.autoPopulateInsert(connection[1], ecuID, cable_color)
     

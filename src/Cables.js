@@ -353,6 +353,7 @@ class Cables {
     createDBWCables() {
 
         if (!this.context.input.dbw) return null;
+        if (this.context.input.dbw && !this.context.ecu.multipurpose_pins.dbw) throw Error('This ECU does not support Drive by Wire');
 
         // Motor: 5V, Signal Ground, Signal, Signal, DBW1, DBW2
         const motorPins = [
@@ -449,7 +450,7 @@ class Cables {
                         const aux_pin = this.context.getAvailableAuxOutputs()[0];
                         if (!aux_pin) throw new Error('Insufficent Auxiliary Outputs to run this configuration.');
                         let color = utils.parseColor(aux_pin.color);
-                        this.context.updateDICounter(aux_pin);
+                        this.context.updateAuxCounter(aux_pin);
                         return color;
                     } else if (type == 'can_h') {
                         return utils.parseColor(can_h_pin.color);
