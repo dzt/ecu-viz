@@ -1270,6 +1270,50 @@
             }
         },
         {
+            "name": "Bosch 3-Wire TPS (Clockwise)",
+            "allow_multiple": false,
+            "type": "tps",
+            "part_number": "H-TPSBCW",
+            "connector_type": "Female",
+            "restrictions": [],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=1613&category_id=337",
+                "estimated_price": 6.38
+            }],
+            "pinout": [
+                { "name": "5V+", "type": "vref", "pin": 1 },
+                { "name": "Signal", "type": "signal", "pin": 2 },
+                { "name": "Signal Ground", "type": "vref_ground", "pin": 3 }
+            ],
+            "image": {
+                "src": "/analog_inputs/bosch_jetronic_tps.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "Bosch 3-Wire TPS (Counter-Clockwise)",
+            "allow_multiple": false,
+            "type": "tps",
+            "part_number": "H-TPSBCCW",
+            "connector_type": "Female",
+            "restrictions": [],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=1613&category_id=337",
+                "estimated_price": 6.38
+            }],
+            "pinout": [
+                { "name": "Signal Ground", "type": "vref", "pin": 1 },
+                { "name": "Signal", "type": "signal", "pin": 2 },
+                { "name": "5V+", "type": "vref_ground", "pin": 3 }
+            ],
+            "image": {
+                "src": "/analog_inputs/bosch_jetronic_tps.png",
+                "height": 120
+            }
+        },
+        {
             "name": "Nissan S13/S14 KA24DE & RB20 TPS (Gray)",
             "allow_multiple": false,
             "type": "tps",
