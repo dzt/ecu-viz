@@ -96,6 +96,7 @@ app.post('/fetch', (req, res) => {
                 }
             });
             process.chdir(dirPath);
+            console.log(`YAML File Generated: ${yamlFilePath}`)
             exec(`wireviz ${yamlFilePath}`, (err, stdout) => {
 
                 if (err) console.error(err)

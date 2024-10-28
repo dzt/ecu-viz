@@ -47,11 +47,7 @@ class Connector {
         if ((type == 'tps') && (this.context.input.dbw)) return null; // eject as dbw uses a different strategy
 
         if (type == "ecu") {
-            if (typeof ecu.pinout[0].pin == 'number') {
-                pins = _.pluck(_.sortBy(ecu.pinout, 'pin'), 'name');
-            } else {
-                pins = _.pluck(ecu.pinout, 'name');
-            }
+            pins = _.pluck(ecu.pinout, 'name');
         } else {
             if (type == 'tps') type = 'analog_inputs' // read tps value from analog inputs
             pins = _.pluck(_.findWhere(connectors[type], {

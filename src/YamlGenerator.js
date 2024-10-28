@@ -103,9 +103,9 @@ class YamlGenerator {
         let connections = new Connections(this);
         let connectionBuild = utils.connectionBuilder([
             connections.createFuseboxConnections(),
+            connections.createChassisConnections(),
             connections.createECUGrounds(),
             connections.createInsertConnections(), 
-            connections.createChassisConnections(),
             connections.createInjectorConnections(),
             connections.createIgnitionConnections(),
             connections.createAnalogConnections(),
