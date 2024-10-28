@@ -302,7 +302,7 @@ class Connections {
                             let keys = [
                                 ecuTitle,
                                 cableTitle,
-                                (isMultiple) ? `${sensorDetails.name} (No. ${multipleValue + 1})` : sensorDetails.name
+                                (isMultiple) ? `${sensorDetails.name} ${multipleValue + 1}` : sensorDetails.name
                             ]
                             let values = [
                                 _.findWhere(ecuPinout, { type: type }).pin,
@@ -352,7 +352,7 @@ class Connections {
                     let keys = [
                         ecuTitle,
                         cableTitle,
-                        (isMultiple) ? `${sensorDetails.name} (No. ${multipleValue + 1})` : sensorDetails.name  // account for multiple
+                        (isMultiple) ? `${sensorDetails.name} ${multipleValue + 1}` : sensorDetails.name  // account for multiple
                     ]
                     let values = [analog_input.pin, i + 1, _.findWhere(sensorDetails.pinout, { type: 'signal' }).pin]
                     connList.push(this.connectionHelper(keys, values));
@@ -565,7 +565,7 @@ class Connections {
                     let keys = [
                         fbQuery.key,
                         cableTitle,
-                        (isMultiple) ? `${auxName} (No. ${multipleVale})`: auxName
+                        (isMultiple) ? `${auxName} ${multipleVale}`: auxName
                     ]
                     let values = [
                         fbQuery.value,
@@ -594,7 +594,7 @@ class Connections {
                 let keys = [
                     ecuTitle,
                     cableTitle,
-                    (isMultiple) ? `${auxName} (No. ${multipleVale})`: auxName
+                    (isMultiple) ? `${auxName} ${multipleVale}`: auxName
                 ]
     
                 let values = [

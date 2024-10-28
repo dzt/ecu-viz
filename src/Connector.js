@@ -333,7 +333,7 @@ class Connector {
             if (where.length > 1) {
                 for (let j = 0; j < where.length; j++) {
                     let indexToModify = where[j].index;
-                    arr[indexToModify].key = `${arr[indexToModify].key} (No. ${j + 1})`
+                    arr[indexToModify].key = `${arr[indexToModify].key} ${j + 1}`
                 }
             }
         }
