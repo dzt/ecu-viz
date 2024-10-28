@@ -101,9 +101,7 @@ let updateChassisOptions = function () {
 
     for (let i = 0; i < options.length; i++) {
         let option = _.findWhere(serverData.inserts, { id: options[i] });
-        console.log(option)
         let checked = (option.required) ? 'checked disabled' : '';
-        console.log(`Checked: ${checked}`)
         let div = `
             <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input" value="${option.id}" id="checkbox_${i + 1}" ${checked}></input>

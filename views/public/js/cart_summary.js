@@ -17,7 +17,21 @@ let getCartSummary = function(input) {
                     summary.push(cartBuilder(pn, 1, 'chassis_options'))
                 });
                 break;
-            case 'inserts': // TODO: Add insert connectors
+            case 'inserts':
+                let inserts_ids = input.inserts;
+                for (let j = 0; j < inserts_ids.length; j++) {
+                    let insertDefinition = _.findWhere(serverData.inserts, { id: inserts_ids[j] });
+                    let additional_connectors = insertDefinition.additional_connectors;
+                    for (let k = 0; k < additional_connectors.length; k++) {
+                        // add connector if it has not been added before
+                        let category = additional_connectors[k].category;
+                        let name = additional_connectors[k].name;
+                        let connDef = _.findWhere(serverData.connectors[category], { name })
+                        if (!_.findWhere(summary, { name })) {
+                            summary.push(cartBuilder(connDef.part_number, 1, category))
+                        }
+                    }
+                }
                 break;
             case 'injectors': // calulate based on engine sizing/type
                 summary.push(cartBuilder(input[key], ign_inj_count, 'injectors'));
@@ -53,7 +67,6 @@ let getCartSummary = function(input) {
                 break;
             case 'idle_valve':
                 if (input[key] && !input.dbw) summary.push(cartBuilder(input[key], 1, 'stepper_valve_options'));
-                console.log(`Idle Valve: ${input[key]}`)
                 break;
             case 'auxiliary_options': // bundle query for aux device
                 summary = summary.concat(input[key].map((pn) => {
@@ -74,25 +87,18 @@ let cartBuilder = function(pn, qty, category) {
 
     if (!pn) return null;
 
-    console.log(`serverData.connectors[${category}], { part_number: ${pn} }\nconn:\n`)
     let conn = _.findWhere(serverData.connectors[category], { part_number: pn });
-    console.log(conn)
     let source;
 
     if (!conn) return null;
-    if (conn.sources.length == 0) return null;
 
-    try {
-        source = conn.sources[0];
-    } catch (e) {
-        return null;
-    }
+    source = conn.sources[0];
 
     let row = {
         name: conn.name,
         qty: qty,
-        source: source,
-        est_cost: qty * source.estimated_price
+        source: (source) ? source : null,
+        est_cost: (source) ? qty * source.estimated_price : null
     }
 
     return row;
@@ -104,14 +110,25 @@ let displaySummary = function(summary) {
     let tableItems = [];
     for (let i = 0; i < summary.length; i++) {
         let conn = summary[i];
-        tableItems.push(`
-            <tr>
-                <th scope="row">${conn.name}</th>
-                <td>${conn.qty}</td>
-                <td><a target="_blank" href="${conn.source.url}">${conn.source.seller}</a></td>
-                <td>$${currencyFormatted(conn.est_cost)}</td>
-            </tr>
-        `)
+        if (conn.source) {
+            tableItems.push(`
+                <tr>
+                    <th scope="row">${conn.name}</th>
+                    <td>${conn.qty}</td>
+                    <td><a target="_blank" href="${conn.source.url}">${conn.source.seller}</a></td>
+                    <td>$${currencyFormatted(conn.est_cost)}</td>
+                </tr>
+            `)
+        } else {
+            tableItems.push(`
+                <tr>
+                    <th scope="row">${conn.name}</th>
+                    <td>${conn.qty}</td>
+                    <td>NLA</a></td>
+                    <td>---</td>
+                </tr>
+            `)   
+        }
     }
     let tableBody = tableItems.join('\n');
     $('#summaryTableBody').html(tableBody);

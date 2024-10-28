@@ -41,9 +41,9 @@ let getUserInput = function () {
 
     let req_params = {
         "ecu": ecu,
+        "chassis": chassis,
         "use_chassis_tacho": use_factory_tacho,
         "inserts": options,
-        "chassis": chassis,
         "engine": engine,
         "tps": tps,
         "injectors": injectors,
