@@ -2203,7 +2203,11 @@
             "name": "Toyota 6-Wire Idle Air Control Valve",
             "part_number": "90980-11144",
             "connector_type": "terminal",
-            "sources": [],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=963&page=2",
+                "estimated_price": 4.74
+            }],
             "pinout": [
                 { "name": "Stepper 4", "type": "step_4", "pin": 1 },
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 2 },

@@ -5,11 +5,19 @@ let getCartSummary = function(input) {
 
     let engine = _.findWhere(serverData.engines, { id: input.engine });
     let ign_inj_count = (engine.type == 'rotary') ? engine.cylinders * 2 : engine.cylinders;
+    let flex_sensor_id = serverData.connectors['flex_options'][0].part_number;
 
     for (let i = 0; i < keys.length; i++) {
         let key = keys[i];
         switch(key) {
             case 'chassis': // gather pricing data for all associated chassis connectors
+                let connector_ids = _.findWhere(serverData.chassis, { id: input.chassis }).chassis_connectors;
+                connector_ids.map((name) => {
+                    let pn = _.findWhere(serverData.connectors['chassis_options'], { name }).part_number
+                    summary.push(cartBuilder(pn, 1, 'chassis_options'))
+                });
+                break;
+            case 'inserts': // TODO: Add insert connectors
                 break;
             case 'injectors': // calulate based on engine sizing/type
                 summary.push(cartBuilder(input[key], ign_inj_count, 'injectors'));
@@ -27,12 +35,25 @@ let getCartSummary = function(input) {
                 summary.push(cartBuilder(input[key], 1, 'trigger_options'));
                 break;
             case 'tps': // singular query for tps sensor
-                summary.push(cartBuilder(input[key], 1, 'analog_inputs'));
+                if (input[key] && !input.dbw) summary.push(cartBuilder(input[key], 1, 'analog_inputs'));
                 break;
             case 'can_devices': // bundle query for can device
                 summary = summary.concat(input[key].map((pn) => {
                     return cartBuilder(pn, 1, 'can_bus');
                 }))
+                break;
+            case 'flex':
+                if (input[key]) summary.push(cartBuilder(flex_sensor_id, 1, 'flex_options'));
+                break;
+            case 'dbw':
+                if (input[key]) {
+                    summary.push(cartBuilder(input.dbw.pedal, 1, 'dbw_app_options')); // pedal
+                    summary.push(cartBuilder(input.dbw.throttle_body, 1, 'dbw_tb_options')); // motor
+                }
+                break;
+            case 'idle_valve':
+                if (input[key] && !input.dbw) summary.push(cartBuilder(input[key], 1, 'stepper_valve_options'));
+                console.log(`Idle Valve: ${input[key]}`)
                 break;
             case 'auxiliary_options': // bundle query for aux device
                 summary = summary.concat(input[key].map((pn) => {
@@ -53,10 +74,13 @@ let cartBuilder = function(pn, qty, category) {
 
     if (!pn) return null;
 
+    console.log(`serverData.connectors[${category}], { part_number: ${pn} }\nconn:\n`)
     let conn = _.findWhere(serverData.connectors[category], { part_number: pn });
+    console.log(conn)
     let source;
 
-    if (conn.sources == 0) return null;
+    if (!conn) return null;
+    if (conn.sources.length == 0) return null;
 
     try {
         source = conn.sources[0];
@@ -70,6 +94,7 @@ let cartBuilder = function(pn, qty, category) {
         source: source,
         est_cost: qty * source.estimated_price
     }
+
     return row;
 
 }
