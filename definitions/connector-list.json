@@ -1336,7 +1336,7 @@
             }
         },
         {
-            "name": "Nissan SR20, RB25-S2, S14.5 KA24DE TPS (Brown)",
+            "name": "Nissan SR20/RB25-S2/S14 Kouki KA24DE TPS (Brown)",
             "allow_multiple": false,
             "type": "tps",
             "part_number": "NSN3PNTPSCOIL",
