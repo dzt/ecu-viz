@@ -124,7 +124,7 @@ let displaySummary = function(summary) {
                 <tr>
                     <th scope="row">${conn.name}</th>
                     <td>${conn.qty}</td>
-                    <td>NLA</a></td>
+                    <td>---</a></td>
                     <td>---</td>
                 </tr>
             `)   
