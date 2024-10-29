@@ -1168,7 +1168,11 @@
             "part_number": "4693236940939",
             "connector_type": "Female",
             "restrictions": ["13b"],
-            "sources": [],
+            "sources": [{
+                "seller": "Race Spec",
+                "url": "https://racespeconline.com/products/dtm-connector-kits?_pos=1&_sid=b75d05225&_ss=r&variant=12133152897",
+                "estimated_price": 12.00
+            }],
             "pinout": [
                 { "name": "Signal", "type": "signal", "pin": 1 },
                 { "name": "Ground", "type": "vref_ground", "pin": 2 },

@@ -12,6 +12,12 @@
         "cylinders": 4
     },
     {
+        "name": "Honda K20/K24",
+        "id": "k20_k24",
+        "type": "piston",
+        "cylinders": 4
+    },
+    {
         "name": "Nissan SR20DET (S13)",
         "id": "sr20det",
         "type": "piston",
