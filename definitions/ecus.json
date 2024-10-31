@@ -728,5 +728,58 @@
             "src": "/ecus/emu_black.png",
             "width": 550
         }
+    },
+    {
+        "name": "MaxxECU MINI",
+        "id": "maxxecu_mini",
+        "dbw_support": false,
+        "internal_wbc": false,
+        "internal_map_sensor": false,
+        "pinout": [
+            { "name": "Trigger", "type": "trigger", "pin": "A1", "color": "R" },
+            { "name": "Trigger GND", "type": "trigger_ground", "pin": "A2", "color": "B" },
+            { "name": "n/c", "type": null, "pin": "A3", "color": "B" },
+            { "name": "n/c", "type": null, "pin": "A4", "color": "B" },
+            { "name": "DIN (HALL ONLY)", "type": null, "pin": "B1", "color": "R" },
+            { "name": "DIN 2 (HALL ONLY)", "type": null, "pin": "B2", "color": "G" },
+            { "name": "Sensor Ground", "type": "vref_ground", "pin": "B3", "color": "Y" },
+            { "name": "Sensor Ground", "type": "vref_ground", "pin": "B4", "color": "Y/Br" },
+            { "name": "CLT", "type": "temp", "pin": "C1", "color": "Y/L" },
+            { "name": "IAT", "type": "temp", "pin": "C2", "color": "W/Br" },
+            { "name": "AIN 3", "type": "analog_input", "pin": "C3", "color": "Y/B" },
+            { "name": "AIN 4", "type": "analog_input", "pin": "C4", "color": "R/L" },
+            { "name": "GPO 8 / Tacho", "type": "auxiliary_output", "pin": "D1", "color": "G" },
+            { "name": "Throttle Position Sensor", "type": "analog_input", "pin": "D2", "color": "L" },
+            { "name": "Ground Shield", "type": null, "pin": "D3", "color": "L/Br" },
+            { "name": "Sensor Ground", "type": "vref_ground", "pin": "D4", "color": "L/R" },
+            { "name": "GPO 3", "type": "auxiliary_output", "pin": "E1", "color": "L/O" },
+            { "name": "+5V Sensor Supply", "type": "vref", "pin": "E2", "color": "Br/B" },
+            { "name": "CAN L", "type": "can_l", "pin": "E3", "color": "Br" },
+            { "name": "CAN H", "type": "can_h", "pin": "E4", "color": "Br/R" },
+            { "name": "IGN 1", "type": "ignition", "pin": "F1", "color": "Br/O" },
+            { "name": "IGN 2", "type": "ignition", "pin": "F2", "color": "O/B" },
+            { "name": "IGN 3", "type": "ignition", "pin": "F3", "color": "O/Br" },
+            { "name": "IGN 4", "type": "ignition", "pin": "F4", "color": "O/R" },
+            { "name": "GPO 2", "type": "auxiliary_output", "pin": "G1", "color": "O" },
+            { "name": "GPO 1", "type": "auxiliary_output", "pin": "G2", "color": "Gy/B" },
+            { "name": "INJ 1", "type": "injector", "pin": "G3", "color": "Gy/Br" },
+            { "name": "Engine Ground", "type": "ground", "pin": "G4", "color": "O/Y" },
+            { "name": "INJ 2", "type": "injector", "pin": "H1", "color": "O/G" },
+            { "name": "INJ 3", "type": "injector", "pin": "H2", "color": "O/G" },
+            { "name": "INJ 4", "type": "injector", "pin": "H3", "color": "O/G" },
+            { "name": "+12V (ECU Power Supply)", "type": "power", "pin": "H4", "color": "O/G" }
+        ],
+        "multipurpose_pins": {
+            "dbw": null,
+            "stepper_valve": null,
+            "3_wire_isc": {
+                "open_pin": 20,
+                "close_pin": 21
+            }
+        },
+        "image": {
+            "src": "/ecus/monsoon_g4x.png",
+            "width": 250
+        }
     }
 ]
