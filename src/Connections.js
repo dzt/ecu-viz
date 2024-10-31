@@ -641,7 +641,13 @@ class Connections {
                     sourceValue = _.findWhere(ecuPinout, { type: pinType}).pin
                 } else {
                     // use shield ground pin on ecu which branches off to bother connection if aplicable
-                    sourceValue = _.findWhere(ecuPinout, { type: 'shield_ground'}).pin
+                    let shield = _.findWhere(ecuPinout, { type: 'shield_ground'});
+                    if (shield) {
+                        sourceValue = shield.pin
+                    } else {
+                        // Use Trigger Ground instead if shield ground is not present
+                        sourceValue = _.findWhere(ecuPinout, { type: 'trigger_ground'}).pin
+                    }
                 }
             }
     

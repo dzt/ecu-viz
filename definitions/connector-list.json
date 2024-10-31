@@ -1934,8 +1934,8 @@
                 "estimated_price": 9.00
             }],
             "pinout": [
-                { "name": "Signal", "type": "home", "pin": 1 },
-                { "name": "Ground", "type": "home_ground", "pin": 2 },
+                { "name": "Signal", "type": "trigger", "pin": 1 },
+                { "name": "Ground", "type": "trigger_ground", "pin": 2 },
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 3 }
             ],
             "image": {

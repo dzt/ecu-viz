@@ -486,8 +486,11 @@ class Cables {
         // Note: some ECUs just have one shielded ground opposed to two so account for that
         let findShieldGnd = _.findWhere(_.findWhere(ecus, { id: this.context.input.ecu }).pinout, { type: 'shield_ground' });
         let isSingleGround = findShieldGnd ? true : false;
-    
-        let homeColor = _.findWhere(ecuPinout, { type: 'home' }).color;
+        
+        let homePin = _.findWhere(ecuPinout, { type: 'home' });
+        let homeColor = null;
+        if (homePin) homeColor = homePin.color; // For ECUs that do not have home pins
+
         let triggerColor = _.findWhere(ecuPinout, { type: 'trigger' }).color;
         let triggerPinout = _.findWhere(connectors.trigger_options, { part_number: trigger.pn }).pinout
     
@@ -510,14 +513,14 @@ class Cables {
                     }
                     break;
                 case 'home':
-                    colorList.push(utils.parseColor(homeColor));
+                    if (homePin) colorList.push(utils.parseColor(homeColor));
                     break;
                 case 'ground': // Nissan CAS' for example have a single ground input, in the event it does just use the home ground
                 case 'home_ground':
                     if (isSingleGround) {
                         colorList.push(utils.parseColor(findShieldGnd.color));
                     } else {
-                        colorList.push(utils.parseColor(_.findWhere(_.findWhere(ecus, { id: this.context.input.ecu }).pinout, { type: 'home_ground' }).color));
+                        if (homePin) colorList.push(utils.parseColor(_.findWhere(_.findWhere(ecus, { id: this.context.input.ecu }).pinout, { type: 'home_ground' }).color));
                     }
                     break;
             }
