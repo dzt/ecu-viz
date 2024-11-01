@@ -407,8 +407,8 @@
         ],
         "multipurpose_pins": {
             "dbw": null,
-            "stepper_valve": true,
-            "3_wire_isc": true
+            "stepper_valve": null,
+            "3_wire_isc": ["all_auxiliary_outputs"]
         },
         "image": {
             "src": "/ecus/haltech_550.png",
@@ -734,7 +734,7 @@
         "id": "maxxecu_mini",
         "dbw_support": false,
         "internal_wbc": false,
-        "internal_map_sensor": false,
+        "internal_map_sensor": true,
         "pinout": [
             { "name": "Trigger", "type": "trigger", "pin": "A1", "color": "Y" },
             { "name": "Trigger GND", "type": "trigger_ground", "pin": "A2",  "color": "G"},
@@ -768,6 +768,72 @@
             { "name": "INJ 3", "type": "injector", "pin": "H2",  "color": "L/Br"},
             { "name": "INJ 4", "type": "injector", "pin": "H3",  "color": "L/R"},
             { "name": "+12V (ECU Power Supply)", "type": "power", "pin": "H4",  "color": "R"}
+        ],
+        "multipurpose_pins": {
+            "dbw": null,
+            "stepper_valve": null,
+            "3_wire_isc": null
+        },
+        "image": {
+            "src": "/ecus/maxx_mini.png",
+            "width": 250
+        }
+    },
+    {
+        "name": "MaxxECU Street",
+        "id": "maxxecu_street",
+        "dbw_support": false,
+        "internal_wbc": false,
+        "internal_map_sensor": false,
+        "pinout": [
+            { "name": "n/c", "type": null, "pin": "A1", "color": null },
+            { "name": "IGN 1", "type": "ignition", "pin": "A2", "color": null },
+            { "name": "IGN 2", "type": "ignition", "pin": "A3", "color": null },
+            { "name": "GPO 8 / Tacho", "type": "auxiliary_output", "pin": "A4", "color": null },
+            { "name": "n/c", "type": null, "pin": "B1", "color": null },
+            { "name": "IGN 3", "type": "ignition", "pin": "B2", "color": null },
+            { "name": "IGN 4", "type": "ignition", "pin": "B3", "color": null },
+            { "name": "GPO 1", "type": "auxiliary_output", "pin": "B4", "color": null },
+            { "name": "n/c", "type": null, "pin": "C1", "color": null },
+            { "name": "IGN 5", "type": "ignition", "pin": "C2", "color": null },
+            { "name": "IGN 6", "type": "ignition", "pin": "C3", "color": null },
+            { "name": "GPO 2", "type": "auxiliary_output", "pin": "C4", "color": null },
+            { "name": "WBO2 HEATER-", "type": null, "pin": "D1", "color": null },
+            { "name": "n/c", "type": null, "pin": "D2", "color": null },
+            { "name": "n/c", "type": null, "pin": "D3", "color": null },
+            { "name": "GPO 3", "type": "auxiliary_output", "pin": "D4", "color": null },
+            { "name": "CAN H", "type": "can_h", "pin": "E1", "color": null },
+            { "name": "CAN L", "type": "can_l", "pin": "E2", "color": null },
+            { "name": "Ground Shield", "type": "home_ground", "pin": "E3", "color": null },
+            { "name": "n/c", "type": null, "pin": "E4", "color": null },
+            { "name": "CLT", "type": "temp", "pin": "F1", "color": null },
+            { "name": "IAT", "type": "temp", "pin": "F2", "color": null },
+            { "name": "WBO2 Vref", "type": null, "pin": "F3", "color": null },
+            { "name": "WBO Vs", "type": null, "pin": "F4", "color": null },
+            { "name": "+5V Sensor Supply", "type": "vref", "pin": "G1", "color": null },
+            { "name": "Throttle Position Sensor", "type": "auxiliary_output", "pin": "G2", "color": null },
+            { "name": "WBO2 IP", "type": null, "pin": "G3", "color": null },
+            { "name": "WBO2 Rcal", "type": null, "pin": "G4", "color": null },
+            { "name": "Sensor Ground", "type": "vref_ground", "pin": "H1", "color": null },
+            { "name": "Trigger Ground", "type": "trigger_ground", "pin": "H2", "color": null },
+            { "name": "Trigger", "type": "trigger", "pin": "H3", "color": null },
+            { "name": "Home", "type": "home", "pin": "H4", "color": null },
+            { "name": "AIN 1 (Temp)", "type": "temp", "pin": "J1", "color": null },
+            { "name": "AIN 2 (Temp)", "type": "temp", "pin": "J2", "color": null },
+            { "name": "AIN 3", "type": "analog_input", "pin": "J3", "color": null },
+            { "name": "AIN 4", "type": "analog_input", "pin": "J4", "color": null },
+            { "name": "INJ 1", "type": "injector", "pin": "K1", "color": null },
+            { "name": "INJ 2", "type": "injector", "pin": "K2", "color": null },
+            { "name": "DIN 1", "type": "digital_input", "pin": "K3", "color": null },
+            { "name": "DIN 2", "type": "digital_input", "pin": "K4", "color": null },
+            { "name": "n/c", "type": null, "pin": "L1", "color": null },
+            { "name": "n/c", "type": null, "pin": "L2", "color": null },
+            { "name": "INJ 6", "type": "injector", "pin": "L3", "color": null },
+            { "name": "Engine Ground", "type": "ground", "pin": "L4", "color": null },
+            { "name": "INJ 3", "type": "injector", "pin": "M1", "color": null },
+            { "name": "INJ 4", "type": "injector", "pin": "M2", "color": null },
+            { "name": "INJ 5", "type": "ignition", "pin": "M3", "color": null },
+            { "name": "+12V (ECU Power Supply)", "type": "power", "pin": "M4", "color": null }
         ],
         "multipurpose_pins": {
             "dbw": null,

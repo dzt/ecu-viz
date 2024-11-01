@@ -329,6 +329,31 @@ utils.hexToShort = function(color) {
     }
 }
 
+utils.getIOList = function(connections, id) {
+    let ecu = _.findWhere(ecus, { id });
+    let ecuTitle = ecu.name;
+    let io_list = [];
+    for (let i = 0; i < connections.length; i++) {
+        let connection = connections[i];
+        if (Object.keys(connection[0])[0] == ecuTitle) {
+            let existing_entry = _.findWhere(io_list, { pin: connection[0][ecuTitle] });
+            if (!existing_entry) {
+                io_list.push({
+                    pin: connection[0][ecuTitle],
+                    description: _.findWhere(ecu.pinout, { pin: connection[0][ecuTitle] }).name,
+                    connection: `${Object.keys(connection[2])[0]} (Pin ${connection[2][Object.keys(connection[2])[0]]})`
+                })
+            } else {
+                // Modify io_list for repeating inputs
+                let entry = `${Object.keys(connection[2])[0]} (Pin ${connection[2][Object.keys(connection[2])[0]]})`
+                let index_to_modify = _.indexOf(io_list, existing_entry);
+                io_list[index_to_modify].connection = `${io_list[index_to_modify].connection}, ${entry}`
+            }
+        }
+    }
+    return io_list;
+}
+
 const capitalize = function(string) {
     return [
       ...string.slice(0, 1).toUpperCase(),

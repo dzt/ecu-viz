@@ -638,7 +638,7 @@ class Connections {
                 // Determine ecu grounding method
                 if (_.findWhere(ecuPinout, { type: pinType})) {
                     // ecu has a pin unique to this connection so assign it
-                    sourceValue = _.findWhere(ecuPinout, { type: pinType}).pin
+                    sourceValue = _.findWhere(ecuPinout, { type: pinType }).pin
                 } else {
                     // use shield ground pin on ecu which branches off to bother connection if aplicable
                     let shield = _.findWhere(ecuPinout, { type: 'shield_ground'});

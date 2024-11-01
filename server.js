@@ -21,6 +21,7 @@ const ecus = require('./definitions/ecus.json');
 const engines = require('./definitions/engines.json');
 const inserts = require('./definitions/inserts.json');
 const connectors = require('./definitions/connector-list.json');
+const utils = require('./src/helpers/utils.js');
 
 temp.track();
 app.use(bodyParser.json())
@@ -71,8 +72,12 @@ app.post('/fetch', (req, res) => {
         }
     }
 
+    // Return JSON payload with entire I/O List?
+    let io_sheet = utils.getIOList(output.connections, input.ecu);
+    console.log('IO Sheet:');
+    console.dir(io_sheet);
+
     let output_yaml = YAML.stringify(output);
- 
     console.dir(input)
 
     temp.cleanupSync();
@@ -97,7 +102,7 @@ app.post('/fetch', (req, res) => {
             });
             process.chdir(dirPath);
             console.log(`YAML File Generated: ${yamlFilePath}`)
-            exec(`wireviz ${yamlFilePath}`, (err, stdout) => {
+            exec(`wireviz ${yamlFilePath}`, (err, _stdout) => {
 
                 if (err) console.error(err)
                 if (err) return res.status(400).json({
