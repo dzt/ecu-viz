@@ -65,6 +65,24 @@ let getUserInput = function () {
     return req_params;
 }
 
+let updateIOSheet = function(io_sheet) {
+    let tableItems = [];
+    for (let i = 0; i < io_sheet.length; i++) {
+        let pin = io_sheet[i];
+        tableItems.push(`
+            <tr>
+                <th scope="row">${pin.pin}</th>
+                <td>${pin.description}</td>
+                <td>${pin.connection}</td>
+            </tr>
+        `)
+    }
+    let tableBody = tableItems.join('\n');
+    $('#io_sheet_tbody').html(tableBody);
+    $('#io_table').css({ display: 'block' });
+    $('#io_sheet_message').css({ display: 'none' });
+}
+
 $(document).ready(function () {
 
     /* Buttons */
@@ -100,15 +118,19 @@ $(document).ready(function () {
         $('#previewContainer').hide();
         $('#spinner').show();
         let req_params = getUserInput();
-        fetch(req_params, function (err, image) {
+        fetch(req_params, function (err, response) {
             if (err) {
                 $('#error').text(err);
                 $('#error').css({ display: 'block' });
             } else {
-                $('#downloadBtn').attr('href', image);
+                
+                $('#downloadBtn').attr('href', response.image);
                 $("#downloadBtn").removeClass('disabled');
-                $('#previewImage').attr('src', image);
+                $('#previewImage').attr('src', response.image);
                 $('#error').css({ display: 'none' });
+
+                /* Update I/O Sheet */
+                updateIOSheet(response.io_sheet)
 
                 lg.destroy()
                 loadGallery();
@@ -127,13 +149,8 @@ $(document).ready(function () {
             contentType: "application/json",
             data: JSON.stringify(params),
             success: function (response, textStatus, jqXHR) {
-                console.log({
-                    response,
-                    textStatus,
-                    jqXHR
-                });
                 // Ensure data is in correct format
-                if (response.data.startsWith("data:image/png;base64,")) {
+                if (response.data.image.startsWith("data:image/png;base64,")) {
                     return callback(null, response.data);
                 } else {
                     return callback('Invalid Response', null);

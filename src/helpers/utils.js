@@ -244,7 +244,6 @@ utils.removeNullPins = function(pinout) {
 }
 
 utils.autoPopulateInsert = function(connection, ecuID, color) {
-    console.log({connection, ecuID, color})
     let connector, pin;
     let ecuQuery = _.findWhere(ecus, { id: ecuID });
     if (typeof connection == 'object') {
@@ -333,6 +332,7 @@ utils.getIOList = function(connections, id) {
     let ecu = _.findWhere(ecus, { id });
     let ecuTitle = ecu.name;
     let io_list = [];
+    let io_complete = [];
     for (let i = 0; i < connections.length; i++) {
         let connection = connections[i];
         if (Object.keys(connection[0])[0] == ecuTitle) {
@@ -351,7 +351,16 @@ utils.getIOList = function(connections, id) {
             }
         }
     }
-    return io_list;
+    for (let i = 0; i < ecu.pinout.length; i++) {
+        let pin_name = ecu.pinout[i].pin;
+        let pin_query = _.findWhere(io_list, { pin: pin_name });
+        if (!pin_query) {
+            io_complete.push({ pin: pin_name, description: ecu.pinout[i].name, connection: 'None' })
+        } else {
+            io_complete.push(pin_query);
+        }
+    }
+    return _.sortBy(io_complete, 'pin');
 }
 
 const capitalize = function(string) {

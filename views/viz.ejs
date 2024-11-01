@@ -55,21 +55,12 @@
                         <form>
                             <nav class="navbar-container">
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <button class="nav-link active" id="nav-general-tab" data-bs-toggle="tab"
-                                        data-bs-target="#nav-general" type="button" role="tab"
-                                        aria-controls="nav-general" aria-selected="true">General</button>
-                                    <button class="nav-link" id="nav-basics-tab" data-bs-toggle="tab"
-                                        data-bs-target="#nav-basics" type="button" role="tab" aria-controls="nav-basics"
-                                        aria-selected="false">Basics</button>
-                                    <button class="nav-link" id="nav-dbw-tab" data-bs-toggle="tab"
-                                        data-bs-target="#nav-dbw" type="button" role="tab" aria-controls="nav-dbw"
-                                        aria-selected="false">Drive by Wire</button>
-                                    <button class="nav-link" id="nav-io-tab" data-bs-toggle="tab"
-                                        data-bs-target="#nav-io" type="button" role="tab" aria-controls="nav-io"
-                                        aria-selected="false">Additional I/O</button>
-                                    <button class="nav-link" id="nav-cart-tab" data-bs-toggle="tab"
-                                        data-bs-target="#nav-cart" type="button" role="tab" aria-controls="nav-cart"
-                                        aria-selected="false">Cart Summary</button>
+                                    <button class="nav-link active" id="nav-general-tab" data-bs-toggle="tab" data-bs-target="#nav-general" type="button" role="tab" aria-controls="nav-general" aria-selected="true">General</button>
+                                    <button class="nav-link" id="nav-basics-tab" data-bs-toggle="tab" data-bs-target="#nav-basics" type="button" role="tab" aria-controls="nav-basics" aria-selected="false">Basics</button>
+                                    <button class="nav-link" id="nav-dbw-tab" data-bs-toggle="tab" data-bs-target="#nav-dbw" type="button" role="tab" aria-controls="nav-dbw" aria-selected="false">DBW</button>
+                                    <button class="nav-link" id="nav-io-tab" data-bs-toggle="tab" data-bs-target="#nav-io" type="button" role="tab" aria-controls="nav-io" aria-selected="false">Additional I/O</button>
+                                    <button class="nav-link" id="nav-io_sheet-tab" data-bs-toggle="tab" data-bs-target="#nav-io_sheet" type="button" role="tab" aria-controls="nav-io_sheet" aria-selected="false">I/O Sheet</button>
+                                    <button class="nav-link" id="nav-cart-tab" data-bs-toggle="tab" data-bs-target="#nav-cart" type="button" role="tab" aria-controls="nav-cart" aria-selected="false">Cart</button>
 
                                 </div>
                             </nav>
@@ -324,6 +315,19 @@
                                           </tr>
                                         </thead>
                                         <tbody id="summaryTableBody"></tbody>
+                                      </table>
+                                </div>
+                                <div class="tab-pane fade" id="nav-io_sheet" role="tabpanel" aria-labelledby="nav-io_sheet-tab">
+                                    <p id="io_sheet_message" style="text-align: center;">Click "Update Preview" to see I/O Sheet</p>
+                                    <table id="io_table" class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Pin</th>
+                                            <th scope="col">Description</th>
+                                            <th scope="col">Connection</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody id="io_sheet_tbody"></tbody>
                                       </table>
                                 </div>
                             </div>

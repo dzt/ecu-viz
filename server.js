@@ -74,8 +74,6 @@ app.post('/fetch', (req, res) => {
 
     // Return JSON payload with entire I/O List?
     let io_sheet = utils.getIOList(output.connections, input.ecu);
-    console.log('IO Sheet:');
-    console.dir(io_sheet);
 
     let output_yaml = YAML.stringify(output);
     console.dir(input)
@@ -118,7 +116,10 @@ app.post('/fetch', (req, res) => {
                 const base64String = Buffer.from(buffer).toString('base64');
 
                 return res.status(200).json({
-                    data: `data:image/png;base64,${base64String}`,
+                    data: {
+                        image: `data:image/png;base64,${base64String}`,
+                        io_sheet
+                    },
                     error: null
                 });
 

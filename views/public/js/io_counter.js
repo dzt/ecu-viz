@@ -160,6 +160,7 @@ $(document).ready(function () {
     refresh();
     /* Init: Frontend Components */
     $('#error').css({ display: 'none' });
+    $('#io_table').css({ display: 'none' });
     /* Called anytime a change is made to the ECU selection */
     $('#nav-tabContent').on('change', function () {
         refresh();

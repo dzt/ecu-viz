@@ -490,7 +490,6 @@ class Cables {
         let homePin = _.findWhere(ecuPinout, { type: 'home' });
         let homeColor = null;
         if (homePin) homeColor = homePin.color; // For ECUs that do not have home pins
-        if (!homePin) console.log('No home pin present');
         let triggerColor = _.findWhere(ecuPinout, { type: 'trigger' }).color;
         let triggerPinout = _.findWhere(connectors.trigger_options, { part_number: trigger.pn }).pinout
     
