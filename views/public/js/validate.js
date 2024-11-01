@@ -72,6 +72,7 @@ let updateIOSheet = function(io_sheet) {
         tableItems.push(`
             <tr>
                 <th scope="row">${pin.pin}</th>
+                <td>${pin.color}</td>
                 <td>${pin.description}</td>
                 <td>${pin.connection}</td>
             </tr>

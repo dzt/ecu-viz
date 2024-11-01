@@ -340,6 +340,7 @@ utils.getIOList = function(connections, id) {
             if (!existing_entry) {
                 io_list.push({
                     pin: connection[0][ecuTitle],
+                    color: _.findWhere(ecu.pinout, { pin: connection[0][ecuTitle] }).color,
                     description: _.findWhere(ecu.pinout, { pin: connection[0][ecuTitle] }).name,
                     connection: `${Object.keys(connection[2])[0]} (Pin ${connection[2][Object.keys(connection[2])[0]]})`
                 })
@@ -355,7 +356,7 @@ utils.getIOList = function(connections, id) {
         let pin_name = ecu.pinout[i].pin;
         let pin_query = _.findWhere(io_list, { pin: pin_name });
         if (!pin_query) {
-            io_complete.push({ pin: pin_name, description: ecu.pinout[i].name, connection: 'None' })
+            io_complete.push({ pin: pin_name, color: ecu.pinout[i].color,description: ecu.pinout[i].name, connection: 'None' })
         } else {
             io_complete.push(pin_query);
         }
