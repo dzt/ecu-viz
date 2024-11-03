@@ -361,7 +361,17 @@ utils.getIOList = function(connections, id) {
             io_complete.push(pin_query);
         }
     }
-    return _.sortBy(io_complete, 'pin');
+    return utils.sortBy(io_complete, 'pin')
+}
+
+utils.sortBy = function(arr, attr) {
+    return [...arr].sort((a, b) => {
+        const [aPrefix, aNumber] = [a[attr].charAt(0), parseInt(a[attr].slice(1))];
+        const [bPrefix, bNumber] = [b[attr].charAt(0), parseInt(b[attr].slice(1))];
+        if (aPrefix < bPrefix) return -1;
+        if (aPrefix > bPrefix) return 1;
+        return aNumber - bNumber;
+    });
 }
 
 const capitalize = function(string) {
