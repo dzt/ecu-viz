@@ -599,10 +599,7 @@ class Connections {
                     cableTitle,
                     (isMultiple) ? `${auxName} ${multipleVale}`: auxName
                 ]
-                
-                console.log(cableSetup)
-                console.log(`i=${i}`)
-                console.log(utils.hexToShort(cableSetup.colors[i]))
+
                 let values = [
                     _.findWhere(ecuPinout, { type: 'auxiliary_output', color: utils.hexToShort(cableSetup.colors[i]) }).pin, // ecu pin
                     i + 1,
@@ -611,8 +608,6 @@ class Connections {
                 connList.push(this.connectionHelper(keys, values));
             }
         }
-
-        console.log(connList)
     
         return connList;
     }
