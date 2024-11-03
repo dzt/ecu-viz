@@ -255,7 +255,7 @@
             { "name": "Digital Input 6", "type": "digital_input", "pin": "B19", "color": "Gy/G" },
             { "name": "Digital Input 5", "type": "digital_input", "pin": "B20", "color": "Gy/Y" },
             { "name": "Digital Input 4", "type": "digital_input", "pin": "B21", "color": "Gy/O" },
-            { "name": "Ground Out", "type": "vref_ground", "pin": "22", "color": "G" },
+            { "name": "Ground Out", "type": "vref_ground", "pin": "B22", "color": "G" },
             { "name": "An Volt 8", "type": "analog_input", "pin": "B23", "color": "W/Y" },
             { "name": "An Volt 9", "type": "analog_input", "pin": "B24", "color": "W/G" },
             { "name": "Ground", "type": "ground", "pin": "B25", "color": "B" },

@@ -62,6 +62,8 @@ class Connections {
         let connList = [];
     
         const definedAuxOutputs = connectors.summary.auxiliary_outputs;
+
+        console.dir(this.context.cables[CABLE.ECU])
     
         for (let i = 0; i < cableSetup.wirecount; i++) {
     
@@ -93,7 +95,7 @@ class Connections {
                     utils.getChassisPinByType(chassisCode, chassisPinType).name
                 ];
                 values = [
-                    _.sortBy(_.where(ecuPinout, { type: 'auxiliary_output' }), 'name')[auxPin - 1].pin,
+                    _.findWhere(ecuPinout, { color: utils.hexToShort(cableSetup.colors[i]) }).pin,
                     colorNumber,
                     utils.getChassisPinByType(chassisCode, chassisPinType).pin
                 ];
