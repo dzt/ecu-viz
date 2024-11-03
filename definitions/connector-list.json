@@ -1662,9 +1662,9 @@
             "part_number": "90980-11162",
             "restrictions": [],
             "sources": [{
-                "seller": "ProTunerz",
-                "url": "https://protunerz.com/products/toyota-vvti-connector",
-                "estimated_price": 9.50
+                "seller": "ProWire USA",
+                "url": "https://www.prowireusa.com/68122",
+                "estimated_price": 5.04
             }],
             "pinout": [
                 { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },

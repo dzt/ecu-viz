@@ -579,9 +579,10 @@ class Connections {
             } else {
                 // Distribute aux outputs to ECU
                 let auxDevice = summary[i - 1];
-           
-                let pinout = _.findWhere(connectorsDefinitions.auxiliary_options, { part_number: auxDevice.pn }).pinout;
-                let auxName = _.findWhere(connectorsDefinitions.auxiliary_options, { part_number: auxDevice.pn }).name;
+                let auxPinOut = _.findWhere(connectorsDefinitions.auxiliary_options, { part_number: auxDevice.pn }); // TODO Redo
+                let pinout = auxPinOut.pinout;
+                let auxName = auxPinOut.name;
+
                 let isMultiple = false;
                 let multipleVale = 0;
     
@@ -598,15 +599,20 @@ class Connections {
                     cableTitle,
                     (isMultiple) ? `${auxName} ${multipleVale}`: auxName
                 ]
-    
+                
+                console.log(cableSetup)
+                console.log(`i=${i}`)
+                console.log(utils.hexToShort(cableSetup.colors[i]))
                 let values = [
-                    _.sortBy(_.where(ecuPinout, { type: 'auxiliary_output' }), 'name')[i - 1].pin,
+                    _.findWhere(ecuPinout, { type: 'auxiliary_output', color: utils.hexToShort(cableSetup.colors[i]) }).pin, // ecu pin
                     i + 1,
                     _.findWhere(pinout, { type: 'signal' }).pin
                 ]
                 connList.push(this.connectionHelper(keys, values));
             }
         }
+
+        console.log(connList)
     
         return connList;
     }

@@ -365,6 +365,7 @@ utils.getIOList = function(connections, id) {
 }
 
 utils.sortBy = function(arr, attr) {
+    if (typeof arr[0][attr] == 'number') return _.sortBy(arr, attr);
     return [...arr].sort((a, b) => {
         const [aPrefix, aNumber] = [a[attr].charAt(0), parseInt(a[attr].slice(1))];
         const [bPrefix, bNumber] = [b[attr].charAt(0), parseInt(b[attr].slice(1))];
