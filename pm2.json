@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "ecu-viz",
+            "script": "npm",
+            "args" : "server"
+        }
+    ]
+}
