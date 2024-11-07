@@ -42,28 +42,33 @@ npm run server
 
 Remote Server Instructions
 ```sh
+# Install required packages
 curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
-sudo apt install nodejs npm python3 graphviz nginx -Y
+sudo apt install nodejs npm build-essential python3 graphviz nginx -Y
 pip3 install wireviz --break-system-packages
 sudo npm install pm2@latest -g
 
+# Set UFW Perms
 ufw enable
 ufw allow ssh
 ufw allow http
 ufw allow https
 ufw allow 'Nginx HTTP'
 
+# Clone Repo
 git clone https://github.com/dzt/ecu-viz.git
 cd ecu-viz
 sudo npm install
 
+# Configure Reverse Proxy via Nginx
 sudo vim /etc/nginx/sites-available/default
 sudo nginx -t
 sudo systemctl restart nginx
 
-pm2 start pm2.json
+# Setup PM2 to run automatically whenever the server restarts
 pm2 startup systemd
+pm2 start pm2.json
 pm2 save
 ```
 
