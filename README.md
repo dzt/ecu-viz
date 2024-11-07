@@ -40,6 +40,33 @@ Run After Setup:
 npm run server
 ```
 
+Remote Server Instructions
+```sh
+curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt install nodejs npm python3 graphviz nginx -Y
+pip3 install wireviz --break-system-packages
+sudo npm install pm2@latest -g
+
+ufw enable
+ufw allow ssh
+ufw allow http
+ufw allow https
+ufw allow 'Nginx HTTP'
+
+git clone https://github.com/dzt/ecu-viz.git
+cd ecu-viz
+sudo npm install
+
+sudo vim /etc/nginx/sites-available/default
+sudo nginx -t
+sudo systemctl restart nginx
+
+pm2 start pm2.json
+pm2 startup systemd
+pm2 save
+```
+
 ## License
 
 ```
