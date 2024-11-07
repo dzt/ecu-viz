@@ -3,7 +3,7 @@
         {
             "name": "ecu-viz",
             "script": "npm",
-            "args" : "server"
+            "args" : "run server"
         }
     ]
 }
