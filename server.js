@@ -28,12 +28,6 @@ app.use(bodyParser.json())
 app.set('view engine', 'ejs');
 app.use('/public', express.static(__dirname + '/views/public'));
 
-app.get('/', (_req, res) => {
-    return res.json({
-        message: 'ECUViz API'
-    });
-});
-
 app.get('/definitions', (req, res) => {
     return res.json({
         chassis,
@@ -129,7 +123,7 @@ app.post('/fetch', (req, res) => {
 
 });
 
-app.get('/viz', (req, res) => {
+app.get('/', (req, res) => {
     return res.render('viz', {
         chassis,
         ecus,
