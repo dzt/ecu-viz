@@ -2,6 +2,8 @@
 
 Effortlessly craft engine wiring diagrams for your project using. Save time planning with a user-friendly interface and clear, easy-to-understand visuals. Spend seconds, not hours, bringing your project to life.
 
+[Live Example](http://viz.petersoboyejo.com/)
+
 ![Preview](./docs//images/git-preview.png)
 
 ### Supported Vehicles
@@ -45,7 +47,7 @@ Remote Server Instructions
 # Install required packages
 curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
-sudo apt install nodejs npm build-essential python3 graphviz nginx -y
+sudo apt install nodejs npm build-essential python3 python3-pip graphviz nginx -y
 pip3 install wireviz --break-system-packages
 sudo npm install pm2@latest -g
 
