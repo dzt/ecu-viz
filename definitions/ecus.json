@@ -836,9 +836,9 @@
             { "name": "+12V (ECU Power Supply)", "type": "power", "pin": "M4", "color": null }
         ],
         "multipurpose_pins": {
-            "dbw": null,
-            "stepper_valve": null,
-            "3_wire_isc": null
+            "dbw": ["B10", "B11"],
+            "stepper_valve": ["all_auxiliary_outputs"],
+            "3_wire_isc": ["all_auxiliary_outputs"]
         },
         "image": {
             "src": "/ecus/maxx_mini.png",

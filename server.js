@@ -66,9 +66,8 @@ app.post('/fetch', (req, res) => {
         }
     }
 
-    // Return JSON payload with entire I/O List?
+    // Return JSON payload with entire I/O List
     let io_sheet = utils.getIOList(output.connections, input.ecu);
-
     let output_yaml = YAML.stringify(output);
     console.dir(input)
 
