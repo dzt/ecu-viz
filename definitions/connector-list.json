@@ -2189,15 +2189,33 @@
             "connector_type": "terminal",
             "sources": [],
             "pinout": [
-                { "name": "WBC PUMP", "type": null, "pin": 1 },
-                { "name": "WBC COM", "type": null, "pin": 2 },
-                { "name": "WBC Heater-", "type": null, "pin": 3 },
-                { "name": "WBC Heater+", "type": null, "pin": 4 },
-                { "name": "WBC Cal-Resistor", "type": null, "pin": 5 },
-                { "name": "WBC CELL", "type": null, "pin": 6 }
+                { "name": "WBC PUMP (IP)", "type": null, "pin": 1 },
+                { "name": "WBC COM (VREF)", "type": null, "pin": 2 },
+                { "name": "WBC Heater- (H-)", "type": null, "pin": 3 },
+                { "name": "WBC Heater+ (12V+/H+)", "type": null, "pin": 4 },
+                { "name": "WBC Cal-Resistor (RCAL)", "type": null, "pin": 5 },
+                { "name": "WBC CELL (VS)", "type": null, "pin": 6 }
             ],
             "image": {
-                "src": "/generic/bosch_lsu_49.png",
+                "src": "/generic/bosch_lsu.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "Bosch LSU 4.2 Wideband Sensor",
+            "part_number": "BOSCH_LSU_42",
+            "connector_type": "terminal",
+            "sources": [],
+            "pinout": [
+                { "name": "WBC CELL (VS)", "type": null, "pin": 1 },
+                { "name": "WBC Cal-Resistor (RCAL)", "type": null, "pin": 2 },
+                { "name": "WBC Heater+ (12V+/H+)", "type": null, "pin": 3 },
+                { "name": "WBC Heater- (H-)", "type": null, "pin": 4 },
+                { "name": "WBC COM (VREF)", "type": null, "pin": 5 },
+                { "name": "WBC PUMP (IP)", "type": null, "pin": 6 }
+            ],
+            "image": {
+                "src": "/generic/bosch_lsu.png",
                 "height": 120
             }
         }
