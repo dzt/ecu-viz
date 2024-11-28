@@ -68,5 +68,10 @@
         "name": "indigo",
         "id": "I",
         "hex_code": "#4B0082"
+    },
+    {
+        "name": "turquoise",
+        "id": "T",
+        "hex_code": "#40E0D0"
     }
 ]
