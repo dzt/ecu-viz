@@ -721,7 +721,7 @@
         ],
         "multipurpose_pins": {
             "dbw": ["G2", "G10"],
-            "stepper_valve": ["G2", "G10", "G3", "G11"],
+            "stepper_valve": ["G2", "G3", "G10", "G11"],
             "3_wire_isc": ["G2", "G3"]
         },
         "image": {
