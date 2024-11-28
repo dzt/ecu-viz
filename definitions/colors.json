@@ -63,5 +63,10 @@
         "name": "pink",
         "id": "P",
         "hex_code": "#FFC0CB"
+    },
+    {
+        "name": "indigo",
+        "id": "I",
+        "hex_code": "#4B0082"
     }
 ]
