@@ -263,6 +263,20 @@
                                         </div>
                                     </div>
                                     <div class="mb-3">
+                                        <label for="can" class="form-label">CAN Devices</label>
+                                        <span class="badge bg-dark add-select" viz-id="can">Add</span>
+                                        <div id="can_container">
+                                            <select id="can_select" class="form-select" aria-label="CAN Devices">
+                                                <option value="null">None</option>
+                                                <% connectors.can_bus.forEach((conn)=>{%>
+                                                    <option value="<%=conn.part_number%>">
+                                                        <%=conn.name%>
+                                                    </option>
+                                                <%});%>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
                                         <label for="auxiliary_outputs" class="form-label">Auxiliary Options</label>
                                         <span class="badge bg-dark add-select" viz-id="aux">Add</span>
                                         <div id="aux_container">
