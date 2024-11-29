@@ -16,6 +16,9 @@ let getUserInput = function () {
     let flex_fuel = ($('#flex').find('option:selected').val() == '0') ? null : serverData.connectors['flex_options'][0].part_number;
     let idle_valve = ($('#idle_stepper').find('option:selected').val() == '0') ? null : $('#idle_stepper').find('option:selected').val();
 
+    let wideband_control = wbo_support() ? $('#wbo_select').find('option:selected').val() : null;
+    if (wideband_control == 'null') wideband_control = null;
+
     let additional_io = parseAdditionalIO();
 
     let can_devices = additional_io.can_devices;
@@ -37,27 +40,25 @@ let getUserInput = function () {
         options.push($(this).val())
     });
 
-    console.log(options)
-
     let req_params = {
-        "ecu": ecu,
-        "chassis": chassis,
-        "use_chassis_tacho": use_factory_tacho,
-        "inserts": options,
-        "engine": engine,
-        "tps": tps,
-        "injectors": injectors,
-        "ignition": ignition,
-        "alt": null,
-        "clt": clt,
-        "iat": iat,
-        "trigger": trigger,
-        "flex": flex_fuel,
-        "idle_valve": idle_valve,
-        "can_devices": can_devices,
-        "auxiliary_options": aux_outputs,
-        "analog_inputs": analog_inputs,
-        "dbw": dbw
+        'ecu': ecu,
+        'chassis': chassis,
+        'use_chassis_tacho': use_factory_tacho,
+        'inserts': options,
+        'engine': engine,
+        'tps': tps,
+        'injectors': injectors,
+        'ignition': ignition,
+        'clt': clt,
+        'iat': iat,
+        'trigger': trigger,
+        'flex': flex_fuel,
+        'idle_valve': idle_valve,
+        'can_devices': can_devices,
+        'auxiliary_options': aux_outputs,
+        'analog_inputs': analog_inputs,
+        'dbw': dbw,
+        'wideband_control': wideband_control
     };
 
     console.log(req_params);

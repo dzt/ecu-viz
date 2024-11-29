@@ -2,9 +2,6 @@
     {
         "name": "Link Atom G4X",
         "id": "atom_g4x",
-        "dbw_support": false,
-        "internal_wbc": false,
-        "internal_map_sensor": false,
         "pinout": [
             { "name": "+14V", "type": "power", "pin": 5, "color": "R" },
             { "name": "Ground", "type": "ground", "pin": 25, "color": "B" },
@@ -52,9 +49,6 @@
     {
         "name": "Link Monsoon G4X",
         "id": "monsoon_g4x",
-        "dbw_support": false,
-        "internal_wbc": false,
-        "internal_map_sensor": true,
         "pinout": [
             { "name": "+14V", "type": "power", "pin": 5, "color": "R" },
             { "name": "Ground", "type": "ground", "pin": 25, "color": "B" },
@@ -107,9 +101,6 @@
     {
         "name": "Link Stom G4X",
         "id": "storm_g4x",
-        "dbw_support": false,
-        "internal_wbc": false,
-        "internal_map_sensor": true,
         "pinout": [
             { "name": "Injector 4", "type": "injector", "pin": "A1", "color": "Br/O" },
             { "name": "Injector 3", "type": "injector", "pin": "A2", "color": "Br/R" },
@@ -196,9 +187,6 @@
     {
         "name": "Link Fury G4X",
         "id": "fury_g4x",
-        "dbw_support": true,
-        "internal_wbc": true,
-        "internal_map_sensor": true,
         "pinout": [
             { "name": "Injector 4", "type": "injector", "pin": "A1", "color": "Br/O" },
             { "name": "Injector 3", "type": "injector", "pin": "A2", "color": "Br/R" },
@@ -285,9 +273,6 @@
     {
         "name": "Link G4X JZX100X",
         "id": "jzx100_g4x",
-        "dbw_support": false,
-        "internal_wbc": false,
-        "internal_map_sensor": true,
         "pinout": [
             { "name": "Injector 1", "type": "injector", "pin": "1", "color": null },
             { "name": "Injector 2", "type": "injector", "pin": "2", "color": null },
@@ -366,9 +351,6 @@
     {
         "name": "Haltech Elite 550",
         "id": "elite_550",
-        "dbw_support": false,
-        "internal_wbc": false,
-        "internal_map_sensor": true,
         "pinout": [
             { "name": "DPO 2", "type": "auxiliary_output", "pin": 1, "color": "V/Br" },
             { "name": "AVI 1", "type": "analog_input", "pin": 2, "color": "Gy/Y" },
@@ -418,9 +400,6 @@
     {
         "name": "Haltech Elite 1500",
         "id": "elite_1500",
-        "dbw_support": false,
-        "internal_wbc": false,
-        "internal_map_sensor": true,
         "pinout": [
             { "name": "DPO 2", "type": "auxiliary_output", "pin": "A1", "color": "V/Br" },
             { "name": "AVI 4", "type": "analog_input", "pin": "A2", "color": "O/Y" },
@@ -496,8 +475,6 @@
     {
         "name": "Haltech Elite 2000/2500",
         "id": "elite_2500",
-        "dbw_support": true,
-        "internal_map_sensor": true,
         "pinout": [
             { "name": "DPO 2", "type": "auxiliary_output", "pin": "A1", "color": "V/Br" },
             { "name": "AVI 4", "type": "analog_input", "pin": "A2", "color": "O/Y" },
@@ -573,9 +550,6 @@
     {
         "name": "Haltech Nexus S2",
         "id": "nexus_s2",
-        "dbw_support": true,
-        "internal_wbc": true,
-        "internal_map_sensor": true,
         "pinout": [
             { "name": "Injector 1", "type": "injector", "pin": "A1", "color": "L" },
             { "name": "Injector 2", "type": "injector", "pin": "A2", "color": "L/B" },
@@ -651,9 +625,6 @@
     {
         "name": "ECUMasters EMU Black",
         "id": "ecum_emu_black",
-        "dbw_support": false,
-        "internal_wbc": true,
-        "internal_map_sensor": true,
         "pinout": [
             { "name": "Ignition Coil #5", "type": "ignition", "pin": "B1", "color": "Y" },
             { "name": "EGT In #1", "type": "egt", "pin": "B2", "color": "L" },
@@ -732,9 +703,6 @@
     {
         "name": "MaxxECU MINI",
         "id": "maxxecu_mini",
-        "dbw_support": false,
-        "internal_wbc": false,
-        "internal_map_sensor": true,
         "pinout": [
             { "name": "Trigger", "type": "trigger", "pin": "A1", "color": "Y" },
             { "name": "Trigger GND", "type": "trigger_ground", "pin": "A2",  "color": "G"},
@@ -782,9 +750,6 @@
     {
         "name": "MaxxECU Street",
         "id": "maxxecu_street",
-        "dbw_support": false,
-        "internal_wbc": false,
-        "internal_map_sensor": false,
         "pinout": [
             { "name": "n/c", "type": null, "pin": "A1", "color": null },
             { "name": "IGN 1", "type": "ignition", "pin": "A2", "color": null },

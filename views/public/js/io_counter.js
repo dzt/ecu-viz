@@ -1,17 +1,9 @@
 let getSummary = function (ecu_id) {
-    let pinout = _.findWhere(serverData.ecus, {
-        id: ecu_id
-    }).pinout;
+    let pinout = _.findWhere(serverData.ecus, { id: ecu_id }).pinout;
     return {
-        auxiliary_outputs: _.pluck(_.where(pinout, {
-            type: 'auxiliary_output'
-        }), 'name'),
-        analog_inputs: _.pluck(_.where(pinout, {
-            type: 'analog_input'
-        }), 'name'),
-        digital_inputs: _.pluck(_.where(pinout, {
-            type: 'digital_input'
-        }), 'name'),
+        auxiliary_outputs: _.pluck(_.where(pinout, { type: 'auxiliary_output' }), 'name'),
+        analog_inputs: _.pluck(_.where(pinout, { type: 'analog_input' }), 'name'),
+        digital_inputs: _.pluck(_.where(pinout, { type: 'digital_input' }), 'name'),
     }
 }
 
@@ -130,7 +122,21 @@ const countIdleSteps = function(id) {
     return count;
 }
 
+const wbo_support = function() {
+    let wbo_pin_types = ['wbo_ip', 'wbo_input', 'wbo_heater', 'wbo_rcal', 'wbo_vs']
+    let wbo_count = 0;
+    let ecu_pinout = _.findWhere(serverData.ecus, { id: $('#ecu').find('option:selected').val() }).pinout
+    
+    for (let i = 0; i < wbo_pin_types.length; i++) {
+        let pin_query = _.findWhere(ecu_pinout, { type: wbo_pin_types[i] });
+        if (pin_query) wbo_count++;
+    }
+    if (wbo_count == wbo_pin_types.length) return true;
+    return false;
+}
+
 const updateUI = function() {
+
     /* If DBW is enabled, enabled, disable the TPS (#tps) and Idle Control (#idle_stepper) Valve box */
     let dbw_mode = $('#dbw_enable').find('option:selected');
     let idle_stepper_select = $('#idle_stepper');
@@ -144,7 +150,14 @@ const updateUI = function() {
         idle_stepper_select.prop("disabled", false);
         tps_select.prop("disabled", false);
     }
-    
+
+    /* Check if ECU has Internal Wideband Sensor Support, if so enable select box */
+    if (wbo_support()) {
+        $('#wbo_select').prop("disabled", false);
+    } else {
+        $('#wbo_select').prop("disabled", true);
+    }
+
     /* If chassis does not have a built in tach disable the box and uncheck it */
 }
 

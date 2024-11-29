@@ -250,12 +250,11 @@
                                 </div>
                                 <div class="tab-pane fade" id="nav-io" role="tabpanel" aria-labelledby="nav-io-tab">
                                     <div class="mb-3">
-                                        <label for="can" class="form-label">CAN Devices</label>
-                                        <span class="badge bg-dark add-select" viz-id="can">Add</span>
-                                        <div id="can_container">
-                                            <select id="can_select" class="form-select" aria-label="CAN Devices">
+                                        <label for="wbo" class="form-label">Internal Wideband Control</label>
+                                        <div id="wbo_container">
+                                            <select id="wbo_select" class="form-select" aria-label="Lambda Sensors" disabled>
                                                 <option value="null">None</option>
-                                                <% connectors.can_bus.forEach((conn)=>{%>
+                                                <% connectors.wideband_options.forEach((conn)=>{%>
                                                     <option value="<%=conn.part_number%>">
                                                         <%=conn.name%>
                                                     </option>
