@@ -60,7 +60,7 @@ app.post('/fetch', (req, res) => {
     output.tweak = {
         override: {
             graph: {
-                ranksep: '3.5',
+                ranksep: '6.5',
                 pad: '10.0'
             }
         }
