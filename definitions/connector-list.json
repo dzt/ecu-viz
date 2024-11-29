@@ -2189,12 +2189,12 @@
             "connector_type": "terminal",
             "sources": [],
             "pinout": [
-                { "name": "WBC PUMP (IP)", "type": null, "pin": 1 },
-                { "name": "WBC COM (VREF)", "type": null, "pin": 2 },
-                { "name": "WBC Heater- (H-)", "type": null, "pin": 3 },
-                { "name": "WBC Heater+ (12V+/H+)", "type": null, "pin": 4 },
-                { "name": "WBC Cal-Resistor (RCAL)", "type": null, "pin": 5 },
-                { "name": "WBC CELL (VS)", "type": null, "pin": 6 }
+                { "name": "WBC PUMP (APE/IP)", "type": "wbo_ip", "pin": 1 },
+                { "name": "WBC COM (Input/Vref/Vgnd)", "type": "wbo_input", "pin": 2 },
+                { "name": "WBC Heater- (H-)", "type": "wbo_heater", "pin": 3 },
+                { "name": "WBC Heater+ (12V+)", "type": "wbo_12v", "pin": 4 },
+                { "name": "WBC Cal-Resistor (RCAL)", "type": "wbo_rcal", "pin": 5 },
+                { "name": "WBC CELL (UN/RE/VS/Nernst)", "type": "wbo_vs", "pin": 6 }
             ],
             "image": {
                 "src": "/generic/bosch_lsu.png",
@@ -2207,12 +2207,12 @@
             "connector_type": "terminal",
             "sources": [],
             "pinout": [
-                { "name": "WBC CELL (VS)", "type": null, "pin": 1 },
-                { "name": "WBC Cal-Resistor (RCAL)", "type": null, "pin": 2 },
-                { "name": "WBC Heater+ (12V+/H+)", "type": null, "pin": 3 },
-                { "name": "WBC Heater- (H-)", "type": null, "pin": 4 },
-                { "name": "WBC COM (VREF)", "type": null, "pin": 5 },
-                { "name": "WBC PUMP (IP)", "type": null, "pin": 6 }
+                { "name": "WBC CELL (UN/RE/VS/Nernst)", "type": "wbo_vs", "pin": 1 },
+                { "name": "WBC Cal-Resistor (RCAL)", "type": "wbo_rcal", "pin": 2 },
+                { "name": "WBC Heater+ (12V+)", "type": "wbo_12v", "pin": 3 },
+                { "name": "WBC Heater- (H-)", "type": "wbo_heater", "pin": 4 },
+                { "name": "WBC COM (Input/Vref/Vgnd)", "type": "wbo_input", "pin": 5 },
+                { "name": "WBC PUMP (IP)", "type": "wbo_ip", "pin": 6 }
             ],
             "image": {
                 "src": "/generic/bosch_lsu.png",
