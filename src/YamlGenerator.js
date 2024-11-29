@@ -49,6 +49,7 @@ class YamlGenerator {
             connector.createCoilGrounds(), /* Ignition coil grounds */
             connector.createBattery(),
             /* Optional Cases */
+            (this.input.wideband_control != null) ? connector.create(this.input.wideband_control, "wideband_options") : null, /* Internal Wideband */
             (this.input.dbw != null) ? connector.create(this.input.dbw.pedal, "dbw_app_options") : null, /* DBW Pedal */
             (this.input.dbw != null) ? connector.create(this.input.dbw.throttle_body, "dbw_tb_options") : null, /* DBW Motor */
             (this.input.flex != null) ? connector.create(this.input.flex, "flex_options") : null, /* Flex fuel connector if applicable */
@@ -77,6 +78,7 @@ class YamlGenerator {
         let cables = new Cables(this);
         let cableObj = utils.builder([
              /* Optional Cases */
+            cables.createWidebandCables(),
             cables.createDBWCables(),
             cables.createInsertCable(), /* Inserts */
             cables.createCANConnection(), /* CAN bus connections */
@@ -106,6 +108,7 @@ class YamlGenerator {
             connections.createChassisConnections(),
             connections.createECUGrounds(),
             connections.createInsertConnections(), 
+            connections.createWidebandConnections(),
             connections.createInjectorConnections(),
             connections.createIgnitionConnections(),
             connections.createAnalogConnections(),

@@ -350,6 +350,36 @@ class Cables {
         
     }
 
+    createWidebandCables() {
+        
+        if (!this.context.input.wideband_control) return null;
+        let sensorDefinition = _.findWhere(connectors.wideband_options, { part_number: this.context.input.wideband_control });
+        let cableColors = [];
+
+        for (let i = 0; i < sensorDefinition.pinout.length; i++ ) {
+            let type = sensorDefinition.pinout[i].type;
+            if (type == 'wbo_12v') {
+                cableColors.push(utils.parseColor('R')); // 12V+ to Sensor
+            } else {
+                let ecu_pin_color = _.findWhere(this.context.ecu.pinout, { type }).color
+                cableColors.push(utils.parseColor(ecu_pin_color));
+            }
+        }
+
+        let cable = {
+            key: CABLE.WIDEBAND,
+            color_code,
+            wirecount: sensorDefinition.pinout.length,
+            gauge,
+            show_equiv: true,
+            colors: cableColors,
+            wirelabels: utils.createColoredWireLabels(cableColors)
+        }
+
+        return cable;
+
+    }
+
     createDBWCables() {
 
         if (!this.context.input.dbw) return null;

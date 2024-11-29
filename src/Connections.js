@@ -62,8 +62,6 @@ class Connections {
         let connList = [];
     
         const definedAuxOutputs = connectors.summary.auxiliary_outputs;
-
-        console.dir(this.context.cables[CABLE.ECU])
     
         for (let i = 0; i < cableSetup.wirecount; i++) {
     
@@ -701,6 +699,30 @@ class Connections {
                 let values = [source.pin, j + 1, dest.pin]
                 connList.push(this.connectionHelper(keys, values));
     
+            }
+        }
+        return connList;
+    }
+
+    createWidebandConnections() {
+        if (!this.context.input.wideband_control) return null;
+        let connList = [];
+        let sensorDefinition = _.findWhere(connectorsDefinitions.wideband_options, { part_number: this.context.input.wideband_control });
+        for (let i = 0; i < sensorDefinition.pinout.length; i++ ) {
+            let type = sensorDefinition.pinout[i].type;
+            let wideband_pin = sensorDefinition.pinout[i].pin
+            if (type == 'wbo_12v' && !(_.findWhere(this.context.ecu.pinout, { type: 'wbo_12v' }))) {
+                // Assign to Fusebox
+                let fusebox_query = utils.getFuseBoxPin(this.context.connectors.fusebox.pn, 'main_12v');
+                let keys = [fusebox_query.key, CABLE.WIDEBAND, sensorDefinition.name]
+                let values = [fusebox_query.value, (i + 1), wideband_pin]
+                connList.push(this.connectionHelper(keys, values));
+
+            } else {
+                let ecu_pin = _.findWhere(this.context.ecu.pinout, { type }).pin
+                let keys = [this.context.ecu.name, CABLE.WIDEBAND, sensorDefinition.name]
+                let values = [ecu_pin, (i + 1), wideband_pin]
+                connList.push(this.connectionHelper(keys, values));
             }
         }
         return connList;

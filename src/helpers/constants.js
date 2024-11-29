@@ -13,7 +13,8 @@ module.exports = {
         FLEX: 'Flex Fuel',
         IDLE: 'Idle Control Valve',
         DBW_MOTOR: 'Drive by Wire Throttle Body',
-        DBW_PEDAL: 'Drive by Wire Accelerator Pedal'
+        DBW_PEDAL: 'Drive by Wire Accelerator Pedal',
+        WIDEBAND: 'Wideband Control'
     },
     ECU_GROUND: {
         CABLE: 'ECU Ground(s)',

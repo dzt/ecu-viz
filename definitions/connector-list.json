@@ -2184,7 +2184,7 @@
     ],
     "wideband_options": [
         {
-            "name": "Bosch LSU 4.9 Wideband Sensor",
+            "name": "Bosch LSU 4_9 Wideband Sensor",
             "part_number": "BOSCH_LSU_49",
             "connector_type": "terminal",
             "sources": [],
@@ -2202,7 +2202,7 @@
             }
         },
         {
-            "name": "Bosch LSU 4.2 Wideband Sensor",
+            "name": "Bosch LSU 4_2 Wideband Sensor",
             "part_number": "BOSCH_LSU_42",
             "connector_type": "terminal",
             "sources": [],
