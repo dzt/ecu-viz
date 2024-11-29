@@ -1807,6 +1807,24 @@
             }
         },
         {
+            "name": "Bosch Motorsports NTC Temperature Sensor",
+            "allow_multiple": false,
+            "part_number": "SNSR-02069",
+            "sources": [{
+                "seller": "Ballenger Motorsports",
+                "url": "https://www.bmotorsports.com/shop/product_info.php/products_id/943",
+                "estimated_price": 3.99
+            }],
+            "pinout": [
+                { "name": "Signal", "type": "signal", "pin": 1 },
+                { "name": "Ground", "type": "vref_ground", "pin": 2 }
+            ],
+            "image": {
+                "src": "/generic/temp_2pin.png",
+                "height": 120
+            }
+        },
+        {
             "name": "Toyota ECT (JZ/UZ Family)",
             "allow_multiple": false,
             "part_number": "CONN-75820",
