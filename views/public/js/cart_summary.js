@@ -68,6 +68,9 @@ let getCartSummary = function(input) {
             case 'idle_valve':
                 if (input[key] && !input.dbw) summary.push(cartBuilder(input[key], 1, 'stepper_valve_options'));
                 break;
+            case 'wideband_control':
+                if (input[key] && input.wideband_control) summary.push(cartBuilder(input[key], 1, 'wideband_options'));
+                break;
             case 'auxiliary_options': // bundle query for aux device
                 summary = summary.concat(input[key].map((pn) => {
                     return cartBuilder(pn, 1, 'auxiliary_options');
