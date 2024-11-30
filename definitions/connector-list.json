@@ -2244,6 +2244,25 @@
                 "src": "/generic/bosch_lsu.png",
                 "height": 120
             }
+        },
+        {
+            "name": "Bosch LSU 4_2 Wideband Sensor (Square Style)",
+            "part_number": "BOSCH_LSU_42_SQUARE",
+            "connector_type": "terminal",
+            "sources": [],
+            "pinout": [
+                { "name": "WBC PUMP (IP)", "type": "wbo_ip", "pin": 1 },
+                { "name": "WBC Heater- (H-)", "type": "wbo_heater", "pin": 2 },
+                { "name": "WBC Cal-Resistor (RCAL)", "type": "wbo_rcal", "pin": 3 },
+                { "name": "WBC COM (Input/Vref/Vgnd)", "type": "wbo_input", "pin": 4 },
+                { "name": "WBC Heater+ (12V+)", "type": "wbo_12v", "pin": 5 },
+                { "name": "WBC CELL (UN/RE/VS/Nernst)", "type": "wbo_vs", "pin": 6 }
+
+            ],
+            "image": {
+                "src": "/generic/lsu_42_square.png",
+                "height": 120
+            }
         }
     ],
     "stepper_valve_options": [
