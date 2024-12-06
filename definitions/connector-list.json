@@ -1494,6 +1494,24 @@
                 "src": "/generic/2pin.png",
                 "height": 50
             }
+        },
+        {
+            "name": "Nissan JECS Injector (Later Style)",
+            "allow_multiple": false,
+            "part_number": "KA24-INJNEW",
+            "sources": [{
+                "seller": "Wiring Specialties",
+                "url": "https://www.wiringspecialties.com/kainconst.html",
+                "estimated_price": 9.95
+            }],
+            "pinout": [
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+                { "name": "Trigger", "type": "signal", "pin": 2 }
+            ],
+            "image": {
+                "src": "/generic/2pin.png",
+                "height": 50
+            }
         }
     ],
     "can_bus": [
