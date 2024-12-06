@@ -48,6 +48,14 @@
         "insert_options": []
     },
     {
+        "name": "Nissan 240SX (S13 - SOHC Chassis)",
+        "id": "240sx_s13_sohc",
+        "fuel_pump_12v": false,
+        "dbw_pedal": false,
+        "chassis_connectors": ["F1_S13_SOHC", "F8_S13", "F10_S13"],
+        "insert_options": ["S13_AC", "S13_CLT_CLUSTER", "S13_CEL"]
+    },
+    {
         "name": "Nissan 240SX (S13 - DOHC Chassis)",
         "id": "240sx_s13",
         "fuel_pump_12v": false,
