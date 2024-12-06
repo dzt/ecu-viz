@@ -357,7 +357,7 @@
                 { "name": "nc", "type": null, "pin": 8 }
             ],
             "image": {
-                "src": "/chassis/s13/f8_f10.png",
+                "src": "/chassis/s13/f8.png",
                 "height": 120
             }
         },
@@ -382,7 +382,7 @@
                 { "name": "nc", "type": null, "pin": 8 }
             ],
             "image": {
-                "src": "/chassis/s13/f8_f10.png",
+                "src": "/chassis/s13/f10.png",
                 "height": 120
             }
         },
