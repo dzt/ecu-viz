@@ -1822,6 +1822,24 @@
             }
         },
         {
+            "name": "Nissan SR/KA/RB ECT (Red Housing)",
+            "allow_multiple": false,
+            "part_number": "WRS-KA24-COOL",
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.wiringspecialties.com/s13-ka24de-coolant-temp-connector",
+                "estimated_price": 9.95
+            }],
+            "pinout": [
+                { "name": "Signal", "type": "signal", "pin": 1 },
+                { "name": "Ground", "type": "vref_ground", "pin": 2 }
+            ],
+            "image": {
+                "src": "/generic/temp_2pin.png",
+                "height": 120
+            }
+        },
+        {
             "name": "Mazda S4/S5 ECT",
             "allow_multiple": false,
             "part_number": "963040-3",
