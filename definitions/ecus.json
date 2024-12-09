@@ -643,7 +643,7 @@
             { "name": "EGT Input #2", "type": "egt", "pin": "B15", "color": "L" },
             { "name": "Knock Sensor Input #2", "type": "knock", "pin": "B16", "color": "R" },
             { "name": "Analog Input #3", "type": "analog_input", "pin": "B17", "color": "P" },
-            { "name": "TPS Input", "type": "analog_input", "pin": "B18", "color": "G" },
+            { "name": "TPS Input", "type": "analog_input", "pin": "B18", "color": "G", "tps": true },
             { "name": "WBO Ip", "type": "wbo_ip", "pin": "B19", "color": "Lg" },
             { "name": "VSS In", "type": "vss", "pin": "B20", "color": "T" },
             { "name": "Camsync Input #1", "type": "home", "pin": "B21", "color": "T" },
