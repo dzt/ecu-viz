@@ -75,6 +75,8 @@ class Cables {
                     break;
                 case 1: // aux, fuel pump (# of existing aux outputs + 1)
                 case 2: // second used aux if aplicable, tacho (# of existing aux outputs + 2)
+                    let type = (i == 1) ? 'fuel_pump_output' : 'tach_output';
+                    this.context[type] = this.context.getAvailableAuxOutputs()[0];
                     colorList.push(utils.parseColor(this.context.getAvailableAuxOutputs()[0].color))
                     this.context.updateAuxCounter(this.context.getAvailableAuxOutputs()[0])
                     break;

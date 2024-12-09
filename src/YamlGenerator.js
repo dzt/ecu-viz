@@ -16,6 +16,10 @@ class YamlGenerator {
         this.used_aux_outputs = []
         this.used_digital_inputs = []
         this.used_analog_inputs = []
+
+        // Mandatory Connections
+        this.fuel_pump_output = null;
+        this.tach_output = null;
         
         // sorted properly in accordance to idle steps (if stepper) or [open, close] for 3-wire isc
         this.isc_pins = []

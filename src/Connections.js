@@ -83,7 +83,6 @@ class Connections {
                 ];
             } else {
                 const chassisPinType = (i === 1) ? 'fuel_pump' : 'tacho'; // tacho, i == 2
-                const auxPin = (definedAuxOutputs.length) + i;
                 if (i == 2 && !(utils.getChassisPinByType(chassisCode, chassisPinType))) {
                     throw new Error('This chassis option does not have an auxiliary tachometer signal. Review your input, and try again.')
                 }
@@ -93,7 +92,7 @@ class Connections {
                     utils.getChassisPinByType(chassisCode, chassisPinType).name
                 ];
                 values = [
-                    _.findWhere(ecuPinout, { color: utils.hexToShort(cableSetup.colors[i]) }).pin,
+                    (chassisPinType == 'fuel_pump') ? this.context.fuel_pump_output.pin : this.context.tach_output.pin,
                     colorNumber,
                     utils.getChassisPinByType(chassisCode, chassisPinType).pin
                 ];
