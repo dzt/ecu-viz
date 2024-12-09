@@ -320,9 +320,8 @@ class Connections {
                     let isMultiple = false;
                     let multipleValue = 0;
 
-                    let cableColor = utils.hexToShort(cableSetup.colors[i]);
-                    let analog_input = _.findWhere(this.context.used_analog_inputs, { color: cableColor })
-
+                    let analog_input = this.context.used_analog_inputs[i - 2]
+                    
                     if (multipleQuery.length > 1) {
                         isMultiple = true;
                         let duplicateIndexs = utils.findAllDuplicatesInListOfObjects(connectors.summary.analog_inputs, 'pn')[0].indexes;
@@ -353,7 +352,12 @@ class Connections {
                         cableTitle,
                         (isMultiple) ? `${sensorDetails.name} ${multipleValue + 1}` : sensorDetails.name  // account for multiple
                     ]
-                    let values = [analog_input.pin, i + 1, _.findWhere(sensorDetails.pinout, { type: 'signal' }).pin]
+                    let values = [
+                        analog_input.pin,
+                        i + 1,
+                        _.findWhere(sensorDetails.pinout, { type: 'signal' }).pin
+                    ]
+
                     connList.push(this.connectionHelper(keys, values));
     
             }
