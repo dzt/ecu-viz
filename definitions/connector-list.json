@@ -1351,7 +1351,7 @@
             }
         },
         {
-            "name": "Nissan S13/S14 KA24DE & RB20 TPS (Gray)",
+            "name": "Nissan S13/S14 KA24DE/RB20 TPS (Gray)",
             "allow_multiple": false,
             "type": "tps",
             "part_number": "WS_WRS-KA24-TPS_S13",
