@@ -392,6 +392,18 @@ utils.getSemiSequentialSummary = function(firing_order) {
     return summary;
 }
 
+/* Splis injector into two outputs (odd/even) */
+utils.getBatchSummary = function(cylinders) {
+    let a = []
+    let b = []
+    let base_assignment = Array.from({length: cylinders}, (_, i) => i + 1);
+    for (let i = 0; i < base_assignment.length; i++) {
+        if (i % 2 === 0) a.push(base_assignment[i])
+        if (i % 2 != 0) b.push(base_assignment[i])
+    }
+    return [a, b];
+}
+
 const capitalize = function(string) {
     return [
       ...string.slice(0, 1).toUpperCase(),
