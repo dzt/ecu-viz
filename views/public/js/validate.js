@@ -58,7 +58,9 @@ let getUserInput = function () {
         'auxiliary_options': aux_outputs,
         'analog_inputs': analog_inputs,
         'dbw': dbw,
-        'wideband_control': wideband_control
+        'wideband_control': wideband_control,
+        // 'injector_mode': 'semi-sequential',
+        // 'ignition_mode':'wasted_spark'
     };
 
     console.log(req_params);

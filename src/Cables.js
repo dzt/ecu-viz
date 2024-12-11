@@ -96,10 +96,19 @@ class Cables {
     }
     
     createInjectors () {
+
         let injector_assignments = this.context.summary.injector_outputs;
         let key = "Fuel Injectors"
-        let count = injector_assignments.length + 1;
+        let num_injectors = injector_assignments.length;
+        let count = num_injectors + 1;
         let colorList = [];
+
+        /* Custom Injector Modes */
+        if (this.context.injector_mode == 'semi-sequential') {
+            count = (num_injectors / 2) + 1;
+        } else if (this.context.injector_mode == 'batch') {
+            count = 3;
+        }
     
         let ecuPinout = _.findWhere(ecus, { id: this.context.input.ecu }).pinout;
         let injectorsOptions = _.where(ecuPinout, { type: 'injector' });
@@ -131,15 +140,22 @@ class Cables {
     
     createIgnitionConnections() {
 
-        let ignition_assignments = this.context.summary.ignition_outputs;
-    
+        let ignition_assignments = this.context.summary.ignition_outputs; // Number of Coils Presenta
+        let ign_count = ignition_assignments.length;
+        
         let key = "Ignition System"
         let colorList = [];
     
         let connDef = _.findWhere(connectors['ignition_coils'], { part_number: ignition_assignments[0].pn })
         let pinout_filtered = utils.removeNullPins(connDef.pinout);
     
-        let count = ignition_assignments.length + 2; // default value (as if it were a 3 pin coil like a K20 style)
+        let count = (ignition_assignments.length) + 2; // default value (as if it were a 3 pin coil like a K20 style)
+
+        if (this.context.ignition_mode == 'wasted_spark') {
+            ign_count = (ignition_assignments.length / 2);
+            count = (ign_count) + 2;
+        }
+
         if (pinout_filtered.length == 4) count += 1; // usually extra ground (i-e: LS coils)
         if (pinout_filtered.length == 5) count += 2; // usually 2 extra grounds (i-e: IGN-1A coils)
     
@@ -150,8 +166,8 @@ class Cables {
         for (let i = 0; i < count; i++) {
             if (i == 0) { // 12v
                 colorList.push(utils.parseColor('R/Y'))
-            } else if (((count - ignition_assignments.length) <= i) || (i <= (count.length - 1))) { // signal wires
-                let ignitionIndex = (ignition_assignments.length - (count - i));
+            } else if (((count - ign_count) <= i) || (i <= (count.length - 1))) { // signal wires
+                let ignitionIndex = (ign_count - (count - i));
                 colorList.push(utils.parseColor(ignitionOptionsSorted[ignitionIndex].color))
             } else { // grounds
                 colorList.push(_.findWhere(colors, { name: 'black' }).hex_code)

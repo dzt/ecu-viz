@@ -1,6 +1,7 @@
 const utils = require('./helpers/utils.js');
 const _ = require('underscore');
 const ecus = require('../definitions/ecus.json');
+const engines = require('../definitions/engines.json');
 
 const { CABLE } = require('./helpers/constants.js');
 
@@ -16,6 +17,23 @@ class YamlGenerator {
         this.used_aux_outputs = []
         this.used_digital_inputs = []
         this.used_analog_inputs = []
+
+        // Injector Mode
+        const engine = _.findWhere(engines, { id: input.engine });
+        this.injector_mode = input.injector_mode ?? 'sequential';
+        this.injector_assignment = Array.from({length: engine.cylinders}, (_, i) => i + 1); // [1...n]
+        if (this.injector_mode == 'semi-sequential') {
+            this.injector_assignment = utils.getSemiSequentialSummary(engine.firing_order);
+        } else if (this.injector_mode == 'batch') {
+            this.injector_assignment = null; // TODO: Batch Fire Implementation
+        }
+
+        // Ignition Mode
+        this.ignition_mode = input.ignition_mode ?? 'direct_fire';
+        this.ignition_assignment = Array.from({length: engine.cylinders}, (_, i) => i + 1); // [1...n];
+        if (this.ignition_mode == 'wasted_spark') {
+            this.ignition_assignment = utils.getSemiSequentialSummary(engine.firing_order);
+        }
 
         // Mandatory Connections
         this.fuel_pump_output = null;

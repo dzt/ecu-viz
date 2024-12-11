@@ -149,32 +149,29 @@ class Connections {
                         loadPin = available12VPins[j < injectorCount / 2 ? 1 : 2];
                     }
     
-                    keys = [
-                        fbQuery.key,
-                        cableTitle,
-                        `Injector ${j + 1}`
-                    ];
-                    values = [
-                        fbQuery.value,
-                        colorNumber,    
-                        injector12VPin
-                    ];
+                    keys = [fbQuery.key, cableTitle, `Injector ${j + 1}`];
+                    values = [fbQuery.value, colorNumber, injector12VPin];
+
                     // Add connection to the list
                     connList.push(this.connectionHelper(keys, values));
                 }
             } else { // Connections from ECU to injectors
-                keys = [
-                    ecuTitle,
-                    cableTitle,
-                    `Injector ${i}`
-                ];
-                values = [
-                    injectorList[i - 1].pin,
-                    colorNumber,
-                    injectorSignalPin
-                ];
-                // Add connection to the list
-                connList.push(this.connectionHelper(keys, values));
+                if (this.context.injector_mode == 'semi-sequential') {
+                    let semi_outputs = this.context.injector_assignment[i - 1];
+                    for (let j = 0; j < semi_outputs.length; j++) {
+                        let inj = semi_outputs[j];
+                        keys = [ecuTitle, cableTitle, `Injector ${inj}`]
+                        values = [injectorList[i - 1].pin, colorNumber, injectorSignalPin]
+                        connList.push(this.connectionHelper(keys, values));
+                    }
+                } else if (this.context.injector_mode == 'batch') {
+                    keys = []
+                    values = []
+                } else {
+                    keys = [ecuTitle, cableTitle, `Injector ${i}`];
+                    values = [injectorList[i - 1].pin, colorNumber, injectorSignalPin];
+                    connList.push(this.connectionHelper(keys, values));
+                }
             }
         }
         return connList;
@@ -240,19 +237,26 @@ class Connections {
                 }
             } else {
                 let ignitionNumber = (i - 2) + 1; // default values  (3-pin coil)
+                let ignitionSignalPin =  _.findWhere(ignitionPinout, { type: 'signal' }).pin;
                 if (ignitionPinout.length == 4) ignitionNumber = (i - 3) + 1; // 4-pin coil
                 if (ignitionPinout.length == 5) ignitionNumber = (i - 4) + 1; // 5-pin coil
-                let keys = [
-                    ecuTitle,
-                    cableTitle,
-                    `Ignition ${ignitionNumber}`
-                ]
-                let values = [
-                    ignitionList[ignitionNumber - 1].pin,
-                    (i + 1),
-                    _.findWhere(ignitionPinout, { type: 'signal' }).pin
-                ]
-                connList.push(this.connectionHelper(keys, values));
+
+                if (this.context.ignition_mode == 'wasted_spark') {
+                    // TODO: Wasted Spark
+                    console.log(this.context.ignition_assignment)
+                    let wasted_spark_outputs = this.context.ignition_assignment[ignitionNumber - 1];
+                    for (let j = 0; j < wasted_spark_outputs.length; j++) {
+                        let ign = wasted_spark_outputs[j];
+                        let keys = [ecuTitle, cableTitle, `Ignition ${ign}`]
+                        let values = [ignitionList[ignitionNumber - 1].pin, (i + 1), ignitionSignalPin]
+                        connList.push(this.connectionHelper(keys, values));
+                    }
+                } else {
+                    // Direct Fire Mode
+                    let keys = [ecuTitle, cableTitle, `Ignition ${ignitionNumber}`]
+                    let values = [ignitionList[ignitionNumber - 1].pin, (i + 1), ignitionSignalPin]
+                    connList.push(this.connectionHelper(keys, values));
+                }
             }
         }
         

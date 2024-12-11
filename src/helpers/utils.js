@@ -375,6 +375,23 @@ utils.sortBy = function(arr, attr) {
     });
 }
 
+/*
+    Returns Injector Output setup in accordance to being setup as a
+    semi-sequential config (for semi and wasted spark)
+    Returns something like this for 6 cylinder engines
+        = [ [ 1, 6 ], [ 5, 2 ], [3, 4] ]
+    Therefore utilizing only 3 injector outputs instead of 6
+*/
+utils.getSemiSequentialSummary = function(firing_order) {
+    let summary = []
+    const left = firing_order.slice(0, Math.floor(firing_order.length / 2));
+    const right = firing_order.slice(Math.floor(firing_order.length / 2), firing_order.length);
+    for (let i = 0; i < left.length; i++) {
+        summary.push([left[i], right[i]])
+    }
+    return summary;
+}
+
 const capitalize = function(string) {
     return [
       ...string.slice(0, 1).toUpperCase(),
