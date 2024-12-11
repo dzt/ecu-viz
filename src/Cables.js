@@ -119,7 +119,7 @@ class Cables {
                 colorList.push(_.findWhere(colors, { name: 'red' }).hex_code)
             } else {
                 let injector_pin = injectorsOptionsSorted[i - 1];
-                if (!injector_pin) throw new Error('Insufficent I/O, not enough injector outputs.');
+                if (!injector_pin) throw new Error('Insufficent I/O, not enough injector outputs. Try another ECU or Injector Setup Mode.');
                 colorList.push(utils.parseColor(injector_pin.color))
             }
         }
@@ -151,7 +151,7 @@ class Cables {
     
         let count = (ignition_assignments.length) + 2; // default value (as if it were a 3 pin coil like a K20 style)
 
-        if (this.context.ignition_mode == 'wasted_spark') {
+        if (this.context.ignition_mode == 'wasted-spark') {
             ign_count = (ignition_assignments.length / 2);
             count = (ign_count) + 2;
         }
@@ -168,7 +168,9 @@ class Cables {
                 colorList.push(utils.parseColor('R/Y'))
             } else if (((count - ign_count) <= i) || (i <= (count.length - 1))) { // signal wires
                 let ignitionIndex = (ign_count - (count - i));
-                colorList.push(utils.parseColor(ignitionOptionsSorted[ignitionIndex].color))
+                let ign_pin = ignitionOptionsSorted[ignitionIndex];
+                if (!ign_pin) throw new Error('Insufficent I/O, not enough ignition outputs. Try another ECU or Ignition Setup Mode (i-e: Wasted Spark)')
+                if (ign_pin) colorList.push(utils.parseColor(ign_pin.color))
             } else { // grounds
                 colorList.push(_.findWhere(colors, { name: 'black' }).hex_code)
             }

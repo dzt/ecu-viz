@@ -29,9 +29,9 @@ class YamlGenerator {
         }
 
         // Ignition Mode
-        this.ignition_mode = input.ignition_mode ?? 'direct_fire';
+        this.ignition_mode = input.ignition_mode ?? 'direct-fire';
         this.ignition_assignment = Array.from({length: engine.cylinders}, (_, i) => i + 1); // [1...n];
-        if (this.ignition_mode == 'wasted_spark') {
+        if (this.ignition_mode == 'wasted-spark') {
             this.ignition_assignment = utils.getSemiSequentialSummary(engine.firing_order);
         }
 

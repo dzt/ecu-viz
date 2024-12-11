@@ -241,9 +241,8 @@ class Connections {
                 if (ignitionPinout.length == 4) ignitionNumber = (i - 3) + 1; // 4-pin coil
                 if (ignitionPinout.length == 5) ignitionNumber = (i - 4) + 1; // 5-pin coil
 
-                if (this.context.ignition_mode == 'wasted_spark') {
-                    // TODO: Wasted Spark
-                    console.log(this.context.ignition_assignment)
+                if (this.context.ignition_mode == 'wasted-spark') {
+                    // Wasted Spark
                     let wasted_spark_outputs = this.context.ignition_assignment[ignitionNumber - 1];
                     for (let j = 0; j < wasted_spark_outputs.length; j++) {
                         let ign = wasted_spark_outputs[j];

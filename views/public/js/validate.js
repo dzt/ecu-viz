@@ -12,6 +12,10 @@ let getUserInput = function () {
 
     let use_factory_tacho = $('#use_factory_tacho').is(":checked");
 
+    // Injector and Ignition modes
+    let injector_mode = $('#injector_mode').find('option:selected').val();
+    let ignition_mode = $('#ignition_mode').find('option:selected').val();
+
     // Assuming these values should be fetched or initialized
     let flex_fuel = ($('#flex').find('option:selected').val() == '0') ? null : serverData.connectors['flex_options'][0].part_number;
     let idle_valve = ($('#idle_stepper').find('option:selected').val() == '0') ? null : $('#idle_stepper').find('option:selected').val();
@@ -59,8 +63,8 @@ let getUserInput = function () {
         'analog_inputs': analog_inputs,
         'dbw': dbw,
         'wideband_control': wideband_control,
-        // 'injector_mode': 'semi-sequential',
-        // 'ignition_mode':'wasted_spark'
+        'injector_mode': injector_mode,
+        'ignition_mode': ignition_mode
     };
 
     console.log(req_params);
