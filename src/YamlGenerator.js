@@ -18,7 +18,7 @@ class YamlGenerator {
         this.used_digital_inputs = []
         this.used_analog_inputs = []
 
-        // Injector Mode
+        // Injector Mode (Sequential, Semi-Sequential, Batch)
         const engine = _.findWhere(engines, { id: input.engine });
         this.injector_mode = input.injector_mode ?? 'sequential';
         this.injector_assignment = Array.from({length: engine.cylinders}, (_, i) => i + 1); // [1...n]
@@ -28,7 +28,7 @@ class YamlGenerator {
             this.injector_assignment = utils.getBatchSummary(engine.cylinders);
         }
 
-        // Ignition Mode
+        // Ignition Mode (Direct Fire or Wasted Spark)
         this.ignition_mode = input.ignition_mode ?? 'direct-fire';
         this.ignition_assignment = Array.from({length: engine.cylinders}, (_, i) => i + 1); // [1...n];
         if (this.ignition_mode == 'wasted-spark') {

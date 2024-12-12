@@ -2,6 +2,20 @@
 
 Effortlessly craft engine wiring diagrams for your project using. Save time planning with a user-friendly interface and clear, easy-to-understand visuals. Spend seconds, not hours, bringing your project to life.
 
+### Features
+- Support for both gasoline rotary and piston engines.
+- Extensive compatibility with a wide selection of popular ECUs.
+- High-resolution, easy-to-follow wiring diagrams with detailed annotations.
+- Flexible injector operation modes, including Sequential, Semi-Sequential, and Batch.
+- Multiple ignition modes supported, such as Direct Fire and Wasted Spark.
+- Comprehensive chassis integration wiring for numerous popular vehicles, retaining OEM functionality.
+- Support for idle stepper valves with 3- to 6-wire systems.
+- Flex fuel compatibility for seamless ethanol and gasoline blending.
+- Drive-by-wire functionality for supported ECUs.
+- CAN bus integration for peripherals like lambda controllers, gauges, and more.
+- Detailed I/O breakdown with a descriptive pinout sheet for clarity.
+- Comprehensive sourcing and pricing information for connectors.
+
 [Live Example](http://viz.petersoboyejo.com/)
 
 ![Preview](./docs//images/git-preview.png)
