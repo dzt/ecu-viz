@@ -119,7 +119,7 @@ class Cables {
                 colorList.push(_.findWhere(colors, { name: 'red' }).hex_code)
             } else {
                 let injector_pin = injectorsOptionsSorted[i - 1];
-                if (!injector_pin) throw new Error('Insufficent I/O, not enough injector outputs. Try another ECU or Injector Setup Mode.');
+                if (!injector_pin) throw new Error('Insufficent I/O, not enough injector outputs. Try another ECU or Injector Setup Mode (i-e: Semi-Sequential, Batch Fire');
                 colorList.push(utils.parseColor(injector_pin.color))
             }
         }

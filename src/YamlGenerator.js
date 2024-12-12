@@ -25,7 +25,7 @@ class YamlGenerator {
         if (this.injector_mode == 'semi-sequential') {
             this.injector_assignment = utils.getSemiSequentialSummary(engine.firing_order);
         } else if (this.injector_mode == 'batch') {
-            this.injector_assignment = null; // TODO: Batch Fire Implementation
+            this.injector_assignment = utils.getBatchSummary(engine.cylinders);
         }
 
         // Ignition Mode

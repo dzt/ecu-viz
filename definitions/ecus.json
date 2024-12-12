@@ -809,5 +809,55 @@
             "src": "/ecus/maxx_mini.png",
             "width": 250
         }
+    },
+    {
+        "name": "DIYAutoTune Microsquirt v3",
+        "id": "diy_microsquirt_v3",
+        "pinout": [
+            { "name": "+12V In", "type": "power", "pin": 1, "color": "R" },
+            { "name": "CANH", "type": "can_h", "pin": 2, "color": "L/Y" },
+            { "name": "CANL", "type": "can_l", "pin": 3, "color": "L/R" },
+            { "name": "VR2+", "type": "home_ground", "pin": 4, "color": "R" },
+            { "name": "SPAREADC", "type": "analog_input", "pin": 5, "color": "P/B" },
+            { "name": "FLEX", "type": "digital_input", "pin": 6, "color": "V/W" },
+            { "name": "FIDLE", "type": "auxiliary_output", "pin": 7, "color": "G" },
+            { "name": "Fuel Pump Relay", "type": "auxiliary_output", "pin": 8, "color": "V" },
+            { "name": "INJ 1", "type": "injector", "pin": 9, "color": "G" },
+            { "name": "INJ 2", "type": "injector", "pin": 10, "color": "L" },
+            { "name": "IGN 2", "type": "ignition", "pin": 11, "color": "W/R" },
+            { "name": "IGN 1", "type": "ignition", "pin": 12, "color": "W" },
+            { "name": "RX", "type": null, "pin": 13, "color": null },
+            { "name": "TX", "type": null, "pin": 14, "color": null },
+            { "name": "BOOT LOAD", "type": null, "pin": 15, "color": "V/B" },
+            { "name": "IGN 4", "type": "ignition", "pin": 16, "color": "Y/B" },
+            { "name": "IGN 3", "type": "ignition", "pin": 17, "color": "Y/W" },
+            { "name": "Sensor Ground", "type": "vref_ground", "pin": 18, "color": "W/B" },
+            { "name": "Serial Ground", "type": null, "pin": 19, "color": null },
+            { "name": "Sensor Ground", "type": "vref_ground", "pin": 20, "color": "W/B" },
+            { "name": "VR2-", "type": "home", "pin": 21, "color": "B" },
+            { "name": "Power Ground", "type": "ground", "pin": 22, "color": "B" },
+            { "name": "Power Ground", "type": "ground", "pin": 23, "color": "B" },
+            { "name": "MAP", "type": "analog_input", "pin": 24, "color": "G/R" },
+            { "name": "CLT", "type": "temp", "pin": 25, "color": "Y" },
+            { "name": "MAT", "type": "temp", "pin": 26, "color": "O" },
+            { "name": "TPS", "type": "analog_input", "pin": 27, "color": "L", "tps": true },
+            { "name": "TPS VREF (5V)", "type": "vref", "pin": 28, "color": "Gy" },
+            { "name": "SPAREADC", "type": "analog_input", "pin": 29, "color": "O/G" },
+            { "name": "Opto+", "type": null, "pin": 30, "color": "Gy/R" },
+            { "name": "Opto-", "type": null, "pin": 31, "color": "Gy/B" },
+            { "name": "VR1+", "type": "trigger_ground", "pin": 32, "color": "R" },
+            { "name": "VR1-", "type": "trigger", "pin": 33, "color": "B" },
+            { "name": "O2", "type": "analog_input", "pin": 34, "color": "P" },
+            { "name": "TACHO", "type": "auxiliary_output", "pin": 35, "color": "G/Y" }
+        ],
+        "multipurpose_pins": {
+            "dbw": null,
+            "stepper_valve": null,
+            "3_wire_isc": ["all_auxiliary_outputs"]
+        },
+        "image": {
+            "src": "/ecus/microsquirt_v3.png",
+            "width": 250
+        }
     }
 ]

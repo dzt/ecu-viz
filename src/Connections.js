@@ -156,7 +156,7 @@ class Connections {
                     connList.push(this.connectionHelper(keys, values));
                 }
             } else { // Connections from ECU to injectors
-                if (this.context.injector_mode == 'semi-sequential') {
+                if (this.context.injector_mode == 'semi-sequential' || this.context.injector_mode == 'batch') {
                     let semi_outputs = this.context.injector_assignment[i - 1];
                     for (let j = 0; j < semi_outputs.length; j++) {
                         let inj = semi_outputs[j];
@@ -164,9 +164,6 @@ class Connections {
                         values = [injectorList[i - 1].pin, colorNumber, injectorSignalPin]
                         connList.push(this.connectionHelper(keys, values));
                     }
-                } else if (this.context.injector_mode == 'batch') {
-                    keys = []
-                    values = []
                 } else {
                     keys = [ecuTitle, cableTitle, `Injector ${i}`];
                     values = [injectorList[i - 1].pin, colorNumber, injectorSignalPin];
