@@ -853,7 +853,15 @@
         "multipurpose_pins": {
             "dbw": null,
             "stepper_valve": null,
-            "3_wire_isc": ["all_auxiliary_outputs"]
+            "3_wire_isc": ["all_auxiliary_outputs"],
+            "reserved_io": [
+                { "pin": 6, "type": "flex_fuel" },
+                { "pin": 8, "type": "fuel_pump" },
+                { "pin": 25, "type": "clt" },
+                { "pin": 26, "type": "iat" },
+                { "pin": 27, "type": "tps" },
+                { "pin": 35, "type": "tacho" }
+            ]
         },
         "image": {
             "src": "/ecus/microsquirt_v3.png",
