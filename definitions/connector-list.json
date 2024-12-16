@@ -1195,6 +1195,28 @@
             }
         },
         {
+            "name": "GM TPS (1999-2001 LS 4.8/5.3/6.0)",
+            "allow_multiple": false,
+            "type": "tps",
+            "part_number": "gm_tps",
+            "connector_type": "Female",
+            "restrictions": [],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=314",
+                "estimated_price": 3.75
+            }],
+            "pinout": [
+                { "name": "5V+", "type": "vref", "pin": 1 },
+                { "name": "Ground", "type": "vref_ground", "pin": 2 },
+                { "name": "Signal", "type": "signal", "pin": 3 }
+            ],
+            "image": {
+                "src": "/analog_inputs/gm_tps.png",
+                "height": 120
+            }
+        },
+        {
             "name": "JDLMFG TPS Kit (S4/S5)",
             "allow_multiple": false,
             "type": "tps",
