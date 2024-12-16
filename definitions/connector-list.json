@@ -1730,6 +1730,25 @@
             }
         },
         {
+            "name": "Ford Idle Control Valve",
+            "allow_multiple": false,
+            "part_number": "CX1911",
+            "restrictions": [],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=542",
+                "estimated_price": 2.86
+            }],
+            "pinout": [
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+                { "name": "Trigger", "type": "signal", "pin": 2 }
+            ],
+            "image": {
+                "src": "/generic/2pin.png",
+                "height": 50
+            }
+        },
+        {
             "name": "Toyota VVT-i Solenoid",
             "allow_multiple": false,
             "part_number": "90980-11162",
