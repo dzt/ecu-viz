@@ -21,43 +21,36 @@
         "firing_order": [1, 3, 4, 2]
     },
     {
-        "name": "Nissan SR20DET (S13)",
+        "name": "Nissan SR20",
         "id": "sr20det",
         "type": "piston",
         "cylinders": 4,
         "firing_order": [1, 3, 4, 2]
     },
     {
-        "name": "Toyota 1JZ-GTE VVT-i",
-        "id": "1jz_gte_vvti",
+        "name": "Toyota JZ",
+        "id": "jz",
         "type": "piston",
         "cylinders": 6,
         "firing_order": [1, 5, 3, 6, 2, 4]
     },
     {
         "name": "Toyota 1UZ-FE",
-        "id": "1jz_uz_fe",
+        "id": "1uz_fe",
         "type": "piston",
         "cylinders": 8,
         "firing_order": [1, 8, 4, 3, 6, 5, 7, 2]
     },
     {
-        "name": "Toyota 2JZ-GE VVT-i",
-        "id": "2jz_ge_vvti",
-        "type": "piston",
-        "cylinders": 6,
-        "firing_order": [1, 5, 3, 6, 2, 4]
-    },
-    {
-        "name": "Toyota 2JZ-GE VVT-i",
-        "id": "2jz_ge_vvti",
-        "type": "piston",
-        "cylinders": 6,
-        "firing_order": [1, 5, 3, 6, 2, 4]
-    },
-    {
         "name": "Nissan RB25DET",
         "id": "rb25det",
+        "type": "piston",
+        "cylinders": 6,
+        "firing_order": [1, 5, 3, 6, 2, 4]
+    },
+    {
+        "name": "BMW M50/M52",
+        "id": "bmw_m5x",
         "type": "piston",
         "cylinders": 6,
         "firing_order": [1, 5, 3, 6, 2, 4]

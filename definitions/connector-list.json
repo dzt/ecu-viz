@@ -1195,7 +1195,7 @@
             }
         },
         {
-            "name": "GM TPS (1999-2001 LS 4.8/5.3/6.0)",
+            "name": "GM TPS (1999-2001 LS Variant)",
             "allow_multiple": false,
             "type": "tps",
             "part_number": "gm_tps",
@@ -2018,7 +2018,11 @@
             "part_number": "JZ_CAM_CRANK",
             "connector_type": "Female",
             "restrictions": [],
-            "sources": [],
+            "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=434",
+                "estimated_price": 3.26
+            }],
             "pinout": [
                 { "name": "Cam Sensor (G+)", "type": "home", "pin": 1 },
                 { "name": "Cam Sensor (G-)", "type": "home_ground", "pin": 2 },
@@ -2156,6 +2160,44 @@
             ],
             "image": {
                 "src": "/trigger_sensors/ka24de_s14.png",
+                "height": 200
+            }
+        },
+        {
+            "name": "BMW M50 (Non-TU Engine Code)",
+            "part_number": "M50_NON_TU",
+            "connector_type": "Female",
+            "restrictions": [],
+            "sources": [],
+            "pinout": [
+                { "name": "Crank Signal (+)", "type": "trigger", "pin": 1 },
+                { "name": "Crank Signal (-)", "type": "trigger_ground", "pin": 2 },
+                { "name": "No Connection", "type": null, "pin": 3 },
+                { "name": "Cam Signal (-)", "type": "home_ground", "pin": 4 },
+                { "name": "Cam Signal (+)", "type": "home", "pin": 5 },
+                { "name": "No Connection", "type": null, "pin": 6 }
+            ],
+            "image": {
+                "src": "/trigger_sensors/m50.png",
+                "height": 200
+            }
+        },
+        {
+            "name": "BMW M50 (TU or Vanos Engine Code)",
+            "part_number": "M50_TU",
+            "connector_type": "Female",
+            "restrictions": [],
+            "sources": [],
+            "pinout": [
+                { "name": "Crank Signal (+)", "type": "trigger", "pin": 1 },
+                { "name": "Crank Signal (-)", "type": "trigger_ground", "pin": 2 },
+                { "name": "No Connection", "type": null, "pin": 3 },
+                { "name": "Switched 12V+", "type": "switched_12v", "pin": 4 },
+                { "name": "Cam Signal (+)", "type": "home", "pin": 5 },
+                { "name": "Signal Ground", "type": "home_ground", "pin": 6 }
+            ],
+            "image": {
+                "src": "/trigger_sensors/m50.png",
                 "height": 200
             }
         }
