@@ -1162,7 +1162,7 @@
                 { "name": "Ground", "type": null, "pin": 4 },
                 { "name": "Ground", "type": null, "pin": 5 },
                 { "name": "Fused Switched 12V+ (15A - ENG CONTROL Fuse)", "type": "switched_12v", "pin": 6 },
-                { "name": "? 12V+ to OEM ECU, Air Copressor Relay, & P/S Switch", "type": null, "pin": 7 },
+                { "name": "12V+ to OEM ECU, Air Copressor Relay, & P/S Switch", "type": null, "pin": 7 },
                 { "name": "Injector Cooling Fan Timer", "type": null, "pin": 8 },
                 { "name": "Fuel Pump Relay Control", "type": "fuel_pump", "pin": 9 },
                 { "name": "nc", "type": null, "pin": 10 },
@@ -1175,6 +1175,110 @@
             ],
             "image": {
                 "src": "/chassis/z31/83m.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "MX83_T5",
+            "allow_multiple": false,
+            "part_number": "MX83_T5",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "Battery", "type": "constant_12v", "pin": 1 },
+                { "name": "Ignition Switch", "type": "switched_12v", "pin": 2 },
+                { "name": "Park", "type": null, "pin": 3 },
+                { "name": "Main Relay", "type": null, "pin": 4 },
+                { "name": "W", "type": null, "pin": 5 },
+                { "name": "Fuel Pump Relay", "type": "fuel_pump", "pin": 6 },
+                { "name": "TT", "type": null, "pin": 7 },
+                { "name": "SP2", "type": null, "pin": 8 },
+                { "name": "Speedometer", "type": null, "pin": 9 },
+                { "name": "Air Conditioning Output", "type": null, "pin": 10 },
+                { "name": "STA", "type": null, "pin": 11 },
+                { "name": "+B1", "type": null, "pin": 12 },
+                { "name": "+B", "type": null, "pin": 13 },
+                { "name": "S", "type": null, "pin": 14 },
+                { "name": "M", "type": null, "pin": 15 },
+                { "name": "L", "type": null, "pin": 16 },
+                { "name": "nc", "type": null, "pin": 17 },
+                { "name": "nc", "type": null, "pin": 18 },
+                { "name": "nc", "type": null, "pin": 19 },
+                { "name": "OD2", "type": null, "pin": 20 },
+                { "name": "OD1", "type": null, "pin": 21 },
+                { "name": "Neutral Safety Switch", "type": null, "pin": 22 }
+            ],
+            "image": {
+                "src": "/chassis/mx83/t5.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "MX83_B1",
+            "allow_multiple": false,
+            "part_number": "MX83_B1",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "ECU, O2, Idle Control Valve Power", "type": "switched_12v", "pin": 1 },
+                { "name": "Injector Power", "type": "switched_12v", "pin": 2 },
+                { "name": "nc", "type": null, "pin": 3 },
+                { "name": "Injector Power", "type": "switched_12v", "pin": 4 }
+            ],
+            "image": {
+                "src": "/chassis/mx83/b1.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "MX83_B3",
+            "allow_multiple": false,
+            "part_number": "MX83_B3",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "nc", "type": null, "pin": 1 },
+                { "name": "Oxygen Sensor Heater", "type": null, "pin": 2 },
+                { "name": "Ground", "type": null, "pin": 3 },
+                { "name": "nc", "type": null, "pin": 4 },
+                { "name": "Circuit Opening Relay 12V+ Output", "type": null, "pin": 5 },
+                { "name": "AFM Ground", "type": null, "pin": 6 },
+                { "name": "Neutral Safety Switch", "type": null, "pin": 7 },
+                { "name": "nc", "type": null, "pin": 8 },
+                { "name": "Cold Start Injector", "type": null, "pin": 9 },
+                { "name": "Oxygen Sensor OX2", "type": null, "pin": 10 },
+                { "name": "Circuit Opening Relay Trigger", "type": null, "pin": 11 },
+                { "name": "Cranking 12V+ directly to Starter", "type": null, "pin": 12 },
+                { "name": "Reverse Light (Constant 12V+)", "type": null, "pin": 13 },
+                { "name": "Stop Light Switch ECU 12V+ Input", "type": null, "pin": 14 }
+            ],
+            "image": {
+                "src": "/chassis/mx83/b3.png",
+                "height": 120
+            }
+        },
+        {
+            "name": "MX83_C1",
+            "allow_multiple": false,
+            "part_number": "MX83_C1",
+            "connector_type": "Female",
+            "sources": [],
+            "pinout": [
+                { "name": "Tachometer Signal", "type": "tacho", "pin": 1 },
+                { "name": "Water Temp Sender to Cluster", "type": null, "pin": 2 },
+                { "name": "Ground", "type": null, "pin": 3 },
+                { "name": "Oil Preassure Switch (to cluster)", "type": null, "pin": 4 },
+                { "name": "nc", "type": null, "pin": 5 },
+                { "name": "Park Indicator", "type": null, "pin": 6 },
+                { "name": "Reverse Indicator", "type": null, "pin": 7 },
+                { "name": "Neutral Indicator", "type": null, "pin": 8 },
+                { "name": "Drive Indicator", "type": null, "pin": 9 },
+                { "name": "2 Indicator", "type": null, "pin": 10 },
+                { "name": "L Indicator", "type": null, "pin": 11 },
+                { "name": "nc", "type": null, "pin": 12 }
+            ],
+            "image": {
+                "src": "/chassis/mx83/c1.png",
                 "height": 120
             }
         }

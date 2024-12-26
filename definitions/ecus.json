@@ -238,7 +238,7 @@
             { "name": "WBO RE (Vs)", "type": "wbo_vs", "pin": "B14", "color": "L/W" },
             { "name": "An Volt 6", "type": "analog_input", "pin": "B15", "color": "W/R" },
             { "name": "An Volt 7", "type": "analog_input", "pin": "B16", "color": "W/O" },
-            { "name": "Shield / Ground", "type": "trigger_ground", "pin": "B17", "color": "G" },
+            { "name": "Shield / Ground", "type": "shield_ground", "pin": "B17", "color": "G" },
             { "name": "Auxiliary Output 9", "type": "auxiliary_output", "pin": "B18", "color": "V" },
             { "name": "Digital Input 6", "type": "digital_input", "pin": "B19", "color": "Gy/G" },
             { "name": "Digital Input 5", "type": "digital_input", "pin": "B20", "color": "Gy/Y" },

@@ -525,5 +525,76 @@
             [{ "GX_100_CF2": 5 }, { "Starter": 1 }],
             [{ "GX_100_CF3": 2 }, { "GX_100_CF2": 1 }]
         ]
+    },
+    {
+        "id": "MX83_MREL_BYPASS",
+        "name": "Main Relay / Circuit Opening Relay Bypass",
+        "required": true,
+        "colors": ["Gy", "B/Y"],
+        "additional_connectors": [],
+        "connections": [
+            [{ "MX83_T5": 4 }, { "MX83_T5": 2 }],
+            [{ "MX83_B3": 11 }, { "MX83_B3": 3 }]
+        ]
+    },
+    {
+        "id": "MX83_STARTER_CONTROL",
+        "name": "Starter Control",
+        "required": false,
+        "colors": ["B"],
+        "additional_connectors": [
+            { "category": "generics", "name": "Starter" }
+        ],
+        "connections": [
+            [{ "MX83_B3": 7 }, { "Starter": 1 }]
+        ]
+    },
+    {
+        "id": "MX83_SPEEDO",
+        "name": "ECU Speedometer Input",
+        "required": false,
+        "colors": ["AUTO"],
+        "additional_connectors": [],
+        "connections": [
+            [{ "MX83_T5": 9 }, "digital_input"]
+        ]
+    },
+    {
+        "id": "MX83_CLT",
+        "name": "Coolant Temp (Instrument Cluster)",
+        "required": false,
+        "colors": ["Y/B"],
+        "additional_connectors": [
+            { "category": "generics", "name": "Female Spade" }
+        ],
+        "connections": [
+            [{ "MX83_C1": 2 }, { "Female Spade": 1 }]
+        ]
+    },
+    {
+        "id": "MX83_OIL_PRES",
+        "name": "Oil Pressure Switch (Instrument Cluster)",
+        "required": false,
+        "colors": ["Y"],
+        "additional_connectors": [
+            { "category": "generics", "name": "Female Spade" }
+        ],
+        "connections": [
+            [{ "MX83_C1": 4 }, { "Female Spade": 1 }]
+        ]
+    },
+    {
+        "id": "MX83_REVERSE_SWITCH",
+        "name": "Reverse Light Switch",
+        "required": false,
+        "colors": ["Y", "R/B"],
+        "additional_connectors": [
+            { "category": "accessories", "name": "TOYOTA_R154_REVERSE_SWITCH" }
+        ],
+        "connections": [
+            [{ "MX83_B3": 13 }, { "TOYOTA_R154_REVERSE_SWITCH": 1 }],
+            [{ "MX83_C1": 7 }, { "TOYOTA_R154_REVERSE_SWITCH": 2 }]
+        ]
     }
+
 ]

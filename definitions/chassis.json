@@ -104,6 +104,21 @@
         "insert_options": []
     },
     {
+        "name": "Toyota Cressida (1989-1992, MX83)",
+        "id": "mx83",
+        "fuel_pump_12v": false,
+        "dbw_pedal": false,
+        "chassis_connectors": ["MX83_T5", "MX83_B1", "MX83_B3", "MX83_C1"],
+        "insert_options": [
+            "MX83_MREL_BYPASS",
+            "MX83_STARTER_CONTROL",
+            "MX83_SPEEDO",
+            "MX83_CLT",
+            "MX83_OIL_PRES",
+            "MX83_REVERSE_SWITCH"
+        ]
+    },
+    {
         "name": "Toyota Chaser/Cresta/MKII (JZX100, 1996-1998)",
         "id": "jzx_100",
         "fuel_pump_12v": false,
