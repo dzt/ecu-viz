@@ -1,0 +1,38 @@
+[
+    {
+        "name": "GM/Delphi IAT",
+        "allow_multiple": false,
+        "part_number": "15449027",
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=540",
+            "estimated_price": 1.96
+        }],
+        "pinout": [
+            { "name": "Signal", "type": "signal", "pin": 1 },
+            { "name": "Ground", "type": "vref_ground", "pin": 2 }
+        ],
+        "image": {
+            "src": "/generic/temp_2pin.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Link ECU IAT",
+        "allow_multiple": false,
+        "part_number": "101-0045",
+        "sources": [{
+            "seller": "Race Spec",
+            "url": "https://racespeconline.com/products/dtm-socket-connector-kits",
+            "estimated_price": 6.00
+        }],
+        "pinout": [
+            { "name": "Signal", "type": "signal", "pin": 1 },
+            { "name": "Ground", "type": "vref_ground", "pin": 2 }
+        ],
+        "image": {
+            "src": "/generic/temp_2pin.png",
+            "height": 120
+        }
+    }
+]

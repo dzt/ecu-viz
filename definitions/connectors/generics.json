@@ -1,0 +1,41 @@
+[
+    {
+        "name": "Starter",
+        "part_number": "starter_conn",
+        "connector_type": "Female",
+        "sources": [],
+        "pinout": [
+            { "name": "Cranking 12V+", "type": null, "pin": 1 }
+        ],
+        "image": {
+            "src": "/generic/starter.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Female Spade",
+        "part_number": "female_spade",
+        "connector_type": "Female",
+        "sources": [],
+        "pinout": [
+            { "name": "Signal", "type": null, "pin": 1 }
+        ],
+        "image": {
+            "src": "/generic/female_spade.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Ground Terminal",
+        "part_number": "ground_terminal",
+        "connector_type": "terminal",
+        "sources": [],
+        "pinout": [
+            { "name": "Connection", "type": null, "pin": 1 }
+        ],
+        "image": {
+            "src": "/generic/ground.png",
+            "height": 120
+        }
+    }
+]

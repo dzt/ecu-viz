@@ -1,0 +1,44 @@
+[
+    {
+        "name": "GaugeArt CAN Gauge",
+        "allow_multiple": true,
+        "part_number": "DTM4-N-SF",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Race Spec",
+            "url": "https://racespeconline.com/products/dtm-socket-connector-kits",
+            "estimated_price": 9.00
+        }],
+        "pinout": [
+            { "name": "Ignition Switched +12V", "type": "switched_12v", "pin": 1 },
+            { "name": "Ground", "type": "ground", "pin": 2 },
+            { "name": "CAN High", "type": "can_h", "pin": 3 },
+            { "name": "CAN Low", "type": "can_l", "pin": 4 }
+        ],
+        "image": {
+            "src": "/generic/can.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Link CAN Lambda",
+        "allow_multiple": true,
+        "part_number": "DTM4-N-SF",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Race Spec",
+            "url": "https://racespeconline.com/products/dtm-socket-connector-kits",
+            "estimated_price": 9.00
+        }],
+        "pinout": [
+            { "name": "Ignition Switched +12V", "type": "switched_12v", "pin": 1 },
+            { "name": "Ground", "type": "ground", "pin": 2 },
+            { "name": "CAN High", "type": "can_h", "pin": 3 },
+            { "name": "CAN Low", "type": "can_l", "pin": 4 }
+        ],
+        "image": {
+            "src": "/generic/can.png",
+            "height": 120
+        }
+    }
+]

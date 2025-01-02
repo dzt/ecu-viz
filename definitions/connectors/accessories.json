@@ -1,0 +1,88 @@
+[
+    {
+        "name": "Series 4 RX-7 Alternator",
+        "part_number": "6111-2568",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=358",
+            "estimated_price": 1.19
+        }],
+        "pinout": [
+            { "name": "Switched 12V+", "type": "r_terminal", "pin": 1 },
+            { "name": "Alternator Charge Light", "type": "l_terminal", "pin": 2 }
+        ],
+        "image": {
+            "src": "/accessories/s4_rx7_alt.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Series 5/6 RX-7 Alternator",
+        "part_number": "7223-6224-40",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=1125",
+            "estimated_price": 4.19
+        }],
+        "pinout": [
+            { "name": "Constant 12V+", "type": "s_terminal", "pin": 1 },
+            { "name": "Alternator Charge Light", "type": "l_terminal", "pin": 2 }
+        ],
+        "image": {
+            "src": "/accessories/s5_s6_rx7_alt.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "TOYOTA_SPEEDO_3WAY",
+        "part_number": "9080-11143",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "toyotapartsdeal.com",
+            "url": "https://www.toyotapartsdeal.com/oem/toyota~housing~connector~f~90980-11143.html",
+            "estimated_price": 8.93
+        }],
+        "pinout": [
+            { "name": "12V+", "type": null, "pin": 1 },
+            { "name": "Ground", "type": null, "pin": 2 },
+            { "name": "Signal", "type": null, "pin": 2 }
+        ],
+        "image": {
+            "src": "/accessories/toyota_speedo_3way.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "TOYOTA_R154_REVERSE_SWITCH",
+        "part_number": "9080-11142",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "toyotapartsdeal.com",
+            "url": "https://www.toyotapartsdeal.com/oem/toyota~housing~connector~f~90980-11142.html",
+            "estimated_price": 4.52
+        }],
+        "pinout": [
+            { "name": "Load", "type": null, "pin": 1 },
+            { "name": "Output", "type": null, "pin": 2 }
+        ],
+        "image": {
+            "src": "/accessories/r154_reverse.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "TOYOTA_JZ_CLT",
+        "part_number": "TOYOTA_JZ_CLT",
+        "connector_type": "Female",
+        "sources": [],
+        "pinout": [
+            { "name": "Signal", "type": null, "pin": 1 }
+        ],
+        "image": {
+            "src": "/accessories/toyota_jz_clt.png",
+            "height": 120
+        }
+    }
+]

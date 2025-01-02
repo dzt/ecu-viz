@@ -1,0 +1,211 @@
+[
+    {
+        "name": "Mazda S4/S5 RX-7 CAS",
+        "part_number": "6187-4441",
+        "connector_type": "Female",
+        "restrictions": ["13b"],
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=341",
+            "estimated_price": 3.17
+        }],
+        "pinout": [
+            { "name": "G+", "type": "home", "pin": 1 },
+            { "name": "G-", "type": "home_ground", "pin": 2 },
+            { "name": "Ne+", "type": "trigger", "pin": 3 },
+            { "name": "Ne-", "type": "trigger_ground", "pin": 4 }
+        ],
+        "image": {
+            "src": "/trigger_sensors/s4_s5_cas.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Toyota 1JZ/2JZ/1UZ Cam/Crank Sensor",
+        "part_number": "JZ_CAM_CRANK",
+        "connector_type": "Female",
+        "restrictions": [],
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=434",
+            "estimated_price": 3.26
+        }],
+        "pinout": [
+            { "name": "Cam Sensor (G+)", "type": "home", "pin": 1 },
+            { "name": "Cam Sensor (G-)", "type": "home_ground", "pin": 2 },
+            { "name": "Crank Sensor (Ne+)", "type": "trigger", "pin": 3 },
+            { "name": "Crank Sensor (Ne-)", "type": "trigger_ground", "pin": 4 }
+        ],
+        "image": {
+            "src": "/trigger_sensors/jz_cam_crank.png",
+            "height": 440
+        }
+    },
+    {
+        "name": "Mazda S6/S7/S8 RX-7 Trigger Sensor",
+        "part_number": "S6/S7/S8",
+        "connector_type": "Female",
+        "restrictions": ["13b"],
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=341",
+            "estimated_price": 3.17
+        }],
+        "pinout": [
+            { "name": "Ne-", "type": "trigger_ground", "pin": 1 },
+            { "name": "Ne+", "type": "trigger", "pin": 2 },
+            { "name": "G-", "type": "home_ground", "pin": 3 },
+            { "name": "G+", "type": "home", "pin": 4 }
+        ],
+        "image": {
+            "src": "/trigger_sensors/s6_rx7.png",
+            "height": 250
+        }
+    },
+    {
+        "name": "Full Function Engineering 13B Trigger Kit",
+        "part_number": "FFE-TRIGGER-KIT",
+        "connector_type": "Female",
+        "restrictions": ["13b"],
+        "sources": [{
+            "seller": "Race Spec",
+            "url": "https://racespeconline.com/products/dtm-connector-kits",
+            "estimated_price": 9.00
+        }],
+        "pinout": [
+            { "name": "Signal", "type": "trigger", "pin": 1 },
+            { "name": "Ground", "type": "trigger_ground", "pin": 2 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 3 }
+        ],
+        "image": {
+            "src": "/generic/3pin.png",
+            "height": 90
+        }
+    },
+    {
+        "name": "Nissan ECCS (SR/KA/RB) - Link G3/G4+ Specific",
+        "part_number": "WS_SR20-CAM-CON_LINK",
+        "connector_type": "Female",
+        "restrictions": ["sr20det"],
+        "sources": [{
+            "seller": "Wiring Specialties",
+            "url": "https://www.wiringspecialties.com/srcamposeco.html",
+            "estimated_price": 9.95
+        }],
+        "pinout": [
+            { "name": "4x (REF)", "type": "home", "pin": 1 },
+            { "name": "360x (POS)", "type": "trigger", "pin": 2 }, 
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 3 },
+            { "name": "Signal Ground", "type": "home_ground", "pin": 4 }
+        ],
+        "image": {
+            "src": "/trigger_sensors/eccs.png",
+            "height": 200
+        }
+    },
+    {
+        "name": "Nissan 4-Pin ECCS (SR/KA/RB)",
+        "part_number": "WS_SR20-CAM-CON",
+        "connector_type": "Female",
+        "restrictions": ["sr20det"],
+        "sources": [{
+            "seller": "Wiring Specialties",
+            "url": "https://www.wiringspecialties.com/srcamposeco.html",
+            "estimated_price": 9.95
+        }],
+        "pinout": [
+            { "name": "4x (REF)", "type": "trigger", "pin": 1 },
+            { "name": "360x (POS)", "type": "home", "pin": 2 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 3 },
+            { "name": "Signal Ground", "type": "home_ground", "pin": 4 }
+        ],
+        "image": {
+            "src": "/trigger_sensors/eccs.png",
+            "height": 200
+        }
+    },
+    {
+        "name": "Nissan ECCS 6-Pin - Link G3/G4+ Specific",
+        "part_number": "WS_KA24DE_6PIN_LINK",
+        "connector_type": "Female",
+        "restrictions": ["sr20det"],
+        "sources": [{
+            "seller": "Wiring Specialties",
+            "url": "https://www.wiringspecialties.com/kadipoconews.html",
+            "estimated_price": 9.95
+        }],
+        "pinout": [
+            { "name": "Signal Ground", "type": "trigger_ground", "pin": 1 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 2 },
+            { "name": "360x (POS)", "type": "trigger", "pin": 3 },
+            { "name": "4x (REF)", "type": "home", "pin": 4 },
+            { "name": "Signal Ground", "type": "home_ground", "pin": 5 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 6 }
+        ],
+        "image": {
+            "src": "/trigger_sensors/ka24de_s14.png",
+            "height": 200
+        }
+    },
+    {
+        "name": "Nissan ECCS 6-Pin",
+        "part_number": "WS_KA24DE_6PIN",
+        "connector_type": "Female",
+        "restrictions": ["sr20det"],
+        "sources": [{
+            "seller": "Wiring Specialties",
+            "url": "https://www.wiringspecialties.com/kadipoconews.html",
+            "estimated_price": 9.95
+        }],
+        "pinout": [
+            { "name": "Signal Ground", "type": "trigger_ground", "pin": 1 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 2 },
+            { "name": "360x (POS)", "type": "home", "pin": 3 },
+            { "name": "4x (REF)", "type": "trigger", "pin": 4 },
+            { "name": "Signal Ground", "type": "home_ground", "pin": 5 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 6 }
+        ],
+        "image": {
+            "src": "/trigger_sensors/ka24de_s14.png",
+            "height": 200
+        }
+    },
+    {
+        "name": "BMW M50 (Non-TU Engine Code)",
+        "part_number": "M50_NON_TU",
+        "connector_type": "Female",
+        "restrictions": [],
+        "sources": [],
+        "pinout": [
+            { "name": "Crank Signal (+)", "type": "trigger", "pin": 1 },
+            { "name": "Crank Signal (-)", "type": "trigger_ground", "pin": 2 },
+            { "name": "No Connection", "type": null, "pin": 3 },
+            { "name": "Cam Signal (-)", "type": "home_ground", "pin": 4 },
+            { "name": "Cam Signal (+)", "type": "home", "pin": 5 },
+            { "name": "No Connection", "type": null, "pin": 6 }
+        ],
+        "image": {
+            "src": "/trigger_sensors/m50.png",
+            "height": 200
+        }
+    },
+    {
+        "name": "BMW M50 (TU or Vanos Engine Code)",
+        "part_number": "M50_TU",
+        "connector_type": "Female",
+        "restrictions": [],
+        "sources": [],
+        "pinout": [
+            { "name": "Crank Signal (+)", "type": "trigger", "pin": 1 },
+            { "name": "Crank Signal (-)", "type": "trigger_ground", "pin": 2 },
+            { "name": "No Connection", "type": null, "pin": 3 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 4 },
+            { "name": "Cam Signal (+)", "type": "home", "pin": 5 },
+            { "name": "Signal Ground", "type": "home_ground", "pin": 6 }
+        ],
+        "image": {
+            "src": "/trigger_sensors/m50.png",
+            "height": 200
+        }
+    }
+]

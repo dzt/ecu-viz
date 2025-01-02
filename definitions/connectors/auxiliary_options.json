@@ -1,0 +1,148 @@
+[
+    {
+        "name": "Generic 2-Wire Idle Control Valve",
+        "allow_multiple": false,
+        "part_number": "2-wire-idle-valve",
+        "restrictions": [],
+        "sources": [],
+        "pinout": [
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+            { "name": "Trigger", "type": "signal", "pin": 2 }
+        ],
+        "image": {
+            "src": "/generic/2pin.png",
+            "height": 50
+        }
+    },
+    {
+        "name": "Ford Idle Control Valve",
+        "allow_multiple": false,
+        "part_number": "CX1911",
+        "restrictions": [],
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=542",
+            "estimated_price": 2.86
+        }],
+        "pinout": [
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+            { "name": "Trigger", "type": "signal", "pin": 2 }
+        ],
+        "image": {
+            "src": "/generic/2pin.png",
+            "height": 50
+        }
+    },
+    {
+        "name": "Toyota VVT-i Solenoid",
+        "allow_multiple": false,
+        "part_number": "90980-11162",
+        "restrictions": [],
+        "sources": [{
+            "seller": "ProWire USA",
+            "url": "https://www.prowireusa.com/68122",
+            "estimated_price": 5.04
+        }],
+        "pinout": [
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+            { "name": "Trigger", "type": "signal", "pin": 2 }
+        ],
+        "image": {
+            "src": "/generic/toyota_vvti.png",
+            "height": 50
+        }
+    },
+    {
+        "name": "S5/S6 Idle Valve",
+        "allow_multiple": false,
+        "part_number": "7223-1324-30",
+        "restrictions": ["13b"],
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=815",
+            "estimated_price": 4.91
+        }],
+        "pinout": [
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+            { "name": "Trigger", "type": "signal", "pin": 2 }
+        ],
+        "image": {
+            "src": "/generic/2pin.png",
+            "height": 50
+        }
+    },
+    {
+        "name": "Nissan Idle Control Valve (Brown)",
+        "allow_multiple": false,
+        "part_number": "WS_KA24-IACON-LT",
+        "restrictions": ["ka24de"],
+        "sources": [{
+            "seller": "Wiring Specialties",
+            "url": "https://www.wiringspecialties.com/s14kaidairco.html",
+            "estimated_price": 9.95
+        }],
+        "pinout": [
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+            { "name": "Trigger", "type": "signal", "pin": 2 }
+        ],
+        "image": {
+            "src": "/generic/2pin.png",
+            "height": 50
+        }
+    },
+    {
+        "name": "Nissan Idle Control Valve (Purple)",
+        "allow_multiple": false,
+        "part_number": "WRB25-IDL-RB",
+        "restrictions": ["ka24de"],
+        "sources": [{
+            "seller": "Wiring Specialties",
+            "url": "https://www.wiringspecialties.com/rbidairpi.html",
+            "estimated_price": 9.95
+        }],
+        "pinout": [
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+            { "name": "Trigger", "type": "signal", "pin": 2 }
+        ],
+        "image": {
+            "src": "/generic/2pin.png",
+            "height": 50
+        }
+    },
+    {
+        "name": "Boost Control",
+        "allow_multiple": true,
+        "part_number": "boost",
+        "sources": [{
+            "seller": "Race Spec",
+            "url": "https://racespeconline.com/products/dt-connector-kits",
+            "estimated_price": 9.00
+        }],
+        "pinout": [
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+            { "name": "Trigger", "type": "signal", "pin": 2 }
+        ],
+        "image": {
+            "src": "/generic/2pin.png",
+            "height": 50
+        }
+    },
+    {
+        "name": "Cooling Fan Output",
+        "allow_multiple": true,
+        "part_number": "fan-1way",
+        "sources": [{
+            "seller": "Race Spec",
+            "url": "https://racespeconline.com/products/dt-connector-kits",
+            "estimated_price": 9.00
+        }],
+        "pinout": [
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+            { "name": "Trigger", "type": "signal", "pin": 2 }
+        ],
+        "image": {
+            "src": "/generic/2pin.png",
+            "height": 50
+        }
+    }
+]

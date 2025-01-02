@@ -1,0 +1,89 @@
+[
+    {
+        "name": "Toyota 6-Wire Idle Air Control Valve",
+        "part_number": "90980-11144",
+        "connector_type": "terminal",
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=963&page=2",
+            "estimated_price": 4.74
+        }],
+        "pinout": [
+            { "name": "Stepper 4", "type": "step_4", "pin": 1 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 2 },
+            { "name": "Stepper 3", "type": "step_3", "pin": 3 },
+            { "name": "Stepper 2", "type": "step_2", "pin": 4 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 5 },
+            { "name": "Stepper 1", "type": "step_1", "pin": 6 }
+        ],
+        "image": {
+            "src": "/stepper_valves/toyota_6pin.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Mitsubishi 6-Wire Idle Air Control Valve",
+        "part_number": "Mitsubishi_6pin_Idle",
+        "connector_type": "terminal",
+        "sources": [],
+        "pinout": [
+            { "name": "Stepper 4", "type": "step_4", "pin": 1 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 2 },
+            { "name": "Stepper 3", "type": "step_3", "pin": 3 },
+            { "name": "Stepper 2", "type": "step_2", "pin": 4 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 5 },
+            { "name": "Stepper 1", "type": "step_1", "pin": 6 }
+        ],
+        "image": {
+            "src": "/stepper_valves/mitsubishi_6pin.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "GM/Holden 4-Wire Idle Air Control Valve (Oval Connector)",
+        "part_number": "gm_4pin_iacv_type_1",
+        "connector_type": "terminal",
+        "sources": [],
+        "pinout": [
+            { "name": "Stepper 4", "type": "step_4", "pin": 1 },
+            { "name": "Stepper 3", "type": "step_3", "pin": 2 },
+            { "name": "Stepper 2", "type": "step_2", "pin": 3 },
+            { "name": "Stepper 1", "type": "step_1", "pin": 4 }
+        ],
+        "image": {
+            "src": "/stepper_valves/gm_type_1.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "GM/Holden 4-Wire Idle Air Control Valve (Square Connector)",
+        "part_number": "gm_4pin_iacv_type_2",
+        "connector_type": "terminal",
+        "sources": [],
+        "pinout": [
+            { "name": "Stepper 4", "type": "step_4", "pin": 1 },
+            { "name": "Stepper 3", "type": "step_3", "pin": 2 },
+            { "name": "Stepper 2", "type": "step_2", "pin": 3 },
+            { "name": "Stepper 1", "type": "step_1", "pin": 4 }
+        ],
+        "image": {
+            "src": "/stepper_valves/gm_type_2.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Bosch 3-Wire Idle Control Valve",
+        "part_number": "bosch_3_wire",
+        "connector_type": "terminal",
+        "sources": [],
+        "pinout": [
+            { "name": "Open", "type": "open", "pin": 1 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 2 },
+            { "name": "Closed", "type": "close", "pin": 3 }
+        ],
+        "image": {
+            "src": "/stepper_valves/bosch_3pin.png",
+            "height": 120
+        }
+    }
+]

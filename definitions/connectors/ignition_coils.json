@@ -1,0 +1,133 @@
+[
+    {
+        "name": "GM/Delphi Ignition Coil",
+        "type": "direct_fire",
+        "allow_multiple": false,
+        "part_number": "15439568",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=1049",
+            "estimated_price": 2.98
+        }],
+        "pinout": [
+            { "name": "Ground", "type": "ground", "pin": 1 },
+            { "name": "Ground", "type": "ground", "pin": 2 },
+            { "name": "Signal", "type": "signal", "pin": 3 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 4 }
+        ],
+        "image": {
+            "src": "/ignition_coils/gm.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "IGN-1A Ignition Coil",
+        "type": "direct_fire",
+        "allow_multiple": false,
+        "part_number": "12162825",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=573",
+            "estimated_price": 4.48
+        }],
+        "pinout": [
+            { "name": "Signal", "type": "signal", "pin": 1 },
+            { "name": "Ground", "type": "ground", "pin": 2 },
+            { "name": "Ground", "type": "ground", "pin": 3 },
+            { "name": "Ground", "type": "ground", "pin": 4 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 5 }
+        ],
+        "image": {
+            "src": "/ignition_coils/ign1a.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Hitachi R35 Ignition Coil",
+        "type": "direct_fire",
+        "allow_multiple": false,
+        "part_number": "020106",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Race Spec",
+            "url": "https://racespeconline.com/products/gtr-sumi-3-pin",
+            "estimated_price": 8.00
+        }],
+        "pinout": [
+            { "name": "Signal", "type": "signal", "pin": 1 },
+            { "name": "Ground", "type": "ground", "pin": 2 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 3 }
+        ],
+        "image": {
+            "src": "/ignition_coils/r35.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Denso Honda/Acura K-Series Ignition Coil",
+        "type": "direct_fire",
+        "allow_multiple": false,
+        "part_number": "6189-0728",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=713",
+            "estimated_price": 5.44
+        }],
+        "pinout": [
+            { "name": "Signal", "type": "signal", "pin": 1 },
+            { "name": "Ground", "type": "ground", "pin": 2 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 3 }
+        ],
+        "image": {
+            "src": "/ignition_coils/kcoils.png",
+            "height": 200
+        }
+    },
+    {
+        "name": "VW/Audi FSI Ignition Coil",
+        "type": "direct_fire",
+        "allow_multiple": false,
+        "part_number": "8K0973724",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Ballenger Motorsports",
+            "url": "https://www.bmotorsports.com/shop/product_info.php/xrf/gshp/products_id/3366",
+            "estimated_price": 13.99
+        }],
+        "pinout": [
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+            { "name": "Ground", "type": "ground", "pin": 2 },
+            { "name": "Signal", "type": "signal", "pin": 3 },
+            { "name": "Ground", "type": "ground", "pin": 4 }
+        ],
+        "image": {
+            "src": "/ignition_coils/vw_audi_fsi.png",
+            "height": 200
+        }
+    },
+    {
+        "name": "Toyota Yaris/ZZ Ignition Coil",
+        "type": "direct_fire",
+        "allow_multiple": false,
+        "part_number": "10232591297",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Race Spec",
+            "url": "https://racespeconline.com/products/1zz-coil-connector-kit",
+            "estimated_price": 6.00
+        }],
+        "pinout": [
+            { "name": "Ground", "type": "ground", "pin": 1 },
+            { "name": "Signal", "type": "signal", "pin": 2 },
+            { "name": "IGF Fail Signal", "type": null, "pin": 3 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 4 }
+        ],
+        "image": {
+            "src": "/ignition_coils/yaris_zz.png",
+            "height": 200
+        }
+    }
+]

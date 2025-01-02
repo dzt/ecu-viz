@@ -1,0 +1,301 @@
+[
+    {
+        "name": "Wideband (Traditional)",
+        "allow_multiple": false,
+        "part_number": "analog-wideband",
+        "connector_type": "Female",
+        "sources": [],
+        "pinout": [
+            { "name": "Signal", "type": "signal", "pin": 1 }
+        ],
+        "image": {
+            "src": "/generic/wideband.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "GM TPS (1999-2001 LS Variant)",
+        "allow_multiple": false,
+        "type": "tps",
+        "part_number": "gm_tps",
+        "connector_type": "Female",
+        "restrictions": [],
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=314",
+            "estimated_price": 3.75
+        }],
+        "pinout": [
+            { "name": "5V+", "type": "vref", "pin": 1 },
+            { "name": "Ground", "type": "vref_ground", "pin": 2 },
+            { "name": "Signal", "type": "signal", "pin": 3 }
+        ],
+        "image": {
+            "src": "/analog_inputs/gm_tps.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "JDLMFG TPS Kit (S4/S5)",
+        "allow_multiple": false,
+        "type": "tps",
+        "part_number": "4693236940939",
+        "connector_type": "Female",
+        "restrictions": ["13b"],
+        "sources": [{
+            "seller": "Race Spec",
+            "url": "https://racespeconline.com/products/dtm-connector-kits?_pos=1&_sid=b75d05225&_ss=r&variant=12133152897",
+            "estimated_price": 12.00
+        }],
+        "pinout": [
+            { "name": "Signal", "type": "signal", "pin": 1 },
+            { "name": "Ground", "type": "vref_ground", "pin": 2 },
+            { "name": "5V+", "type": "vref", "pin": 3 }
+        ],
+        "image": {
+            "src": "/analog_inputs/jdl_tps.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Toyota 1JZ/2JZ TPS (4 Wire - JZX90/JZX110/JZA80/JCE10/JZS160)",
+        "allow_multiple": false,
+        "type": "tps",
+        "part_number": "jz_4_wire",
+        "connector_type": "Female",
+        "restrictions": [],
+        "sources": [{
+            "seller": "Wiring Specialties",
+            "url": "https://www.wiringspecialties.com/1jz-vvti-etcs-i-tps-throttle-position-sensor-connector/",
+            "estimated_price": 9.95
+        }],
+        "pinout": [
+            { "name": "5V+", "type": "vref", "pin": 1 },
+            { "name": "Signal", "type": "signal", "pin": 2 },
+            { "name": "nc", "type": null, "pin": 3 },
+            { "name": "Signal Ground", "type": "vref_ground", "pin": 4 }
+        ],
+        "image": {
+            "src": "/analog_inputs/jz_4_wire.png",
+            "height": 180
+        }
+    },
+    {
+        "name": "Toyota 1JZ/2JZ TPS (3 Wire - JZX100/JZZ30)",
+        "allow_multiple": false,
+        "type": "tps",
+        "part_number": "jz_3_wire",
+        "connector_type": "Female",
+        "restrictions": [],
+        "sources": [{
+            "seller": "Wiring Specialties",
+            "url": "https://www.wiringspecialties.com/1jz-vvti-tps-throttle-position-sensor-connector/",
+            "estimated_price": 9.95
+        }],
+        "pinout": [
+            { "name": "Signal", "type": "signal", "pin": 1 },
+            { "name": "Ground", "type": "vref_ground", "pin": 2 },
+            { "name": "5V+", "type": "vref", "pin": 3 }
+        ],
+        "image": {
+            "src": "/analog_inputs/jz_3_wire.png",
+            "height": 180
+        }
+    },
+    {
+        "name": "Mazda TPS (S6)",
+        "allow_multiple": false,
+        "type": "tps",
+        "part_number": "6195-0030",
+        "connector_type": "Female",
+        "restrictions": ["13b"],
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=444",
+            "estimated_price": 4.73
+        }],
+        "pinout": [
+            { "name": "Signal", "type": "signal", "pin": 1 },
+            { "name": "5V+", "type": "vref", "pin": 2 },
+            { "name": "Ground", "type": "vref_ground", "pin": 3 }
+        ],
+        "image": {
+            "src": "/analog_inputs/rx7_s6_tps.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Toyota 1UZ-FE 4-Wire TPS",
+        "allow_multiple": false,
+        "type": "tps",
+        "part_number": "90980-10711",
+        "connector_type": "Female",
+        "restrictions": [],
+        "sources": [{
+            "seller": "Ballenger Motorsports",
+            "url": "https://www.bmotorsports.com/shop/product_info.php/products_id/2264",
+            "estimated_price": 5.99
+        }],
+        "pinout": [
+            { "name": "5V+", "type": "vref", "pin": 1 },
+            { "name": "Signal", "type": "signal", "pin": 2 },
+            { "name": "nc", "type": null, "pin": 3 },
+            { "name": "Ground", "type": "vref_ground", "pin": 4 }
+        ],
+        "image": {
+            "src": "/analog_inputs/1uz_fe_tps.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Bosch 3-Wire TPS (Clockwise)",
+        "allow_multiple": false,
+        "type": "tps",
+        "part_number": "H-TPSBCW",
+        "connector_type": "Female",
+        "restrictions": [],
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=1613&category_id=337",
+            "estimated_price": 6.38
+        }],
+        "pinout": [
+            { "name": "5V+", "type": "vref", "pin": 1 },
+            { "name": "Signal", "type": "signal", "pin": 2 },
+            { "name": "Signal Ground", "type": "vref_ground", "pin": 3 }
+        ],
+        "image": {
+            "src": "/analog_inputs/bosch_jetronic_tps.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Bosch 3-Wire TPS (Counter-Clockwise)",
+        "allow_multiple": false,
+        "type": "tps",
+        "part_number": "H-TPSBCCW",
+        "connector_type": "Female",
+        "restrictions": [],
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=1613&category_id=337",
+            "estimated_price": 6.38
+        }],
+        "pinout": [
+            { "name": "Signal Ground", "type": "vref", "pin": 1 },
+            { "name": "Signal", "type": "signal", "pin": 2 },
+            { "name": "5V+", "type": "vref_ground", "pin": 3 }
+        ],
+        "image": {
+            "src": "/analog_inputs/bosch_jetronic_tps.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Nissan S13/S14 KA24DE/RB20 TPS (Gray)",
+        "allow_multiple": false,
+        "type": "tps",
+        "part_number": "WS_WRS-KA24-TPS_S13",
+        "connector_type": "Female",
+        "restrictions": ["ka24de"],
+        "sources": [{
+            "seller": "Wiring Specialties",
+            "url": "https://www.wiringspecialties.com/s13-ka24de-tps-connector/",
+            "estimated_price": 9.95
+        }],
+        "pinout": [
+            { "name": "5V+", "type": "vref", "pin": 1 },
+            { "name": "Signal", "type": "signal", "pin": 2 },
+            { "name": "Signal Ground", "type": "vref_ground", "pin": 3 }
+        ],
+        "image": {
+            "src": "/analog_inputs/ka24de_tps.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Nissan SR20/RB25-S2/S14 Kouki KA24DE TPS (Brown)",
+        "allow_multiple": false,
+        "type": "tps",
+        "part_number": "NSN3PNTPSCOIL",
+        "connector_type": "Female",
+        "restrictions": ["sr20det"],
+        "sources": [{
+            "seller": "Wiring Specialties",
+            "url": "https://www.wiringspecialties.com/w.html",
+            "estimated_price": 9.95
+        }],
+        "pinout": [
+            { "name": "Signal Ground", "type": "vref_ground", "pin": 1 },
+            { "name": "Signal", "type": "signal", "pin": 2 },
+            { "name": "5V+", "type": "vref", "pin": 3 }
+        ],
+        "image": {
+            "src": "/analog_inputs/sr20_3pin.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "GM/Delphi MAP Sensor",
+        "allow_multiple": false,
+        "part_number": "WP-3S-1",
+        "type": "pressure",
+        "connector_type": "Male",
+        "sources": [{
+            "seller": "Ballenger Motorsports",
+            "url": "https://www.bmotorsports.com/shop/product_info.php/xrf/gshp/products_id/463",
+            "estimated_price": 3.99
+        }],
+        "pinout": [
+            { "name": "Signal", "type": "signal", "pin": 1 },
+            { "name": "5V+", "type": "vref", "pin": 2 },
+            { "name": "Ground", "type": "vref_ground", "pin": 3 }
+        ],
+        "image": {
+            "src": "/analog_inputs/gm_map.png",
+            "height": 80
+        }
+    },
+    {
+        "name": "Link ECU MAP Sensor",
+        "allow_multiple": true,
+        "part_number": "LINK-MAP",
+        "type": "pressure",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Race Spec",
+            "url": "https://racespeconline.com/products/dtm-socket-connector-kits",
+            "estimated_price": 6.00
+        }],
+        "pinout": [
+            { "name": "Ground", "type": "vref_ground", "pin": 1 },
+            { "name": "Signal", "type": "signal", "pin": 2 },
+            { "name": "5V+", "type": "vref", "pin": 3 }
+        ],
+        "image": {
+            "src": "/analog_inputs/link_map_sensor.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "GM/Delphi Style Pressure Sensor",
+        "allow_multiple": true,
+        "part_number": "12065287",
+        "type": "pressure",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=314",
+            "estimated_price": 3.75
+        }],
+        "pinout": [
+            { "name": "Signal", "type": "signal", "pin": 1 },
+            { "name": "5V+", "type": "vref", "pin": 2 },
+            { "name": "Ground", "type": "vref_ground", "pin": 3 }
+        ],
+        "image": {
+            "src": "/analog_inputs/gm_pressure_fluid.png",
+            "height": 120
+        }
+    }
+]

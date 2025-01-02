@@ -1186,7 +1186,7 @@
             "sources": [],
             "pinout": [
                 { "name": "Battery", "type": "constant_12v", "pin": 1 },
-                { "name": "Ignition Switch", "type": "switched_12v", "pin": 2 },
+                { "name": "Ignition Switch", "type": null, "pin": 2 },
                 { "name": "Park", "type": null, "pin": 3 },
                 { "name": "Main Relay", "type": null, "pin": 4 },
                 { "name": "W", "type": null, "pin": 5 },

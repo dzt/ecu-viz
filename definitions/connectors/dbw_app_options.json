@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Bosch DBW Pedal",
+        "part_number": "bosch_dbw_pedal_1",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Haltech",
+            "url": "https://www.haltech.com/product/ht-030431-bosch-dbw-pedal-assembly-connector-kit/",
+            "estimated_price": 16.00
+        }],
+        "pinout": [
+            { "name": "+5V In", "type": "vref", "pin": 1 },
+            { "name": "+5V In", "type": "vref", "pin": 2 },
+            { "name": "Signal Ground", "type": "vref_ground", "pin": 3 },
+            { "name": "Pedal Signal 1", "type": "signal", "pin": 4 },
+            { "name": "Signal Ground", "type": "vref_ground", "pin": 5 },
+            { "name": "Pedal Signal 2", "type": "signal", "pin": 6 }
+        ],
+        "image": {
+            "src": "/dbw/bosch_app.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Mazda RX-8 Pedal",
+        "part_number": "rx8_pedal",
+        "connector_type": "Female",
+        "sources": [],
+        "pinout": [
+            { "name": "+5V In (A)", "type": "vref", "pin": 1 },
+            { "name": "Signal Ground (B)", "type": "vref_ground", "pin": 2 },
+            { "name": "Pedal Signal 1 (C)", "type": "signal", "pin": 3 },
+            { "name": "+5V In (D)", "type": "vref", "pin": 4 },
+            { "name": "Signal Ground (E)", "type": "vref_ground", "pin": 5 },
+            { "name": "Pedal Signal 2 (F)", "type": "signal", "pin": 6 }
+        ],
+        "image": {
+            "src": "/dbw/rx8_app.png",
+            "height": 120
+        }
+    }
+]

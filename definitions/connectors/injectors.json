@@ -1,0 +1,56 @@
+[
+    {
+        "name": "EV1 Injector",
+        "allow_multiple": false,
+        "part_number": "282189-1",
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=1217",
+            "estimated_price": 3.02
+        }],
+        "pinout": [
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+            { "name": "Trigger", "type": "signal", "pin": 2 }
+        ],
+        "image": {
+            "src": "/generic/2pin.png",
+            "height": 50
+        }
+    },
+    {
+        "name": "EV6/EV14 Injector",
+        "allow_multiple": false,
+        "part_number": "E-2157-000",
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=430",
+            "estimated_price": 3.47
+        }],
+        "pinout": [
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+            { "name": "Trigger", "type": "signal", "pin": 2 }
+        ],
+        "image": {
+            "src": "/generic/2pin.png",
+            "height": 50
+        }
+    },
+    {
+        "name": "Nissan JECS Injector (Later Style)",
+        "allow_multiple": false,
+        "part_number": "KA24-INJNEW",
+        "sources": [{
+            "seller": "Wiring Specialties",
+            "url": "https://www.wiringspecialties.com/kainconst.html",
+            "estimated_price": 9.95
+        }],
+        "pinout": [
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+            { "name": "Trigger", "type": "signal", "pin": 2 }
+        ],
+        "image": {
+            "src": "/generic/2pin.png",
+            "height": 50
+        }
+    }
+]

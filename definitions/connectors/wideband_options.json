@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Bosch LSU 4_9 Wideband Sensor",
+        "part_number": "BOSCH_LSU_49",
+        "connector_type": "terminal",
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=1296",
+            "estimated_price": 10.65
+        }],
+        "pinout": [
+            { "name": "WBC PUMP (APE/IP)", "type": "wbo_ip", "pin": 1 },
+            { "name": "WBC COM (Input/Vref/Vgnd)", "type": "wbo_input", "pin": 2 },
+            { "name": "WBC Heater- (H-)", "type": "wbo_heater", "pin": 3 },
+            { "name": "WBC Heater+ (12V+)", "type": "wbo_12v", "pin": 4 },
+            { "name": "WBC Cal-Resistor (RCAL)", "type": "wbo_rcal", "pin": 5 },
+            { "name": "WBC CELL (UN/RE/VS/Nernst)", "type": "wbo_vs", "pin": 6 }
+        ],
+        "image": {
+            "src": "/generic/bosch_lsu.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Bosch LSU 4_2 Wideband Sensor",
+        "part_number": "BOSCH_LSU_42",
+        "connector_type": "terminal",
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=2105",
+            "estimated_price": 5.89
+        }],
+        "pinout": [
+            { "name": "WBC CELL (UN/RE/VS/Nernst)", "type": "wbo_vs", "pin": 1 },
+            { "name": "WBC Cal-Resistor (RCAL)", "type": "wbo_rcal", "pin": 2 },
+            { "name": "WBC Heater+ (12V+)", "type": "wbo_12v", "pin": 3 },
+            { "name": "WBC Heater- (H-)", "type": "wbo_heater", "pin": 4 },
+            { "name": "WBC COM (Input/Vref/Vgnd)", "type": "wbo_input", "pin": 5 },
+            { "name": "WBC PUMP (IP)", "type": "wbo_ip", "pin": 6 }
+        ],
+        "image": {
+            "src": "/generic/bosch_lsu.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "Bosch LSU 4_2 Wideband Sensor (Square Style)",
+        "part_number": "BOSCH_LSU_42_SQUARE",
+        "connector_type": "terminal",
+        "sources": [],
+        "pinout": [
+            { "name": "WBC PUMP (IP)", "type": "wbo_ip", "pin": 1 },
+            { "name": "WBC Heater- (H-)", "type": "wbo_heater", "pin": 2 },
+            { "name": "WBC Cal-Resistor (RCAL)", "type": "wbo_rcal", "pin": 3 },
+            { "name": "WBC COM (Input/Vref/Vgnd)", "type": "wbo_input", "pin": 4 },
+            { "name": "WBC Heater+ (12V+)", "type": "wbo_12v", "pin": 5 },
+            { "name": "WBC CELL (UN/RE/VS/Nernst)", "type": "wbo_vs", "pin": 6 }
+
+        ],
+        "image": {
+            "src": "/generic/lsu_42_square.png",
+            "height": 120
+        }
+    }
+]

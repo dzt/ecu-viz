@@ -1,0 +1,21 @@
+[
+    {
+        "name": "GM/Delphi Style Flex Fuel Sensor",
+        "part_number": "13511132",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=1149",
+            "estimated_price": 3.35
+        }],
+        "pinout": [
+            { "name": "VCC", "type": "switched_12v", "pin": 1 },
+            { "name": "GND", "type": "ground", "pin": 2 },
+            { "name": "OUT", "type": "signal", "pin": 3 }
+        ],
+        "image": {
+            "src": "/generic/flex.png",
+            "height": 120
+        }
+    }
+]
