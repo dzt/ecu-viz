@@ -1,0 +1,101 @@
+[
+    {
+        "name": "E3_IS2002",
+        "allow_multiple": false,
+        "part_number": "IS2002_E3",
+        "connector_type": "Female",
+        "sources": [],
+        "pinout": [
+            { "name": "BATT (+12v)", "type": null, "pin": 1 },
+            { "name": "nc", "type": null, "pin": 2 },
+            { "name": "nc", "type": null, "pin": 3 },
+            { "name": "DI (+12v +B)", "type": "constant_12v", "pin": 4 },
+            { "name": "Fuel Pump Ctr", "type": "fuel_pump", "pin": 5 },
+            { "name": "W (CEL)", "type": null, "pin": 6 },
+            { "name": "BM ETCS", "type": null, "pin": 7 },
+            { "name": "B2 (+B)", "type": null, "pin": 8 },
+            { "name": "Ign. Switch", "type": null, "pin": 9 },
+            { "name": "MREL", "type": null, "pin": 10 },
+            { "name": "SIL Data Link", "type": null, "pin": 11 },
+            { "name": "nc", "type": null, "pin": 12 },
+            { "name": "TRC+ TRC ECU", "type": null, "pin": 13 },
+            { "name": "ENG+ TRC ECU", "type": null, "pin": 14 },
+            { "name": "NEO TRC ECU", "type": null, "pin": 15 },
+            { "name": "+B", "type": null, "pin": 16 },
+            { "name": "nc", "type": null, "pin": 17 },
+            { "name": "nc", "type": null, "pin": 18 },
+            { "name": "nc", "type": null, "pin": 19 },
+            { "name": "TRC- TRC ECU", "type": null, "pin": 20 },
+            { "name": "ENG- TRC ECU", "type": null, "pin": 21 },
+            { "name": "EC (Ground)", "type": null, "pin": 22 }
+        ],
+        "image": {
+            "src": "/chassis/is300_2002+/e3.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "E4_IS2002",
+        "allow_multiple": false,
+        "part_number": "IS2002_E4",
+        "connector_type": "Female",
+        "sources": [],
+        "pinout": [
+            { "name": "nc", "type": null, "pin": 1 },
+            { "name": "Starter STA", "type": null, "pin": 2 },
+            { "name": "nc", "type": null, "pin": 3 },
+            { "name": "SFTU", "type": null, "pin": 4 },
+            { "name": "TC Data Link", "type": null, "pin": 5 },
+            { "name": "STP From Stop Lt", "type": null, "pin": 6 },
+            { "name": "4", "type": null, "pin": 7 },
+            { "name": "B1S2 02", "type": null, "pin": 8 },
+            { "name": "From Fan Relay", "type": null, "pin": 9 },
+            { "name": "TAM (Outside Temp)", "type": null, "pin": 10 },
+            { "name": "ST1- Stop Light", "type": null, "pin": 11 },
+            { "name": "nc", "type": null, "pin": 12 },
+            { "name": "ACMG From AC Relay", "type": null, "pin": 13 },
+            { "name": "SFTD", "type": null, "pin": 14 },
+            { "name": "nc", "type": null, "pin": 15 },
+            { "name": "SP1 (Tach)", "type": "tacho", "pin": 16 },
+            { "name": "D", "type": null, "pin": 17 },
+            { "name": "PTNK Tank Pressure", "type": null, "pin": 18 },
+            { "name": "nc", "type": null, "pin": 19 },
+            { "name": "nc", "type": null, "pin": 20 },
+            { "name": "PRE AC Dual Press.", "type": null, "pin": 21 },
+            { "name": "nc", "type": null, "pin": 22 },
+            { "name": "nc", "type": null, "pin": 23 },
+            { "name": "nc", "type": null, "pin": 24 },
+            { "name": "WFSE Data Link", "type": null, "pin": 25 },
+            { "name": "EC (Ground)", "type": null, "pin": 26 },
+            { "name": "MPX2", "type": null, "pin": 27 },
+            { "name": "MPX1", "type": null, "pin": 28 }
+        ],
+        "image": {
+            "src": "/chassis/is300_2002+/e4.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "EA1_IS2002",
+        "allow_multiple": false,
+        "part_number": "IS2002_EA1",
+        "connector_type": "Female",
+        "sources": [],
+        "pinout": [
+            { "name": "OBD2 Port Ground (Center side of the intake manifold)", "type": null, "pin": 1 },
+            { "name": "Starter Signal via 7.5A Fuse to ECT P/N Switch", "type": null, "pin": 2 },
+            { "name": "Power to Ignition Coils 1-3 and Ignitor", "type": "switched_12v", "pin": 3 },
+            { "name": "Power to VSV(ACIS), VSV(EVAP), MAF, 02 Heater x 3", "type": null, "pin": 4 },
+            { "name": "Power to AC Magnetic Clutch", "type": null, "pin": 5 },
+            { "name": "Starter Signal post P/N Switch", "type": null, "pin": 6 },
+            { "name": "Power to Injectors 1-6", "type": "switched_12v", "pin": 7 },
+            { "name": "To Starter Solenoid", "type": "cranking_12v", "pin": 8 },
+            { "name": "Alternator Battery Voltage (7.5A Sense Wire)", "type": null, "pin": 9 },
+            { "name": "Engine Oil Level Sensor to Ground (Left fender apron)", "type": null, "pin": 10 }
+        ],
+        "image": {
+            "src": "/chassis/is300_2002+/ea1.png",
+            "height": 120
+        }
+    }
+]

@@ -1,11 +1,11 @@
 let utils = {};
 const colors = require('../../definitions/colors.json');
 const _ = require('underscore');
+const fs = require('fs');
 
 const { FUSEBOX } = require('./constants.js');
 
 const chassis = require('../../definitions/chassis.json');
-const connectors = require('../../definitions/connector-list.json');
 const ecus = require('../../definitions/ecus.json');
 
 utils.createConnectorSummary = function(connectorList) {
@@ -98,7 +98,8 @@ utils.connectionBuilder = function(arr) {
     return list;
 }
 
-utils.getChassisConnectors = function(chassisCode) {
+// TODO: Repair Implmenetation
+utils.getChassisConnectors = function(chassisCode, connectors) {
     let chassisConnectors = _.findWhere(chassis, { id: chassisCode}).chassis_connectors;
     let pinoutList = [];
     for (let i = 0; i < chassisConnectors.length; i++) {
@@ -108,8 +109,8 @@ utils.getChassisConnectors = function(chassisCode) {
     return pinoutList;
 }
 
-utils.getChassisPinByType = function(chassisCode, type) {
-    let connectors = utils.getChassisConnectors(chassisCode);
+utils.getChassisPinByType = function(chassisCode, type, conn_list) {
+    let connectors = utils.getChassisConnectors(chassisCode, conn_list);
     for (let i = 0; i < connectors.length; i++) {
         let connector = connectors[i];
         for (let j = 0; j < connector.pinout.length; j++) {
@@ -123,8 +124,8 @@ utils.getChassisPinByType = function(chassisCode, type) {
     return null;
 }
 
-utils.getChassisAvailablePinsByType = function(chassisCode, type) {
-    let connectors = utils.getChassisConnectors(chassisCode);
+utils.getChassisAvailablePinsByType = function(chassisCode, type, conn_list) {
+    let connectors = utils.getChassisConnectors(chassisCode, conn_list);
     let list = [];
     for (let i = 0; i < connectors.length; i++) {
         let connector = connectors[i];
@@ -402,6 +403,54 @@ utils.getBatchSummary = function(cylinders) {
         if (i % 2 != 0) b.push(base_assignment[i])
     }
     return [a, b];
+}
+
+utils.readFolders = async function(dirPath, cb) {
+    fs.readdir(dirPath, { withFileTypes: true }, (err, entries) => {
+        if (err) return cb(err)
+        const folders = entries.filter(entry => entry.isDirectory()).map(entry => entry.name);
+        return cb(null, folders);
+    });
+}
+
+utils.generateConnectorList = function(chassisDirPath, cb) {
+
+    const connectorPath = '../../definitions/connectors';
+
+    let summary =  {
+        chassis_options: null, // Chassis Specific Connectors
+        analog_inputs: require(`${connectorPath}/analog_inputs.json`), // Ananlog Inputs
+        injectors: require(`${connectorPath}/injectors.json`), // Injector Variants
+        can_bus: require(`${connectorPath}/can_bus.json`), // CAN Specific Devices
+        ignition_coils: require(`${connectorPath}/ignition_coils.json`), // Ignition Coils
+        auxiliary_options: require(`${connectorPath}/auxiliary_options.json`), // Auxiliary Devices
+        clt_options: require(`${connectorPath}/clt_options.json`), // Coolant Temp Sensors
+        iat_options: require(`${connectorPath}/iat_options.json`), // Intake Air Temp Sensors
+        trigger_options: require(`${connectorPath}/trigger_options.json`), // Trigger Sensors
+        flex_options: require(`${connectorPath}/flex_options.json`), // Ethonal Content Sensors
+        accessories: require(`${connectorPath}/accessories.json`), // Misc sensors, switches, etc.
+        generics: require(`${connectorPath}/generics.json`), // Starter, Terminals, etc.
+        wideband_options: require(`${connectorPath}/wideband_options.json`), // Wideband Sensors
+        stepper_valve_options: require(`${connectorPath}/stepper_valve_options.json`), // Stepper Valve Motors
+        dbw_tb_options: require(`${connectorPath}/dbw_tb_options.json`), // DBW Throttle Bodies
+        dbw_app_options: require(`${connectorPath}/dbw_app_options.json`), // DBW Pedal Options
+    }
+
+    fs.readdir(chassisDirPath, { withFileTypes: true }, (err, entries) => {
+        if (err) return cb(err)
+        const folders = entries.filter(entry => entry.isDirectory()).map(entry => entry.name);
+        let chassis_connectors = [];
+        for (let i = 0; i < folders.length; i++) {
+            let chassis = folders[i];
+            let chassis_definition = require(`../../pinout_data/chassis/${chassis}/connectors.json`);
+            chassis_connectors = chassis_connectors.concat(chassis_definition);
+        }
+
+        summary.chassis_options = chassis_connectors;
+
+        return cb(null, summary);
+    });
+
 }
 
 const capitalize = function(string) {

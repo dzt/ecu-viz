@@ -1,0 +1,91 @@
+[
+    {
+        "name": "GX_100_F64",
+        "allow_multiple": false,
+        "part_number": "GX_100_F64",
+        "connector_type": "Female",
+        "sources": [],
+        "pinout": [
+            { "name": "STA", "type": null, "pin": 1 },
+            { "name": "AC1", "type": null, "pin": 2 },
+            { "name": "SPD", "type": null, "pin": 3 },
+            { "name": "ACMG", "type": null, "pin": 4 },
+            { "name": "OD2/PWRL", "type": null, "pin": 5 },
+            { "name": "ELS", "type": null, "pin": 6 },
+            { "name": "W", "type": null, "pin": 7 },
+            { "name": "MREL", "type": null, "pin": 8 },
+            { "name": "EGW", "type": null, "pin": 9 },
+            { "name": "IGSW", "type": null, "pin": 10 },
+            { "name": "BATT", "type": null, "pin": 11 },
+            { "name": "NSW", "type": null, "pin": 12 },
+            { "name": "P", "type": null, "pin": 13 },
+            { "name": "IND", "type": null, "pin": 14 },
+            { "name": "ELS3", "type": null, "pin": 15 },
+            { "name": "ELS2", "type": null, "pin": 16 },
+            { "name": "MSW", "type": null, "pin": 17 },
+            { "name": "RSPD", "type": null, "pin": 18 },
+            { "name": "STP", "type": null, "pin": 19 },
+            { "name": "FC", "type": "fuel_pump", "pin": 20 },
+            { "name": "AC2", "type": null, "pin": 21 },
+            { "name": "+B", "type": null, "pin": 22 }
+        ],
+        "image": {
+            "src": "/chassis/gx100/f64.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "GX_100_CF2",
+        "allow_multiple": false,
+        "part_number": "GX_100_CF2",
+        "connector_type": "Female",
+        "sources": [],
+        "pinout": [
+            { "name": "Starter Relay Trigger", "type": null, "pin": 1 },
+            { "name": "Switched 12V+ via EFI Relay", "type": null, "pin": 2 },
+            { "name": "nc", "type": null, "pin": 3 },
+            { "name": "nc", "type": null, "pin": 4 },
+            { "name": "Cranking 12V+ Output via Starter Relay", "type": null, "pin": 5 },
+            { "name": "nc", "type": null, "pin": 6 },
+            { "name": "nc", "type": null, "pin": 7 },
+            { "name": "nc", "type": null, "pin": 8 },
+            { "name": "CCO Pin to Factory ECU", "type": null, "pin": 9 },
+            { "name": "SIL Communication Pin via Factory ECU", "type": null, "pin": 10 },
+            { "name": "12V+ Supply to Speed Sensor and Neutral Start Switch", "type": null, "pin": 11 },
+            { "name": "OP4 Pin to the Diagnosis Connector from the ABS CPU", "type": null, "pin": 12 }
+        ],
+        "image": {
+            "src": "/chassis/gx100/cf2.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "GX_100_CF3",
+        "allow_multiple": false,
+        "part_number": "GX_100_CF3",
+        "connector_type": "Female",
+        "sources": [],
+        "pinout": [
+            { "name": "TC Pin via Factory ECU originally communicating with the Diagnostic Port", "type": null, "pin": 1 },
+            { "name": "Fused Cranking 12V+ from Ignition Switch", "type": null, "pin": 2 },
+            { "name": "Diagnostic Port (WB)", "type": null, "pin": 3 },
+            { "name": "TC Pin from ABS CPU to Diagnosis Connector", "type": null, "pin": 4 },
+            { "name": "nc", "type": null, "pin": 5 },
+            { "name": "TS Pin to TEMS Computer", "type": null, "pin": 6 },
+            { "name": "nc", "type": null, "pin": 7 },
+            { "name": "Neutral Start Switch originally going to “P” pin on the ABS CPU", "type": null, "pin": 8 },
+            { "name": "Neutral Start Switch originally going to “N” pin on the ABS CPU", "type": null, "pin": 9 },
+            { "name": "nc", "type": null, "pin": 10 },
+            { "name": "Neutral Safety Switch, Cranking 12V+ Output", "type": null, "pin": 11 },
+            { "name": "Fused Cranking 12V+ from Ignition Switch", "type": null, "pin": 12 },
+            { "name": "nc", "type": null, "pin": 13 },
+            { "name": "Automatic Speed Sensor", "type": null, "pin": 14 },
+            { "name": "Automatic Speed Sensor", "type": null, "pin": 15 },
+            { "name": "Automatic Speed Sensor", "type": null, "pin": 16 }
+        ],
+        "image": {
+            "src": "/chassis/gx100/cf3.png",
+            "height": 120
+        }
+    }
+]

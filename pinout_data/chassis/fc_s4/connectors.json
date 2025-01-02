@@ -1,0 +1,103 @@
+[
+    {
+        "name": "FEM_02",
+        "allow_multiple": false,
+        "part_number": "172498-1",
+        "connector_type": "Female",
+        "sources": [{
+                "seller": "Corsa Technic",
+                "url": "https://www.corsa-technic.com/item.php?item_id=1169",
+                "estimated_price": 5.16
+        }],
+        "pinout": [
+            { "name": "nc", "type": null, "pin": 1 },
+            { "name": "Main Relay", "type": "switched_12v", "pin": 2 },
+            { "name": "nc", "type": null, "pin": 3 },
+            { "name": "Battery 12V+", "type": "constant_12v", "pin": 4 },
+            { "name": "Main Relay", "type": "switched_12v", "pin": 5 },
+            { "name": "Coolant Temperature (to Cluster)", "type": "clt_cluster", "pin": 6 },
+            { "name": "nc", "type": null, "pin": 7 },
+            { "name": "Main Relay", "type": "switched_12v", "pin": 8 },
+            { "name": "nc", "type": null, "pin": 9 },
+            { "name": "Fuel Pump Relay", "type": "fuel_pump", "pin": 10 },
+            { "name": "nc", "type": null, "pin": 11 },
+            { "name": "Main Relay", "type": "switched_12v", "pin": 12 },
+            { "name": "nc", "type": null, "pin": 13 }
+        ],
+        "image": {
+            "src": "/chassis/fc_s4/fem_02.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "FEM_01",
+        "allow_multiple": false,
+        "part_number": "FEM_01_NLA",
+        "connector_type": "Female",
+        "sources": [],
+        "pinout": [
+            { "name": "nc", "type": null, "pin": 1 },
+            { "name": "nc", "type": null, "pin": 2 },
+            { "name": "nc", "type": null, "pin": 3 },
+            { "name": "nc", "type": null, "pin": 4 },
+            { "name": "Alternator 12V+ Output (Switched)", "type": null, "pin": 5 },
+            { "name": "Wiper Signal", "type": null, "pin": 6 },
+            { "name": "Wiper Signal", "type": null, "pin": 7 },
+            { "name": "nc", "type": null, "pin": 8 },
+            { "name": "nc", "type": null, "pin": 9 },
+            { "name": "nc", "type": null, "pin": 10 },
+            { "name": "Wiper Ground", "type": null, "pin": 11 },
+            { "name": "nc", "type": null, "pin": 12 },
+            { "name": "Alternator Charge Light", "type": null, "pin": 13 },
+            { "name": "Wiper Signal", "type": null, "pin": 14 },
+            { "name": "nc", "type": null, "pin": 15 },
+            { "name": "nc", "type": null, "pin": 16 },
+            { "name": "Wiper Power", "type": null, "pin": 17 }
+        ],
+        "image": {
+            "src": "/chassis/fc_s4/fem_01.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "F-31",
+        "allow_multiple": false,
+        "part_number": "172319-1",
+        "connector_type": "Female",
+        "sources": [{
+                "seller": "DigiKey",
+                "url": "https://www.digikey.com/short/p9cz89mz",
+                "estimated_price": 11.00
+        }],
+        "pinout": [
+            { "name": "Self-Daignosis Checker", "type": null, "pin": "1A" },
+            { "name": "Self-Daignosis Checker", "type": null, "pin": "1B" },
+            { "name": "Air Bypass Relay", "type": null, "pin": "1C" },
+            { "name": "Self-Daignosis Checker (Monitor Lamp)", "type": null, "pin": "1D" },
+            { "name": "A/C Switch", "type": null, "pin": "1E" },
+            { "name": "A/C Main Relay", "type": null, "pin": "1F" },
+            { "name": "Neutral Switch", "type": null, "pin": "1G" },
+            { "name": "Water Temperature Switch", "type": null, "pin": "1H" },
+            { "name": "5th Switch", "type": null, "pin": "1I" },
+            { "name": "Initial Set Coupler", "type": null, "pin": "1J" },
+            { "name": "Shift Indicator Light", "type": null, "pin": "1K" },
+            { "name": "Clutch Switch", "type": null, "pin": "1L" },
+            { "name": "Coil with Igniter (Trailing) IGf-T", "type": null, "pin": "1M" },
+            { "name": "Crank Angle Sensor (G)", "type": null, "pin": "1N" },
+            { "name": "Mileage Switch", "type": null, "pin": "1O" },
+            { "name": "Crank Angle Sensor (G)", "type": null, "pin": "1P" },
+            { "name": "Crank Angle Sensor (Ne)", "type": null, "pin": "1Q" },
+            { "name": "P/S Switch", "type": null, "pin": "1R" },
+            { "name": "Port Air Solenoid Valve", "type": null, "pin": "1S" },
+            { "name": "Crank Angle Sensor (Ne)", "type": null, "pin": "1T" },
+            { "name": "Coil with Igniter (Trailing) IGs-T (Select Signal)", "type": null, "pin": "1U" },
+            { "name": "Coil with Igniter (Leading) IGT-L (Ignition Timing Signal)", "type": null, "pin": "1V" },
+            { "name": "Heat Hazard Sensor", "type": null, "pin": "1W" },
+            { "name": "Coil with Igniter (Trailing) IGT-T (Ignition Timing Signal)", "type": null, "pin": "1X" }
+        ],
+        "image": {
+            "src": "/chassis/fc_s4/f-31.png",
+            "height": 120
+        }
+    }
+]

@@ -1,7 +1,6 @@
 const _ = require('underscore');
 
 const ecus = require('../definitions/ecus.json');
-const connectors = require('../definitions/connector-list.json');
 const chassis = require('../definitions/chassis.json');
 const engines = require('../definitions/engines.json');
 const inserts = require('../definitions/inserts.json');
@@ -27,7 +26,7 @@ class Connector {
                 id: partNumber
             }).image
         } else {
-            findImage = _.findWhere(connectors[type], {
+            findImage = _.findWhere(this.context.connector_list[type], {
                 part_number: partNumber
             }).image
         }
@@ -50,7 +49,7 @@ class Connector {
             pins = _.pluck(ecu.pinout, 'name');
         } else {
             if (type == 'tps') type = 'analog_inputs' // read tps value from analog inputs
-            pins = _.pluck(_.findWhere(connectors[type], {
+            pins = _.pluck(_.findWhere(this.context.connector_list[type], {
                 part_number: partNumber
             }).pinout, 'name');
         }
@@ -60,7 +59,7 @@ class Connector {
             notes: (pins.length > 1) ? 'Harness Side View' : null,
             key: (type == "ecu") ? _.findWhere(ecus, {
                 id: partNumber
-            }).name : _.findWhere(connectors[type], {
+            }).name : _.findWhere(this.context.connector_list[type], {
                 part_number: partNumber
             }).name,
             pn: partNumber,
@@ -137,7 +136,7 @@ class Connector {
         }).chassis_connectors
         for (let i = 0; i < connectorIDs.length; i++) {
             let connector_id = connectorIDs[i];
-            let chassisConnector = _.findWhere(connectors.chassis_options, {
+            let chassisConnector = _.findWhere(this.context.connector_list.chassis_options, {
                 name: connector_id
             });
             let conn = {
@@ -173,7 +172,7 @@ class Connector {
             // Check if connector is already in list or chassis connectors array to avoid duplicate add
             for (let j = 0; j < insertQuery.additional_connectors.length; j++) {
                 let additional_connector = insertQuery.additional_connectors[j];
-                let additional_connector_query = _.findWhere(connectors[additional_connector.category], {
+                let additional_connector_query = _.findWhere(this.context.connector_list[additional_connector.category], {
                     name: additional_connector.name
                 });
 
@@ -219,7 +218,7 @@ class Connector {
         let engine = _.findWhere(engines, {
             id: engineType
         });
-        let injector = _.findWhere(connectors.injectors, {
+        let injector = _.findWhere(this.context.connector_list.injectors, {
             part_number: partNumber
         });
         let injectorCount = engine.cylinders;
@@ -246,7 +245,7 @@ class Connector {
         let engine = _.findWhere(engines, {
             id: engineType
         });
-        let coil = _.findWhere(connectors.ignition_coils, {
+        let coil = _.findWhere(this.context.connector_list.ignition_coils, {
             part_number: partNumber
         });
         let coilCount = engine.cylinders;
@@ -275,7 +274,7 @@ class Connector {
             let connectorSection = ['clt_options', 'iat_options']
             let connectorPNs = [clt_pn, iat_pn]
 
-            obj = _.findWhere(connectors[connectorSection[i]], {
+            obj = _.findWhere(this.context.connector_list[connectorSection[i]], {
                 part_number: connectorPNs[i]
             })
 

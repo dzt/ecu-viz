@@ -20,8 +20,14 @@ const chassis = require('./definitions/chassis.json');
 const ecus = require('./definitions/ecus.json');
 const engines = require('./definitions/engines.json');
 const inserts = require('./definitions/inserts.json');
-const connectors = require('./definitions/connector-list.json');
+
 const utils = require('./src/helpers/utils.js');
+
+let connectors;
+utils.generateConnectorList('./pinout_data/chassis', (err, summary) => {
+    if (err) return console.error(err);
+    connectors = summary;
+});
 
 temp.track();
 app.use(bodyParser.json())
@@ -44,7 +50,7 @@ app.post('/fetch', (req, res) => {
     let output;
     
     try {
-        const yg = new YamlGenerator(input);
+        const yg = new YamlGenerator(input, connectors);
         output = yg.generateOutput()
     } catch(e) {
         console.log(e)

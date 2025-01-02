@@ -1,0 +1,68 @@
+[
+    {
+        "name": "F3_S14_OBDII",
+        "allow_multiple": false,
+        "part_number": "WRS-S14F3_OBDII",
+        "connector_type": "Female",
+        "sources": [{
+                "seller": "Wiring Specialties",
+                "url": "https://www.wiringspecialties.com/s1424f3dapl.html",
+                "estimated_price": 45.00
+        }],
+        "pinout": [
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 1 },
+            { "name": "Ground", "type": null, "pin": 2 },
+            { "name": "Rear Defroster Electrical Load", "type": null, "pin": 3 },
+            { "name": "Washer Switch", "type": null, "pin": 4 },
+            { "name": "Wiper Motor", "type": null, "pin": 5 },
+            { "name": "Wiper Motor", "type": null, "pin": 6 },
+            { "name": "Wiper Motor", "type": null, "pin": 7 },
+            { "name": "Wiper Motor", "type": null, "pin": 8 },
+            { "name": "nc", "type": null, "pin": 9 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 10 },
+            { "name": "Fuel Pump Relay Trigger", "type": "fuel_pump", "pin": 11 },
+            { "name": "Headlamp Signal", "type": null, "pin": 12 },
+            { "name": "nc", "type": null, "pin": 13 },
+            { "name": "nc", "type": null, "pin": 14 },
+            { "name": "Power Steering Oil Pressure Switch", "type": null, "pin": 15 },
+            { "name": "Air Conditioning Switch", "type": null, "pin": 16 },
+            { "name": "Constant 12V+ to ECCS Relay and ECU", "type": null, "pin": 17 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 18 },
+            { "name": "nc", "type": null, "pin": 19 },
+            { "name": "Data-Link (KLINE)", "type": null, "pin": 20 },
+            { "name": "Data-Link (Ground)", "type": null, "pin": 21 },
+            { "name": "Data-Link (SCTIX)", "type": null, "pin": 22 },
+            { "name": "Data-Link (SCICL)", "type": null, "pin": 23 },
+            { "name": "Vehicle Speed Sensor Input", "type": null, "pin": 24 },
+            { "name": "A/C Cooling Fan", "type": null, "pin": 25 },
+            { "name": "Tachometer Signal", "type": "tacho", "pin": 26 },
+            { "name": "Wiper Signal", "type": null, "pin": 27 },
+            { "name": "Water Temp Signal to Cluster", "type": null, "pin": 28 },
+            { "name": "Ambient Temp Switch", "type": null, "pin": 29 },
+            { "name": "Check Engine Light", "type": null, "pin": 30 },
+            { "name": "ASCD Actuator Power", "type": null, "pin": 31 },
+            { "name": "ASCD Actuator Power", "type": null, "pin": 32 },
+            { "name": "5th Gear Position Switch", "type": null, "pin": 33 },
+            { "name": "Cranking 12V+", "type": null, "pin": 34 },
+            { "name": "nc", "type": null, "pin": 35 },
+            { "name": "nc", "type": null, "pin": 36 },
+            { "name": "Recirc Relay", "type": null, "pin": 37 },
+            { "name": "Data-Link (SCIRX)", "type": null, "pin": 38 },
+            { "name": "nc", "type": null, "pin": 39 },
+            { "name": "Neutral Position Switch", "type": null, "pin": 40 },
+            { "name": "Cooling Fan", "type": null, "pin": 41 },
+            { "name": "Wiper Motor", "type": null, "pin": 42 },
+            { "name": "A/C Relay", "type": null, "pin": 43 },
+            { "name": "Idle Up Signal Pin", "type": null, "pin": 44 },
+            { "name": "nc", "type": null, "pin": 45 },
+            { "name": "A/C Request Signal", "type": null, "pin": 46 },
+            { "name": "nc", "type": null, "pin": 47 },
+            { "name": "nc", "type": null, "pin": 48 }
+
+        ],
+        "image": {
+            "src": "/chassis/s14/f3.png",
+            "height": 120
+        }
+    }
+]

@@ -1,0 +1,78 @@
+[
+    {
+        "name": "X-11",
+        "allow_multiple": false,
+        "part_number": "6240-5035",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=1357",
+            "estimated_price": 6.25
+        }],
+        "pinout": [
+            { "name": "F_PUMP", "type": "fuel_pump", "pin": 1 },
+            { "name": "nc", "type": null, "pin": 2 },
+            { "name": "Wiper Switched 12V+", "type": null, "pin": 3 },
+            { "name": "Ground", "type": null, "pin": 4 },
+            { "name": "nc", "type": null, "pin": 5 },
+            { "name": "nc", "type": null, "pin": 6 },
+            { "name": "Wiper Signal", "type": null, "pin": 7 },
+            { "name": "MREL", "type": "switched_12v", "pin": 8 },
+            { "name": "MREL", "type": "switched_12v", "pin": 9 },
+            { "name": "CLT", "type": "clt_cluster", "pin": 10 },
+            { "name": "nc", "type": null, "pin": 11 },
+            { "name": "Wiper Signal", "type": null, "pin": 12 },
+            { "name": "nc", "type": null, "pin": 13 },
+            { "name": "nc", "type": null, "pin": 14 },
+            { "name": "nc", "type": null, "pin": 15 },
+            { "name": "nc", "type": null, "pin": 16 },
+            { "name": "MREL", "type": "switched_12v", "pin": 17 },
+            { "name": "Wiper Signal", "type": null, "pin": 18 },
+            { "name": "MREL", "type": "switched_12v", "pin": 19 },
+            { "name": "MREL", "type": "switched_12v", "pin": 20 }
+        ],
+        "image": {
+            "src": "/chassis/fc_s5/x11.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "B1-03",
+        "allow_multiple": false,
+        "part_number": "178780-1",
+        "connector_type": "Female",
+        "sources": [{
+                "seller": "LMS EFI",
+                "url": "https://lms-efi-llc.myshopify.com/products/s5-fc-and-fd-rx-7-ecu-header",
+                "estimated_price": 25.00
+        }],
+        "pinout": [
+            { "name": "Battery", "type": null, "pin": "1A" },
+            { "name": "Main Relay", "type": null, "pin": "1B" },
+            { "name": "Ignition Switch", "type": null, "pin": "1C" },
+            { "name": "Self-Daignosis Checker (Monitor Lamp)", "type": null, "pin": "1D" },
+            { "name": "Malfunction Indicator Light (MIL) Lamp", "type": null, "pin": "1E" },
+            { "name": "Self-Diagnosis Check (Malfunction Code Number)", "type": null, "pin": "1F" },
+            { "name": "Ignition Coil (Trailing) IGt-T (Ignition Timing Signal)", "type": null, "pin": "1G" },
+            { "name": "Ignition Coil (Leading) IGtL (Ignition Timing Signal)", "type": null, "pin": "1H" },
+            { "name": "Test Connector", "type": null, "pin": "1I" },
+            { "name": "Ignition Coil (Trailing) (IGs-T Select Signal)", "type": null, "pin": "1J" },
+            { "name": "Fuel Pump Resistor Relay", "type": null, "pin": "1K" },
+            { "name": "A/C Relay", "type": null, "pin": "1L" },
+            { "name": "Mileage Sensor", "type": null, "pin": "1M" },
+            { "name": "Power Steering Pressure Switch", "type": null, "pin": "1N" },
+            { "name": "A/C Switch", "type": null, "pin": "1O" },
+            { "name": "Heat Hazzard Sensor", "type": null, "pin": "1P" },
+            { "name": "Clutch Switch", "type": null, "pin": "1Q" },
+            { "name": "Neutral Switch", "type": null, "pin": "1R" },
+            { "name": "Fog Light Switch", "type": null, "pin": "1S" },
+            { "name": "Back-up light and 5th switch", "type": null, "pin": "1T" },
+            { "name": "Mileage Sensor No.2", "type": null, "pin": "1U" },
+            { "name": "Ignition Coil (Trailing) IGf-T Ignition Confirmation Signal", "type": null, "pin": "1V" }
+        ],
+        "image": {
+            "src": "/chassis/fc_s5/b1-03.png",
+            "height": 120
+        }
+    }
+]

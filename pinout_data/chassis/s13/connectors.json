@@ -1,0 +1,118 @@
+[
+    {
+        "name": "F1_S13",
+        "allow_multiple": false,
+        "part_number": "WS_WRSDICON",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Wiring Specialties",
+            "url": "https://www.wiringspecialties.com/connectore.html",
+            "estimated_price": 15.00
+        }],
+        "pinout": [
+            { "name": "Coolant Gauge signal", "type": "clt_cluster", "pin": 1 },
+            { "name": "Tachometer Signal", "type": "tacho", "pin": 2 },
+            { "name": "nc", "type": null, "pin": 3 },
+            { "name": "AC button", "type": null, "pin": 4 },
+            { "name": "ABS Ground", "type": null, "pin": 5 },
+            { "name": "ABS wheel speed sensor", "type": null, "pin": 6 },
+            { "name": "ABS wheel speed sensor", "type": null, "pin": 7 },
+            { "name": "nc", "type": null, "pin": 8 },
+            { "name": "nc", "type": null, "pin": 9 },
+            { "name": "nc", "type": null, "pin": 10 },
+            { "name": "nc", "type": null, "pin": 11 },
+            { "name": "nc", "type": null, "pin": 12 },
+            { "name": "Check Engine Light", "type": null, "pin": 13 },
+            { "name": "nc", "type": null, "pin": 14 },
+            { "name": "Ground", "type": null, "pin": 15 },
+            { "name": "nc", "type": null, "pin": 16 }
+        ],
+        "image": {
+            "src": "/chassis/s13/f1.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "F1_S13_SOHC",
+        "allow_multiple": false,
+        "part_number": "WS_WRSSDICON",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Wiring Specialties",
+            "url": "https://www.wiringspecialties.com/connectorl1.html",
+            "estimated_price": 15.00
+        }],
+        "pinout": [
+            { "name": "Coolant Gauge signal", "type": "clt_cluster", "pin": 1 },
+            { "name": "Tachometer Signal", "type": "tacho", "pin": 2 },
+            { "name": "nc", "type": null, "pin": 3 },
+            { "name": "AC button", "type": null, "pin": 4 },
+            { "name": "nc", "type": null, "pin": 5 },
+            { "name": "nc", "type": null, "pin": 6 },
+            { "name": "nc", "type": null, "pin": 7 },
+            { "name": "nc", "type": null, "pin": 8 },
+            { "name": "nc", "type": null, "pin": 9 },
+            { "name": "nc", "type": null, "pin": 10 },
+            { "name": "Ground", "type": null, "pin": 11 },
+            { "name": "nc", "type": null, "pin": 12 },
+            { "name": "Check Engine Light", "type": null, "pin": 13 },
+            { "name": "nc", "type": null, "pin": 14 },
+            { "name": "nc", "type": null, "pin": 15 },
+            { "name": "nc", "type": null, "pin": 16 }
+        ],
+        "image": {
+            "src": "/chassis/s13/f1.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "F8_S13",
+        "allow_multiple": false,
+        "part_number": "WS_WRSPICON",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Wiring Specialties",
+            "url": "https://www.wiringspecialties.com/connector.html",
+            "estimated_price": 18.00
+        }],
+        "pinout": [
+            { "name": "nc", "type": null, "pin": 1 },
+            { "name": "Ignition Power Switched 12V+", "type": "switched_12v", "pin": 2 },
+            { "name": "Battery Power Constant 12V+", "type": "constant_12v", "pin": 3 },
+            { "name": "AC Relay Signal", "type": null, "pin": 4 },
+            { "name": "nc", "type": null, "pin": 5 },
+            { "name": "nc", "type": null, "pin": 6 },
+            { "name": "Load Idle Bump Signal", "type": null, "pin": 7 },
+            { "name": "nc", "type": null, "pin": 8 }
+        ],
+        "image": {
+            "src": "/chassis/s13/f8.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "F10_S13",
+        "allow_multiple": false,
+        "part_number": "WS_WRSCICON",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Wiring Specialties",
+            "url": "https://www.wiringspecialties.com/connectord1.html",
+            "estimated_price": 18.00
+        }],
+        "pinout": [
+            { "name": "nc", "type": null, "pin": 1 },
+            { "name": "nc", "type": null, "pin": 2 },
+            { "name": "nc", "type": null, "pin": 3 },
+            { "name": "nc", "type": null, "pin": 4 },
+            { "name": "nc", "type": null, "pin": 5 },
+            { "name": "nc", "type": null, "pin": 6 },
+            { "name": "Fuel Pump Signal", "type": "fuel_pump", "pin": 7 },
+            { "name": "nc", "type": null, "pin": 8 }
+        ],
+        "image": {
+            "src": "/chassis/s13/f10.png",
+            "height": 120
+        }
+    }
+]

@@ -1,5 +1,4 @@
 const ecus = require('../definitions/ecus.json');
-const connectorsDefinitions = require('../definitions/connector-list.json');
 const inserts = require('../definitions/inserts.json');
 const engines = require('../definitions/engines.json');
 const utils = require('./helpers/utils.js');
@@ -20,9 +19,9 @@ class Connections {
 
         let connList = [];
     
-        let chassis12VPins = utils.getChassisAvailablePinsByType(input.chassis, 'switched_12v');
-        let fb_switched12v = utils.getFuseBoxPin(connectors.fusebox.pn, 'switched_12v');
-        let fb_ground = utils.getFuseBoxPin(connectors.fusebox.pn, 'ground');
+        let chassis12VPins = utils.getChassisAvailablePinsByType(input.chassis, 'switched_12v', this.context.connector_list);
+        let fb_switched12v = utils.getFuseBoxPin(this.context.connectors.fusebox.pn, 'switched_12v');
+        let fb_ground = utils.getFuseBoxPin(this.context.connectors.fusebox.pn, 'ground');
     
         // Ignition Switch 12V+
         connList.push(this.connectionHelper(
@@ -37,7 +36,7 @@ class Connections {
         ))
     
         // Battery (Constant 12V+)
-        let constant_pins = utils.getFuseBoxPins(connectors.fusebox.pn, 'battery_12v');
+        let constant_pins = utils.getFuseBoxPins(this.context.connectors.fusebox.pn, 'battery_12v');
         for (let i = 0; i < constant_pins.length; i++) {
             connList.push(this.connectionHelper(
                 [constant_pins[i].key, 'Fusebox Connections', 'BATTERY'],
@@ -57,18 +56,18 @@ class Connections {
         let cableTitle = CABLE.ECU;
         let chassisCode = this.context.input.chassis;
 
-        const ecuTitle = Object.keys(connectors.data)[0];
+        const ecuTitle = Object.keys(this.context.connectors.data)[0];
         const ecuPinout = this.context.ecu.pinout;
         let connList = [];
     
-        const definedAuxOutputs = connectors.summary.auxiliary_outputs;
+        const definedAuxOutputs = this.context.connectors.summary.auxiliary_outputs;
     
         for (let i = 0; i < cableSetup.wirecount; i++) {
     
             const colorNumber = i + 1;
             let keys, values;
     
-            let fbQuery = utils.getFuseBoxPin(connectors.fusebox.pn, 'main_12v');
+            let fbQuery = utils.getFuseBoxPin(this.context.connectors.fusebox.pn, 'main_12v');
     
             if (i === 0) {
                 keys = [
@@ -83,18 +82,18 @@ class Connections {
                 ];
             } else {
                 const chassisPinType = (i === 1) ? 'fuel_pump' : 'tacho'; // tacho, i == 2
-                if (i == 2 && !(utils.getChassisPinByType(chassisCode, chassisPinType))) {
+                if (i == 2 && !(utils.getChassisPinByType(chassisCode, chassisPinType, this.context.connector_list))) {
                     throw new Error('This chassis option does not have an auxiliary tachometer signal. Review your input, and try again.')
                 }
                 keys = [
                     ecuTitle,
                     cableTitle,
-                    utils.getChassisPinByType(chassisCode, chassisPinType).name
+                    utils.getChassisPinByType(chassisCode, chassisPinType, this.context.connector_list).name
                 ];
                 values = [
                     (chassisPinType == 'fuel_pump') ? this.context.fuel_pump_output.pin : this.context.tach_output.pin,
                     colorNumber,
-                    utils.getChassisPinByType(chassisCode, chassisPinType).pin
+                    utils.getChassisPinByType(chassisCode, chassisPinType, this.context.connector_list).pin
                 ];
             }
             const conn = this.connectionHelper(keys, values);
@@ -116,19 +115,19 @@ class Connections {
         const injectorCount = cableSetup.wirecount - 1;
     
         // Extract necessary data
-        const ecuTitle = Object.keys(connectors.data)[0];
+        const ecuTitle = Object.keys(this.context.connectors.data)[0];
         const ecuPinout = this.context.ecu.pinout;
     
         // Sort injector list and retrieve injector part number and pinout
         const injectorList = _.sortBy(_.where(ecuPinout, { type: 'injector' }), 'name');
-        const injectorPartNumber = _.findWhere(connectors.data, { type: 'injector' }).pn;
-        const injectorPinout = _.findWhere(connectorsDefinitions.injectors, { part_number: injectorPartNumber }).pinout;
+        const injectorPartNumber = _.findWhere(this.context.connectors.data, { type: 'injector' }).pn;
+        const injectorPinout = _.findWhere(this.context.connector_list.injectors, { part_number: injectorPartNumber }).pinout;
     
         // Retrieve injector pin for 12V and signal
         const injector12VPin = _.findWhere(injectorPinout, { type: 'switched_12v' }).pin;
         const injectorSignalPin = _.findWhere(injectorPinout, { type: 'signal' }).pin;
     
-        let fbQuery = utils.getFuseBoxPin(connectors.fusebox.pn, 'main_12v');
+        let fbQuery = utils.getFuseBoxPin(this.context.connectors.fusebox.pn, 'main_12v');
     
         // Iterate through cable wires
         for (let i = 0; i < cableSetup.wirecount; i++) {
@@ -136,7 +135,7 @@ class Connections {
             let keys, values;
     
             if (i === 0) { // Connections for switched 12V source
-                const available12VPins = utils.getChassisAvailablePinsByType(chassisCode, 'switched_12v');
+                const available12VPins = utils.getChassisAvailablePinsByType(chassisCode, 'switched_12v', this.context.connector_list);
                 let loadPin = available12VPins[0].pin;
     
                 // Create connections for each injector
@@ -184,13 +183,13 @@ class Connections {
         let connList = [];
     
         // Extract necessary data
-        const ecuTitle = Object.keys(connectors.data)[0];
+        const ecuTitle = Object.keys(this.context.connectors.data)[0];
         const ecuPinout = this.context.ecu.pinout;
     
         // Sort injector list and retrieve ignition coil part number and pinout
         const ignitionList = _.sortBy(_.where(ecuPinout, { type: 'ignition' }), 'name');
-        const ignitionPartNumber = _.findWhere(connectors.data, { type: 'ignition' }).pn;
-        let ignitionPinout = _.findWhere(connectorsDefinitions.ignition_coils, { part_number: ignitionPartNumber }).pinout;
+        const ignitionPartNumber = _.findWhere(this.context.connectors.data, { type: 'ignition' }).pn;
+        let ignitionPinout = _.findWhere(this.context.connector_list.ignition_coils, { part_number: ignitionPartNumber }).pinout;
     
         // Ignore Null Pins (IGF pins and unused pins for standalone applications)
         ignitionPinout = utils.removeNullPins(ignitionPinout);
@@ -200,7 +199,7 @@ class Connections {
         const engineCylinders = (engineType == "piston") ? selectedEngine.cylinders : selectedEngine.cylinders * 2;
         const ignitionCount = engineCylinders;
     
-        let fbQuery = utils.getFuseBoxPin(connectors.fusebox.pn, 'ign_12v');
+        let fbQuery = utils.getFuseBoxPin(this.context.connectors.fusebox.pn, 'ign_12v');
     
         for (let i = 0; i < cableSetup.wirecount; i++) {
     
@@ -271,7 +270,7 @@ class Connections {
         if (!cableSetup) return null;
 
         // Extract necessary data
-        const ecuTitle = Object.keys(connectors.data)[0];
+        const ecuTitle = Object.keys(this.context.connectors.data)[0];
         const ecuPinout = this.context.ecu.pinout;
     
     
@@ -282,13 +281,13 @@ class Connections {
             if (i == 0 || i == 1) { // Distribute 5v or Vref Ground to sensors
                     for (let j = 0; j < (cableSetup.wirecount - 2); j++) {
         
-                        let sensorDetails = _.findWhere(connectorsDefinitions.analog_inputs, { part_number: connectors.summary.analog_inputs[j].pn });
-                        let multipleQuery = _.where(connectors.summary.analog_inputs, { pn: sensorDetails.part_number })
+                        let sensorDetails = _.findWhere(this.context.connector_list.analog_inputs, { part_number: this.context.connectors.summary.analog_inputs[j].pn });
+                        let multipleQuery = _.where(this.context.connectors.summary.analog_inputs, { pn: sensorDetails.part_number })
                         let isMultiple = false;
                         let multipleValue = 0;
         
                         if (multipleQuery.length > 1) {
-                            let duplicateIndexs = utils.findAllDuplicatesInListOfObjects(connectors.summary.analog_inputs, 'pn')[0].indexes;
+                            let duplicateIndexs = utils.findAllDuplicatesInListOfObjects(this.context.connector_list.summary.analog_inputs, 'pn')[0].indexes;
                             isMultiple = true;
                             for (let k = 0; k < duplicateIndexs.length; k++) {
                                 if (duplicateIndexs[k] == j) multipleValue = k;
@@ -315,8 +314,8 @@ class Connections {
             } else {
     
                     // Distribute sensour outputs to ECU
-                    let sensorDetails = _.findWhere(connectorsDefinitions.analog_inputs, { part_number: connectors.summary.analog_inputs[i - 2].pn });
-                    let multipleQuery = _.where(connectors.summary.analog_inputs, { pn: sensorDetails.part_number })
+                    let sensorDetails = _.findWhere(this.context.connector_list.analog_inputs, { part_number: this.context.connectors.summary.analog_inputs[i - 2].pn });
+                    let multipleQuery = _.where(this.context.connectors.summary.analog_inputs, { pn: sensorDetails.part_number })
                     let isMultiple = false;
                     let multipleValue = 0;
 
@@ -324,7 +323,7 @@ class Connections {
                     
                     if (multipleQuery.length > 1) {
                         isMultiple = true;
-                        let duplicateIndexs = utils.findAllDuplicatesInListOfObjects(connectors.summary.analog_inputs, 'pn')[0].indexes;
+                        let duplicateIndexs = utils.findAllDuplicatesInListOfObjects(this.context.connector_list.summary.analog_inputs, 'pn')[0].indexes;
                         for (let j = 0; j < duplicateIndexs.length; j++) {
                             if (duplicateIndexs[j] == (i - 2)) multipleValue = j;
                         }
@@ -377,14 +376,14 @@ class Connections {
         let iat_pn = this.context.input.iat
 
         // Extract necessary data
-        const ecuTitle = Object.keys(connectors.data)[0];
+        const ecuTitle = Object.keys(this.context.connectors.data)[0];
         const ecuPinout = this.context.ecu.pinout;
         
-        const clts = connectorsDefinitions.clt_options;
-        const iats = connectorsDefinitions.iat_options;
+        const clts = this.context.connector_list.clt_options;
+        const iats = this.context.connector_list.iat_options;
         let allTempSensors = clts.concat(iats);
     
-        let tempSensorInput = connectors.summary.temp_inputs; // Selections picked by user
+        let tempSensorInput = this.context.connectors.summary.temp_inputs; // Selections picked by user
     
         for (let i = 0; i < cableSetup.wirecount; i++) {
             if (i == 0) {
@@ -439,15 +438,15 @@ class Connections {
     
         let connList = [];
          // Extracting ECU title and pinout
-        const ecuTitle = Object.keys(connectors.data)[0];
+        const ecuTitle = Object.keys(this.context.connector_list.data)[0];
         const ecuPinout = this.context.ecu.pinout;
     
         // Finding device information based on part number
-        let pn = _.findWhere(connectors.summary.digital_inputs, { type: 'flex_options' }).pn
-        let flexSensor = _.findWhere(connectorsDefinitions.flex_options, { part_number: pn });
+        let pn = _.findWhere(this.context.connector_list.summary.digital_inputs, { type: 'flex_options' }).pn
+        let flexSensor = _.findWhere(this.context.connector_list.flex_options, { part_number: pn });
     
-        const power_pin = utils.getChassisAvailablePinsByType(chassisCode, 'switched_12v')[0];
-        let fbQuery = utils.getFuseBoxPin(connectors.fusebox.pn, 'main_12v');
+        const power_pin = utils.getChassisAvailablePinsByType(chassisCode, 'switched_12v', this.context.connector_list)[0];
+        let fbQuery = utils.getFuseBoxPin(this.context.connectors.fusebox.pn, 'main_12v');
     
         let sensor_pinout = flexSensor.pinout;
         let sensor_name = flexSensor.name;
@@ -491,11 +490,11 @@ class Connections {
         const ecuTitle = this.context.ecu.name;
     
         // Finding device information based on part number
-        let pn = connectors.summary.can_bus[0].pn;
-        let device = _.findWhere(connectorsDefinitions.can_bus, { part_number: pn });
+        let pn = this.context.connector_list.summary.can_bus[0].pn;
+        let device = _.findWhere(this.context.connector_list.can_bus, { part_number: pn });
         
         // Finding power pin based on chassis code
-        const power_pin = utils.getChassisAvailablePinsByType(chassisCode, 'switched_12v')[0];
+        const power_pin = utils.getChassisAvailablePinsByType(chassisCode, 'switched_12v', this.context.connector_list)[0];
     
         let can_pinout = device.pinout;
         let can_name = device.name;
@@ -536,24 +535,24 @@ class Connections {
         let chassisCode = this.context.input.chassis;
     
         // Extract necessary data
-        const ecuTitle = Object.keys(connectors.data)[0];
+        const ecuTitle = Object.keys(this.context.connector_list.data)[0];
         const ecuPinout = this.context.ecu.pinout;
-        let fbQuery = utils.getFuseBoxPin(connectors.fusebox.pn, 'main_12v');
+        let fbQuery = utils.getFuseBoxPin(this.context.connectors.fusebox.pn, 'main_12v');
     
-        let summary = _.where(connectors.summary.auxiliary_outputs, { type: 'auxiliary_options' });
+        let summary = _.where(this.context.connector_list.summary.auxiliary_outputs, { type: 'auxiliary_options' });
     
         for (let i = 0; i < cableSetup.wirecount; i++) {
             if (i == 0) {
                 // Distribute 12V to Aux Outputs
-                const available12VPins = utils.getChassisAvailablePinsByType(chassisCode, 'switched_12v');
+                const available12VPins = utils.getChassisAvailablePinsByType(chassisCode, 'switched_12v', this.context.connector_list);
                 let availablePin = available12VPins[0]; // always use shared ecu 12v pin unless 4 pins or more are present
                 if (available12VPins.length >= 4) availablePin = available12VPins[3]; // use 4th pin if readily avaialble
     
                 for (let j = 0; j < (cableSetup.wirecount - 1); j++) {
                     
                     let auxDevice = summary[j];
-                    let pinout = _.findWhere(connectorsDefinitions.auxiliary_options, { part_number: auxDevice.pn }).pinout;
-                    let auxName = _.findWhere(connectorsDefinitions.auxiliary_options, { part_number: auxDevice.pn }).name;
+                    let pinout = _.findWhere(this.context.connector_list.auxiliary_options, { part_number: auxDevice.pn }).pinout;
+                    let auxName = _.findWhere(this.context.connector_list.auxiliary_options, { part_number: auxDevice.pn }).name;
                     let isMultiple = false;
                     let multipleVale = 0;
     
@@ -580,7 +579,7 @@ class Connections {
             } else {
                 // Distribute aux outputs to ECU
                 let auxDevice = summary[i - 1];
-                let auxPinOut = _.findWhere(connectorsDefinitions.auxiliary_options, { part_number: auxDevice.pn }); // TODO Redo
+                let auxPinOut = _.findWhere(this.context.connector_list.auxiliary_options, { part_number: auxDevice.pn }); // TODO Redo
                 let pinout = auxPinOut.pinout;
                 let auxName = auxPinOut.name;
 
@@ -624,14 +623,14 @@ class Connections {
     
         for (let i = 0; i < cableSetup.wirecount; i++) {
     
-            let triggerPn = connectors.summary.trigger_options[0].pn
-            const ecuTitle = Object.keys(connectors.data)[0];
+            let triggerPn = this.context.connectors.summary.trigger_options[0].pn
+            const ecuTitle = Object.keys(this.context.connectors.data)[0];
             const ecuPinout = this.context.ecu.pinout;
-            const triggerPinout = _.findWhere(connectorsDefinitions.trigger_options, { part_number: triggerPn }).pinout
-            const triggerTitle = _.findWhere(connectorsDefinitions.trigger_options, { part_number: triggerPn }).name;
+            const triggerPinout = _.findWhere(this.context.connector_list.trigger_options, { part_number: triggerPn }).pinout
+            const triggerTitle = _.findWhere(this.context.connector_list.trigger_options, { part_number: triggerPn }).name;
             const pinType = triggerPinout[i].type;
     
-            const available12VPins = utils.getChassisAvailablePinsByType(chassisCode, 'switched_12v');
+            const available12VPins = utils.getChassisAvailablePinsByType(chassisCode, 'switched_12v', this.context.connector_list);
             let availablePin = available12VPins[0]; // always use shared ecu 12v pin unless 4 pins or more are present
             if (available12VPins.length >= 4) availablePin = available12VPins[3]; // use 4th pin if readily avaialble
     
@@ -710,7 +709,7 @@ class Connections {
     createWidebandConnections() {
         if (!this.context.input.wideband_control) return null;
         let connList = [];
-        let sensorDefinition = _.findWhere(connectorsDefinitions.wideband_options, { part_number: this.context.input.wideband_control });
+        let sensorDefinition = _.findWhere(this.context.connector_list.wideband_options, { part_number: this.context.input.wideband_control });
         for (let i = 0; i < sensorDefinition.pinout.length; i++ ) {
             let type = sensorDefinition.pinout[i].type;
             let wideband_pin = sensorDefinition.pinout[i].pin
@@ -739,7 +738,7 @@ class Connections {
 
         /* DBW Pedal Connections */
         let pedal_signal_check = 0;
-        let pedal = _.findWhere(connectorsDefinitions['dbw_app_options'], { part_number: this.context.input.dbw.pedal });
+        let pedal = _.findWhere(this.context.connector_list['dbw_app_options'], { part_number: this.context.input.dbw.pedal });
         for (let i = 0; i < pedal.pinout.length; i++) {
             let pin_type = pedal.pinout[i].type;
             let cableIndex, ecuPin;
@@ -762,7 +761,7 @@ class Connections {
         /* DBW Motor Connections */
         let motor_check_an = 0;
         let motor_check = 0;
-        let motor = _.findWhere(connectorsDefinitions['dbw_tb_options'], { part_number: this.context.input.dbw.throttle_body });
+        let motor = _.findWhere(this.context.connector_list['dbw_tb_options'], { part_number: this.context.input.dbw.throttle_body });
         for (let i = 0; i < motor.pinout.length; i++) {
             let pin_type = motor.pinout[i].type;
             let cableIndex, ecuPin;
@@ -796,7 +795,7 @@ class Connections {
         let idleValve_pn = this.context.input.idle_valve;
         if (!idleValve_pn) return null;
 
-        let idleValveDefinition = _.findWhere(connectorsDefinitions['stepper_valve_options'], { part_number: idleValve_pn });
+        let idleValveDefinition = _.findWhere(this.context.connector_list['stepper_valve_options'], { part_number: idleValve_pn });
         let switch_12v_pins = _.where(idleValveDefinition.pinout, { type: 'switched_12v' });
         let uses_switched12v = (switch_12v_pins.length > 0);
         let colors = this.context.cables[CABLE.IDLE].colors;

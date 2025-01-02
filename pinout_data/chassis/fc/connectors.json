@@ -1,0 +1,46 @@
+[
+    {
+        "name": "FC_TACHO",
+        "allow_multiple": false,
+        "part_number": "6187-4441",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=341",
+            "estimated_price": 3.17
+        }],
+        "pinout": [
+            { "name": "nc", "type": null, "pin": 1 },
+            { "name": "nc", "type": null, "pin": 2 },
+            { "name": "Tachometer", "type": "tacho", "pin": 3 },
+            { "name": "nc", "type": null, "pin": 4 }
+        ],
+        "image": {
+            "src": "/chassis/fc/tacho.png",
+            "height": 120
+        }
+    },
+    {
+        "name": "FC_WIPER",
+        "allow_multiple": false,
+        "part_number": "7123-2165-30",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Corsa Technic",
+            "url": "https://www.corsa-technic.com/item.php?item_id=365",
+            "estimated_price": 2.21
+        }],
+        "pinout": [
+            { "name": "Wiper Speed Output", "type": null, "pin": 1 },
+            { "name": "Wiper Speed Output", "type": null, "pin": 2 },
+            { "name": "Ground", "type": "ground", "pin": 3 },
+            { "name": "Switched 12V+", "type": "switched_12v", "pin": 4 },
+            { "name": "Wiper Speed Output", "type": null, "pin": 5 },
+            { "name": "nc", "type": null, "pin": 6 }
+        ],
+        "image": {
+            "src": "/chassis/fc/wiper.png",
+            "height": 120
+        }
+    }
+]

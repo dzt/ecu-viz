@@ -11,12 +11,13 @@ const Connections = require('./Connections.js');
 
 class YamlGenerator {
 
-    constructor(input) {
+    constructor(input, connector_list) {
         this.input = input;
         this.ecu = _.findWhere(ecus, { id: input.ecu });
         this.used_aux_outputs = []
         this.used_digital_inputs = []
         this.used_analog_inputs = []
+        this.connector_list = connector_list;
 
         // Injector Mode (Sequential, Semi-Sequential, Batch)
         const engine = _.findWhere(engines, { id: input.engine });

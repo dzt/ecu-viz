@@ -1,0 +1,91 @@
+[
+    {
+        "name": "c101_early",
+        "allow_multiple": false,
+        "part_number": "c101_early",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "Tulay's Wire Werks",
+            "url": "https://tulayswirewerks.com/product/bmw-e36-x20-chassis-harness-connector-kit/",
+            "estimated_price": 34.95
+        }],
+        "pinout": [
+            { "name": "Charge Light", "type": null, "pin": 1 },
+            { "name": "Static Oil Level", "type": null, "pin": 2 },
+            { "name": "nc", "type": null, "pin": 3 },
+            { "name": "Temp Gauge", "type": "clt_cluster", "pin": 4 },
+            { "name": "nc", "type": null, "pin": 5 },
+            { "name": "Oxygen Sensor Relay", "type": null, "pin": 6 },
+            { "name": "Fuel Pump Relay", "type": "fuel_pump", "pin": 7 },
+            { "name": "Starter Signal", "type": "cranking_12v", "pin": 8 },
+            { "name": "nc", "type": null, "pin": 9 },
+            { "name": "Live power from ignition (unfused)", "type": "switched_12v", "pin": 10 },
+            { "name": "nc", "type": null, "pin": 11 },
+            { "name": "nc", "type": null, "pin": 12 },
+            { "name": "nc", "type": null, "pin": 13 },
+            { "name": "nc", "type": null, "pin": 14 },
+            { "name": "Unloader relay", "type": null, "pin": 15 },
+            { "name": "Oil Pressure Light", "type": null, "pin": 16 },
+            { "name": "Reset Service Lights", "type": null, "pin": 17 },
+            { "name": "nc", "type": null, "pin": 18 },
+            { "name": "nc", "type": null, "pin": 19 }
+        ],
+        "image": {
+            "src": "/chassis/e30/c101_early.jpg",
+            "height": 120
+        }
+    },
+    {
+        "name": "c101_late",
+        "allow_multiple": false,
+        "part_number": "c101_late",
+        "connector_type": "Female",
+        "sources": [{
+            "seller": "FCP Euro",
+            "url": "https://www.fcpeuro.com/products/bmw-plug-housing-20pol-12521707283",
+            "estimated_price": 15.29
+        }],
+        "pinout": [
+            { "name": "Charge Light", "type": null, "pin": 1 },
+            { "name": "Static Oil Level", "type": null, "pin": 2 },
+            { "name": "nc", "type": null, "pin": 3 },
+            { "name": "Temp Gauge", "type": "clt_cluster", "pin": 4 },
+            { "name": "Oil Pressure Light", "type": null, "pin": 5 },
+            { "name": "Oxygen Pressure Relay", "type": null, "pin": 6 },
+            { "name": "Ignition Switch Switched Power", "type": "switched_12v", "pin": 7 },
+            { "name": "Fuel Rate Input", "type": null, "pin": 8 },
+            { "name": "Engine Speed Input", "type": "tacho", "pin": 9 },
+            { "name": "Dynamic Oil Level", "type": null, "pin": 10 },
+            { "name": "Reset Service Lights", "type": null, "pin": 11 },
+            { "name": "Check Engine Light", "type": null, "pin": 12 },
+            { "name": "Fuel Pump Relay", "type": "fuel_pump", "pin": 13 },
+            { "name": "Speed Signal Out to ECU", "type": null, "pin": 14 },
+            { "name": "Unloader Relay", "type": null, "pin": 15 },
+            { "name": "Diagnostic Connector", "type": null, "pin": 16 },
+            { "name": "nc", "type": null, "pin": 17 },
+            { "name": "Starter Signal", "type": "cranking_12v", "pin": 18 },
+            { "name": "nc", "type": null, "pin": 19 },
+            { "name": "ABS Power", "type": null, "pin": 20 }
+        ],
+        "image": {
+            "src": "/chassis/e30/c101_late.jpg",
+            "height": 120
+        }
+    },
+    {
+        "name": "c104_e30_early",
+        "allow_multiple": false,
+        "part_number": "c104_e30_early",
+        "connector_type": "Female",
+        "sources": [],
+        "pinout": [
+            { "name": "Tachometer", "type": "tacho", "pin": 1 },
+            { "name": "OBC Relay Box", "type": null, "pin": 2 },
+            { "name": "Fuel Econ. Gauge", "type": null, "pin": 3 }
+        ],
+        "image": {
+            "src": "/chassis/e30/c104.png",
+            "height": 120
+        }
+    }
+]

@@ -3,7 +3,6 @@ let cables = {}
 const { CABLE } = require('./helpers/constants.js');
 
 const colors = require('../definitions/colors.json');
-const connectors = require('../definitions/connector-list.json');
 const ecus = require('../definitions/ecus.json');
 const inserts = require('../definitions/inserts.json');
 const utils = require('./helpers/utils.js');
@@ -29,7 +28,7 @@ class Cables {
         let idle_valve_id = this.context.input.idle_valve;
 
         if (idle_valve_id) {
-            let idleValveDefinition = _.findWhere(connectors.stepper_valve_options, { part_number: idle_valve_id });
+            let idleValveDefinition = _.findWhere(this.context.connector_list.stepper_valve_options, { part_number: idle_valve_id });
             let idle_pin_count = idleValveDefinition.pinout.length;
             let isc_rules, pins_to_pluck;
             isc_rules = this.context.ecu.multipurpose_pins[(idle_pin_count === 3) ? '3_wire_isc' : 'stepper_valve'];
@@ -146,7 +145,7 @@ class Cables {
         let key = "Ignition System"
         let colorList = [];
     
-        let connDef = _.findWhere(connectors['ignition_coils'], { part_number: ignition_assignments[0].pn })
+        let connDef = _.findWhere(this.context.connector_list['ignition_coils'], { part_number: ignition_assignments[0].pn })
         let pinout_filtered = utils.removeNullPins(connDef.pinout);
     
         let count = (ignition_assignments.length) + 2; // default value (as if it were a 3 pin coil like a K20 style)
@@ -347,7 +346,7 @@ class Cables {
         if (!this.context.input.flex) return null;
         let digitalInputs = this.context.summary.digital_inputs;
         let flexOption = _.findWhere(digitalInputs, { type: 'flex_options' });
-        let connDefinition = _.findWhere(connectors.flex_options, { part_number: flexOption.pn });
+        let connDefinition = _.findWhere(this.context.connector_list.flex_options, { part_number: flexOption.pn });
 
         const di = this.context.getAvailableDIs()[0];
         let colorList = [
@@ -373,7 +372,7 @@ class Cables {
     createWidebandCables() {
         
         if (!this.context.input.wideband_control) return null;
-        let sensorDefinition = _.findWhere(connectors.wideband_options, { part_number: this.context.input.wideband_control });
+        let sensorDefinition = _.findWhere(this.context.connector_list.wideband_options, { part_number: this.context.input.wideband_control });
         let cableColors = [];
 
         for (let i = 0; i < sensorDefinition.pinout.length; i++ ) {
@@ -542,7 +541,7 @@ class Cables {
         if (homePin) homeColor = homePin.color; // For ECUs that do not have home pins
         
         let triggerColor = _.findWhere(ecuPinout, { type: 'trigger' }).color;
-        let triggerPinout = _.findWhere(connectors.trigger_options, { part_number: trigger.pn }).pinout
+        let triggerPinout = _.findWhere(this.context.connector_list.trigger_options, { part_number: trigger.pn }).pinout
     
         for (let i = 0; i < trigger.pinlabels.length; i++) {
     
@@ -619,7 +618,7 @@ class Cables {
         let idleConnector = _.findWhere(this.context.summary.auxiliary_outputs, { type: 'stepper_valve_options' })
         let ecu = _.findWhere(ecus, { id: this.context.input.ecu });
         let multipurpose_pins = ecu.multipurpose_pins;
-        let idleValveDefinition = _.findWhere(connectors.stepper_valve_options, { part_number: idleConnector.pn });
+        let idleValveDefinition = _.findWhere(this.context.connector_list.stepper_valve_options, { part_number: idleConnector.pn });
     
         const idleStepCount = utils.countIdleSteps(idleValveDefinition.pinout);
         const uses_switched12v = _.findWhere(idleValveDefinition.pinout, { type: 'switched_12v' });

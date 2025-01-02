@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Z31_83M",
+        "allow_multiple": false,
+        "part_number": "Z31_83M",
+        "connector_type": "Female",
+        "sources": [],
+        "pinout": [
+            { "name": "Water Temp Signal to Instrument Cluster", "type": null, "pin": 1 },
+            { "name": "S Terminal from the Ignition Switch (Starter Signal)", "type": null, "pin": 2 },
+            { "name": "Fused Switched 12V+ (10A - FUEL PUMP Fuse)", "type": null, "pin": 3 },
+            { "name": "Ground", "type": null, "pin": 4 },
+            { "name": "Ground", "type": null, "pin": 5 },
+            { "name": "Fused Switched 12V+ (15A - ENG CONTROL Fuse)", "type": "switched_12v", "pin": 6 },
+            { "name": "12V+ to OEM ECU, Air Copressor Relay, & P/S Switch", "type": null, "pin": 7 },
+            { "name": "Injector Cooling Fan Timer", "type": null, "pin": 8 },
+            { "name": "Fuel Pump Relay Control", "type": "fuel_pump", "pin": 9 },
+            { "name": "nc", "type": null, "pin": 10 },
+            { "name": "nc", "type": null, "pin": 11 },
+            { "name": "nc", "type": null, "pin": 12 },
+            { "name": "nc", "type": null, "pin": 13 },
+            { "name": "nc", "type": null, "pin": 14 },
+            { "name": "Tachometer Signal to Instrument Cluster  ", "type": "tacho", "pin": 15 },
+            { "name": "ECU Signal to Ignition Coil and Ignition Power Transistor", "type": null, "pin": 16 }
+        ],
+        "image": {
+            "src": "/chassis/z31/83m.png",
+            "height": 120
+        }
+    }
+]
