@@ -490,8 +490,8 @@ class Connections {
         const ecuTitle = this.context.ecu.name;
     
         // Finding device information based on part number
-        let pn = this.context.connector_list.summary.can_bus[0].pn;
-        let device = _.findWhere(this.context.connector_list.can_bus, { part_number: pn });
+        let pn = connectors.summary.can_bus[0].pn;
+        let device = _.findWhere(this.context.connector_list['can_bus'], { part_number: pn });
         
         // Finding power pin based on chassis code
         const power_pin = utils.getChassisAvailablePinsByType(chassisCode, 'switched_12v', this.context.connector_list)[0];
@@ -535,11 +535,11 @@ class Connections {
         let chassisCode = this.context.input.chassis;
     
         // Extract necessary data
-        const ecuTitle = Object.keys(this.context.connector_list.data)[0];
+        const ecuTitle = Object.keys(this.context.connectors.data)[0];
         const ecuPinout = this.context.ecu.pinout;
         let fbQuery = utils.getFuseBoxPin(this.context.connectors.fusebox.pn, 'main_12v');
     
-        let summary = _.where(this.context.connector_list.summary.auxiliary_outputs, { type: 'auxiliary_options' });
+        let summary = _.where(this.context.connectors.summary.auxiliary_outputs, { type: 'auxiliary_options' });
     
         for (let i = 0; i < cableSetup.wirecount; i++) {
             if (i == 0) {

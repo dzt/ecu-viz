@@ -417,7 +417,7 @@ utils.generateConnectorList = function(chassisDirPath, cb) {
 
     const connectorPath = '../../definitions/connectors';
 
-    let summary =  {
+    let connector_list =  {
         chassis_options: null, // Chassis Specific Connectors
         analog_inputs: require(`${connectorPath}/analog_inputs.json`), // Ananlog Inputs
         injectors: require(`${connectorPath}/injectors.json`), // Injector Variants
@@ -446,9 +446,9 @@ utils.generateConnectorList = function(chassisDirPath, cb) {
             chassis_connectors = chassis_connectors.concat(chassis_definition);
         }
 
-        summary.chassis_options = chassis_connectors;
+        connector_list.chassis_options = chassis_connectors;
 
-        return cb(null, summary);
+        return cb(null, connector_list);
     });
 
 }

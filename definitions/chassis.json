@@ -1,5 +1,4 @@
-[
-    {
+[{
         "name": "Universal",
         "id": "universal",
         "fuel_pump_12v": false,
@@ -109,14 +108,7 @@
         "fuel_pump_12v": false,
         "dbw_pedal": false,
         "chassis_connectors": ["MX83_T5", "MX83_B1", "MX83_B3", "MX83_C1"],
-        "insert_options": [
-            "MX83_MREL_BYPASS",
-            "MX83_STARTER_CONTROL",
-            "MX83_SPEEDO",
-            "MX83_CLT",
-            "MX83_OIL_PRES",
-            "MX83_REVERSE_SWITCH"
-        ]
+        "insert_options": ["MX83_MREL_BYPASS", "MX83_STARTER_CONTROL", "MX83_SPEEDO", "MX83_CLT", "MX83_OIL_PRES", "MX83_REVERSE_SWITCH"]
     },
     {
         "name": "Toyota Chaser/Cresta/MKII (JZX100, 1996-1998)",
@@ -124,31 +116,14 @@
         "fuel_pump_12v": false,
         "dbw_pedal": false,
         "chassis_connectors": ["JZX_100_F26", "GX_JZX_100_CG1", "GX_JZX_100_C1"],
-        "insert_options": [
-            "JZX_100_MREL_CONTROL",
-            "JZX_100_AC",
-            "JZX_100_CEL",
-            "JZX_100_FP_SPEED",
-            "JZX_100_SPEEDO",
-            "JZX_100_REVERSE_LIGHTS",
-            "JZX_100_PS_SWITCH",
-            "JZX_100_STARTER",
-            "JZX_100_CLT"
-        ]
+        "insert_options": ["JZX_100_MREL_CONTROL", "JZX_100_AC", "JZX_100_CEL", "JZX_100_FP_SPEED", "JZX_100_SPEEDO", "JZX_100_REVERSE_LIGHTS", "JZX_100_PS_SWITCH", "JZX_100_STARTER", "JZX_100_CLT"]
     },
     {
         "name": "Toyota Chaser/Cresta/MKII (GX100, 1996-1998)",
         "id": "gx_100",
         "fuel_pump_12v": false,
         "dbw_pedal": false,
-        "chassis_connectors": [
-            "GX_100_F64",
-            "GX_JZX_100_CG1",
-            "GX_JZX_100_C1"
-        ],
-        "insert_options": [
-            "GX_100_MREL_CONTROL",
-            "GX_100_STARTER_MANUAL"
-        ]
+        "chassis_connectors": ["GX_100_F64", "GX_JZX_100_CG1", "GX_JZX_100_C1"],
+        "insert_options": ["GX_100_MREL_CONTROL", "GX_100_STARTER_MANUAL"]
     }
 ]
